@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { ethers } from "ethers";
 import "./Tab.style.js";
 import { Table } from "./Fifa.styles";
@@ -19,6 +20,8 @@ import {
 import Utils from "../../utilities";
 
 function Tabs(props) {
+  let { group, title, id } = useParams();
+
   const metaMaskAddress = useSelector((state) => state.wallet);
   const dispatch = useDispatch();
   const [currentAccount, setCurrentAccount] = useState("");
@@ -102,14 +105,17 @@ function Tabs(props) {
           ""
         ) : (
           <div className="video">
-            {(pathname === "/dxy" || pathname === "/cricket-event") && (
-              <div className="prediction">
-                <span>Prediction</span>
-                <div className="video-container-separeted">
-                  <ReactPlayer url={prediction_src_1} />
+            {pathname === "/dxy" ||
+              pathname === "/cricket-event" ||
+              pathname === `/football/${group}/${title}/${id}/stats` || (
+                <div className="prediction">
+                  <span>Prediction</span>
+                  <div className="video-container-separeted">
+                    <ReactPlayer url={prediction_src_1} />
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+
             <div className="prediction">
               <span>Review</span>
               <div className="video-container-separeted">
@@ -121,6 +127,7 @@ function Tabs(props) {
         {pathname === "/bitcoin" ||
         pathname === "/ethereum" ||
         pathname === "/politics" ||
+        pathname === "/football/:group/:title/stats/:id" ||
         pathname === "/cricket" ? (
           <div className="video">
             <div className="prediction">

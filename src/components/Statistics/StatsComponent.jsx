@@ -25,7 +25,7 @@ const StatsComponent = () => {
     window.scrollTo(0, 0);
   }, [group, title, id]);
 
-  console.log("res", item);
+  console.log("res", item?.prediction_video);
 
   return (
     <>
@@ -143,7 +143,14 @@ const StatsComponent = () => {
           </div>
         ))}
       </Info>
-      <Tabs />
+      <Tabs
+        getId={item?.smart_contract_id}
+        winId={addStyle}
+        // getName={getName}
+        getPrediction={item?.prediction_video}
+        getReview={item?.review_video}
+        // eventStatus={eventStatus}
+      />{" "}
     </>
   );
 };

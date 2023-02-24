@@ -5,6 +5,9 @@ export const RegularFootBallContainer = styled("div")`
   background-repeat: no-repeat;
   background-size: contain;
   height: 39vh;
+  @media screen and (max-width: 375px) {
+    height: 14vh;
+  }
 `;
 
 export const SingleFootBallBannerContainer = styled("div")`
@@ -167,7 +170,7 @@ export const SingleFootBallBannerContainer = styled("div")`
 
       .country_wrapper {
         img {
-          max-width: 45px;
+          max-width: 20px;
         }
 
         span {
