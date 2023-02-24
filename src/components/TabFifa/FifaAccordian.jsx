@@ -215,21 +215,6 @@ const Accordian = (props) => {
     },
     {
       id: 8,
-      name: "TRUEAI",
-      poolSize: busdData_size,
-      poolCricket: "0.0000",
-      numbers_bets: "0.0000",
-      outer_odds: busdData_odd == null ? "0.00" : busdData_odd.toFixed(2),
-      payouts: "0.0000",
-      img: TRUEAI_Icon,
-      amount: "Enter Amount",
-      pool: busdData_total,
-      odd: busdData_odd == null ? "0.00" : busdData_odd.toFixed(2),
-      win: "Possible WIN",
-      token: BUSD_ADDRESS,
-    },
-    {
-      id: 9,
       name: "METABET",
       poolSize: metabetData_size,
       poolCricket: "0.0000",
@@ -255,11 +240,11 @@ const Accordian = (props) => {
             <div
               className={
                 item.id === 1 &&
-                (pathname === "/Ethereum" ||
-                  pathname === "/Bitcoin" ||
-                  pathname === "/PoliticsDetails" ||
-                  pathname === "/UFC-Events" ||
-                  pathname === "/Cricket-Event" ||
+                (pathname === "/ethereum" ||
+                  pathname === "/bitcoin" ||
+                  pathname === "/politics-details" ||
+                  pathname === "/ufc-events" ||
+                  pathname === "/cricket-event" ||
                   pathname === "/dxy")
                   ? "hide"
                   : `Head Head-${item.id}` && pathname === "/football-stats"

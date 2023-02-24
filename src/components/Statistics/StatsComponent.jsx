@@ -9,8 +9,8 @@ import { Info, StatisticsContainer } from "./Stats.syle";
 
 const StatsComponent = () => {
   let { group, title, id } = useParams();
-
   const { fetchData, response } = useAxios();
+  const [addStyle, setAddStyle] = useState();
 
   const getBanners = async () => {
     await fetchData({
@@ -25,9 +25,7 @@ const StatsComponent = () => {
     window.scrollTo(0, 0);
   }, [group, title, id]);
 
-  // console.log("res", item);
-
-  const [addStyle, setAddStyle] = useState();
+  console.log("res", item);
 
   return (
     <>
@@ -77,9 +75,11 @@ const StatsComponent = () => {
             )}
           </div>
           <div className="player-VS">
-            <span>{item?.vs}</span>
-            <span>{item?.pool_status}</span>
-            <Times date={item?.date} />
+            <span>VS</span>
+            <Times date={item?.event_date} />
+            <span style={{ fontSize: "14px", color: "yellow" }}>
+              {item?.pool_status}
+            </span>
           </div>
           <div className="statistic_rectangle">
             <span>Statistics:</span>
