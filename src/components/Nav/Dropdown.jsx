@@ -41,13 +41,6 @@ function Dropdown() {
     <>
       <div className="dropdown">
         <div className="dropdown-ai">
-          <div className="openai">
-            <img src={openai} alt="openai" />
-            <div>
-              <span>32%</span>
-              <img src={verified} alt="verified" />
-            </div>
-          </div>
           <div className="right-nav">
             <label>
               <input type="text" name="name" placeholder="5" />

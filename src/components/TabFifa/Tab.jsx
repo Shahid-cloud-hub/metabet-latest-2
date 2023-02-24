@@ -71,14 +71,6 @@ function Tabs(props) {
             <span>Live Bets</span>
           </div>
         </div>
-        {metaMaskAddress.metaMaskAddress ? (
-          <button onClick={() => Utils.FreeBetToken(currentAccount)}>
-            <img src={BetImg} alt="Free Bets" />
-            <span>+50 Free Bets</span>
-          </button>
-        ) : (
-          ""
-        )}
       </div>
       <div className="tableContent" hidden={index !== 0}>
         <Table>
@@ -102,15 +94,15 @@ function Tabs(props) {
             bitAndEth={props.bitAndEthBet}
           />
         </Table>
-        {pathname === "/Bitcoin" ||
-        pathname === "/Ethereum" ||
-        pathname === "/Cricket" ||
-        pathname === "/Politics" ||
-        pathname === "/UFC-Events" ? (
+        {pathname === "/bitcoin" ||
+        pathname === "/ethereum" ||
+        pathname === "/cricket" ||
+        pathname === "/politics" ||
+        pathname === "/ufc-events" ? (
           ""
         ) : (
           <div className="video">
-            {(pathname === "/dxy" || pathname === "/Cricket-Event") && (
+            {(pathname === "/dxy" || pathname === "/cricket-event") && (
               <div className="prediction">
                 <span>Prediction</span>
                 <div className="video-container-separeted">
@@ -126,25 +118,25 @@ function Tabs(props) {
             </div>
           </div>
         )}
-        {pathname === "/Bitcoin" ||
-        pathname === "/Ethereum" ||
-        pathname === "/Politics" ||
-        pathname === "/Cricket" ? (
+        {pathname === "/bitcoin" ||
+        pathname === "/ethereum" ||
+        pathname === "/politics" ||
+        pathname === "/cricket" ? (
           <div className="video">
             <div className="prediction">
               <span>Prediction</span>
               <div className="video-container-separeted">
-                {pathname === "/Bitcoin" && (
+                {pathname === "/bitcoin" && (
                   <ReactPlayer url={props.predictionVideo} />
                 )}
-                {pathname === "/Ethereum" && (
+                {pathname === "/ethereum" && (
                   <ReactPlayer url={props.predictionVideo} />
                 )}
-                {pathname === "/Cricket" && <ReactPlayer url={prediction_3} />}
-                {pathname === "/Politics" && <ReactPlayer url={prediction_3} />}
+                {pathname === "/cricket" && <ReactPlayer url={prediction_3} />}
+                {pathname === "/politics" && <ReactPlayer url={prediction_3} />}
               </div>
             </div>
-            {pathname === "/Bitcoin" && (
+            {pathname === "/bitcoin" && (
               <div className="pie">
                 <TradingViewWidget
                   theme={Themes.DARK}
@@ -156,7 +148,7 @@ function Tabs(props) {
                 />
               </div>
             )}
-            {pathname === "/Ethereum" && (
+            {pathname === "/ethereum" && (
               <div className="pie">
                 <TradingViewWidget
                   theme={Themes.DARK}
@@ -169,14 +161,14 @@ function Tabs(props) {
                 />
               </div>
             )}
-            {pathname === "/Bitcoin" || pathname === "/Ethereum" ? (
+            {pathname === "/bitcoin" || pathname === "/ethereum" ? (
               ""
             ) : (
               <div className="prediction">
                 <span>Review</span>
                 <div className="video-container-separeted">
-                  {pathname === "/Cricket" && <ReactPlayer url={review_3} />}
-                  {pathname === "/Politics" && <ReactPlayer url={review_3} />}
+                  {pathname === "/cricket" && <ReactPlayer url={review_3} />}
+                  {pathname === "/politics" && <ReactPlayer url={review_3} />}
                 </div>
               </div>
             )}

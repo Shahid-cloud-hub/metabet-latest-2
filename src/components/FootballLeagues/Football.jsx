@@ -1,15 +1,35 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAxios } from "../../hooks/useAxios";
-import Loading from "../Loading/Loading";
 import { FootballLeaguesContainer } from "./FootballLeagues.style";
 import BetBTN from "../../assets/images/bet-new-btn.png";
+import Loading from "../Loading/Loading";
 
-const ChampionsLeague = ({ group_type }) => {
+const AllFootballEvents = ({ group_type }) => {
   const { fetchData, response, loading } = useAxios();
   const navigate = useNavigate();
   const location = useLocation();
   const { pathname } = location;
+
+  const title =
+    group_type === "champions-league"
+      ? "Chanpions League"
+      : "" || group_type === "ligue-1"
+      ? "Ligue 1"
+      : "" || group_type === "laliga"
+      ? "La Liga"
+      : "" || group_type === "premier-league"
+      ? "Premier League"
+      : "" || group_type === "serie-a"
+      ? "Serie A"
+      : "" || group_type === "bundesliga"
+      ? "Bundesliga"
+      : "";
+
+  //   const newTitle = title.replace(/[^a-zA-Z0-9-]/g, "");
+  //   const updatedTitle = title.replace(/-/g, " ");
+
+  // console.log("first", title);
 
   const getEvent = async () => {
     await fetchData({
@@ -29,7 +49,7 @@ const ChampionsLeague = ({ group_type }) => {
   return (
     <FootballLeaguesContainer>
       <div className="football-loading-wrapper">
-        <h1>Champions League</h1>
+        <h1>{title}</h1>
         {loading ? (
           <div className="loading">
             <Loading />
@@ -91,4 +111,4 @@ const ChampionsLeague = ({ group_type }) => {
   );
 };
 
-export default ChampionsLeague;
+export default AllFootballEvents;
