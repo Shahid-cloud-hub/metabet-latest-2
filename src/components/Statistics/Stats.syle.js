@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StatisticsContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   width: 100%;
   background: #0f212e;
   border-radius: 10px;
