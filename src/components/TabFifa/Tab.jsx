@@ -8,7 +8,6 @@ import FifaAccordian from "./FifaAccordian";
 import { TabContainer } from "./Tab.style.js";
 import RecentTrade from "../RecentTrade/RecentTrade";
 import ReactPlayer from "react-player/youtube";
-import BetImg from "../../assets/images/bet.png";
 import TradingViewWidget, { Themes } from "react-tradingview-widget";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -21,6 +20,8 @@ import Utils from "../../utilities";
 
 function Tabs(props) {
   let { group, title, id } = useParams();
+
+  console.log(props);
 
   const metaMaskAddress = useSelector((state) => state.wallet);
   const dispatch = useDispatch();
