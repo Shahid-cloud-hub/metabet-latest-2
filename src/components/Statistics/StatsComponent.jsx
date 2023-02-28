@@ -9,6 +9,7 @@ import { Info, StatisticsContainer } from "./Stats.syle";
 
 const StatsComponent = () => {
   let { group, title, id } = useParams();
+
   const { fetchData, response } = useAxios();
   const [addStyle, setAddStyle] = useState();
 
@@ -18,14 +19,14 @@ const StatsComponent = () => {
       url: `https://dull-puce-wildebeest-belt.cyclic.app/getGroup/${group}/${title}/${id}/stats`,
     });
   };
-  const item = response?.stats;
+  const item = response?.stats?.data;
 
   useEffect(() => {
     getBanners();
     window.scrollTo(0, 0);
   }, [group, title, id]);
 
-  console.log("res", item?.prediction_video);
+  // console.log("res", item);
 
   return (
     <>
@@ -150,7 +151,7 @@ const StatsComponent = () => {
         getPrediction={item?.prediction_video}
         getReview={item?.review_video}
         // eventStatus={eventStatus}
-      />{" "}
+      />
     </>
   );
 };

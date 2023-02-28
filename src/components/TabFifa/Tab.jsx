@@ -12,22 +12,10 @@ import TradingViewWidget, { Themes } from "react-tradingview-widget";
 
 import { useDispatch, useSelector } from "react-redux";
 
-import {
-  metaMaskConnection,
-  metaMaskDisconnect,
-} from "../../redux/walletConnect/walletConnectSlice";
-import Utils from "../../utilities";
-
 function Tabs(props) {
   let { group, title, id } = useParams();
-
-  console.log(props);
-
   const metaMaskAddress = useSelector((state) => state.wallet);
-  const dispatch = useDispatch();
-  const [currentAccount, setCurrentAccount] = useState("");
   const { ethereum } = window;
-  console.log("bitcoin tabs", props?.bitcoinBet);
 
   useEffect(() => {
     if (ethereum) {
