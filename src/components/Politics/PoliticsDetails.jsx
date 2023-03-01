@@ -24,32 +24,6 @@ const PoliticsDetails = () => {
   const id =
     "0x294220fa75e41651782e351551183231fff9deba6bd76820bd93d92f9382481a";
 
-  const bData = [
-    {
-      id: 1,
-      name: "Stays in Bahamas 🏝️ Prison",
-      btn: "Bet",
-      info: "Short information",
-    },
-    {
-      id: 2,
-      name: "Prison 🇺🇸 ⛓️ ",
-      btn: "Bet",
-      info: "Short information",
-    },
-    {
-      id: 3,
-      name: "Suicide 👻 ",
-      btn: "Bet",
-      info: "Short information",
-    },
-    {
-      id: 4,
-      name: "Freedom 😂",
-      btn: "Bet",
-      info: "Short information",
-    },
-  ];
   const [addStyle, setAddStyle] = useState();
 
   return (

@@ -5,6 +5,26 @@ export const RegularFootBallContainer = styled("div")`
   background-repeat: no-repeat;
   background-size: contain;
   height: 39vh;
+  @media screen and (max-width: 1280px) {
+    height: 30vh;
+  }
+  @media screen and (max-width: 912px) {
+    height: 11vh;
+  }
+  @media screen and (max-width: 820px) {
+    height: 11vh;
+  }
+  @media screen and (max-width: 768px) {
+    height: 20vh;
+  }
+
+  @media screen and (max-width: 540px) {
+    height: 19vh;
+  }
+  @media screen and (max-width: 414px) {
+    height: 12vh;
+  }
+
   @media screen and (max-width: 375px) {
     height: 14vh;
   }

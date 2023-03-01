@@ -801,7 +801,7 @@ export const Info = styled.div`
     background: #0a1a25;
     border-radius: 10px;
     padding: 10px;
-    max-width: 205px;
+    max-width: 135px;
     width: 100%;
     gap: 10px;
     .title {
@@ -828,7 +828,7 @@ export const Info = styled.div`
       border: none;
       font-size: 14px;
       cursor: pointer;
-      padding: 10px 65px;
+      padding: 7px 45px;
     }
     span {
       font-weight: 500;
@@ -875,7 +875,6 @@ export const Info = styled.div`
     .WIN {
       padding: 10px;
       max-width: 150px;
-
       p {
         font-size: 12px;
       }

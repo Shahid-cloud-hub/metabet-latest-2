@@ -77,7 +77,7 @@ const StatsComponent = () => {
           <div className="player-VS">
             <span>VS</span>
             <Times date={item?.event_date} />
-            <span style={{ fontSize: "14px", color: "yellow" }}>
+            <span id="val" style={{ color: "yellow" }}>
               {item?.pool_status}
             </span>
           </div>
