@@ -133,7 +133,21 @@ const router = createBrowserRouter([
       },
       {
         path: "/ufc",
-        element: <UFC group_type="ufc" />,
+        element: <UFC />,
+        children: [
+          {
+            path: "ufc-fight-night",
+            element: <ALLFOOTBALLEVENTS group_type="ufc-fight-night" />,
+          },
+          {
+            path: "ufc-285",
+            element: <ALLFOOTBALLEVENTS group_type="ufc-285" />,
+          },
+          {
+            path: "ufc-286",
+            element: <ALLFOOTBALLEVENTS group_type="ufc-286" />,
+          },
+        ],
       },
       {
         path: "/event/:group/:title",
