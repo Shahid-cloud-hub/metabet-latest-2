@@ -120,13 +120,17 @@ const Accordian = (props) => {
           <>
             <div
               className={
-                item.id === 1 &&
-                (pathname === "/Ethereum" ||
-                  pathname === "/Bitcoin" ||
-                  pathname === "/PoliticsDetails" ||
-                  pathname === "/UFC-Events" ||
-                  pathname === "/Cricket-Event" ||
-                  pathname === "/dxy")
+                item.id === 1 ||
+                item.id === 3 ||
+                item.id === 4 ||
+                item.id === 5 ||
+                (item.id === 7 &&
+                  (pathname === "/Ethereum" ||
+                    pathname === "/Bitcoin" ||
+                    pathname === "/politics-details" ||
+                    pathname === "/UFC-Events" ||
+                    pathname === "/Cricket-Event" ||
+                    pathname === "/dxy"))
                   ? "hide"
                   : `Head Head-${item.id}` && pathname === "/football-stats"
                   ? "Head"
