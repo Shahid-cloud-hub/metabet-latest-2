@@ -206,6 +206,7 @@ export const StatContainer = styled.div`
   padding: 10px 0px;
   background-repeat: no-repeat;
   background-size: contain;
+  gap: 15px;
 
   .portfolio {
     display: flex;
@@ -323,7 +324,7 @@ export const StatContainer = styled.div`
     border-radius: 12px;
     padding: 10px;
     min-height: 230px;
-    max-width: 163px;
+    max-width: 285px;
     gap: 10px;
 
     p {
