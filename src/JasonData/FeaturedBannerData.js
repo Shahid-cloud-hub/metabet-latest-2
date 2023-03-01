@@ -1564,7 +1564,7 @@ export const Politics_banner_data = [
         stats_title3: "Money Laundering",
         stats_title4: "Theft Range $1b - $20b",
         Date: "25 December",
-        title: "Sam Bankman-Fried",
+        title: "Will Sam Bankman Fried (SBF) ? ",
         bet: [
           {
             id: 1,
