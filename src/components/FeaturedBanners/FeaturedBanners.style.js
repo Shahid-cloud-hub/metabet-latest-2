@@ -129,6 +129,26 @@ export const FeaturedBannersContainer = styled("div")`
         right: -130px;
         top: 60px;
       }
+      .button-18 {
+        position: absolute;
+        right: -137px;
+        top: 70px;
+      }
+      .button-19 {
+        position: absolute;
+        right: -140px;
+        top: 60px;
+      }
+      .button-20 {
+        position: absolute;
+        right: -140px;
+        top: 60px;
+      }
+      .button-21 {
+        position: absolute;
+        right: -140px;
+        top: 60px;
+      }
     }
 
     .country_wrapper {
@@ -369,6 +389,22 @@ export const FeaturedBannersContainer = styled("div")`
           top: 76px;
         }
         .button-17 {
+          right: -159px;
+          top: 86px;
+        }
+        .button-18 {
+          right: -159px;
+          top: 86px;
+        }
+        .button-19 {
+          right: -159px;
+          top: 86px;
+        }
+        .button-20 {
+          right: -159px;
+          top: 86px;
+        }
+        .button-21 {
           right: -159px;
           top: 86px;
         }

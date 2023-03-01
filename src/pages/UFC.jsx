@@ -11,6 +11,8 @@ const UFC = ({ group_type }) => {
   const location = useLocation();
   const { pathname } = location;
 
+  console.log(pathname);
+
   const getEvent = async () => {
     await fetchData({
       method: "GET",
@@ -23,9 +25,10 @@ const UFC = ({ group_type }) => {
     window.scrollTo(0, 0);
   }, []);
 
+  const event = response?.map((item) => item?.event?.title);
   const highlightsData = response?.map((item) => item?.event?.highlights[0]);
 
-  console.log("res", response);
+  console.log("res", event);
   return (
     <FootballLeaguesContainer>
       <div className="football-loading-wrapper">
@@ -43,24 +46,34 @@ const UFC = ({ group_type }) => {
             ) : (
               highlightsData?.map((item, index) => (
                 <>
+                  {console.log(item)}
                   <div className="card" key={index}>
                     <div className="card__header">
                       <img src={item?.data?.background_img} alt="" />
                     </div>
-                    <div className="card__body">
+                    <div
+                      className="card__body"
+                      style={{
+                        transform: "translate(53px, 48px)",
+                        gap: "61px",
+                      }}
+                    >
                       <div className="card_item">
                         <div className="img_item">
-                          <img src={item?.data?.flag_Img_1} alt="" />
+                          <img src={item?.data?.player_Img_1} alt="" />
                         </div>
-                        <span>{item?.data?.flag_name_1}</span>
+                        {/* <span>{item?.data?.player_name_1}</span> */}
                       </div>
                       <div className="bet-btn-wrapper">
                         <span>VS</span>
                         <div
                           onClick={() =>
-                            navigate(`${pathname}/stats/${item?._id}`, {
-                              state: item?._id,
-                            })
+                            navigate(
+                              `${pathname}/${event}/stats/${item?._id}`,
+                              {
+                                state: item?._id,
+                              }
+                            )
                           }
                         >
                           <img src={BetBTN} alt="Bet Now" />
@@ -69,11 +82,11 @@ const UFC = ({ group_type }) => {
                       <div className="card_item">
                         <div className="img_item">
                           <img
-                            src={item?.data?.flag_Img_2}
-                            alt={item?.data?.flag_name_2}
+                            src={item?.data?.player_Img_2}
+                            alt={item?.data?.player_name_2}
                           />
                         </div>
-                        <span>{item?.data?.flag_name_2}</span>
+                        {/* <span>{item?.data?.player_name_2}</span> */}
                       </div>
                     </div>
                   </div>

@@ -98,6 +98,10 @@ import tbanner14 from "../assets/images/Politics/tbanner14.webp";
 import tbanner15 from "../assets/images/Politics/tbanner15.webp";
 import tbanner16 from "../assets/images/Politics/tbanner16.webp";
 import tbanner17 from "../assets/images/Politics/tbanner17.webp";
+import tbanner18 from "../assets/images/Politics/tbanner18.webp";
+import tbanner19 from "../assets/images/Politics/tbanner19.webp";
+import tbanner20 from "../assets/images/Politics/tbanner20.webp";
+import tbanner21 from "../assets/images/Politics/tbanner21.webp";
 import btnIcon from "../assets/images/Politics/btnIcon.webp";
 
 // Politics Inner Data //
@@ -118,6 +122,10 @@ import Poli_inner_img_15 from "../assets/images/Politics/inner_img_11.webp";
 import Poli_inner_img_16 from "../assets/images/Politics/inner_img_18.webp";
 import Poli_inner_img_17 from "../assets/images/Politics/inner_img_15.webp";
 import Poli_inner_img_18 from "../assets/images/Politics/inner_img_17.webp";
+import Poli_inner_img_19 from "../assets/images/Politics/inner_img_19.webp";
+import Poli_inner_img_20 from "../assets/images/Politics/inner_img_20.webp";
+import Poli_inner_img_21 from "../assets/images/Politics/inner_img_21.webp";
+import Poli_inner_img_22 from "../assets/images/Politics/inner_img_22.webp";
 import twitter from "../assets/images/Politics/twitter.webp";
 import binance from "../assets/images/Politics/binance.webp";
 import dodge from "../assets/images/Politics/dodge.webp";
@@ -1335,14 +1343,12 @@ export const bData = [
     id: 0,
     name: "WIN",
     btn: "Event Ended",
-    info: "Short information",
     btnColor: "#7b7b7b",
   },
   {
     id: 1,
     name: "WIN",
     btn: "Event Ended",
-    info: "Short information",
     btnColor: "#7b7b7b",
   },
 ];
@@ -1352,21 +1358,18 @@ export const bData_1 = [
     id: 0,
     name: "WIN",
     btn: "Event Ended",
-    info: "Short information",
     btnColor: "#7b7b7b",
   },
   {
     id: 2,
     name: "DRAW",
     btn: "Event Ended",
-    info: "Short information",
     btnColor: "#000000",
   },
   {
     id: 1,
     name: "WIN",
     btn: "Event Ended",
-    info: "Short information",
     btnColor: "#7b7b7b",
   },
 ];
@@ -1407,13 +1410,11 @@ export const Politics_banner_data = [
             id: 1,
             name: "YES",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
             name: "NO",
             btn: "Bet",
-            info: "Short information",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=_pqG1OToHlw",
@@ -1443,15 +1444,23 @@ export const Politics_banner_data = [
         bet: [
           {
             id: 1,
-            name: "YES",
+            name: "25",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
-            name: "NO",
+            name: "50",
             btn: "Bet",
-            info: "Short information",
+          },
+          {
+            id: 3,
+            name: "75",
+            btn: "Bet",
+          },
+          {
+            id: 4,
+            name: "100",
+            btn: "Bet",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=2L075vZNSdw",
@@ -1481,13 +1490,11 @@ export const Politics_banner_data = [
             id: 1,
             name: "YES",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
             name: "NO",
             btn: "Bet",
-            info: "Short information",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=q7hkqTEDD_g",
@@ -1515,15 +1522,18 @@ export const Politics_banner_data = [
         bet: [
           {
             id: 1,
-            name: "YES",
+            name: "More than $104",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
-            name: "NO",
+            name: "Between $104-$102",
             btn: "Bet",
-            info: "Short information",
+          },
+          {
+            id: 3,
+            name: "Less than $102",
+            btn: "Bet",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=NIIkf8OeWjo",
@@ -1557,25 +1567,21 @@ export const Politics_banner_data = [
             id: 1,
             name: "Stays in Bahamas 🏝️ Prison",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
             name: "Prison 🇺🇸 ⛓️ ",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 3,
             name: "Suicide 👻 ",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 4,
             name: "Freedom 😂",
             btn: "Bet",
-            info: "Short information",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=WXJJ9m1t2Io",
@@ -1607,21 +1613,18 @@ export const Politics_banner_data = [
             icon: binance,
             name: "BINANCE",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
             icon: dodge,
             name: "DODGE",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 3,
             icon: twitter,
             name: "ELON'S TWITTER TOKEN",
             btn: "Bet",
-            info: "Short information",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=pnxVSFk_jZc",
@@ -1651,13 +1654,11 @@ export const Politics_banner_data = [
             id: 1,
             name: "YES",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
             name: "NO",
             btn: "Bet",
-            info: "Short information",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=Vyd8cy2cC4U",
@@ -1687,13 +1688,11 @@ export const Politics_banner_data = [
             id: 1,
             name: "YES",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
             name: "NO",
             btn: "Bet",
-            info: "Short information",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=rZl255ra5cA",
@@ -1723,13 +1722,11 @@ export const Politics_banner_data = [
             id: 1,
             name: "YES",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
             name: "NO",
             btn: "Bet",
-            info: "Short information",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=1VlEzXt-4No",
@@ -1759,7 +1756,6 @@ export const Politics_banner_data = [
             id: 1,
             name: "Khloe",
             btn: "Bet",
-            info: "Short information",
             Pool_size: "Pool Size",
             bet_number: "Number of Bets",
             odds: "Odds",
@@ -1768,7 +1764,6 @@ export const Politics_banner_data = [
             id: 2,
             name: "Kendall",
             btn: "Bet",
-            info: "Short information",
             Pool_size: "Pool Size",
             bet_number: "Number of Bets",
             odds: "Odds",
@@ -1777,7 +1772,6 @@ export const Politics_banner_data = [
             id: 3,
             name: "Kim",
             btn: "Bet",
-            info: "Short information",
             Pool_size: "Pool Size",
             bet_number: "Number of Bets",
             odds: "Odds",
@@ -1786,7 +1780,6 @@ export const Politics_banner_data = [
             id: 4,
             name: "Kylie",
             btn: "Bet",
-            info: "Short information",
             Pool_size: "Pool Size",
             bet_number: "Number of Bets",
             odds: "Odds",
@@ -1795,7 +1788,6 @@ export const Politics_banner_data = [
             id: 5,
             name: "Kourtney",
             btn: "Bet",
-            info: "Short information",
             Pool_size: "Pool Size",
             bet_number: "Number of Bets",
             odds: "Odds",
@@ -1804,7 +1796,6 @@ export const Politics_banner_data = [
             id: 6,
             name: "Kris",
             btn: "Bet",
-            info: "Short information",
             Pool_size: "Pool Size",
             bet_number: "Number of Bets",
             odds: "Odds",
@@ -1847,13 +1838,11 @@ export const Politics_banner_data = [
             id: 1,
             name: "YES",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
             name: "NO",
             btn: "Bet",
-            info: "Short information",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=Zq7hJ3GH0E8",
@@ -1883,13 +1872,11 @@ export const Politics_banner_data = [
             id: 1,
             name: "YES",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
             name: "NO",
             btn: "Bet",
-            info: "Short information",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=Zq7hJ3GH0E8",
@@ -1921,13 +1908,11 @@ export const Politics_banner_data = [
             id: 1,
             name: "YES",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
             name: "NO",
             btn: "Bet",
-            info: "Short information",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=Zq7hJ3GH0E8",
@@ -1949,7 +1934,8 @@ export const Politics_banner_data = [
       {
         id: 14,
         background_img: Poli_inner_img_15,
-        stats_title1: " ",
+        stats_title1:
+          "When 2022 began, you probably didn’t think there would be a ban on travel to China or the rest of the world. A nationwide travel ban from China took effect on January 31, 2020, with a few confirmed Covid-19 cases in the United States.",
         title:
           "Will United States Ban flights from China By the end of February 2023",
         Date: "01 March 2023",
@@ -1958,13 +1944,11 @@ export const Politics_banner_data = [
             id: 1,
             name: "YES",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
             name: "NO",
             btn: "Bet",
-            info: "Short information",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=2XmpZ4hiZGA",
@@ -1987,7 +1971,7 @@ export const Politics_banner_data = [
         id: 15,
         background_img: Poli_inner_img_16,
         stats_title1:
-          "Elon Musk Industry: Space, Electronic Cars, Twitter. 2022 Net Worth $190b",
+          "Elon Musk  Industry: Space, Electronic Cars, Twitter. 2022 Net Worth $190b",
         stats_title2:
           "Bill Gates Industry: Microsoft, Buying Farmland, Vaccines. 2022 Net Worth $107b ",
         stats_title3:
@@ -2002,15 +1986,33 @@ export const Politics_banner_data = [
         bet: [
           {
             id: 1,
-            name: "YES",
+            name: "Elon Musk",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
-            name: "NO",
+            name: "Bill Gate",
             btn: "Bet",
-            info: "Short information",
+          },
+          {
+            id: 3,
+            name: "Gautam Adani",
+            btn: "Bet",
+          },
+          {
+            id: 4,
+            name: "Jeff Bezos",
+            btn: "Bet",
+          },
+          {
+            id: 5,
+            name: "Bernard Arnault",
+            btn: "Bet",
+          },
+          {
+            id: 6,
+            name: "None of these",
+            btn: "Bet",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=QnpbCVQ4VYw",
@@ -2040,13 +2042,11 @@ export const Politics_banner_data = [
             id: 1,
             name: "YES",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
             name: "NO",
             btn: "Bet",
-            info: "Short information",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=KyXCUvVeH8A",
@@ -2078,13 +2078,149 @@ export const Politics_banner_data = [
             id: 1,
             name: "YES",
             btn: "Bet",
-            info: "Short information",
           },
           {
             id: 2,
             name: "NO",
             btn: "Bet",
-            info: "Short information",
+          },
+        ],
+        review_video: "https://www.youtube.com/watch?v=YOfBjaKFUuI",
+      },
+    ],
+  },
+  {
+    id: 18,
+    background_img: tbanner18,
+    route_path: "/politics-details",
+    btn_name: "Live",
+    btn_img: btnIcon,
+    event_status: false,
+    data_name: "Politics",
+    Truth_data: "Truth2earn",
+    verdict_title: "Will in 2023? Volodymyr Zelensky   be assassinated...",
+    innerData: [
+      {
+        id: 18,
+        background_img: Poli_inner_img_19,
+        stats_title1:
+          "According to Ukrainian government officials and news sources, President of Ukraine Volodymyr Zelenskyy has survived a number of assassination and kidnapping attempts by Russian or pro-Russian agents....",
+        title: "Will in 2023? Volodymyr Zelensky   be assassinated...",
+        Date: "01 March 2023",
+        bet: [
+          {
+            id: 1,
+            name: "YES",
+            btn: "Bet",
+          },
+          {
+            id: 2,
+            name: "NO",
+            btn: "Bet",
+          },
+        ],
+        review_video: "https://www.youtube.com/watch?v=YOfBjaKFUuI",
+      },
+    ],
+  },
+  {
+    id: 19,
+    background_img: tbanner19,
+    route_path: "/politics-details",
+    btn_name: "Live",
+    btn_img: btnIcon,
+    event_status: false,
+    data_name: "Politics",
+    Truth_data: "Truth2earn",
+    verdict_title: "Who will win ?",
+    innerData: [
+      {
+        id: 19,
+        background_img: Poli_inner_img_20,
+        stats_title1:
+          "The controversial internet superstar Jake Paul has a professional boxing record of 6-0, with four wins coming by way of knockout and two wins coming by way of decision.  Paul opened his professional boxing career with a TKO win over YouTuber AnEsonGib in January 2020, followed by a knockout win over former professional Basketball player Nate Robinson in November of that year.   Tommy Fury the brother of World Heavyweight champion Tyson Fury has a professional boxing record of 8-0, with four wins coming by way of knockout and four wins coming by way of decision.",
+        title: "Who will win ?",
+        Date: "01 March 2023",
+        bet: [
+          {
+            id: 1,
+            name: "YES",
+            btn: "Bet",
+          },
+          {
+            id: 2,
+            name: "NO",
+            btn: "Bet",
+          },
+        ],
+        review_video: "https://www.youtube.com/watch?v=YOfBjaKFUuI",
+      },
+    ],
+  },
+  {
+    id: 20,
+    background_img: tbanner20,
+    route_path: "/politics-details",
+    btn_name: "Live",
+    btn_img: btnIcon,
+    event_status: false,
+    data_name: "Politics",
+    Truth_data: "Truth2earn",
+    verdict_title: "Will it Rain at Wimbledon 2023?",
+    innerData: [
+      {
+        id: 20,
+        background_img: Poli_inner_img_21,
+        stats_title1:
+          "Only 8 previous Championships have recorded as being without rain interuptions since 1922, 1931, 1976, 1977, 1993, 1995, 2009, 2010, 2019.",
+        title: "Will it Rain at Wimbledon 2023?",
+        Date: "01 March 2023",
+        bet: [
+          {
+            id: 1,
+            name: "YES",
+            btn: "Bet",
+          },
+          {
+            id: 2,
+            name: "NO",
+            btn: "Bet",
+          },
+        ],
+        review_video: "https://www.youtube.com/watch?v=YOfBjaKFUuI",
+      },
+    ],
+  },
+  {
+    id: 21,
+    background_img: tbanner21,
+    route_path: "/politics-details",
+    btn_name: "Live",
+    btn_img: btnIcon,
+    event_status: false,
+    data_name: "Politics",
+    Truth_data: "Truth2earn",
+    verdict_title:
+      "Will the British Crap Fishing record catch weight be beaten in 2023 ?",
+    innerData: [
+      {
+        id: 21,
+        background_img: Poli_inner_img_22,
+        stats_title1:
+          "The official crap record is currently The Parrot at 68lb 1oz, caught by Dean Fletcher in January 2016 from Berkshire’s Wasing Estate.",
+        title:
+          "Will the British Crap Fishing record catch weight be beaten in 2023 ?",
+        Date: "01 March 2023",
+        bet: [
+          {
+            id: 1,
+            name: "YES",
+            btn: "Bet",
+          },
+          {
+            id: 2,
+            name: "NO",
+            btn: "Bet",
           },
         ],
         review_video: "https://www.youtube.com/watch?v=YOfBjaKFUuI",
@@ -2317,21 +2453,18 @@ export const betNowData = [
     id: 0,
     name: "WIN",
     btn: "Live",
-    info: "Short information",
     btnColor: "#7b7b7b",
   },
   {
     id: 2,
     name: "DRAW",
     btn: "Live",
-    info: "Short information",
     btnColor: "#000000",
   },
   {
     id: 1,
     name: "WIN",
     btn: "Live",
-    info: "Short information",
     btnColor: "#7b7b7b",
   },
 ];

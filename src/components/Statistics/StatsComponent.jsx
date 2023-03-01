@@ -10,6 +10,8 @@ import { Info, StatisticsContainer } from "./Stats.syle";
 const StatsComponent = () => {
   let { group, title, id } = useParams();
 
+  console.log(group, title, id);
+
   const { fetchData, response } = useAxios();
   const [addStyle, setAddStyle] = useState();
 
@@ -26,7 +28,7 @@ const StatsComponent = () => {
     window.scrollTo(0, 0);
   }, [group, title, id]);
 
-  console.log("res", item?.prediction_video);
+  console.log("res", item?.smart_contract_id);
 
   return (
     <>
@@ -65,13 +67,13 @@ const StatsComponent = () => {
             )}
             {item?.height_1 && (
               <>
-                <span>Record: {item?.statistic_1}</span>
-                <span>Home Record:{item?.record_1}</span>
-                <span>Away Record:{item?.height_1}</span>
-                <span>{item?.weight_1}</span>
-                <span>Coach:{item?.stance_1}</span>
-                <span>League Position:{item?.reach_1}</span>
-                <span>Ranking:{item?.fifa_club_ranking_1}</span>
+                <span>Record: {item?.record_1}</span>
+                <span>Height: {item?.height_1}</span>
+                <span>Weight: {item?.weight_1}</span>
+                <span>Stance: {item?.stance_1}</span>
+                <span>Reach: {item?.reach_1}</span>
+                <span>Age: {item?.age_1}</span>
+                {/* <span>Ranking:{item?.fifa_club_ranking_1}</span> */}
               </>
             )}
           </div>
@@ -86,7 +88,7 @@ const StatsComponent = () => {
             <span>Statistics:</span>
             {item?.coach_2 && (
               <>
-                <span>Record: {item?.record_2}</span>
+                {item?.record_2 && <span>Record: {item?.record_2}</span>}
                 <span>Home Record: {item?.home_record_2}</span>
                 <span>Away Record: {item?.away_record_2}</span>
                 <span>
@@ -101,13 +103,12 @@ const StatsComponent = () => {
             )}
             {item?.height_2 && (
               <>
-                <span>{item?.statistic_2}</span>
-                <span>{item?.record_2}</span>
-                <span>{item?.height_2}</span>
-                <span>{item?.weight_2}</span>
-                <span>{item?.stance_2}</span>
-                <span>{item?.reach_2}</span>
-                <span>{item?.age_2}</span>
+                <span>Record: {item?.record_2}</span>
+                <span>Height: {item?.height_2}</span>
+                <span>Weight: {item?.weight_2}</span>
+                <span>Stance: {item?.stance_2}</span>
+                <span>Reach: {item?.reach_2}</span>
+                <span>Age: {item?.age_2}</span>
               </>
             )}
           </div>
@@ -148,8 +149,8 @@ const StatsComponent = () => {
         getId={item?.smart_contract_id}
         winId={addStyle}
         // getName={getName}
-        getPrediction={item?.prediction_video}
-        getReview={item?.review_video}
+        getPrediction={item?.prediction_video || item?.u_prediction_video}
+        getReview={item?.review_video || item?.u_preview_video}
         // eventStatus={eventStatus}
       />
     </>

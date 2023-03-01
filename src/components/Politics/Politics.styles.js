@@ -841,7 +841,7 @@ export const Info = styled.div`
     background: #0a1a25;
     border-radius: 10px;
     padding: 10px;
-    max-width: 135px;
+    max-width: 150px;
     width: 100%;
     gap: 10px;
 
