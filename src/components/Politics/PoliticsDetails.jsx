@@ -24,32 +24,6 @@ const PoliticsDetails = () => {
   const id =
     "0x294220fa75e41651782e351551183231fff9deba6bd76820bd93d92f9382481a";
 
-  const bData = [
-    {
-      id: 1,
-      name: "Stays in Bahamas 🏝️ Prison",
-      btn: "Bet",
-      info: "Short information",
-    },
-    {
-      id: 2,
-      name: "Prison 🇺🇸 ⛓️ ",
-      btn: "Bet",
-      info: "Short information",
-    },
-    {
-      id: 3,
-      name: "Suicide 👻 ",
-      btn: "Bet",
-      info: "Short information",
-    },
-    {
-      id: 4,
-      name: "Freedom 😂",
-      btn: "Bet",
-      info: "Short information",
-    },
-  ];
   const [addStyle, setAddStyle] = useState();
 
   return (
@@ -112,7 +86,7 @@ const PoliticsDetails = () => {
         </StatContainer>
         <Info>
           {state[0]?.bet.map((item) => (
-            <>
+            <div className="win_wrapper">
               {console.log(item.id)}
               <div className="WIN" key={item.id}>
                 <div className="title">
@@ -130,7 +104,23 @@ const PoliticsDetails = () => {
                   {item.btn}
                 </button>
               </div>
-            </>
+              {state[0]?.id === 10 && (
+                <div className="betStat">
+                  <div>
+                    <span>{item.Pool_size}</span>
+                    <span id="clr">$873782</span>
+                  </div>{" "}
+                  <div>
+                    <span>{item.bet_number}</span>
+                    <span id="clr">36262</span>
+                  </div>{" "}
+                  <div>
+                    <span>{item.odds}</span>
+                    <span id="clr">1.2</span>
+                  </div>{" "}
+                </div>
+              )}
+            </div>
           ))}
         </Info>
         <Tabs
