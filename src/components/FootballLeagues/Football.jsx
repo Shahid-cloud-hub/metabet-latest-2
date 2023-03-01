@@ -24,6 +24,8 @@ const AllFootballEvents = ({ group_type }) => {
       ? "Serie A"
       : "" || group_type === "bundesliga"
       ? "Bundesliga"
+      : "" || group_type === "ufc-fight-night"
+      ? "UFC Fight Night"
       : "";
 
   //   const newTitle = title.replace(/[^a-zA-Z0-9-]/g, "");
@@ -45,7 +47,7 @@ const AllFootballEvents = ({ group_type }) => {
 
   const highlightsData = response?.map((item) => item?.event?.highlights[0]);
 
-  // console.log("res", response);
+  console.log("res", response);
   return (
     <FootballLeaguesContainer>
       <div className="football-loading-wrapper">
@@ -67,35 +69,75 @@ const AllFootballEvents = ({ group_type }) => {
                     <div className="card__header">
                       <img src={item?.data?.background_img} alt="" />
                     </div>
-                    <div className="card__body">
-                      <div className="card_item">
-                        <div className="img_item">
-                          <img src={item?.data?.flag_Img_1} alt="" />
+                    {item?.data?.flag_Img_1 && (
+                      <div className="card__body">
+                        <div className="card_item">
+                          <div className="img_item">
+                            <img src={item?.data?.flag_Img_1} alt="" />
+                          </div>
+                          <span>{item?.data?.flag_name_1}</span>
                         </div>
-                        <span>{item?.data?.flag_name_1}</span>
-                      </div>
-                      <div className="bet-btn-wrapper">
-                        <span>VS</span>
-                        <div
-                          onClick={() =>
-                            navigate(`${pathname}/stats/${item?._id}`, {
-                              state: item?._id,
-                            })
-                          }
-                        >
-                          <img src={BetBTN} alt="Bet Now" />
+                        <div className="bet-btn-wrapper">
+                          <span>VS</span>
+                          <div
+                            onClick={() =>
+                              navigate(`${pathname}/stats/${item?._id}`, {
+                                state: item?._id,
+                              })
+                            }
+                          >
+                            <img src={BetBTN} alt="Bet Now" />
+                          </div>
+                        </div>
+                        <div className="card_item">
+                          <div className="img_item">
+                            <img
+                              src={item?.data?.flag_Img_2}
+                              alt={item?.data?.flag_name_2}
+                            />
+                          </div>
+                          <span>{item?.data?.flag_name_2}</span>
                         </div>
                       </div>
-                      <div className="card_item">
-                        <div className="img_item">
-                          <img
-                            src={item?.data?.flag_Img_2}
-                            alt={item?.data?.flag_name_2}
-                          />
+                    )}
+                    {item?.data.player_Img_1 && (
+                      <div
+                        className="card__body"
+                        style={{
+                          transform: "translate(55px, 56px)",
+                          gap: "61px",
+                        }}
+                      >
+                        <div className="card_item">
+                          <div className="img_item">
+                            <img
+                              src={item?.data?.player_Img_1}
+                              alt={item?.data?.player_name_2}
+                            />
+                          </div>
                         </div>
-                        <span>{item?.data?.flag_name_2}</span>
+                        <div className="bet-btn-wrapper">
+                          <span>VS</span>
+                          <div
+                            onClick={() =>
+                              navigate(`${pathname}/stats/${item?._id}`, {
+                                state: item?._id,
+                              })
+                            }
+                          >
+                            <img src={BetBTN} alt="Bet Now" />
+                          </div>
+                        </div>
+                        <div className="card_item">
+                          <div className="img_item">
+                            <img
+                              src={item?.data?.player_Img_2}
+                              alt={item?.data?.player_name_1}
+                            />
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </>
               ))
