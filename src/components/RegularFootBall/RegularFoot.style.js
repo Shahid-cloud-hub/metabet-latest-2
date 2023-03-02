@@ -4,7 +4,7 @@ export const RegularFootBallContainer = styled("div")`
   background-image: url(${(props) => props.background});
   background-repeat: no-repeat;
   background-size: contain;
-  height: 39vh;
+  height: 40vh;
   @media screen and (max-width: 1280px) {
     height: 30vh;
   }

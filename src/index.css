@@ -25,7 +25,8 @@ body {
   width: 100%;
   max-width: 900px;
   margin-left: 50px;
-  bottom: 15px;
+  /* bottom: 15px; */
+  bottom: 0px;
 }
 
 .slide_img>img {

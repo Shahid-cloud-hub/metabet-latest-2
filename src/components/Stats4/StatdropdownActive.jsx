@@ -18,6 +18,7 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
   const dispatch = useDispatch();
   const [enterAmount, setEnterAmount] = useState(0);
   const [teamT, setTeamT] = useState(0);
+  const [allBetData, setAllBetData] = useState();
   const [Data_size, setDataSize] = useState(null);
   const [Data_total, setDataTotal] = useState(null);
 
@@ -25,6 +26,8 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
   const total = Number(enterAmount) + Number(Data_total);
 
   if (betWinId !== "") {
+    // then is used to check if id is exist then the next function will run
+    // data is an anonymous function
     Utils.EventOdd(id, betWinId, token).then(function (data) {
       setTeamT(Number(data / 1e18));
     });

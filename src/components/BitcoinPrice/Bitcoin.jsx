@@ -155,7 +155,6 @@ function BitcoinPrice() {
           bitAndEthBet={false}
         />
       </Container>
-      {isDesktop && <AirdropFooterBanner />}
     </>
   );
 }
