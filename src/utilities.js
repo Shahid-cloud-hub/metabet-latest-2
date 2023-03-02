@@ -82,6 +82,10 @@ const PoolSize = async (id, token) => {
   return Number(Txn.toString());
 };
 
+// async is a promise here which will check into server if id exist or not.
+
+// await until Id's provided to us by server
+
 const AllBets = async (id) => {
   const Txn = await connectedContract.getBets(id);
   return Txn;
