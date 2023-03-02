@@ -164,7 +164,7 @@ function Ethereum() {
           bitAndEthBet={false}
         />
       </Container>
-      {isDesktop && <AirdropFooterBanner />}
+      {/* {isDesktop && <AirdropFooterBanner />} */}
     </>
   );
 }

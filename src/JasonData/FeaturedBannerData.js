@@ -2147,7 +2147,7 @@ export const Politics_banner_data = [
     event_status: false,
     data_name: "Politics",
     Truth_data: "Truth2earn",
-    verdict_title: "Who will win ?",
+    verdict_title: "Who will win ? Tommy Fury or Jake Paul",
     innerData: [
       {
         id: 19,
