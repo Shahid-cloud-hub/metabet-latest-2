@@ -2529,3 +2529,16 @@ export const TruscData = [
     placeholder: "0",
   },
 ];
+
+export const Andrew = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];

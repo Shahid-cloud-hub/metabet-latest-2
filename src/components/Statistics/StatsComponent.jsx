@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useAxios } from "../../hooks/useAxios";
 import { betNowData } from "../../JasonData/FeaturedBannerData";
+import Loading from "../Loading/Loading";
 import Tabs from "../TabFifa/Tab";
 import Times from "../Time/Times";
 import { Info, StatisticsContainer } from "./Stats.syle";
@@ -10,9 +11,9 @@ import { Info, StatisticsContainer } from "./Stats.syle";
 const StatsComponent = () => {
   let { group, title, id } = useParams();
 
-  console.log(group, title, id);
+  console.log(group, title, id, "UFC Componet");
 
-  const { fetchData, response } = useAxios();
+  const { fetchData, response, loading } = useAxios();
   const [addStyle, setAddStyle] = useState();
 
   const getBanners = async () => {
@@ -50,66 +51,82 @@ const StatsComponent = () => {
           </div>
           <div className="statistic_rectangle">
             <span>Statistics:</span>
-            {item?.coach_1 && (
-              <>
-                <span>Record: {item?.record_1}</span>
-                <span>Home Record: {item?.home_record_1}</span>
-                <span>Away Record: {item?.away_record_1}</span>
-                <span>
-                  GF: {item?.gf_ga_gd_1.slice(0, 2)} GA:
-                  {item?.gf_ga_gd_1.slice(3, 5)} GD:
-                  {item?.gf_ga_gd_1.slice(6, 10)}
-                </span>
-                <span>Coach: {item?.coach_1}</span>
-                <span>LP: {item?.league_position_1}</span>
-                <span>Ranking: {item?.fifa_club_ranking_1}</span>
-              </>
+            {loading ? (
+              <Loading />
+            ) : (
+              item?.coach_1 && (
+                <>
+                  <span>Record: {item?.record_1}</span>
+                  <span>Home Record: {item?.home_record_1}</span>
+                  <span>Away Record: {item?.away_record_1}</span>
+                  <span>
+                    GF: {item?.gf_ga_gd_1.slice(0, 2)} GA:
+                    {item?.gf_ga_gd_1.slice(3, 5)} GD:
+                    {item?.gf_ga_gd_1.slice(6, 10)}
+                  </span>
+                  <span>Coach: {item?.coach_1}</span>
+                  <span>LP: {item?.league_position_1}</span>
+                  <span>Ranking: {item?.fifa_club_ranking_1}</span>
+                </>
+              )
             )}
-            {item?.height_1 && (
-              <>
-                <span>Record: {item?.record_1}</span>
-                <span>Height: {item?.height_1}</span>
-                <span>Weight: {item?.weight_1}</span>
-                <span>Stance: {item?.stance_1}</span>
-                <span>Reach: {item?.reach_1}</span>
-                <span>Age: {item?.age_1}</span>
-                {/* <span>Ranking:{item?.fifa_club_ranking_1}</span> */}
-              </>
+            {loading ? (
+              <Loading />
+            ) : (
+              item?.height_1 && (
+                <>
+                  <span>Record: {item?.record_1}</span>
+                  <span>Height: {item?.height_1}</span>
+                  <span>Weight: {item?.weight_1}</span>
+                  <span>Stance: {item?.stance_1}</span>
+                  <span>Reach: {item?.reach_1}</span>
+                  <span>Age: {item?.age_1}</span>
+                  {/* <span>Ranking:{item?.fifa_club_ranking_1}</span> */}
+                </>
+              )
             )}
           </div>
           <div className="player-VS">
             <span>VS</span>
-            <Times date={item?.event_date} />
+            <Times date={loading ? <Loading /> : item?.event_date} />
             <span id="val" style={{ color: "yellow" }}>
-              {item?.pool_status}
+              {loading ? <Loading /> : item?.pool_status}
             </span>
           </div>
           <div className="statistic_rectangle">
             <span>Statistics:</span>
-            {item?.coach_2 && (
-              <>
-                {item?.record_2 && <span>Record: {item?.record_2}</span>}
-                <span>Home Record: {item?.home_record_2}</span>
-                <span>Away Record: {item?.away_record_2}</span>
-                <span>
-                  GF: {item?.gf_ga_gd_2.slice(0, 2)} GA:
-                  {item?.gf_ga_gd_2.slice(3, 5)} GD:
-                  {item?.gf_ga_gd_2.slice(6, 10)}
-                </span>
-                <span>Coach: {item?.coach_2}</span>
-                <span>LP: {item?.league_position_2}</span>
-                <span>Ranking: {item?.fifa_club_ranking_2}</span>
-              </>
+            {loading ? (
+              <Loading />
+            ) : (
+              item?.coach_2 && (
+                <>
+                  {item?.record_2 && <span>Record: {item?.record_2}</span>}
+                  <span>Home Record: {item?.home_record_2}</span>
+                  <span>Away Record: {item?.away_record_2}</span>
+                  <span>
+                    GF: {item?.gf_ga_gd_2.slice(0, 2)} GA:
+                    {item?.gf_ga_gd_2.slice(3, 5)} GD:
+                    {item?.gf_ga_gd_2.slice(6, 10)}
+                  </span>
+                  <span>Coach: {item?.coach_2}</span>
+                  <span>LP: {item?.league_position_2}</span>
+                  <span>Ranking: {item?.fifa_club_ranking_2}</span>
+                </>
+              )
             )}
-            {item?.height_2 && (
-              <>
-                <span>Record: {item?.record_2}</span>
-                <span>Height: {item?.height_2}</span>
-                <span>Weight: {item?.weight_2}</span>
-                <span>Stance: {item?.stance_2}</span>
-                <span>Reach: {item?.reach_2}</span>
-                <span>Age: {item?.age_2}</span>
-              </>
+            {loading ? (
+              <Loading />
+            ) : (
+              item?.height_2 && (
+                <>
+                  <span>Record: {item?.record_2}</span>
+                  <span>Height: {item?.height_2}</span>
+                  <span>Weight: {item?.weight_2}</span>
+                  <span>Stance: {item?.stance_2}</span>
+                  <span>Reach: {item?.reach_2}</span>
+                  <span>Age: {item?.age_2}</span>
+                </>
+              )
             )}
           </div>
           <div className="flag_wrapper">

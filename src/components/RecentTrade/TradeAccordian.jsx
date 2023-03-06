@@ -17,6 +17,9 @@ const TradeAccordian = (props) => {
       setAllBets(Array(data));
     });
   }, []);
+
+  console.log("all bet", bets);
+
   const RecentTradeData = [
     {
       id: 1,

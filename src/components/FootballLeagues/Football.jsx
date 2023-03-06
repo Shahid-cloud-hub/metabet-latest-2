@@ -25,7 +25,11 @@ const AllFootballEvents = ({ group_type }) => {
       : "" || group_type === "bundesliga"
       ? "Bundesliga"
       : "" || group_type === "ufc-fight-night"
-      ? "UFC Fight Night"
+      ? "UFC Fight Night Events"
+      : "" || group_type === "ufc-285"
+      ? "UFC 285 Events"
+      : "" || group_type === "ufc-286"
+      ? "UFC 286 Events"
       : "";
 
   //   const newTitle = title.replace(/[^a-zA-Z0-9-]/g, "");

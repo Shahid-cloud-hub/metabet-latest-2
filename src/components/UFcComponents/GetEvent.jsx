@@ -4,12 +4,12 @@ import { useAxios } from "../../hooks/useAxios";
 import EventInfo from "../FeaturedEvents/EventInfo";
 import HightLightsComponent from "../HighLights/HightLightsComponent";
 
-const Test = () => {
+const GetEvent = () => {
   let { group, title } = useParams();
 
   console.log(title, group, "title");
 
-  const updatedTitle = title.replace(/-/g, " ");
+  // const updatedTitle = title.replace(/-/g, " ");
 
   const { fetchData, response } = useAxios();
 
@@ -34,4 +34,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default GetEvent;
