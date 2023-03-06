@@ -36,7 +36,7 @@ import SPONSORSHIP from "./components/Sponsorship/Sponsorship";
 import COOKIES from "./components/Cookies/Cookies";
 import PRIVACY from "./components/Privacy/Privacy";
 import TERMS from "./components/Terms/Terms";
-import Test from "./components/UFcComponents/Test";
+import GETEVENT from "./components/UFcComponents/GetEvent";
 import STATSCOMPONENT from "./components/Statistics/StatsComponent";
 import TRUTH2EARN from "./components/Truth2earn/Truth2earn";
 import TRUSCTOKEN from "./components/TRUSCToken/TRUSCToken";
@@ -46,6 +46,7 @@ import REGFOOTBALL from "./pages/RegFootball";
 
 // Leagues Section //
 import ALLFOOTBALLEVENTS from "./components/FootballLeagues/Football";
+import GetStatistics from "./components/Statistics/GetStatistics";
 
 let persistor = persistStore(store);
 const router = createBrowserRouter([
@@ -151,11 +152,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/event/:group/:title",
-        element: <Test />,
+        element: <GETEVENT />,
       },
       {
         path: "/stats/:group/:title/:id",
         element: <STATSCOMPONENT />,
+      },
+      {
+        path: ":group/:title/statistics/:id",
+        element: <GetStatistics />,
       },
       {
         path: "/politics",

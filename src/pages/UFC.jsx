@@ -6,7 +6,6 @@ import { UFCMainBanners } from "../JasonData/UFC";
 const UFC = () => {
   const location = useLocation();
   const { pathname } = location;
-  console.log("first", pathname);
 
   const p_1 = "/ufc/ufc-fight-night";
   const p_2 = "/ufc/ufc-285";

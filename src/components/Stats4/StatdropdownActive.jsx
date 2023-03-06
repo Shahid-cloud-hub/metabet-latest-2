@@ -21,6 +21,9 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
   const [allBetData, setAllBetData] = useState();
   const [Data_size, setDataSize] = useState(null);
   const [Data_total, setDataTotal] = useState(null);
+  const [load_win, setLoad_Win] = useState(false);
+
+  console.log("Window load", load_win);
 
   // console.log("Bet Amount", betWinId);
   const total = Number(enterAmount) + Number(Data_total);
@@ -32,7 +35,6 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
       setTeamT(Number(data / 1e18));
     });
   }
-
   const details = () => {
     Utils.PoolSize(id, token).then(function (data) {
       setDataSize(data);
@@ -44,13 +46,14 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
 
   useEffect(() => {
     details();
-  }, []);
+  }, [Data_size, Data_total]);
 
   const multiplier = total / (teamT + Number(enterAmount));
   const payout = multiplier * Number(enterAmount);
   console.log("Multiplier", multiplier);
   console.log("Multiplier", isFinite(multiplier));
   console.log("Payout", payout);
+
   const BetNow = async (_id, _token, _amount, userResult) => {
     try {
       const { ethereum } = window;
@@ -91,6 +94,7 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
               userResult
             );
             await Txn.wait();
+            setLoad_Win(true);
             return;
           }
         }
