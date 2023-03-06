@@ -14,11 +14,11 @@ const PoliticsDetails = () => {
   }, []);
 
   const { state } = useLocation();
-  const [preview] = useState(state[0]?.review_video);
-  const [prediction] = useState(state[0]?.prediction_video);
+  const [preview] = useState(state?.review_video);
+  const [prediction] = useState(state?.prediction_video);
   const { isDesktop } = useBreakpoint();
 
-  console.log("first", state[0]);
+  console.log("first", state);
 
   const id =
     "0x294220fa75e41651782e351551183231fff9deba6bd76820bd93d92f9382481a";
@@ -31,7 +31,7 @@ const PoliticsDetails = () => {
         <StatContainer>
           <div className="rectangle">
             <span>Statistic:</span>
-            {state[0]?.map((item) => (
+            {state?.map((item) => (
               <>
                 <span>{item?.stats_title1}</span>
                 <span>{item?.stats_title2}</span>
@@ -44,7 +44,7 @@ const PoliticsDetails = () => {
             <div id="live">
               <span>POOL LIVE</span>
             </div>
-            {state[0]?.title && <span>{state[0]?.title}</span>}
+            {state?.title && <span>{state?.title}</span>}
             <div className="close">
               <div className="outcome">
                 <div className="clock">
@@ -64,14 +64,14 @@ const PoliticsDetails = () => {
                   </div>
                 </div>
                 <span>
-                  {state[0]?.Date}
+                  {state?.Date}
                   <br />
                   00:00 GMT
                 </span>
               </div>
             </div>
           </div>
-          {state[0]?.map((item) => {
+          {state?.map((item) => {
             return (
               <div className="portfolio">
                 <img
@@ -84,7 +84,7 @@ const PoliticsDetails = () => {
           })}
         </StatContainer>
         <Info>
-          {state[0]?.bet.map((item) => (
+          {state[0]?.bet?.map((item) => (
             <div className="win_wrapper">
               {console.log(item?.id)}
               <div className="WIN" key={item?.id}>
@@ -103,7 +103,7 @@ const PoliticsDetails = () => {
                   {item?.btn}
                 </button>
               </div>
-              {state[0]?.id === 10 && (
+              {state?.id === 10 && (
                 <div className="betStat">
                   <div>
                     <span>{item?.Pool_size}</span>
