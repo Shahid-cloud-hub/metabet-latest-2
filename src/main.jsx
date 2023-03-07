@@ -40,6 +40,18 @@ import GETEVENT from "./components/UFcComponents/GetEvent";
 import STATSCOMPONENT from "./components/Statistics/StatsComponent";
 import TRUTH2EARN from "./components/Truth2earn/Truth2earn";
 import TRUSCTOKEN from "./components/TRUSCToken/TRUSCToken";
+import CURRENCIES from "./components/Currencies/Currencies";
+import CRYPTOCURRENCIES from "./components/CryptoCurrencies/CryptoCurrencies";
+import BASKETBALL from "./components/Basketball/Basketball";
+import TENNIS from "./components/Tennis/Tennis";
+import AMERICANFOOTBALL from "./components/AmericanFootball/AmericanFootball";
+import BASEBALL from "./components/Baseball/Baseball";
+import SNOOKER from "./components/Snooker/Snooker";
+import GOLF from "./components/Golf/GOlf";
+import VOLLEYBALL from "./components/Volleyball/Volleyball";
+import BOXING from "./components/Boxing/Boxing";
+import DARTS from "./components/Darts/Darts";
+import HORSERACING from "./components/HorseRacing/HorseRacing";
 
 // Football Events Section //
 import REGFOOTBALL from "./pages/RegFootball";
@@ -205,6 +217,55 @@ const router = createBrowserRouter([
       {
         path: "/terms",
         element: <TERMS />,
+      },
+      {
+        path: "/currencies",
+        element: <CURRENCIES />,
+      },
+      {
+        path: "/crypto-Currencies",
+        element: <CRYPTOCURRENCIES />,
+      },
+      {
+        path: "/basketball",
+        element: <BASKETBALL />,
+      },
+      {
+        path: "/tennis",
+        element: <TENNIS />,
+      },
+      {
+        path: "/american-football",
+        element: <AMERICANFOOTBALL />,
+      },
+      {
+        path: "/baseball",
+        element: <BASEBALL />,
+      },
+      {
+        path: "/snooker",
+        element: <SNOOKER />,
+      },
+      {
+        path: "/golf",
+        element: <GOLF />,
+      },
+      {
+        path: "/volleyball",
+        element: <VOLLEYBALL />,
+      },
+      {
+        path: "/boxing",
+        element: <BOXING />,
+      },
+
+      {
+        path: "/darts",
+        element: <DARTS />,
+      },
+      {
+        path: "/horse-racing",
+        element: <HORSERACING />,
       },
     ],
   },

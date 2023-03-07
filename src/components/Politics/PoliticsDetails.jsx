@@ -14,13 +14,8 @@ const PoliticsDetails = () => {
   }, []);
 
   const { state } = useLocation();
-<<<<<<< HEAD
-  const [preview] = useState(state?.review_video);
-  const [prediction] = useState(state?.prediction_video);
-=======
   // const [preview] = useState(state[0]?.review_video);
   // const [prediction] = useState(state[0]?.prediction_video);
->>>>>>> ff964438854906b8305691212581a541afcca45d
   const { isDesktop } = useBreakpoint();
 
   console.log("first", state);
@@ -49,11 +44,7 @@ const PoliticsDetails = () => {
             <div id="live">
               <span>POOL LIVE</span>
             </div>
-<<<<<<< HEAD
-            {state?.title && <span>{state?.title}</span>}
-=======
             {/* {state[0]?.title && <span>{state[0]?.title}</span>} */}
->>>>>>> ff964438854906b8305691212581a541afcca45d
             <div className="close">
               <div className="outcome">
                 <div className="clock">
@@ -73,22 +64,14 @@ const PoliticsDetails = () => {
                   </div>
                 </div>
                 <span>
-<<<<<<< HEAD
-                  {state?.Date}
-=======
                   {/* {state[0]?.Date} */}
->>>>>>> ff964438854906b8305691212581a541afcca45d
                   <br />
                   00:00 GMT
                 </span>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-          {state?.map((item) => {
-=======
           {/* {state[0]?.map((item) => {
->>>>>>> ff964438854906b8305691212581a541afcca45d
             return (
               <div className="portfolio">
                 <img
@@ -100,13 +83,8 @@ const PoliticsDetails = () => {
             );
           })} */}
         </StatContainer>
-<<<<<<< HEAD
-        <Info>
-          {state[0]?.bet?.map((item) => (
-=======
         {/* <Info>
           {state[0]?.bet.map((item) => (
->>>>>>> ff964438854906b8305691212581a541afcca45d
             <div className="win_wrapper">
               {console.log(item?.id)}
               <div className="WIN" key={item?.id}>

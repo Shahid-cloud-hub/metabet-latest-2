@@ -2529,8 +2529,338 @@ export const TruscData = [
     placeholder: "0",
   },
 ];
-
-export const Andrew = [
+export const andrew = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const Kardashian = [
+  {
+    id: 1,
+    name: "Khloe",
+    btn: "Bet",
+    Pool_size: "Pool Size",
+    bet_number: "Number of Bets",
+    odds: "Odds",
+  },
+  {
+    id: 2,
+    name: "Kendall",
+    btn: "Bet",
+    Pool_size: "Pool Size",
+    bet_number: "Number of Bets",
+    odds: "Odds",
+  },
+  {
+    id: 3,
+    name: "Kim",
+    btn: "Bet",
+    Pool_size: "Pool Size",
+    bet_number: "Number of Bets",
+    odds: "Odds",
+  },
+  {
+    id: 4,
+    name: "Kylie",
+    btn: "Bet",
+    Pool_size: "Pool Size",
+    bet_number: "Number of Bets",
+    odds: "Odds",
+  },
+  {
+    id: 5,
+    name: "Kourtney",
+    btn: "Bet",
+    Pool_size: "Pool Size",
+    bet_number: "Number of Bets",
+    odds: "Odds",
+  },
+  {
+    id: 6,
+    name: "Kris",
+    btn: "Bet",
+    Pool_size: "Pool Size",
+    bet_number: "Number of Bets",
+    odds: "Odds",
+  },
+];
+export const FED = [
+  {
+    id: 1,
+    name: "25",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "50",
+    btn: "Bet",
+  },
+  {
+    id: 3,
+    name: "75",
+    btn: "Bet",
+  },
+  {
+    id: 4,
+    name: "100",
+    btn: "Bet",
+  },
+];
+export const crufts = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const DXY = [
+  {
+    id: 1,
+    name: "More than $104",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "Between $104-$102",
+    btn: "Bet",
+  },
+  {
+    id: 3,
+    name: "Less than $102",
+    btn: "Bet",
+  },
+];
+export const SBF = [
+  {
+    id: 1,
+    name: "Stays in Bahamas 🏝️ Prison",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "Prison 🇺🇸 ⛓️ ",
+    btn: "Bet",
+  },
+  {
+    id: 3,
+    name: "Suicide 👻 ",
+    btn: "Bet",
+  },
+  {
+    id: 4,
+    name: "Freedom 😂",
+    btn: "Bet",
+  },
+];
+export const Cryptocurrency = [
+  {
+    id: 1,
+    icon: binance,
+    name: "BINANCE",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    icon: dodge,
+    name: "DODGE",
+    btn: "Bet",
+  },
+  {
+    id: 3,
+    icon: twitter,
+    name: "ELON'S TWITTER TOKEN",
+    btn: "Bet",
+  },
+];
+export const Grayscale = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const Twitter = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const ethereum = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const Genesis = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const DCG = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const Silvergate = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const China = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const Richest = [
+  {
+    id: 1,
+    name: "Elon Musk",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "Bill Gate",
+    btn: "Bet",
+  },
+  {
+    id: 3,
+    name: "Gautam Adani",
+    btn: "Bet",
+  },
+  {
+    id: 4,
+    name: "Jeff Bezos",
+    btn: "Bet",
+  },
+  {
+    id: 5,
+    name: "Bernard Arnault",
+    btn: "Bet",
+  },
+  {
+    id: 6,
+    name: "None of these",
+    btn: "Bet",
+  },
+];
+export const Dana = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const US = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const Volodymyr = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const win = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const rain = [
+  {
+    id: 1,
+    name: "YES",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "NO",
+    btn: "Bet",
+  },
+];
+export const crap = [
   {
     id: 1,
     name: "YES",
