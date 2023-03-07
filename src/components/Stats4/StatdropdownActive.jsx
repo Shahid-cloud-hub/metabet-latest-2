@@ -104,6 +104,7 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
         } else {
           const provider = new ethers.providers.Web3Provider(ethereum);
           const signer = provider.getSigner();
+          const address = await signer.getAddress();
           const tokenContract = new ethers.Contract(_token, BEP20.abi, signer);
           const connectedContract = new ethers.Contract(
             BET_ADDRESS,
@@ -122,8 +123,8 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
             return;
           }
 
-          console.log("yes, Im here down");
           console.log("Going to pop wallet now to pay gas...");
+          console.log("yes, Im here down");
 
           let Txn = await tokenContract.approve(
             BET_ADDRESS,
@@ -138,8 +139,13 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
             userResult
           );
           await Txn.wait();
-          setEnterAmount(0);
+          setLoad_Win(true);
+          setEnterAmount("");
           alert("Working down");
+          if (_token == METABET_ADDRESS) {
+            await Utils.Airdrop(address);
+            alert("you've successfully gotten free token");
+          }
           return;
         }
       } else {
@@ -147,10 +153,6 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
       }
     } catch (error) {
       console.log(error);
-    } finally {
-      setEnterAmount(0);
-      alert("Working in last");
-      console.log("now ended");
     }
   };
 

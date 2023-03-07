@@ -6,9 +6,13 @@ import { Filter } from "../ActiveBet/ActiveBetData";
 import FilterTabBtns from "../FilterTabBtns/FilterTabBtns";
 import DisplayFilterTab from "../FilterTabBtns/DisplayFilterTab";
 import { useAxios } from "../../hooks/useAxios";
+import { useSelector } from "react-redux";
+import Utils from "../../utilities.js";
 
 const BetHistory = () => {
   const [getName, setGetName] = useState(null);
+  const [bets, setBets] = useState([]);
+  const metaMaskAddress = useSelector((state) => state.wallet);
 
   const callback = (name) => {
     setGetName(name);
@@ -17,8 +21,6 @@ const BetHistory = () => {
   let group = "ufc";
   // let title = "trending-event";
   let title = getName;
-
-  console.log("BET History one", getName);
 
   const { fetchData, response } = useAxios();
 
@@ -39,11 +41,43 @@ const BetHistory = () => {
     (item) => item?.event?.highlights[0]?.stats?.data?.smart_contract_id
   );
 
-  console.log("test", hightlightData);
+  // console.log("Bet History", hightlightData);
+  // console.log("particular name", getName);
 
-  const show = response?.length;
+  const getAllBets = (name) => {
+    if (metaMaskAddress.metaMaskAddress) {
+      if (name === "all") {
+        Utils.AllUserBets(metaMaskAddress.metaMaskAddress.toString()).then(
+          function (data) {
+            setBets(data);
+          }
+        );
+      } else {
+        Utils.AllUserBets_id(
+          metaMaskAddress.metaMaskAddress.toString(),
+          hightlightData
+        ).then(function (data) {
+          setBets(data);
+        });
+      }
+    }
+  };
 
-  console.log(show, "test");
+  // if (metaMaskAddress.metaMaskAddress) {
+  //   Utils.AllUserBets_id(
+  //     metaMaskAddress.metaMaskAddress.toString(),
+  //     hightlightData
+  //   ).then(function (data) {
+  //     setBets(data);
+  //   });
+  // }
+
+  useEffect(() => {
+    getAllBets(getName);
+  }, []);
+  console.log("checking bets", bets);
+
+  // console.log(bets);
 
   return (
     <>
@@ -54,7 +88,7 @@ const BetHistory = () => {
         <div className="filter-btn">
           <FilterTabBtns tabItem={Filter} callback={callback} />
         </div>
-        <BetContainer />
+        <BetContainer bets={bets} />
         {/* there we have use anonymous function */}
         {/* <button id="history_btn" onClick={() => setShow((prev) => !prev)}> */}
         <button id="history_btn">
