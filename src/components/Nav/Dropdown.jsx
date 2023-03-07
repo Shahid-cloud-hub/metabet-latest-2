@@ -65,11 +65,12 @@ function Dropdown() {
                 type="text"
                 name="name"
                 placeholder={balance == null ? "0.00" : balance}
+                disabled
               />
               <img src={foxCircle} alt="foxCircle" />
             </label>
             <label id="label-nav">
-              <input type="text" name="name" placeholder="0.00" />
+              <input type="text" name="name" placeholder="0.00" disabled />
               <img src={foxMini} alt="foxMini" />
             </label>
           </div>
