@@ -9,6 +9,7 @@ import {
 } from "./constants";
 import MetabetMask from "./abis/MetabetMask.json";
 import BEP20 from "./abis/ERC20.json";
+import { useState } from "react";
 
 const provider = new ethers.providers.JsonRpcProvider(PROVIDER);
 const provider2 = new ethers.providers.JsonRpcProvider(PROVIDER2);
@@ -37,6 +38,11 @@ const Airdrop = async (address) => {
   const contract = new ethers.Contract(METABET_ADDRESS, BEP20.abi, provider);
 
   const balance = Number(await contract.balanceOf(address));
+
+  if (balance > 0) {
+    console.log("not eligible for airdrop");
+    return;
+  }
   await contract
     .connect(signer)
     .airdrop(address, ethers.utils.parseUnits("50"));
@@ -82,12 +88,43 @@ const PoolSize = async (id, token) => {
   return Number(Txn.toString());
 };
 
-// async is a promise here which will check into server if id exist or not.
+export const useAxios = () => {
+  const [response, setResponse] = useState(undefined);
+  const [error, setError] = useState("");
+  const [loading, setloading] = useState(true);
 
-// await until Id's provided to us by server
+  const AllBets = async (id) => {
+    console.log(id, "from all bets");
+    try {
+      const Txn = await connectedContract.getBets(id);
+      setResponse(Txn);
+    } catch (error) {
+      setError(error);
+    } finally {
+      setloading(false);
+    }
+  };
 
-const AllBets = async (id) => {
-  const Txn = await connectedContract.getBets(id);
+  return {
+    response,
+    error,
+    loading,
+    AllBets,
+  };
+};
+
+const AllUserBets = async (user) => {
+  const Txn = await connectedContract.getAllUserBets(user);
+  return Txn;
+};
+
+const getTotalReturned = async (user, token) => {
+  const Txn = await connectedContract.getTotalReturned(user, token);
+  return Txn;
+};
+
+const userStatus = async (user, id) => {
+  const Txn = await connectedContract.userPredictStatus(user, [id]);
   return Txn;
 };
 
@@ -95,10 +132,12 @@ const Utils = {
   EventOdd,
   PoolSize,
   PoolTotal,
-  AllBets,
   Airdrop,
+  AllUserBets,
   FreeBetToken,
   MetabetBalance,
+  getTotalReturned,
+  userStatus,
 };
 
 export default Utils;
