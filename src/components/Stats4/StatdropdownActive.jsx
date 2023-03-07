@@ -22,6 +22,7 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
   const [Data_size, setDataSize] = useState(null);
   const [Data_total, setDataTotal] = useState(null);
   const [load_win, setLoad_Win] = useState(false);
+  const [hashId, setHashId] = useState("");
 
   console.log("Window load", load_win, enterAmount);
 
@@ -84,8 +85,6 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
               ethers.utils.parseUnits(_amount)
             );
             console.log(await signer.getAddress(), "your on right");
-            setEnterAmount(0);
-            alert("Working up");
 
             Txn = await connectedContract.bet(
               _id,
@@ -139,6 +138,7 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
             userResult
           );
           await Txn.wait();
+          setHashId();
           setLoad_Win(true);
           setEnterAmount("");
           alert("Working down");
