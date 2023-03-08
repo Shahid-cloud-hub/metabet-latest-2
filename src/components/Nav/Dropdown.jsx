@@ -39,10 +39,14 @@ function Dropdown() {
     Utils.MetabetBalance(metaMaskAddress.metaMaskAddress.toString()).then(
       function (data) {
         data === 0 ? setBalance(null) : setBalance(data);
-        console.log(data);
+        console.log(data, "test");
       }
     );
   }
+
+  useEffect(() => {
+    console.log("balance", balance);
+  }, [balance]);
 
   useEffect(() => {
     // console.log(metaMaskAddress, "metaMaskAddress");
@@ -64,7 +68,7 @@ function Dropdown() {
               <input
                 type="text"
                 name="name"
-                placeholder={balance == null ? "0.00" : balance}
+                value={balance == null ? "0.00" : balance}
                 disabled
               />
               <img src={foxCircle} alt="foxCircle" />
@@ -81,7 +85,6 @@ function Dropdown() {
               {walletAddress ? walletAddress : "0.0000"}
               <img src={Component} alt="Component" />
             </div>
-
             <svg
               width="17"
               height="18"

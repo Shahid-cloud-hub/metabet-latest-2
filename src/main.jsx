@@ -8,6 +8,7 @@ import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import "./Font/Cabinet-Medium/CabinetGrotesk-Bold.ttf";
 import { RouterProvider } from "react-router";
+import { ContextProvider } from "./Context";
 
 // Routes //
 import Dashboard from "./routes/Dashboard";
@@ -275,7 +276,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-        <RouterProvider router={router} />
+        <ContextProvider>
+          <RouterProvider router={router} />
+        </ContextProvider>
       </PersistGate>
     </Provider>
   </React.StrictMode>
