@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 import Utils from "../../utilities.js";
 
 const BetHistory = () => {
-  const [getName, setGetName] = useState(null);
+  const [getName, setGetName] = useState("all");
   const [bets, setBets] = useState([]);
   const metaMaskAddress = useSelector((state) => state.wallet);
 
@@ -21,6 +21,8 @@ const BetHistory = () => {
   let group = "ufc";
   // let title = "trending-event";
   let title = getName;
+
+  console.log(getName);
 
   const { fetchData, response } = useAxios();
 
@@ -41,27 +43,34 @@ const BetHistory = () => {
     (item) => item?.event?.highlights[0]?.stats?.data?.smart_contract_id
   );
 
-  // console.log("Bet History", hightlightData);
-  // console.log("particular name", getName);
+  const arrData =
+    hightlightData == undefined ? [] : Object.values(hightlightData);
 
-  const getAllBets = (name) => {
+  useEffect(() => {
     if (metaMaskAddress.metaMaskAddress) {
-      if (name === "all") {
+      if (getName != "all") {
+        Utils.AllUserBets_id(
+          metaMaskAddress.metaMaskAddress.toString(),
+          arrData
+        ).then(function (data) {
+          setBets(data);
+        });
+      } else if (
+        getName == "dxy" ||
+        getName == "ufc" ||
+        getName == "ethereum" ||
+        getName == "bitcoin" ||
+        getName == "football" ||
+        getName == "cricket"
+      ) {
         Utils.AllUserBets(metaMaskAddress.metaMaskAddress.toString()).then(
           function (data) {
             setBets(data);
           }
         );
-      } else {
-        Utils.AllUserBets_id(
-          metaMaskAddress.metaMaskAddress.toString(),
-          hightlightData
-        ).then(function (data) {
-          setBets(data);
-        });
       }
     }
-  };
+  }, [metaMaskAddress]);
 
   // if (metaMaskAddress.metaMaskAddress) {
   //   Utils.AllUserBets_id(
@@ -72,12 +81,9 @@ const BetHistory = () => {
   //   });
   // }
 
-  useEffect(() => {
-    getAllBets(getName);
-  }, []);
-  console.log("checking bets", bets);
+  //console.log(bets);
 
-  // console.log(bets);
+  console.log("====================================>");
 
   return (
     <>
@@ -88,7 +94,7 @@ const BetHistory = () => {
         <div className="filter-btn">
           <FilterTabBtns tabItem={Filter} callback={callback} />
         </div>
-        <BetContainer bets={bets} />
+        <BetContainer data={arrData} name={getName} />
         {/* there we have use anonymous function */}
         {/* <button id="history_btn" onClick={() => setShow((prev) => !prev)}> */}
         <button id="history_btn">
