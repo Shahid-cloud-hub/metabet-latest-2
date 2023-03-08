@@ -631,7 +631,7 @@ export const Info = styled.div`
   background: #112533;
   border-radius: 10px;
   padding: 10px 15px;
-  gap: 10px;
+  gap: 30px;
 
   .win_wrapper {
     display: flex;
@@ -689,7 +689,7 @@ export const Info = styled.div`
     background: #0a1a25;
     border-radius: 10px;
     padding: 10px;
-    max-width: 133px;
+    max-width: 173px;
     width: 100%;
     gap: 10px;
     .title {

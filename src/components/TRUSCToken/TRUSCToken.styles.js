@@ -78,7 +78,17 @@ export const Balance = styled.div`
     border: 1px solid #5f9ea0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
-    gap: 60px;
+    gap: 30px;
+    button {
+      background: #6495ed;
+      border-radius: 12px;
+      width: 108px;
+      height: 34px;
+      font-size: 15px;
+      color: #ffffff;
+      font-family: "MostraNuova";
+      border: none;
+    }
 
     .heading {
       padding-top: 10px;
@@ -151,49 +161,90 @@ export const Balance = styled.div`
       display: flex;
       flex-direction: column;
       gap: 10px;
-
-      label {
-        font-size: 15px;
-        color: #637592;
+      .dropdown {
         display: flex;
+        flex-direction: column;
         gap: 5px;
+        position: relative;
 
-        input {
-          border: none;
-          background: transparent;
-          padding-left: 10px;
-          max-width: 89px;
-        }
         input::placeholder {
+          font-family: "MostraNuova";
+          font-style: normal;
+          font-weight: 700;
           font-size: 15px;
+          line-height: 95%;
           color: #ffffff;
-        }
-        #icon {
-          margin-right: 40px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
         }
       }
 
-      span {
-        font-family: "MostraNuova";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 95%;
+      .select {
+        width: 80px;
+        background: #020f18;
+        border-radius: 4px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        transform: translate(-8px, 31px);
+        div {
+          font-family: "MostraNuova";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 15px;
+          line-height: 95%;
+          color: #ffffff;
+          display: flex;
+          align-items: center;
+          gap: 13px;
+        }
+      }
+    }
+
+    label {
+      font-size: 15px;
+      color: #637592;
+      display: flex;
+      gap: 5px;
+
+      input {
+        border: none;
+        background: transparent;
+        padding-left: 10px;
+        max-width: 89px;
+      }
+      input::placeholder {
+        font-size: 15px;
         color: #ffffff;
       }
+      #icon {
+        margin-right: 40px;
+      }
+    }
 
-      #grey {
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 95%;
-        color: #637592;
-      }
-      #blue {
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 95%;
-        color: #3d6eff;
-      }
+    span {
+      font-family: "MostraNuova";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 95%;
+      color: #ffffff;
+    }
+
+    #grey {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 95%;
+      color: #637592;
+    }
+    #blue {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 95%;
+      color: #3d6eff;
     }
   }
 
