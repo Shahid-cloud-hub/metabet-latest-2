@@ -716,7 +716,7 @@ export const Info = styled.div`
       border: none;
       font-size: 14px;
       cursor: pointer;
-      padding: 10px 55px;
+      padding: 10px 45px;
     }
     span {
       font-weight: 500;
