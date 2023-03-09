@@ -14,6 +14,7 @@ import foxCircle from "../../assets/images/foxCircle.webp";
 import foxMini from "../../assets/images/fox-mini.webp";
 import Connect from "../../assets/images/Connect_btn.png";
 import Disconnect from "../../assets/images/Disconnect.png";
+import Withdraw from "../../assets/images/withdraw_btn.png";
 import navFox from "../../assets/images/nav-fox.webp";
 import openai from "../../assets/images/openai.webp";
 import verified from "../../assets/images/verified.webp";
@@ -91,17 +92,21 @@ function Dropdown() {
               />
               <img src={foxCircle} alt="foxCircle" />
             </label>
-            <label id="label-nav">
-              <input type="text" name="name" placeholder="0.00" disabled />
-              <img src={foxMini} alt="foxMini" />
-            </label>
+            {!metaMaskAddress.metaMaskAddress ? (
+              <label id="label-nav">
+                <input type="text" name="name" placeholder="0.00" disabled />
+                <img src={foxMini} alt="foxMini" />
+              </label>
+            ) : (
+              <img src={Withdraw} alt="Withdraw" />
+            )}
           </div>
         </div>
         <div className="dropdownBtn" onClick={() => setIsActive(!Active)}>
           <div className="Nav-Btn">
             <div className="Nav-text">
               {walletAddress ? walletAddress : "0.0000"}
-              <img src={Component} alt="Component" />
+              <img src={ETH} alt="ETH" />
             </div>
 
             <svg

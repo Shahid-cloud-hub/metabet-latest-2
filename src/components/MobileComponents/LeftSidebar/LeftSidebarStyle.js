@@ -78,6 +78,7 @@ export const ContainerSidebar = styled("div")`
 
   .OpenNavBar {
     cursor: pointer;
+    margin-right: 10px;
   }
 
   .activated {

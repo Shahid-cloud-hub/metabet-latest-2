@@ -13,9 +13,9 @@
 }
 
 @font-face {
-  font-family: "MostraNuova";
-  src: local("MostraNuova"),
-    url("./Font/MostraNuova/Mostra\ Nuova\ AltC\ Bold.otf") format("truetype");
+  font-family: "Mostra Nuova";
+  src: local("Mostra Nuova"),
+    url("./Font/MostraNuova/FontsFree-Net-aa.ttf") format("truetype");
 
 }
 
@@ -28,8 +28,7 @@
 
 body {
   margin: 0;
-  /* font-family: "CabinetGroteskBold"; */
-  font-family: "MostraNuova";
+  font-family: "CabinetGroteskBold";
   background-color: #1b2c38;
   overflow-x: hidden;
 }
@@ -47,7 +46,6 @@ body {
   width: 100%;
   max-width: 900px;
   margin-left: 50px;
-  /* bottom: 15px; */
   bottom: 0px;
 }
 

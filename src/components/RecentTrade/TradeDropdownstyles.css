@@ -2,8 +2,9 @@
   margin: 0;
   padding: 0;
   font-family: "CabinetGroteskBold";
-}
+  /* font-family: "Mostra Nuova"; */
 
+}
 
 .Amount span {
   font-size: 13px;

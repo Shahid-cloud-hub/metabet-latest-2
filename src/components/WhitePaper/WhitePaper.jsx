@@ -9,7 +9,7 @@ import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 // Worker
 import { Worker } from "@react-pdf-viewer/core"; // install this library
 
-import PDF_File from "../../PDF/Updated-white-paper.pdf";
+import PDF_File from "../../PDF/MetaBet-Whitepaper-March-2023.pdf";
 
 const WhitePaper = () => {
   const [defaultPdfFile] = useState(PDF_File);

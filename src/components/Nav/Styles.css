@@ -194,10 +194,18 @@
     gap: 12px;
   }
 
+  .dropdown .dropdownContent {
+    max-width: 140px;
+    transform: translate(0px, 10px);
+  }
+
   .dropdown .dropdownBtn .Nav-Btn .Nav-text {
     width: 100px;
   }
 
+  .dropdown .dropdownContent .dropdownItem {
+    gap: 15px;
+  }
 
 }
 
@@ -219,6 +227,10 @@
 
   }
 
+  .dropdown .dropdownContent .dropdownItem {
+    gap: 15px;
+  }
+
 }
 
 @media screen and (max-width: 820px) {
@@ -235,10 +247,19 @@
 
   }
 
+  .dropdown .dropdownContent {
+    max-width: 165px;
+    transform: translate(-1px, -12px);
+  }
+
   .dropdown .dropdownBtn .connect-btn img {
     width: 100%;
     height: 100%;
 
+  }
+
+  .dropdown .dropdownContent .dropdownItem {
+    gap: 40px;
   }
 
   .dropdown .dropdownBtn .Nav-Btn {
@@ -294,6 +315,17 @@
     align-items: center;
     gap: 1px;
     padding: 0px;
+  }
+
+  .dropdown .dropdownContent {
+    max-width: 175px;
+    transform: translate(-4px, -2px);
+  }
+
+  .dropdown .dropdownContent .dropdownItem {
+    gap: 50px;
+    font-size: 12px;
+
   }
 
   .dropdown .dropdownBtn .connect-btn {
@@ -355,6 +387,16 @@
     align-items: center;
   }
 
+  .dropdown .dropdownContent .dropdownItem {
+    gap: 32px;
+    font-size: 12px;
+  }
+
+  .dropdown .dropdownContent {
+    max-width: 155px;
+    transform: translate(-5px, 8px);
+  }
+
   .dropdown .dropdownBtn .Nav-Btn .Nav-text {
     width: 95px;
     padding: 0px;
@@ -367,6 +409,24 @@
 
 @media screen and (max-width: 375px) {
 
+  .dropdown .dropdownContent {
+    max-width: 125px;
+    transform: translate(3px, 8px);
+  }
+
+  .dropdown .dropdownContent .dropdownItem {
+    gap: 15px;
+  }
+
+  .dropdown .dropdownContent .dropdownItem>div {
+    font-size: 10px;
+
+  }
+
+  .dropdown .dropdownContent .dropdownItem {
+    font-size: 10px;
+
+  }
 
   .right-nav>label>input {
     max-width: 28px;
@@ -394,11 +454,14 @@
   }
 
   .dropdown .dropdownBtn .Nav-Btn {
-    padding: 10px 15px;
+    padding: 13px 0px;
     border-radius: 6px 0px 0px 6px;
-    gap: 20px;
+    gap: 5px;
+    justify-content: center;
+
 
   }
+
 
   .dropdown .dropdownBtn .Nav-Btn>svg {
     width: 12px;

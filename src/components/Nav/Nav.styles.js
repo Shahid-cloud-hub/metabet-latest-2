@@ -164,7 +164,7 @@ export const Container = styled.div`
   }
   @media screen and (max-width: 360px) {
     .dropdown-ai {
-      justify-content: end;
+      justify-content: center;
     }
   }
 `;
