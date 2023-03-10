@@ -2,7 +2,7 @@ import "../RecentTrade/TradedropdownActive";
 import { ethers } from "ethers";
 import { useDispatch, useSelector } from "react-redux";
 import { metaMaskConnection } from "../../redux/walletConnect/walletConnectSlice";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import MetabetMask from "../../abis/MetabetMask.json";
 import BEP20 from "../../abis/ERC20.json";
 import {
@@ -12,20 +12,25 @@ import {
   BET_ADDRESS2,
 } from "../../constants";
 import Utils from "../../utilities";
+import PopUpModel from "../PopUpModel/PopUpModel";
+import { Context } from "../../Context";
 
 function Dropdown({ id, token, img, amount, name, win, betWinId }) {
   const metaMaskAddress = useSelector((state) => state.wallet);
   const dispatch = useDispatch();
-  const [enterAmount, setEnterAmount] = useState(0);
+  const [enterAmount, setEnterAmount] = useState("");
   const [teamT, setTeamT] = useState(0);
   const [allBetData, setAllBetData] = useState();
   const [Data_size, setDataSize] = useState(null);
   const [Data_total, setDataTotal] = useState(null);
   const [load_win, setLoad_Win] = useState(false);
+  const { setItems } = useContext(Context);
 
-  console.log("Window load", load_win);
+  // console.log("Window load", load_win, enterAmount);
+  console.log("dropdown", betWinId);
 
-  // console.log("Bet Amount", betWinId);
+  // console.log("Selected Bet Amount", betWinId);
+
   const total = Number(enterAmount) + Number(Data_total);
 
   if (betWinId !== "") {
@@ -44,10 +49,6 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
     });
   };
 
-  useEffect(() => {
-    details();
-  }, [Data_size, Data_total]);
-
   const multiplier = total / (teamT + Number(enterAmount));
   const payout = multiplier * Number(enterAmount);
   console.log("Multiplier", multiplier);
@@ -60,7 +61,7 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
 
       if (ethereum) {
         let chainId = await ethereum.request({ method: "eth_chainId" });
-        console.log("Connected to chain " + chainId);
+        console.log("Connecteds to chains " + chainId);
 
         // String, hex code of the chainId of the bsc test network
         const testnetChainId = "0x61";
@@ -80,13 +81,15 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
               signer
             );
 
+            console.log("yes, Im here up");
             console.log("Going to pop wallet now to pay gas...");
 
             let Txn = await tokenContract.approve(
               BET_ADDRESS2,
               ethers.utils.parseUnits(_amount)
             );
-            console.log(await signer.getAddress());
+            console.log(await signer.getAddress(), "your on right");
+
             Txn = await connectedContract.bet(
               _id,
               _token,
@@ -94,7 +97,6 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
               userResult
             );
             await Txn.wait();
-            setLoad_Win(true);
             return;
           }
         }
@@ -104,6 +106,7 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
         } else {
           const provider = new ethers.providers.Web3Provider(ethereum);
           const signer = provider.getSigner();
+          const address = await signer.getAddress();
           const tokenContract = new ethers.Contract(_token, BEP20.abi, signer);
           const connectedContract = new ethers.Contract(
             BET_ADDRESS,
@@ -123,19 +126,40 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
           }
 
           console.log("Going to pop wallet now to pay gas...");
+          console.log("yes, Im here down");
 
           let Txn = await tokenContract.approve(
             BET_ADDRESS,
             ethers.utils.parseUnits(_amount)
           );
-          console.log(await signer.getAddress());
+          await Txn.wait();
+
+          console.log(await signer.getAddress(), "down side");
+
           Txn = await connectedContract.bet(
             _id,
             name,
             ethers.utils.parseUnits(_amount),
             userResult
           );
+
           await Txn.wait();
+          setEnterAmount("");
+          alert("Working down");
+          setItems((prevState) => ({
+            ...prevState,
+            betMessage: true,
+            airDropBetMessage: false,
+          }));
+          if (_token == METABET_ADDRESS) {
+            await Utils.Airdrop(address);
+            alert("you've successfully gotten free token");
+            setItems((prevState) => ({
+              ...prevState,
+              betMessage: false,
+              airDropBetMessage: true,
+            }));
+          }
           return;
         }
       } else {
@@ -146,7 +170,20 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
     }
   };
 
+  useEffect(() => {
+    // console.log("Window load", load_win);
+    details();
+  }, [Data_size, Data_total, load_win, enterAmount]);
+
   console.log("payout", payout);
+
+  // const test = () => {
+  //   setItems((prevState) => ({
+  //     ...prevState,
+  //     betMessage: false,
+  //     airDropBetMessage: true,
+  //   }));
+  // };
 
   return (
     <>
@@ -161,6 +198,7 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
           <input
             type="text"
             placeholder="0.0000"
+            value={enterAmount}
             onChange={(e) => setEnterAmount(e.target.value)}
           />
         </label>
@@ -170,7 +208,7 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
               <img src={img} alt="img" />
             </div>
           </div>
-          <input type="text" placeholder={Data_total} disabled />
+          <input type="text" value={Data_total ? Data_total : 0} disabled />
         </label>
         <label>
           <div className="status_3">
@@ -178,7 +216,7 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
               <img src={img} alt="img" />
             </div>
           </div>
-          <input type="text" placeholder={Data_size} disabled />
+          <input type="text" value={Data_size ? Data_size : 0} disabled />
         </label>
         <label>
           <div className="status_4">
@@ -187,9 +225,7 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
             </div>
             <input
               type="text"
-              placeholder={
-                isFinite(multiplier) ? multiplier.toFixed(2) : "0.00"
-              }
+              value={isFinite(multiplier) ? multiplier.toFixed(2) : "0.00"}
               disabled
             />
           </div>
@@ -205,9 +241,7 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
           </div>
           <input
             type="text"
-            placeholder={
-              payout.toFixed(2) === "NaN" ? "0.000" : payout.toFixed(2)
-            }
+            value={payout.toFixed(2) === "NaN" ? "0.000" : payout.toFixed(2)}
             disabled
           />
         </label>
@@ -225,6 +259,7 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
             id="btn"
             style={{ background: "#fc4c1e" }}
             onClick={() => BetNow(id, token, enterAmount, betWinId)}
+            // onClick={test}
           >
             BET
           </button>

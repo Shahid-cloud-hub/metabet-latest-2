@@ -86,6 +86,12 @@ export const sec_array = [
   //   white: EthereW,
   // },
   {
+    display_name: "Trending Events",
+    route: "/politics",
+    icon: Politics,
+    white: PoliticsW,
+  },
+  {
     display_name: "Football",
     route: "/football",
     icon: PL,
@@ -165,12 +171,6 @@ export const sec_array = [
     icon: Horse,
     white: HorseW,
   },
-  // {
-  //   display_name: "Trending Events",
-  //   route: "/politics",
-  //   icon: Politics,
-  //   white: PoliticsW,
-  // },
 ];
 
 export const third_array = [

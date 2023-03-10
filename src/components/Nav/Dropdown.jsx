@@ -65,7 +65,17 @@ function Dropdown() {
     { name: "0.00000", img: MATIC, text: "MATIC" },
     { name: "0.00000", img: GOAL, text: "GOAL" },
   ];
-  options.map((item) => console.log(item));
+  useEffect(() => {
+    if (metaMaskAddress.metaMaskAddress) {
+      Utils.MetabetBalance(metaMaskAddress.metaMaskAddress.toString()).then(
+        function (data) {
+          data === 0 ? setBalance(null) : setBalance(data);
+          // console.log(data, "test");
+        }
+      );
+    }
+    // console.log("balance", balance);
+  }, [metaMaskAddress, balance]);
 
   useEffect(() => {
     // console.log(metaMaskAddress, "metaMaskAddress");
@@ -87,7 +97,7 @@ function Dropdown() {
               <input
                 type="text"
                 name="name"
-                placeholder={balance == null ? "0.00" : balance}
+                value={balance == null ? "0.00" : balance}
                 disabled
               />
               <img src={foxCircle} alt="foxCircle" />
@@ -108,7 +118,6 @@ function Dropdown() {
               {walletAddress ? walletAddress : "0.0000"}
               <img src={ETH} alt="ETH" />
             </div>
-
             <svg
               width="17"
               height="18"

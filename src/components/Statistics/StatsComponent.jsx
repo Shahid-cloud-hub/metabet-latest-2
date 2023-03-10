@@ -11,7 +11,7 @@ import { Info, StatisticsContainer } from "./Stats.syle";
 const StatsComponent = () => {
   let { group, title, id } = useParams();
 
-  console.log(group, title, id, "UFC Componet");
+  // console.log(group, title, id, "UFC Componet");
 
   const { fetchData, response, loading } = useAxios();
   const [addStyle, setAddStyle] = useState();
@@ -28,8 +28,6 @@ const StatsComponent = () => {
     getBanners();
     window.scrollTo(0, 0);
   }, [group, title, id]);
-
-  console.log("res", item?.smart_contract_id);
 
   return (
     <>
@@ -51,25 +49,23 @@ const StatsComponent = () => {
           </div>
           <div className="statistic_rectangle">
             <span>Statistics:</span>
-            {loading ? (
-              <Loading />
-            ) : (
-              item?.coach_1 && (
-                <>
-                  <span>Record: {item?.record_1}</span>
-                  <span>Home Record: {item?.home_record_1}</span>
-                  <span>Away Record: {item?.away_record_1}</span>
-                  <span>
-                    GF: {item?.gf_ga_gd_1.slice(0, 2)} GA:
-                    {item?.gf_ga_gd_1.slice(3, 5)} GD:
-                    {item?.gf_ga_gd_1.slice(6, 10)}
-                  </span>
-                  <span>Coach: {item?.coach_1}</span>
-                  <span>LP: {item?.league_position_1}</span>
-                  <span>Ranking: {item?.fifa_club_ranking_1}</span>
-                </>
-              )
-            )}
+            {loading
+              ? item?.coach_1 && <Loading />
+              : item?.coach_1 && (
+                  <>
+                    <span>Record: {item?.record_1}</span>
+                    <span>Home Record: {item?.home_record_1}</span>
+                    <span>Away Record: {item?.away_record_1}</span>
+                    <span>
+                      GF: {item?.gf_ga_gd_1.slice(0, 2)} GA:
+                      {item?.gf_ga_gd_1.slice(3, 5)} GD:
+                      {item?.gf_ga_gd_1.slice(6, 10)}
+                    </span>
+                    <span>Coach: {item?.coach_1}</span>
+                    <span>LP: {item?.league_position_1}</span>
+                    <span>Ranking: {item?.fifa_club_ranking_1}</span>
+                  </>
+                )}
             {loading ? (
               <Loading />
             ) : (
@@ -95,25 +91,23 @@ const StatsComponent = () => {
           </div>
           <div className="statistic_rectangle">
             <span>Statistics:</span>
-            {loading ? (
-              <Loading />
-            ) : (
-              item?.coach_2 && (
-                <>
-                  {item?.record_2 && <span>Record: {item?.record_2}</span>}
-                  <span>Home Record: {item?.home_record_2}</span>
-                  <span>Away Record: {item?.away_record_2}</span>
-                  <span>
-                    GF: {item?.gf_ga_gd_2.slice(0, 2)} GA:
-                    {item?.gf_ga_gd_2.slice(3, 5)} GD:
-                    {item?.gf_ga_gd_2.slice(6, 10)}
-                  </span>
-                  <span>Coach: {item?.coach_2}</span>
-                  <span>LP: {item?.league_position_2}</span>
-                  <span>Ranking: {item?.fifa_club_ranking_2}</span>
-                </>
-              )
-            )}
+            {loading
+              ? item?.coach_2 && <Loading />
+              : item?.coach_2 && (
+                  <>
+                    {item?.record_2 && <span>Record: {item?.record_2}</span>}
+                    <span>Home Record: {item?.home_record_2}</span>
+                    <span>Away Record: {item?.away_record_2}</span>
+                    <span>
+                      GF: {item?.gf_ga_gd_2.slice(0, 2)} GA:
+                      {item?.gf_ga_gd_2.slice(3, 5)} GD:
+                      {item?.gf_ga_gd_2.slice(6, 10)}
+                    </span>
+                    <span>Coach: {item?.coach_2}</span>
+                    <span>LP: {item?.league_position_2}</span>
+                    <span>Ranking: {item?.fifa_club_ranking_2}</span>
+                  </>
+                )}
             {loading ? (
               <Loading />
             ) : (

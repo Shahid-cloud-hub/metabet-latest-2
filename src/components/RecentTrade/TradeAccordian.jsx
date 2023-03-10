@@ -6,20 +6,50 @@ import ufc from "../../assets/images/ufc.webp";
 import BUSD from "../../assets/images/BUSD.png";
 import GOAL from "../../assets/images/GOAL.png";
 import Utils from "../../utilities";
+import { result } from "lodash";
 
 const TradeAccordian = (props) => {
   const [isOpen, setOpen] = useState(false);
   const [showAccord, setShowAccord] = useState();
   const [bets, setAllBets] = useState([]);
+  const [odd, setOdd] = useState(0);
+
+  // console.log(props.id, "all best");
 
   useEffect(() => {
     Utils.AllBets(props.id).then(function (data) {
-      setAllBets(Array(data));
+      setAllBets(data);
     });
-  }, []);
+  }, [props?.id]);
 
-  console.log("all bet", bets);
+  //console.log("All bets tab", Number(bets[0][0].amount));
 
+  // const arr = bets.length > 20 ? bets.slice(0, 20) : bets;
+  const arr = bets;
+  console.log(Object.values(arr)?.reverse(), "object");
+  //bets[0].length -= 4;
+  //bets[0].slice(0,8);
+  //console.log(bets[0].slice(0,8))
+
+  const formatDate = (seconds) => {
+    const s = new Date(seconds * 1000).toLocaleString("en-US");
+    return s;
+  };
+
+  const checkOdd = (result, token) => {
+    Utils.currentOdd(props?.id, result, token).then(function (data) {
+      setOdd(Number(data));
+    });
+    return odd;
+  };
+
+  //console.log(checkOdd(props.id,"0xac6d8867a466Cd5C017822aB6feE2d670090cbB3", 79000000000000))
+
+  // console.log(
+  //   arr.map((item) => {
+  //     console.log(item);
+  //   })
+  // );
   const RecentTradeData = [
     {
       id: 1,
@@ -40,35 +70,43 @@ const TradeAccordian = (props) => {
         className={`accordion-title ${isOpen ? "open" : ""}`}
         style={{ flexDirection: "column" }}
       >
-        {RecentTradeData.map((item) => (
-          <>
-            <div
-              className="td-item"
-              style={{
-                background: item.backgroundColor,
-                borderRadius: item.border,
-              }}
-            >
-              <div className="td-wrapper">
-                <div className="item_1">
-                  <span>{item.id}</span>
-                </div>
-                <div className="item_2">
-                  <span>{item.userID}</span>
-                  <span>{item.time}</span>
-                  <span>{item.odds}</span>
-                  <div id="betAmount">
-                    <span>{item.betAmount}</span>
-                    <img src={item.icon3} alt={item.name} />
+        {Object.values(arr)
+          ?.reverse()
+          ?.map((item) => (
+            <>
+              <div
+                className="td-item"
+                style={{
+                  background: item.backgroundColor,
+                  borderRadius: item.border,
+                }}
+              >
+                <div className="td-wrapper">
+                  <div className="item_1">
+                    <span>{String(item?.eventId).substring(20, -1)}</span>
                   </div>
-                  <div id="scan-icon">
-                    <img src={item.icon4} alt="icon" width={20} />
+                  <div className="item_2">
+                    <span>{String(item?.user).substring(8, -1)}</span>
+                    <span>{formatDate(Number(item.timestamp))}</span>
+                    <span>
+                      {checkOdd(item?.result, item?.token).toFixed(2)}
+                    </span>
+                    <div id="betAmount">
+                      <span>{Number(item?.amount) / 1e18}</span>
+                      <img src={item?.icon3} alt={item?.name} />
+                    </div>
+                    <div id="scan-icon">
+                      <img
+                        src={RecentTradeData[0].icon4}
+                        alt="icon"
+                        width={20}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </>
-        ))}
+            </>
+          ))}
       </div>
     </div>
   );

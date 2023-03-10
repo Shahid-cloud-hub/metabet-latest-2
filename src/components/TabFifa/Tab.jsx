@@ -15,6 +15,7 @@ import { useDispatch, useSelector } from "react-redux";
 function Tabs(props) {
   let { group, title, id } = useParams();
   const metaMaskAddress = useSelector((state) => state.wallet);
+  const [currentAccount, setCurrentAccount] = useState("");
   const { ethereum } = window;
 
   useEffect(() => {
@@ -34,6 +35,7 @@ function Tabs(props) {
   const review_3 = "https://youtu.be/1ObdFaUL7nc";
 
   const pathname = window.location.pathname;
+
   return (
     <TabContainer>
       <div className="tab-wrapper">

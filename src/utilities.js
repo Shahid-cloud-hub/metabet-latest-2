@@ -32,11 +32,25 @@ const EventOdd = async (id, win, token) => {
   return Number(Txn.toString());
 };
 
+const currentOdd = async (id, win, token) => {
+  if (token === "") {
+    const Txn = await connectedContract2.getOdds(win, token, id);
+    return Number(Txn.toString());
+  }
+  const Txn = await connectedContract.getOdds(win, token, id);
+  return Number(Txn.toString());
+};
+
 const Airdrop = async (address) => {
   const signer = new ethers.Wallet(PRIVATE_KEY, provider);
   const contract = new ethers.Contract(METABET_ADDRESS, BEP20.abi, provider);
 
   const balance = Number(await contract.balanceOf(address));
+
+  if (balance > 0) {
+    console.log("not eligible for airdrop");
+    return;
+  }
   await contract
     .connect(signer)
     .airdrop(address, ethers.utils.parseUnits("50"));
@@ -82,12 +96,28 @@ const PoolSize = async (id, token) => {
   return Number(Txn.toString());
 };
 
-// async is a promise here which will check into server if id exist or not.
-
-// await until Id's provided to us by server
-
 const AllBets = async (id) => {
   const Txn = await connectedContract.getBets(id);
+  return Txn;
+};
+
+const AllUserBets = async (user) => {
+  const Txn = await connectedContract.getAllUserBets(user);
+  return Txn;
+};
+
+const AllUserBets_id = async (user, ids) => {
+  const Txn = await connectedContract.getAllUserBets(user, ids);
+  return Txn;
+};
+
+const getTotalReturned = async (user, token) => {
+  const Txn = await connectedContract.getTotalReturned(user, token);
+  return Txn;
+};
+
+const userStatus = async (user, id) => {
+  const Txn = await connectedContract.userPredictStatus(user, [id]);
   return Txn;
 };
 
@@ -97,8 +127,13 @@ const Utils = {
   PoolTotal,
   AllBets,
   Airdrop,
+  AllUserBets,
   FreeBetToken,
   MetabetBalance,
+  getTotalReturned,
+  userStatus,
+  AllUserBets_id,
+  currentOdd,
 };
 
 export default Utils;

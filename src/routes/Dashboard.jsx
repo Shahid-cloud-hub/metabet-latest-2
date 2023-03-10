@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import styled from "styled-components";
@@ -6,8 +6,22 @@ import Nav from "../Components/Nav/Nav";
 import useBreakpoint from "../hooks/useBreakpoints";
 import Sidebar from "../components/Sidebar/Sidebar";
 import { useEffect } from "react";
+import PopUpModel from "../components/PopUpModel/PopUpModel";
+import { Context } from "../Context";
+import Confetti from "react-confetti";
 
 const ContainerWrapper = styled("div")`
+  display: flex;
+  position: relative;
+
+  .popup-model {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+  }
   .container {
     width: 100%;
     height: 100%;
@@ -58,6 +72,10 @@ const ContainerWrapper = styled("div")`
     }
   }
 
+  .active-popup {
+    filter: blur(8px);
+  }
+
   footer {
     grid-column: 1 / span 3;
   }
@@ -71,14 +89,27 @@ const ContainerWrapper = styled("div")`
 
 const Dashboard = () => {
   const { isDesktop, isTablet } = useBreakpoint();
+  const { items } = useContext(Context);
+  const [celebRemove] = useState(true);
 
-  const result = window.location.pathname;
-  useEffect(() => {}, [result]);
+  console.log(items, "dashboard");
+
+  const availableWidth = window?.screen?.availWidth;
 
   return (
     <>
       <ContainerWrapper>
-        <div className="container">
+        {items?.betMessage ||
+          (items?.airDropBetMessage && celebRemove && (
+            <Confetti width={availableWidth} height={1200} gravity={0.77} />
+          ))}
+        <div
+          className={
+            items?.betMessage || items?.airDropBetMessage
+              ? "container active-popup"
+              : "container"
+          }
+        >
           <header>
             <Nav />
           </header>
@@ -94,6 +125,16 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+        {items?.betMessage && (
+          <div className="popup-model">
+            <PopUpModel />
+          </div>
+        )}
+        {items?.airDropBetMessage && (
+          <div className="popup-model">
+            <PopUpModel />
+          </div>
+        )}
       </ContainerWrapper>
     </>
   );

@@ -10,6 +10,7 @@ import "./Font/Cabinet-Medium/CabinetGrotesk-Bold.ttf";
 // Import the font file
 import "./Font/MostraNuova/Mostra-Nuova-AltA-Bold.otf";
 import { RouterProvider } from "react-router";
+import { ContextProvider } from "./Context";
 
 // Routes //
 import Dashboard from "./routes/Dashboard";
@@ -178,7 +179,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/politics",
-        element: <POLITICS />,
+        element: <POLITICS group_type="trending-event" />,
+      },
+      {
+        path: "/politics/:group/:title/politics-stats/:id",
+        element: <GetStatistics />,
       },
       {
         path: "/politics-details",
@@ -277,7 +282,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-        <RouterProvider router={router} />
+        <ContextProvider>
+          <RouterProvider router={router} />
+        </ContextProvider>
       </PersistGate>
     </Provider>
   </React.StrictMode>
