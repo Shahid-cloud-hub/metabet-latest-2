@@ -81,7 +81,6 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
               signer
             );
 
-            console.log("yes, Im here up");
             console.log("Going to pop wallet now to pay gas...");
 
             let Txn = await tokenContract.approve(
@@ -126,7 +125,6 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
           }
 
           console.log("Going to pop wallet now to pay gas...");
-          console.log("yes, Im here down");
 
           let Txn = await tokenContract.approve(
             BET_ADDRESS,
@@ -145,25 +143,30 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
 
           await Txn.wait();
           setEnterAmount("");
-          alert("Working down");
+          // alert("Working down");
           setItems((prevState) => ({
             ...prevState,
             betMessage: true,
             airDropBetMessage: false,
+            getRender: true,
           }));
           if (_token == METABET_ADDRESS) {
             await Utils.Airdrop(address);
-            alert("you've successfully gotten free token");
-            setItems((prevState) => ({
-              ...prevState,
-              betMessage: false,
-              airDropBetMessage: true,
-            }));
+            // alert("you've successfully gotten free token");
+            setTimeout(() => {
+              setItems((prevState) => ({
+                ...prevState,
+                betMessage: false,
+                airDropBetMessage: true,
+                getRender: true,
+              }));
+            }, 9000);
           }
           return;
         }
       } else {
         console.log("Ethereum object doesn't exist!");
+        alert("Ethereum object doesn't exist!");
       }
     } catch (error) {
       console.log(error);
@@ -176,14 +179,6 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
   }, [Data_size, Data_total, load_win, enterAmount]);
 
   console.log("payout", payout);
-
-  // const test = () => {
-  //   setItems((prevState) => ({
-  //     ...prevState,
-  //     betMessage: false,
-  //     airDropBetMessage: true,
-  //   }));
-  // };
 
   return (
     <>

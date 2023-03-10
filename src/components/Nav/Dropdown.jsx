@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Styles.css";
 import Component from "../../assets/images/BNB.svg";
 import foxCircle from "../../assets/images/foxCircle.webp";
@@ -17,6 +17,7 @@ import {
 import useBreakpoint from "../../hooks/useBreakpoints";
 import truncateEthAddress from "truncate-eth-address";
 import Utils from "../../utilities";
+import { Context } from "../../Context";
 
 function Dropdown() {
   const [Active, setIsActive] = useState(false);
@@ -24,6 +25,7 @@ function Dropdown() {
   const dispatch = useDispatch();
   const [balance, setBalance] = useState(null);
   const { isSmallMobile, isMobile, isTablet, isDesktop } = useBreakpoint();
+  const { items } = useContext(Context);
 
   // const Address =
   //   metaMaskAddress.metaMaskAddress === null
@@ -44,8 +46,8 @@ function Dropdown() {
         }
       );
     }
-    // console.log("balance", balance);
-  }, [metaMaskAddress, balance]);
+  }, [metaMaskAddress, balance, items?.getRender]);
+  console.log("re-render", items?.getRender);
 
   useEffect(() => {
     // console.log(metaMaskAddress, "metaMaskAddress");

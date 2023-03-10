@@ -7,6 +7,7 @@ import BUSD from "../../assets/images/BUSD.png";
 import GOAL from "../../assets/images/GOAL.png";
 import Utils from "../../utilities";
 import { result } from "lodash";
+import Loading from "../Loading/Loading";
 
 const TradeAccordian = (props) => {
   const [isOpen, setOpen] = useState(false);
@@ -70,43 +71,49 @@ const TradeAccordian = (props) => {
         className={`accordion-title ${isOpen ? "open" : ""}`}
         style={{ flexDirection: "column" }}
       >
-        {Object.values(arr)
-          ?.reverse()
-          ?.map((item) => (
-            <>
-              <div
-                className="td-item"
-                style={{
-                  background: item.backgroundColor,
-                  borderRadius: item.border,
-                }}
-              >
-                <div className="td-wrapper">
-                  <div className="item_1">
-                    <span>{String(item?.eventId).substring(20, -1)}</span>
-                  </div>
-                  <div className="item_2">
-                    <span>{String(item?.user).substring(8, -1)}</span>
-                    <span>{formatDate(Number(item.timestamp))}</span>
-                    <span>
-                      {checkOdd(item?.result, item?.token).toFixed(2)}
-                    </span>
-                    <div id="betAmount">
-                      <span>{Number(item?.amount) / 1e18}</span>
-                      <img src={item?.icon3} alt={item?.name} />
+        {arr.length > 0 ? (
+          Object.values(arr)
+            ?.reverse()
+            ?.map((item) => (
+              <>
+                <div
+                  className="td-item"
+                  style={{
+                    background: item.backgroundColor,
+                    borderRadius: item.border,
+                  }}
+                >
+                  <div className="td-wrapper">
+                    <div className="item_1">
+                      <span>{String(item?.eventId).substring(20, -1)}</span>
                     </div>
-                    <div id="scan-icon">
-                      <img
-                        src={RecentTradeData[0].icon4}
-                        alt="icon"
-                        width={20}
-                      />
+                    <div className="item_2">
+                      <span>{String(item?.user).substring(8, -1)}</span>
+                      <span>{formatDate(Number(item.timestamp))}</span>
+                      <span>
+                        {checkOdd(item?.result, item?.token).toFixed(2)}
+                      </span>
+                      <div id="betAmount">
+                        <span>{Number(item?.amount) / 1e18}</span>
+                        <img src={item?.icon3} alt={item?.name} />
+                      </div>
+                      <div id="scan-icon">
+                        <img
+                          src={RecentTradeData[0].icon4}
+                          alt="icon"
+                          width={20}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </>
-          ))}
+              </>
+            ))
+        ) : (
+          <div className="loading">
+            <Loading />
+          </div>
+        )}
       </div>
     </div>
   );

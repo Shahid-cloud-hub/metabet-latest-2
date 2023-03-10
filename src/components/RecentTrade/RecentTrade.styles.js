@@ -30,7 +30,9 @@ export const TradeTable = styled.div`
 
   .td-Head {
     width: 100%;
-    max-width: 934px;
+    max-width: 954px;
+    height: 300px;
+    overflow-x: hidden;
     .td-item {
       display: flex;
       flex-direction: column;

@@ -2,84 +2,111 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Utils from "../../utilities";
 import { ContainerBet } from "../ActiveBet/ActiveBet.styles";
+import Loading from "../Loading/Loading";
 
 const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
   const [bets, setBets] = useState([]);
-  const [item, setItem] = useState([]);
-  const [tReturned, setTReturned] = useState(0);
+  const [odd, setOdd] = useState(0);
+  const [eventName, setEventName] = useState(null);
   const [betArr, setBetArr] = useState([]);
+  const [allEventsData, setallEventsData] = useState([]);
   const metaMaskAddress = useSelector((state) => state.wallet);
 
-  console.log("display", smartContractId);
+  console.log("display", smartContractId, getName);
 
   useEffect(() => {
-    // console.log("datas", props?.data);
-    if (metaMaskAddress.metaMaskAddress) {
-      Utils.AllUserBets(metaMaskAddress.metaMaskAddress.toString()).then(
-        function (data) {
-          setBets(data);
-        }
-      );
+    const check = async (i) => {
+      let data = await Utils.AllBets(i);
+
+      return data;
+    };
+
+    const getEventName = (id) => {
+      Utils.getEventName(id).then(function (data) {
+        setEventName(data);
+      });
+
+      return [
+        eventName == null ? "" : eventName[0].teamA,
+        eventName == null ? "" : eventName[0].teamB,
+      ];
+    };
+    if (smartContractId?.length > 0) {
+      let arr = [];
+      let eventData = [];
+
+      let finallArr = [];
+
+      for (let i = 0; i < smartContractId?.length; i++) {
+        const s = check(smartContractId[i]);
+        arr.push(s);
+      }
+
+      if (arr?.length > 0) {
+        (async () => {
+          arr = await Promise.all(arr);
+          const data_3 = arr?.forEach((j) => {
+            eventData?.push(j);
+          });
+          setBetArr(arr);
+          eventData?.forEach((x) => {
+            //console.log(x, "x");
+            x.forEach((y) => {
+              if (
+                y?.user.toUpperCase() ==
+                metaMaskAddress.metaMaskAddress.toString().toUpperCase()
+              ) {
+                finallArr?.push(y);
+              }
+            });
+          });
+
+          let allEvents = [];
+          // debugger;
+          for (let i = 0; i < finallArr.length; i++) {
+            let tmp = {};
+            let event = await Utils.getEventName(finallArr[i]?.eventId);
+
+            let odds = await Utils.currentOdd(
+              finallArr[i]?.eventId,
+              finallArr[i]?.result,
+              finallArr[i]?.token
+            );
+            allEvents.push({ event, odds });
+          }
+          setallEventsData(allEvents);
+          // console.log("events", allEvents);
+        })();
+      }
     }
-  }, [metaMaskAddress]);
+  }, [smartContractId?.length]);
 
-  // useEffect(() => {
-  //   const check = async (i) => {
-  //     let data = await Utils.AllBets(i);
+  // console.log(eventData, "array");
 
-  //     return data;
-  //   };
-  //   if (smartContractId?.length > 0) {
-  //     let arr = [];
-  //     for (let i = 0; i < smartContractId?.length; i++) {
-  //       const s = check(smartContractId?.data[i]);
-  //       arr.push(s);
-  //     }
+  //console.log(finallArr[0].eventId, 'array');
+  // const checkOdd = (id, result, token) => {
+  //   Utils.currentOdd(id, result, token).then(function (data) {
+  //     setOdd(Number(data));
+  //   });
+  //   return odd;
+  // };
 
-  //     if (arr?.length > 0) {
-  //       (async () => {
-  //         arr = await Promise.all(arr);
-  //         setBetArr(arr);
-  //       })();
-  //     }
-  //   }
-  // }, [smartContractId?.length]);
-
-  let eventData = [];
-  // console.log(betArr, 'array');
-
-  const data_3 = betArr?.forEach((j) => {
-    if (
-      j[0]?.user.toUpperCase() ==
-      metaMaskAddress.metaMaskAddress.toString().toUpperCase()
-    ) {
-      eventData?.push(j);
-    }
-  });
-
-  let finallArr = [];
-
-  eventData?.forEach((x) => x.forEach((y) => finallArr?.push(y)));
-
-  const totalBets = (field, value) => {
-    const array = getName == "all" ? bets : finallArr;
-    const filter = array.filter((item) => item[field] === value);
-    return filter;
+  const formatDate = (seconds) => {
+    const s = new Date(seconds * 1000).toLocaleString("en-US");
+    return s;
   };
 
-  const totalValue = (array, field) => {
-    let sum = 0;
-    array.forEach((item) => (sum += Number(item[field])));
-    return sum / 1e18;
-  };
+  console.log("test", allEventsData);
 
-  const totalReturned = (user, token) => {
-    Utils.getTotalReturned(user, token).then(function (data) {
-      setTReturned(Number(data));
-    });
-
-    return tReturned;
-  };
+  // console.log(getEventName(finallArr[0]?.eventId), "test");
+  // console.log(
+  //   getEventName(formatDate(Number(finallArr[0]?.timestamp))),
+  //   "test"
+  // );
+  // console.log(
+  //   checkOdd(finallArr[0]?.eventId, finallArr[0]?.result, finallArr[0]?.token),
+  //   "test"
+  // );
 
   return (
     <ContainerBet>
