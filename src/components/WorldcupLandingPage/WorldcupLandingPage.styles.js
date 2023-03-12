@@ -250,6 +250,50 @@ export const DashContainer = styled("div")`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 20px;
+    @media screen and (max-width: 1024px) {
+      margin: 0px 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 920px) {
+      grid-template-columns: 1fr;
+    }
+    @media screen and (max-width: 912px) {
+      grid-template-columns: 1fr;
+    }
+    @media screen and (max-width: 820px) {
+      margin: 10px 20px;
+      grid-template-columns: 1fr;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      padding: 0px;
+    }
+    @media screen and (max-width: 768px) {
+      margin: 30px auto 0;
+    }
+
+    @media screen and (max-width: 740px) {
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 620px) {
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 520px) {
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 420px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 375px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .card {

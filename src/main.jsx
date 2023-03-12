@@ -7,6 +7,8 @@ import { store } from "./redux/store";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import "./Font/Cabinet-Medium/CabinetGrotesk-Bold.ttf";
+// Import the font file
+import "./Font/MostraNuova/Mostra-Nuova-AltA-Bold.otf";
 import { RouterProvider } from "react-router";
 import { ContextProvider } from "./Context";
 
@@ -177,7 +179,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/politics",
-        element: <POLITICS />,
+        element: <POLITICS group_type="trending-event" />,
+      },
+      {
+        path: "/politics/:group/:title/polictics/:id",
+        element: <GetStatistics />,
       },
       {
         path: "/politics-details",

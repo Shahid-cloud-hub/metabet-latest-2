@@ -1,10 +1,20 @@
 import { useContext, useEffect, useState } from "react";
 import "./Styles.css";
 import Component from "../../assets/images/BNB.svg";
+import ETH from "../../assets/images/ETH.png";
+import WETH from "../../assets/images/WETH.svg";
+import USDT from "../../assets/images/USDT.svg";
+import BNB from "../../assets/images/BNB.svg";
+import ETC from "../../assets/images/ETC.svg";
+import MATIC from "../../assets/images/MATIC.svg";
+import BUSD from "../../assets/images/BUSD.png";
+import GOAL from "../../assets/images/GOAL.png";
+import USDC from "../../assets/images/usdc.png";
 import foxCircle from "../../assets/images/foxCircle.webp";
 import foxMini from "../../assets/images/fox-mini.webp";
 import Connect from "../../assets/images/Connect_btn.png";
 import Disconnect from "../../assets/images/Disconnect.png";
+import Withdraw from "../../assets/images/withdraw_btn.png";
 import navFox from "../../assets/images/nav-fox.webp";
 import openai from "../../assets/images/openai.webp";
 import verified from "../../assets/images/verified.webp";
@@ -20,6 +30,7 @@ import Utils from "../../utilities";
 import { Context } from "../../Context";
 
 function Dropdown() {
+  const [selected, setSelected] = useState();
   const [Active, setIsActive] = useState(false);
   const metaMaskAddress = useSelector((state) => state.wallet);
   const dispatch = useDispatch();
@@ -48,6 +59,26 @@ function Dropdown() {
     }
   }, [metaMaskAddress, balance, items?.getRender]);
   console.log("re-render", items?.getRender);
+  if (metaMaskAddress.metaMaskAddress) {
+    Utils.MetabetBalance(metaMaskAddress.metaMaskAddress.toString()).then(
+      function (data) {
+        data === 0 ? setBalance(null) : setBalance(data);
+        console.log(data);
+      }
+    );
+  }
+  const options = [
+    { name: "0.00000", img: ETH, text: "ETH" },
+    { name: "0.00000", img: WETH, text: "WETH" },
+    { name: "0.00000", img: USDT, text: "USDT" },
+    { name: "0.00000", img: USDC, text: "USDC" },
+    { name: "0.00000", img: BUSD, text: "BUSD" },
+    { name: "0.00000", img: BNB, text: "BNB" },
+    { name: "0.00000", img: ETC, text: "ETC" },
+    { name: "0.00000", img: MATIC, text: "MATIC" },
+    { name: "0.00000", img: GOAL, text: "GOAL" },
+  ];
+  options.map((item) => console.log(item));
 
   useEffect(() => {
     // console.log(metaMaskAddress, "metaMaskAddress");
@@ -57,13 +88,6 @@ function Dropdown() {
     <>
       <div className="dropdown">
         <div className="dropdown-ai">
-          {/* <div className="openai">
-            <img src={openai} alt="openai" />
-            <div>
-              <span>32%</span>
-              <img src={verified} alt="verified" />
-            </div>
-          </div> */}
           <div className="right-nav">
             <label>
               <input
@@ -74,17 +98,21 @@ function Dropdown() {
               />
               <img src={foxCircle} alt="foxCircle" />
             </label>
-            <label id="label-nav">
-              <input type="text" name="name" placeholder="0.00" disabled />
-              <img src={foxMini} alt="foxMini" />
-            </label>
+            {!metaMaskAddress.metaMaskAddress ? (
+              <label id="label-nav">
+                <input type="text" name="name" placeholder="0.00" disabled />
+                <img src={foxMini} alt="foxMini" />
+              </label>
+            ) : (
+              <img src={Withdraw} alt="Withdraw" />
+            )}
           </div>
         </div>
         <div className="dropdownBtn" onClick={() => setIsActive(!Active)}>
           <div className="Nav-Btn">
             <div className="Nav-text">
               {walletAddress ? walletAddress : "0.0000"}
-              <img src={Component} alt="Component" />
+              <img src={ETH} alt="ETH" />
             </div>
             <svg
               width="17"
@@ -110,6 +138,23 @@ function Dropdown() {
                 </clipPath>
               </defs>
             </svg>
+            {Active && (
+              <div className="dropdownContent">
+                {Object.values(options).map((option, index) => (
+                  <div
+                    onClick={() => setSelected(option)}
+                    key={index}
+                    className="dropdownItem"
+                  >
+                    {option.name?.slice(0, 10)}
+                    <div>
+                      <img src={option.img} alt="option.img" />
+                      {option.text}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
           {!metaMaskAddress.metaMaskAddress ? (
             <div

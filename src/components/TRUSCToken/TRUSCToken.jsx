@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { TRUSCTokenContainer, Container1, Balance } from "./TRUSCToken.styles";
 import Trueai from "../../assets/images/TRUSC/Trueai.webp";
 import trusc from "../../assets/images/TRUSC/trusc.webp";
@@ -12,9 +12,23 @@ import BUSD from "../../assets/images/TRUSC/BUSD.webp";
 import liquidityFox from "../../assets/images/TRUSC/liquidityFox.webp";
 import foxmini from "../../assets/images/TRUSC/fox-mini.webp";
 import usdt from "../../assets/images/TRUSC/usdt-mini.webp";
+import busd from "../../assets/images/TRUSC/busd-mini.webp";
+import usdc from "../../assets/images/TRUSC/usdc-mini.webp";
 import icon from "../../assets/images/TRUSC/switch.webp";
 
 const TRUSCToken = () => {
+  const [Active, setIsActive] = useState(false);
+
+  const [selectedCurrency, setSelectedCurrency] = useState("USD");
+  const handleCurrencyChange = (event) => {
+    setSelectedCurrency(event.target.value);
+  };
+
+  const options = [
+    { value: "USDT", text: "USDT", img: usdt },
+    { value: "USDC", text: "USDC", img: busd },
+    { value: "BUSD", text: "BUSD", img: usdc },
+  ];
   return (
     <TRUSCTokenContainer>
       <Container1>
@@ -60,7 +74,8 @@ const TRUSCToken = () => {
           <div className="convert">
             <div className="truai">
               <label>
-                From: <img src={foxmini} />
+                From:
+                <img src={foxmini} />
                 <input placeholder="TRUSC" />
               </label>{" "}
               <span>00.00</span>
@@ -71,10 +86,30 @@ const TRUSCToken = () => {
             </div>
             <img id="icon" src={icon} alt="icon" />
             <div className="truai">
-              <label>
-                To: <img src={usdt} />
-                <input placeholder="USDC" />
-              </label>{" "}
+              <div className="dropdown">
+                <label onClick={() => setIsActive(!Active)}>
+                  To: <img src={usdt} />
+                  <input placeholder="USDT" disabled />
+                </label>
+                {Active && (
+                  <div className="select">
+                    {" "}
+                    {Object.values(options).map((option, index) => (
+                      <div
+                        onClick={() => setSelected(option)}
+                        key={index}
+                        className="dropdownItem"
+                      >
+                        {option.name?.slice(0, 10)}
+                        <div>
+                          <img src={option.img} alt="option.img" />
+                          {option.text}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
               <span>00.00</span>
               <div className="text">
                 <span id="grey">Balance: 25.00</span>
@@ -82,6 +117,7 @@ const TRUSCToken = () => {
               </div>
             </div>
           </div>
+          <button>Swap</button>
         </div>
       </Balance>
     </TRUSCTokenContainer>
