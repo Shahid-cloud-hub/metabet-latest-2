@@ -9,10 +9,10 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
   const [odd, setOdd] = useState(0);
   const [eventName, setEventName] = useState(null);
   const [betArr, setBetArr] = useState([]);
-  const [allEventsData, setallEventsData] = useState([]);
   const metaMaskAddress = useSelector((state) => state.wallet);
+  const [allEventsData, setallEventsData] = useState([]);
 
-  console.log("display", smartContractId, getName);
+  //console.log("display", smartContractId);
 
   useEffect(() => {
     const check = async (i) => {
@@ -72,7 +72,7 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
               finallArr[i]?.result,
               finallArr[i]?.token
             );
-            allEvents.push({ event, odds });
+            allEvents.push({ finallArr, event, odds });
           }
           setallEventsData(allEvents);
           // console.log("events", allEvents);
@@ -81,87 +81,78 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
     }
   }, [smartContractId?.length]);
 
-  // console.log(eventData, "array");
-
-  //console.log(finallArr[0].eventId, 'array');
-  // const checkOdd = (id, result, token) => {
-  //   Utils.currentOdd(id, result, token).then(function (data) {
-  //     setOdd(Number(data));
-  //   });
-  //   return odd;
-  // };
-
   const formatDate = (seconds) => {
-    const s = new Date(seconds * 1000).toLocaleString("en-US");
+    const s = new Date(seconds * 1000).toLocaleDateString("en-US");
     return s;
   };
 
-  console.log("test", allEventsData);
-
   // console.log(getEventName(finallArr[0]?.eventId), "test");
-  // console.log(
-  //   getEventName(formatDate(Number(finallArr[0]?.timestamp))),
-  //   "test"
-  // );
   // console.log(
   //   checkOdd(finallArr[0]?.eventId, finallArr[0]?.result, finallArr[0]?.token),
   //   "test"
   // );
+  // console.log(allEventsData, "test");
 
   return (
     <ContainerBet>
-      {itemData?.map((item) => {
-        return (
-          <>
-            <div className="betHistory-container">
-              <div className="bet-item-1">
-                <div>
-                  <img src={item.icon1} alt="" />
-                </div>
-                <div className="table-wrapper">
-                  <div className="bet-th">
-                    <span>{item.th_1}</span>
-                    <span>{item.th_2}</span>
-                  </div>
-                  <div className="bet-td">
-                    <span>{item.td_1}</span>
-                    <span>{item.td_2}</span>
-                  </div>
-                </div>
-                <div className="table-wrapper">
-                  <div className="bet-th">
-                    <span>{item.th_3}</span>
-                    <span>{item.th_4}</span>
-                    <span>{item.th_5}</span>
-                  </div>
-                  <div className="bet-td1">
-                    <span>{item.td_3}</span>
-                    <img src={item.td_4} alt="" />
-                    <span>{item.td_5}</span>
-                  </div>
-                </div>
-                <div className="status-btn">
-                  <div className="right-pannel">
-                    <div>
-                      <button>Won</button>
-                      <button>Lost</button>
-                    </div>
-                    <div>
-                      <button>All</button>
-                      <button>Live</button>
-                    </div>
-                  </div>
+      {allEventsData?.length === 0 ? (
+        <Loading />
+      ) : (
+        allEventsData?.map((item) => {
+          return (
+            <>
+              <div className="betHistory-container">
+                <div className="bet-item-1">
                   <div>
-                    <button>Claim</button>
-                    <button className="sell">Sell</button>
+                    <img src={item.icon1} alt="" />
+                  </div>
+                  <div className="table-wrapper">
+                    <div className="bet-th">
+                      <span>{"Date"}</span>
+                      <span>{"Event"}</span>
+                    </div>
+                    <div className="bet-td">
+                      <span>
+                        {formatDate(Number(item?.finallArr[0]?.timestamp))}
+                      </span>
+                      <span>{item?.event[0][1] + "/" + item?.event[0][2]}</span>
+                    </div>
+                  </div>
+                  <div className="table-wrapper">
+                    <div className="bet-th">
+                      <span>{"Bet Amount"}</span>
+                      <span>{"Blockchain"}</span>
+                      <span>{"Current Odds"}</span>
+                    </div>
+                    <div className="bet-td1">
+                      <span>{Number(item?.finallArr[0]?.amount) / 1e18}</span>
+                      <img src={item.td_4} alt="" />
+                      <span>{item?.odds}</span>
+                    </div>
+                  </div>
+                  <div className="status-btn">
+                    <div className="right-pannel">
+                      <div>
+                        <button>Won</button>
+                        <button>Lost</button>
+                      </div>
+                      <div>
+                        <button>All</button>
+                        <button>Live</button>
+                      </div>
+                    </div>
+                    <div>
+                      <button>Claim</button>
+                      <button className="sell">Sell</button>
+                    </div>
                   </div>
                 </div>
+                <hr />
               </div>
-              <hr />
-            </div>
-          </>
-        );
-      })}
+            </>
+          );
+        })
+      )}
     </ContainerBet>
   );
 };
