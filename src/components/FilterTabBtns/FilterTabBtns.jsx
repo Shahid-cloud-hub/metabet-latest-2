@@ -50,8 +50,8 @@ const FilterTabBtns = ({
                 onClick={() => handle(item?.name)}
                 style={
                   item?.name.toLowerCase() === check
-                    ? { color: "#fff" }
-                    : { color: "#577184" }
+                    ? { color: "#fff", cursor: "pointer" }
+                    : { color: "#577184", cursor: "pointer" }
                 }
               >
                 <img src={item?.imgV} alt={item?.name} />

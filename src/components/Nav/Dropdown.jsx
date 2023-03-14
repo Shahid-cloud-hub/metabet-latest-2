@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Styles.css";
 import Component from "../../assets/images/BNB.svg";
 import ETH from "../../assets/images/ETH.png";
@@ -13,7 +13,7 @@ import USDC from "../../assets/images/usdc.png";
 import foxCircle from "../../assets/images/foxCircle.webp";
 import foxMini from "../../assets/images/fox-mini.webp";
 import Connect from "../../assets/images/Connect_btn.png";
-import Disconnect from "../../assets/images/Disconnect.png";
+import Disconnect from "../../assets/images/discount-1.png";
 import Withdraw from "../../assets/images/withdraw_btn.png";
 import navFox from "../../assets/images/nav-fox.webp";
 import openai from "../../assets/images/openai.webp";
@@ -27,6 +27,7 @@ import {
 import useBreakpoint from "../../hooks/useBreakpoints";
 import truncateEthAddress from "truncate-eth-address";
 import Utils from "../../utilities";
+import { Context } from "../../Context";
 
 function Dropdown() {
   const [selected, setSelected] = useState();
@@ -35,6 +36,7 @@ function Dropdown() {
   const dispatch = useDispatch();
   const [balance, setBalance] = useState(null);
   const { isSmallMobile, isMobile, isTablet, isDesktop } = useBreakpoint();
+  const { items } = useContext(Context);
 
   // const Address =
   //   metaMaskAddress.metaMaskAddress === null
@@ -46,6 +48,17 @@ function Dropdown() {
       ? "0.0000"
       : truncateEthAddress(metaMaskAddress.metaMaskAddress.toString());
 
+  useEffect(() => {
+    if (metaMaskAddress.metaMaskAddress) {
+      Utils.MetabetBalance(metaMaskAddress.metaMaskAddress.toString()).then(
+        function (data) {
+          data === 0 ? setBalance(null) : setBalance(data);
+          // console.log(data, "test");
+        }
+      );
+    }
+  }, [metaMaskAddress, balance, items?.getRender]);
+  console.log("re-render", items?.getRender);
   if (metaMaskAddress.metaMaskAddress) {
     Utils.MetabetBalance(metaMaskAddress.metaMaskAddress.toString()).then(
       function (data) {
@@ -65,17 +78,7 @@ function Dropdown() {
     { name: "0.00000", img: MATIC, text: "MATIC" },
     { name: "0.00000", img: GOAL, text: "GOAL" },
   ];
-  useEffect(() => {
-    if (metaMaskAddress.metaMaskAddress) {
-      Utils.MetabetBalance(metaMaskAddress.metaMaskAddress.toString()).then(
-        function (data) {
-          data === 0 ? setBalance(null) : setBalance(data);
-          // console.log(data, "test");
-        }
-      );
-    }
-    // console.log("balance", balance);
-  }, [metaMaskAddress, balance]);
+  options.map((item) => console.log(item));
 
   useEffect(() => {
     // console.log(metaMaskAddress, "metaMaskAddress");
@@ -85,13 +88,6 @@ function Dropdown() {
     <>
       <div className="dropdown">
         <div className="dropdown-ai">
-          {/* <div className="openai">
-            <img src={openai} alt="openai" />
-            <div>
-              <span>32%</span>
-              <img src={verified} alt="verified" />
-            </div>
-          </div> */}
           <div className="right-nav">
             <label>
               <input

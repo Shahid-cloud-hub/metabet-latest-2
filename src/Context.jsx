@@ -5,6 +5,7 @@ export const ContextProvider = ({ children }) => {
   const [items, setItems] = useState({
     betMessage: false,
     airDropBetMessage: false,
+    getRender: false,
   });
 
   return (

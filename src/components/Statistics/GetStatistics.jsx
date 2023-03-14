@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { useAxios } from "../../hooks/useAxios";
-import { andrew, betNowData } from "../../JasonData/FeaturedBannerData";
 import Loading from "../Loading/Loading";
 import { StatContainer } from "../Politics/Politics.styles";
 import Tabs from "../TabFifa/Tab";
@@ -10,15 +9,12 @@ import { Info, StatisticsContainer } from "./Stats.syle";
 import clock1 from "../../assets/images/BitcoinPrice/clock1.png";
 import clock2 from "../../assets/images/BitcoinPrice/clock2.png";
 import BetNowBtns from "../BetNowBtns/BetNowBtns";
+import Carousel from "../Politics/Carousel/Carousel";
 
 const GetStatistics = () => {
   let { group, title, id } = useParams();
   const { pathname } = useLocation();
   const { fetchData, response, loading } = useAxios();
-
-  const p_1 = `/trending-event/andrew-tate/statistics/${id}`;
-  const p_2 = "/ufc/ufc-285";
-  const p_3 = "/ufc/ufc-286";
   const [addStyle, setAddStyle] = useState();
 
   const callback = (id) => {
@@ -40,10 +36,6 @@ const GetStatistics = () => {
     getBanners();
     window.scrollTo(0, 0);
   }, [group, title, id]);
-
-  console.log(response, "get Statisticss");
-  // const pathname = window.location.pathname;
-  console.log(pathname, "hshds");
 
   return (
     <>
@@ -222,6 +214,7 @@ const GetStatistics = () => {
         getReview={item?.review_video || item?.u_preview_video}
         // eventStatus={eventStatus}
       />
+      <Carousel />
     </>
   );
 };

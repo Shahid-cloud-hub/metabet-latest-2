@@ -10,8 +10,9 @@ const PopUpModel = ({ messages }) => {
   const { items, setItems } = useContext(Context);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     console.log("img", messages);
-  }, [messages]);
+  }, [messages, items?.betMessage, items?.airDropBetMessage]);
 
   return (
     <PopUpContainer bg={BgImg}>

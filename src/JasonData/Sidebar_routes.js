@@ -87,7 +87,7 @@ export const sec_array = [
   // },
   {
     display_name: "Trending Events",
-    route: "/politics",
+    route: "/trending-event",
     icon: Politics,
     white: PoliticsW,
   },
