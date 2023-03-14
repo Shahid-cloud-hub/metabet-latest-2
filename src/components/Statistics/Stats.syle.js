@@ -627,16 +627,20 @@ export const StatisticsContainer = styled.div`
 
 export const Info = styled.div`
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   background: #112533;
   border-radius: 10px;
-  padding: 10px 15px;
-  gap: 30px;
+  gap: 10px;
+  justify-content: center;
+  /* padding: 10px 15px; */
+  /* gap: 30px; */
 
   .win_wrapper {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    padding: 10px 0px;
+
+    /* gap: 10px; */
   }
   .betStat {
     display: flex;
@@ -688,10 +692,13 @@ export const Info = styled.div`
     flex-direction: column;
     background: #0a1a25;
     border-radius: 10px;
-    padding: 10px;
-    max-width: 173px;
+    padding: 0px 5px;
+    /* padding: 10px; */
+    max-width: 215px;
     width: 100%;
-    gap: 10px;
+    justify-content: space-evenly;
+
+    /* gap: 10px; */
     .title {
       display: flex;
       gap: 2px;
@@ -701,6 +708,8 @@ export const Info = styled.div`
     }
 
     p {
+      display: flex;
+      align-items: center;
       text-align: center;
       font-weight: 700;
       font-size: 16px;
@@ -708,15 +717,15 @@ export const Info = styled.div`
     }
     button {
       align-items: center;
-      max-width: 163.8px;
-      min-height: 37px;
+      /* max-width: 171px; */
+      min-height: 38px;
       background: #fc4c1e;
       border-radius: 6px;
       color: #ffffff;
       border: none;
       font-size: 14px;
       cursor: pointer;
-      padding: 10px 45px;
+      padding: 10px 60px;
     }
     span {
       font-weight: 500;

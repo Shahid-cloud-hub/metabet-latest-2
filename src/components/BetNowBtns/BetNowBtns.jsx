@@ -25,6 +25,7 @@ import {
   Twitter,
   US,
   Volodymyr,
+  Win,
 } from "../../JasonData/FeaturedBannerData";
 import { Info } from "../Statistics/Stats.syle";
 
@@ -97,7 +98,7 @@ const BetNowBtns = ({ getPath, callback }) => {
         betNowData = Volodymyr;
         break;
       case `/trending-event/who-will-win/statistics/${id}`:
-        betNowData = win;
+        betNowData = Win;
         break;
       case `/trending-event/wimbledon/statistics/${id}`:
         betNowData = rain;
@@ -117,41 +118,51 @@ const BetNowBtns = ({ getPath, callback }) => {
   console.log(betNowData, "test");
 
   return (
-    <Info>
+    <Info style={{ justifyContent: "space-evenly" }}>
       {betNowData?.map((item) => (
-        <div className="win_wrapper">
-          <div className="WIN" key={item.id}>
-            <p> {item.name}</p>
-            <button
-              onClick={() => callStyle(item.id)}
-              style={
-                item.id === addStyle
-                  ? { background: "#fc4c1e" }
-                  : { background: "#7b7b7b" }
-              }
+        <>
+          <div className="win_wrapper" style={{ gap: item?.gap }}>
+            <div
+              className="WIN"
+              key={item.id}
+              style={{ width: item?.width, height: item?.height }}
             >
-              {item.btn}
-            </button>
+              <p>
+                {" "}
+                {item.name}
+                {item?.icon && <img src={item.icon} alt="icon" />}
+              </p>
+              <button
+                onClick={() => callStyle(item.id)}
+                style={
+                  item.id === addStyle
+                    ? { background: "#fc4c1e" }
+                    : { background: "#7b7b7b" }
+                }
+              >
+                {item.btn}
+              </button>
+            </div>
+            <div>
+              {item?.Pool_size && (
+                <div className="betStat">
+                  <div>
+                    <span>{item?.Pool_size}</span>
+                    <span id="clr">$873782</span>
+                  </div>
+                  <div>
+                    <span>{item?.bet_number}</span>
+                    <span id="clr">36262</span>
+                  </div>
+                  <div>
+                    <span>{item?.odds}</span>
+                    <span id="clr">1.2</span>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
-          <div>
-            {item?.Pool_size && (
-              <div className="betStat">
-                <div>
-                  <span>{item?.Pool_size}</span>
-                  <span id="clr">$873782</span>
-                </div>
-                <div>
-                  <span>{item?.bet_number}</span>
-                  <span id="clr">36262</span>
-                </div>
-                <div>
-                  <span>{item?.odds}</span>
-                  <span id="clr">1.2</span>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
+        </>
       ))}
     </Info>
   );
