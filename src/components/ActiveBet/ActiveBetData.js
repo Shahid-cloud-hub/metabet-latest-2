@@ -19,6 +19,13 @@ import Football from "../../assets/images/PL.png";
 import CricketGrey from "../../assets/images/Cricket.png";
 import UFCGrey from "../../assets/images/UFC.png";
 import trending from "../../assets/images/Politics.png";
+import DXYW from "../../assets/images/DXYW.webp";
+import BitcoinW from "../../assets/images/BitcoinW.webp";
+import EthereW from "../../assets/images/FeaturedEvent/white-Ethereum.webp";
+import CricketW from "../../assets/images/CricketW.webp";
+import PoliticsW from "../../assets/images/PoliticsW.webp";
+import FootballW from "../../assets/images/FootballW.webp";
+import UFCW from "../../assets/images/UFCW.webp";
 
 export const betData = [
   {
@@ -128,6 +135,7 @@ export const Filter = [
     id: 3,
     name: "Bitcoin",
     img: Bitcoin,
+    imgW: BitcoinW,
     icon1: bitcoin,
     th_1: "Date",
     th_2: "Event",
@@ -145,9 +153,6 @@ export const Filter = [
     name: "Ethereum",
     img: Ethere,
     th_1: "Date",
-    th_2: "Event",
-    th_3: "Bet Amount",
-    th_4: "Blockchain",
     th_5: "Current Odds",
     td_1: "12.01.2022",
     td_2: "England/France",
@@ -157,8 +162,8 @@ export const Filter = [
   },
   {
     id: 5,
-    name: "Football",
     img: Football,
+    imgW: FootballW,
     icon1: football,
     th_1: "Date",
     th_2: "Event",
@@ -175,6 +180,7 @@ export const Filter = [
     id: 6,
     name: "Cricket",
     img: CricketGrey,
+    imgW: CricketW,
     icon1: Cricket,
     th_1: "Date",
     th_2: "Event",
@@ -191,6 +197,7 @@ export const Filter = [
     id: 7,
     name: "UFC",
     img: UFCGrey,
+    imgW: UFCW,
     icon1: UFC,
     th_1: "Date",
     th_2: "Event",
@@ -207,6 +214,7 @@ export const Filter = [
     id: 8,
     name: "UFC",
     img: UFCGrey,
+    imgW: UFCW,
     icon1: UFC,
     th_1: "Date",
     th_2: "Event",
@@ -223,6 +231,7 @@ export const Filter = [
     id: 9,
     name: "UFC",
     img: UFCGrey,
+    imgW: UFCW,
     icon1: UFC,
     th_1: "Date",
     th_2: "Event",

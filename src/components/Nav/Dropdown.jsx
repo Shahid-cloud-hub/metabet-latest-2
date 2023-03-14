@@ -102,7 +102,7 @@ function Dropdown() {
                 <img src={foxMini} alt="foxMini" />
               </label>
             ) : (
-              <img src={Withdraw} alt="Withdraw" />
+              <img id="withdraw" src={Withdraw} alt="Withdraw" />
             )}
           </div>
         </div>
