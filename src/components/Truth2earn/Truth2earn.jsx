@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Truth2earnContainer } from "./Truth2earn.styles";
-import { Filter } from "../ActiveBet/ActiveBetData";
+import { Truth2Filter } from "../ActiveBet/ActiveBetData";
 import FeaturedBanners from "../../Components/FeaturedBanners/FeaturedBanners";
 import { Politics_banner_data } from "../../JasonData/FeaturedBannerData";
 import VoteBtnUp from "../../assets/images/Vote_btn_Up.webp";
@@ -24,7 +24,7 @@ const Truth2earn = (props) => {
   return (
     <Container>
       <div className="filter-btn">
-        {Filter.map((item) => {
+        {Truth2Filter?.map((item) => {
           return (
             <>
               <button

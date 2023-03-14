@@ -4,7 +4,6 @@ import { TermsContainer } from "./Sponsorship.styles";
 import sponsor from "../../assets/images/WorldcupBanner/sponsor.webp";
 import dress from "../../assets/images/WorldcupBanner/dress.webp";
 import Nairaland from "../../assets/images/WorldcupBanner/Nairaland.webp";
-import { NavLink } from "react-router-dom";
 
 const Terms = () => {
   useEffect(() => {

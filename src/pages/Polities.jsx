@@ -24,6 +24,7 @@ const Polities = ({ group_type }) => {
     getEvent();
   }, []);
 
+  const res = response ? response : [];
   // console.log("res", response);
 
   useEffect(() => {
@@ -37,7 +38,7 @@ const Polities = ({ group_type }) => {
         </div>
       ) : (
         <div className="card-parent">
-          {Object.values(response)
+          {Object?.values(res)
             .reverse()
             .slice(0, 21)
             ?.map((item, index) => (
@@ -49,7 +50,7 @@ const Polities = ({ group_type }) => {
                     style={{ width: "90%" }}
                     onClick={() =>
                       navigate(
-                        `${item?.group}/${item?.event?.title}/polictics/${item?.event?.highlights[0]?._id}`,
+                        `${item?.event?.title}/statistics/${item?.event?.highlights[0]?._id}`,
                         {
                           state: item?.event?.highlights[0]?._id,
                         }

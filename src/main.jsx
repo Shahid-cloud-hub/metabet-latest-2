@@ -26,7 +26,6 @@ import BITCOIN from "./components/BitcoinPrice/Bitcoin";
 import ETHEREUM from "./components/Ethereum/Ethereum";
 import CIRCKET from "./components/CricketBanners/CricketLandingPage";
 import CRICKETEVENT from "./components/CricketBanners/CricketEvent";
-import POLITICSDETAILS from "./components/Politics/PoliticsDetails";
 import HOWITWORKS from "./components/HowItsWork/HowItWorks";
 import MYACTIVEBETS from "./components/ActiveBet/ActiveBet";
 import MYBETHISTORY from "./components/BETHistory/BETHistory";
@@ -39,7 +38,6 @@ import SPONSORSHIP from "./components/Sponsorship/Sponsorship";
 import COOKIES from "./components/Cookies/Cookies";
 import PRIVACY from "./components/Privacy/Privacy";
 import TERMS from "./components/Terms/Terms";
-import GETEVENT from "./components/UFcComponents/GetEvent";
 import STATSCOMPONENT from "./components/Statistics/StatsComponent";
 import TRUTH2EARN from "./components/Truth2earn/Truth2earn";
 import TRUSCTOKEN from "./components/TRUSCToken/TRUSCToken";
@@ -165,10 +163,7 @@ const router = createBrowserRouter([
           },
         ],
       },
-      {
-        path: "/event/:group/:title",
-        element: <GETEVENT />,
-      },
+
       {
         path: "/stats/:group/:title/:id",
         element: <STATSCOMPONENT />,
@@ -178,17 +173,13 @@ const router = createBrowserRouter([
         element: <GetStatistics />,
       },
       {
-        path: "/politics",
+        path: "/trending-event",
         element: <POLITICS group_type="trending-event" />,
       },
-      {
-        path: "/politics/:group/:title/polictics/:id",
-        element: <GetStatistics />,
-      },
-      {
-        path: "/politics-details",
-        element: <POLITICSDETAILS />,
-      },
+      // {
+      //   path: "/politics-details",
+      //   element: <POLITICSDETAILS />,
+      // },
       {
         path: "/whitepaper",
         element: <WHITEPAPER />,
@@ -265,7 +256,6 @@ const router = createBrowserRouter([
         path: "/boxing",
         element: <BOXING />,
       },
-
       {
         path: "/darts",
         element: <DARTS />,

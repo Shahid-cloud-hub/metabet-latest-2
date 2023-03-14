@@ -251,3 +251,50 @@ export const Filter = [
     td_5: "1.15",
   },
 ];
+
+export const Truth2Filter = [
+  {
+    id: 1,
+    name: "All",
+    img: foxCircle,
+  },
+  {
+    id: 2,
+    name: "DXY",
+    img: DXY,
+  },
+  {
+    id: 3,
+    name: "Bitcoin",
+    img: Bitcoin,
+    icon1: bitcoin,
+  },
+  {
+    id: 4,
+    name: "Ethereum",
+    img: Ethere,
+  },
+  {
+    id: 5,
+    name: "Football",
+    img: Football,
+    icon1: football,
+  },
+  {
+    id: 6,
+    name: "Cricket",
+    img: CricketGrey,
+    icon1: Cricket,
+  },
+  {
+    id: 7,
+    name: "UFC",
+    img: UFCGrey,
+    icon1: UFC,
+  },
+  {
+    id: 8,
+    name: "Trending-Event",
+    img: trending,
+  },
+];

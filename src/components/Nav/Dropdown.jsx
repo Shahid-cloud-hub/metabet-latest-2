@@ -13,7 +13,7 @@ import USDC from "../../assets/images/usdc.png";
 import foxCircle from "../../assets/images/foxCircle.webp";
 import foxMini from "../../assets/images/fox-mini.webp";
 import Connect from "../../assets/images/Connect_btn.png";
-import Disconnect from "../../assets/images/Disconnect.png";
+import Disconnect from "../../assets/images/discount-1.png";
 import Withdraw from "../../assets/images/withdraw_btn.png";
 import navFox from "../../assets/images/nav-fox.webp";
 import openai from "../../assets/images/openai.webp";

@@ -12,7 +12,6 @@ import {
   BET_ADDRESS2,
 } from "../../constants";
 import Utils from "../../utilities";
-import PopUpModel from "../PopUpModel/PopUpModel";
 import { Context } from "../../Context";
 
 function Dropdown({ id, token, img, amount, name, win, betWinId }) {

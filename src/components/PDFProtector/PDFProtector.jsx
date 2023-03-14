@@ -174,7 +174,7 @@ const PDFProtector = () => {
             required
           />
           {renderErrorMessage("pass")}
-          <i class="fa fa-lock"></i>
+          <i class="fa fa-lock" aria-hidden="true"></i>
         </label>
         <button type="submit">Submit</button>
       </form>

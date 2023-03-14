@@ -10,7 +10,7 @@ import RecentTrade from "../RecentTrade/RecentTrade";
 import ReactPlayer from "react-player/youtube";
 import TradingViewWidget, { Themes } from "react-tradingview-widget";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 function Tabs(props) {
   let { group, title, id } = useParams();

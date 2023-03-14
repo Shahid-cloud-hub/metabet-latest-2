@@ -10,9 +10,6 @@ import { Info, StatisticsContainer } from "./Stats.syle";
 
 const StatsComponent = () => {
   let { group, title, id } = useParams();
-
-  // console.log(group, title, id, "UFC Componet");
-
   const { fetchData, response, loading } = useAxios();
   const [addStyle, setAddStyle] = useState();
 

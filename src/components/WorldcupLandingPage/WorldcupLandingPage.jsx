@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useAxios } from "../../hooks/useAxios";
 import Loading from "../Loading/Loading";
 import { DashContainer } from "./WorldcupLandingPage.styles";
-import BetBTN from "../../assets/images/bet-new-btn.png";
 import { useNavigate } from "react-router-dom";
 
 const WorldcupLandingPage = () => {
@@ -14,15 +13,12 @@ const WorldcupLandingPage = () => {
     await fetchData({
       method: "GET",
       url: `https://dull-puce-wildebeest-belt.cyclic.app/group`,
-      // url: `https://dull-puce-wildebeest-belt.cyclic.app/getGroup/ufc/ufc-fight-night/63fef129dc670b46ffaa1128`,
     });
   };
 
   useEffect(() => {
     getEvent();
   }, []);
-
-  // console.log("res", response);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -51,11 +47,6 @@ const WorldcupLandingPage = () => {
                     )
                   }
                 />
-                {/* <div className="card-btn">
-                  <div>
-                    <img src={BetBTN} alt="Bet Now" />
-                  </div>
-                </div> */}
               </div>
             </>
           ))}
