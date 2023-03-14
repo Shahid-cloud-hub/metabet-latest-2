@@ -108,8 +108,8 @@ function Dropdown() {
             )}
           </div>
         </div>
-        <div className="dropdownBtn" onClick={() => setIsActive(!Active)}>
-          <div className="Nav-Btn">
+        <div className="dropdownBtn">
+          <div className="Nav-Btn" onClick={() => setIsActive(!Active)}>
             <div className="Nav-text">
               {walletAddress ? walletAddress : "0.0000"}
               <img src={ETH} alt="ETH" />

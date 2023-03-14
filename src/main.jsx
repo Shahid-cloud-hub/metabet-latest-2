@@ -222,7 +222,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/crypto-Currencies",
-        element: <CRYPTOCURRENCIES />,
+        element: <CRYPTOCURRENCIES group_type="trending-event" />,
       },
       {
         path: "/basketball",
