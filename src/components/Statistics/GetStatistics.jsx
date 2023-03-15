@@ -89,6 +89,7 @@ const GetStatistics = () => {
 
   return (
     <>
+      {/* // Trending Event // */}
       {loading
         ? item?.stats_title && <Loading />
         : item?.stats_title && (
@@ -131,6 +132,7 @@ const GetStatistics = () => {
               </div>
             </StatContainer>
           )}
+      {/* // UFC && Football // */}
       {loading ? (
         <Loading />
       ) : (
@@ -249,6 +251,7 @@ const GetStatistics = () => {
           </StatisticsContainer>
         )
       )}
+      {/* // Currencies and Crypto-Currencies // */}
       <Info>
         <BetNowBtns getPath={pathname} callback={callback} />
       </Info>
