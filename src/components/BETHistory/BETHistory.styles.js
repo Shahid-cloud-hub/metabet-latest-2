@@ -7,14 +7,14 @@ export const Container = styled.div`
   .filter-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
     button {
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 16px;
-      padding: 0px 10px;
+      padding: 0px 20px;
       min-height: 45px;
       background: #0f212e;
       border-radius: 8px;

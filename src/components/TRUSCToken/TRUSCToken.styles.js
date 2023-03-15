@@ -16,8 +16,9 @@ export const TRUSCTokenContainer = styled.div`
 
 export const Container1 = styled.div`
   width: 100%;
-  margin: 20px 10px;
-  display: flex;
+  margin: auto 0;
+  justify-content: center;
+  align-items: center;  display: flex;
   gap: 20px;
 
   .fox-stats {
@@ -175,6 +176,9 @@ export const Balance = styled.div`
       padding: 0px 35px;
 
       .icon {
+        img{
+          width:60px;
+        }
         span {
           font-family: "Junegull";
           font-style: normal;
