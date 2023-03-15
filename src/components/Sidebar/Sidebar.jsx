@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Container } from "./Sidebar.style";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import Footer from "../Footer/Footer";
 
 import { first_array, sec_array } from "../../JasonData/Sidebar_routes";
@@ -62,7 +62,9 @@ const Sidebar = () => {
         </div>
         <hr />
         <div className="wrapper-span">
-          <span>All Events</span>
+          <NavLink to="/">
+            <span>All Events</span>
+          </NavLink>
         </div>
         <div className="wrapper-link-1">
           {sec_array.map((item, index) => (

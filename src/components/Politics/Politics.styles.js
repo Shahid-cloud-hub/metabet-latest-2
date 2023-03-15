@@ -260,10 +260,13 @@ export const StatContainer = styled.div`
       min-height: 95px;
       background: #0f212e;
       border-radius: 12px;
+
       span:nth-child(2) {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 140%;
         color: #ffffff;
+        max-width: 100px;
+        text-align: left;
       }
 
       span {

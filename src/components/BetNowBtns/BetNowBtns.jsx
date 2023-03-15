@@ -81,7 +81,7 @@ const BetNowBtns = ({ getPath, callback }) => {
       case `/trending-event/flights-from-china/statistics/${id}`:
         betNowData = China;
         break;
-      case `/trending-event/world’s-richest-man/statistics/${id}`:
+      case `/trending-event/worlds-richest-man/statistics/${id}`:
         betNowData = Richest;
         break;
       case `/trending-event/dana-white/statistics/${id}`:
