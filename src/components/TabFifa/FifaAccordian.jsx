@@ -18,13 +18,24 @@ import {
   BUSD_ADDRESS,
   METABET_ADDRESS,
 } from "../../constants";
+import { createGlobalStyle } from "styled-components";
 
 const Accordian = (props) => {
   const pathname = window.location.pathname;
   const [isOpen, setOpen] = useState(false);
   const [showAccord, setShowAccord] = useState(false);
   const [addStyle, setAddStyle] = useState();
-  const [valData, setValData] = useState();
+  const [callBets, setCallBets] = useState();
+  const [callPool, setCallPool] = useState();
+console.log("parent",callBets )
+console.log("parent",callPool )
+  const callbackbets = (callbets)=> {
+    setCallBets(callbets);
+  
+  }
+  const callbackpool = (callpool)=> {
+    setCallPool(callpool);
+  }
 
   let FifaTableData = [
     {
@@ -32,8 +43,9 @@ const Accordian = (props) => {
       name: "GOAL",
       poolCricket: "0.0000",
       img: GOAL_Icon,
-      amount: "Enter Amount",
-      win: "Possible Win",
+      amount: "Amount",
+      win: "Possible Win:",
+      odds: "Odds",
       display_none: "none",
       token: GOAL_ADDRESS,
     },
@@ -42,8 +54,9 @@ const Accordian = (props) => {
       name: "BNB",
       poolCricket: "0.0000",
       img: BNB_Icon,
-      amount: "Enter Amount",
-      win: "Possible WIN",
+      amount: "Amount",
+      win: "Possible WIN:",
+      odds: "Odds",
       token: ZERO_ADDRESS,
     },
     {
@@ -51,8 +64,9 @@ const Accordian = (props) => {
       name: "ETH",
       poolCricket: "0.0000",
       img: ETH_Icon,
-      amount: "Enter Amount",
-      win: "Possible WIN",
+      amount: "Amount",
+      win: "Possible WIN:",
+      odds: "Odds",
       token: ZERO_ADDRESS,
     },
     {
@@ -60,8 +74,9 @@ const Accordian = (props) => {
       name: "USDT",
       poolCricket: "0.0000",
       img: USDT_Icon,
-      amount: "Enter Amount",
-      win: "Possible WIN",
+      amount: "Amount",
+      win: "Possible WIN:",      
+      odds: "Odds",
       token: ZERO_ADDRESS,
     },
     {
@@ -69,8 +84,9 @@ const Accordian = (props) => {
       name: "USDC",
       poolCricket: "0.0000",
       img: USDC_Icon,
-      amount: "Enter Amount",
-      win: "Possible WIN",
+      amount: "Amount",
+      win: "Possible WIN:",      
+      odds: "Odds",
       token: ZERO_ADDRESS,
     },
     {
@@ -79,7 +95,8 @@ const Accordian = (props) => {
       poolCricket: "0.0000",
       img: BUSD_Icon,
       amount: "Enter Amount",
-      win: "Possible WIN",
+      win: "Possible WIN:",       
+      odds: "Odds",
       token: BUSD_ADDRESS,
     },
     {
@@ -88,7 +105,8 @@ const Accordian = (props) => {
       poolCricket: "0.0000",
       img: TRUSC_Icon,
       amount: "Enter Amount",
-      win: "Possible WIN",
+      win: "Possible WIN:",      
+      odds: "Odds",
       token: BUSD_ADDRESS,
     },
     // {
@@ -105,8 +123,9 @@ const Accordian = (props) => {
       name: "METABET",
       poolCricket: "0.0000",
       img: METABET_Icon,
-      amount: "Enter Amount",
-      win: "Possible WIN",
+      amount: "Enter Amount",    
+      odds: "Odds",
+      win: "Possible WIN:",
       token: METABET_ADDRESS,
     },
   ];
@@ -142,7 +161,10 @@ const Accordian = (props) => {
                 <img src={item.img} alt={item.name} />
                 <span>{item.name}</span>
               </div>
+
               <div className="item changeItem">
+              <span>{callPool ? callPool : 0.0000}</span>
+                <span>{callBets ? callBets:  0.0000}</span>
                 <button
                   disabled={
                     !props.eventStatus || props.bitAndEth == false
@@ -177,6 +199,9 @@ const Accordian = (props) => {
                     amount={item.amount}
                     name={item.name}
                     win={item.win}
+                    odds={item.odds}
+                    callbackbets={callbackbets}
+                    callbackpool={callbackpool}
                   />
                 </div>
               </div>

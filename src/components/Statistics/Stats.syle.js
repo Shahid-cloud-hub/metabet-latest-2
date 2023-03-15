@@ -8,6 +8,14 @@ export const StatisticsContainer = styled.div`
   border-radius: 10px;
   margin: 10px auto;
   max-width: 975px;
+  .rectangle{
+    span{
+      font-size: 14px;
+      text-align: center;
+      color: #ffffff;
+
+    }
+  }
 
   .featured-banner-wrapper {
     display: flex;
@@ -695,6 +703,7 @@ export const Info = styled.div`
     padding: 0px 5px;
     /* padding: 10px; */
     max-width: 215px;
+    min-height: 106px;
     width: 100%;
     justify-content: space-evenly;
 

@@ -95,7 +95,7 @@ const GetStatistics = () => {
         : item?.stats_title && (
             <StatContainer>
               <div className="rectangle">
-                <span>Statistic:</span>
+                {/* <span>Statistic:</span> */}
                 <span>{item?.stats_title}</span>
               </div>
               <div className="vs">

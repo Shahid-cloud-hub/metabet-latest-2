@@ -14,7 +14,7 @@ import {
 import Utils from "../../utilities";
 import { Context } from "../../Context";
 
-function Dropdown({ id, token, img, amount, name, win, betWinId }) {
+function Dropdown({ id, token, img, amount, name, win, odds, betWinId, callbackbets , callbackpool}) {
   const metaMaskAddress = useSelector((state) => state.wallet);
   const dispatch = useDispatch();
   const [enterAmount, setEnterAmount] = useState("");
@@ -42,17 +42,23 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
   const details = () => {
     Utils.PoolSize(id, token).then(function (data) {
       setDataSize(data);
+      callbackbets(data);
     });
     Utils.PoolTotal(id, token).then(function (data) {
       setDataTotal((data / 1e18).toFixed(2));
+      callbackpool((data / 1e18).toFixed(2));
+
     });
   };
+  
 
   const multiplier = total / (teamT + Number(enterAmount));
   const payout = multiplier * Number(enterAmount);
   console.log("Multiplier", multiplier);
   console.log("Multiplier", isFinite(multiplier));
   console.log("Payout", payout);
+
+
 
   const BetNow = async (_id, _token, _amount, userResult) => {
     try {
@@ -198,9 +204,10 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
         </label>
         <label>
           <div className="status_3">
-            <div>
+            {/* <div>
               <img src={img} alt="img" />
-            </div>
+            </div> */}
+        <span>{odds}</span>
           </div>
           <input type="text" value={Data_total ? Data_total : 0} disabled />
         </label>
@@ -209,10 +216,11 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
             <div>
               <img src={img} alt="img" />
             </div>
+            <span>{win}</span>
           </div>
           <input type="text" value={Data_size ? Data_size : 0} disabled />
         </label>
-        <label>
+        {/* <label>
           <div className="status_4">
             <div>
               <img src={img} alt="img" />
@@ -229,23 +237,21 @@ function Dropdown({ id, token, img, amount, name, win, betWinId }) {
             <div>
               <img src={img} alt="img" />
             </div>
-            {/* <span>
-              {payout.toFixed(2) === "NaN" ? "0.000" : payout.toFixed(2)}
-            </span> */}
+        
           </div>
           <input
             type="text"
             value={payout.toFixed(2) === "NaN" ? "0.000" : payout.toFixed(2)}
             disabled
           />
-        </label>
+        </label> */}
         {!metaMaskAddress.metaMaskAddress ? (
           <button
             className="bet-btn"
             id="btn"
             onClick={() => dispatch(metaMaskConnection())}
           >
-            Connect Wallet
+            BET
           </button>
         ) : (
           <button

@@ -62,8 +62,13 @@ export const TradeTable = styled.div`
           display: flex;
           justify-content: space-around;
           width: 100%;
-          max-width: 632px;
+          /* max-width: 632px; */
+          max-width: 690px;
+          align-items: baseline;
           align-self: end;
+          #time {
+            max-width: 36px;
+          }
         }
       }
     }

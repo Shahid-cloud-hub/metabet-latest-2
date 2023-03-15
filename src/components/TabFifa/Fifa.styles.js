@@ -312,7 +312,7 @@ export const Table = styled.div`
   .item {
     display: flex;
     align-items: center;
-    grid-gap: 81px;
+    grid-gap: 182px;
 
     span:nth-child(1) {
       transform: translate(-70px, 0px);
@@ -385,71 +385,99 @@ export const Table = styled.div`
     display: flex;
     gap: 10px;
   }
+  .bet-btn{
+    margin-top: 2px;
+    height: 42px;
 
+  }
   label {
     display: flex;
     background: #0a1a25;
     border-radius: 10px;
     align-items: center;
-    min-width: 124px;
-    padding: 16px 9px;
+    min-width: 210px;
+    // min-height: 35px;
+    padding: 10px;
+ 
+      input::placeholder{
+        color: #ffffff;
+    
+      }
+
+    // padding: 16px 9px;
   }
 
-  label:nth-child(1) {
-    min-width: 150px;
-  }
-  label:nth-child(5) {
-    min-width: 130px;
-  }
+  // label:nth-child(1) {
+  //   min-width: 150px;
+  // }
+  // label:nth-child(5) {
+  //   min-width: 130px;
+  // }
 
   .status {
     display: flex;
-    justify-content: space-around;
+    // justify-content: space-around;
     width: 100%;
     position: relative;
+    align-items: center;
+    gap: 5px;
+span{
+  font-size: 13px;
+  color: #969696;
+}
 
-    span {
-      font-size: 13px;
-      transform: translate(12px, 0px);
-    }
+}
 
-    div {
-      position: absolute;
-      transform: translate(0px, -3px);
-      left: -4px;
-    }
+    // span {
+    //   font-size: 13px;
+    //   transform: translate(12px, 0px);
+    // }
+
+    // div {
+    //   position: absolute;
+    //   transform: translate(0px, -3px);
+    //   left: -4px;
+    // }
   }
 
   .status_3 {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     width: 100%;
     position: relative;
+    align-items: center;
+    gap: 5px;
     span {
       font-size: 13px;
+      color: #969696;
+
     }
 
-    div {
-      position: absolute;
-      transform: translate(5px, -11px);
-      left: 0;
-    }
+    // div {
+    //   position: absolute;
+    //   transform: translate(5px, -11px);
+    //   left: 0;
+    // }
   }
 
   .status_4 {
     display: flex;
-    justify-content: flex-end;
+    // justify-content: flex-end;
     width: 100%;
     position: relative;
+    align-items: center;
+    gap: 5px;
     span {
       font-size: 13px;
+      color: #969696;
+
     }
 
-    div {
-      position: absolute;
-      transform: translate(2px, -2px);
-      left: 0;
-    }
+    // div {
+    //   position: absolute;
+    //   transform: translate(2px, -2px);
+    //   left: 0;
+    // }
   }
 
   .status_5 {
@@ -476,7 +504,9 @@ export const Table = styled.div`
     border: none;
     color: #ffffff;
     text-align: end;
+   
   }
+
 
   @media screen and (max-width: 820px) {
     max-width: 430px;

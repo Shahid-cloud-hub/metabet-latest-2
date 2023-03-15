@@ -340,21 +340,23 @@ export const StatContainer = styled.div`
       flex-direction: column;
       gap: 10px;
     }
-    span:nth-child(1) {
-      font-weight: 800;
-      font-size: 18px;
-      line-height: 140%;
-      color: #ffffff;
-    }
+    // span:nth-child(1) {
+    //   font-weight: 800;
+    //   font-size: 18px;
+    //   line-height: 140%;
+    //   color: #ffffff;
+    // }
 
     span {
       display: flex;
       flex-direction: column;
       font-weight: 500;
-      font-size: 11px;
+      font-size: 16px;
       line-height: 140%;
-      color: #b6b6b6;
-    }
+      color: #ffffff;
+      text-align: justify;
+      padding-top: 25px;
+      }
   }
   @media screen and (max-width: 1080px) {
     .portfolio {

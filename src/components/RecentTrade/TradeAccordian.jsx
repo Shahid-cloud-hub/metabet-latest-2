@@ -72,7 +72,9 @@ const TradeAccordian = (props) => {
                     </div>
                     <div className="item_2">
                       <span>{String(item?.user).substring(8, -1)}</span>
-                      <span>{formatDate(Number(item.timestamp))}</span>
+                      <span id="time">
+                        {formatDate(Number(item.timestamp))}
+                      </span>
                       <span>
                         {checkOdd(item?.result, item?.token).toFixed(2)}
                       </span>

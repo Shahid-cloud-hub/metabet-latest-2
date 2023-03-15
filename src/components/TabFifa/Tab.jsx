@@ -72,8 +72,8 @@ function Tabs(props) {
             <span>CURRENCY</span>
             <span>POOL SIZE</span>
             <span>NUMBER OF BETS</span>
-            <span>ODDS</span>
-            <span>PAYOUT</span>
+            {/* <span>ODDS</span>
+            <span>PAYOUT</span> */}
             <span>SELECT CURRENCY</span>
           </div>
           <FifaAccordian

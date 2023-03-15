@@ -218,11 +218,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/currencies",
-        element: <CURRENCIES />,
+        element: <CURRENCIES group_type="trending-event" />,
       },
       {
         path: "/crypto-Currencies",
-        element: <CRYPTOCURRENCIES />,
+        element: <CRYPTOCURRENCIES group_type="trending-event" />,
       },
       {
         path: "/basketball",
