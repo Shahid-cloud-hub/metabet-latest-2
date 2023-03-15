@@ -10,12 +10,12 @@ const ActiveBetHistory = () => {
   const [getName, setGetName] = useState("all");
   const { fetchData, response } = useAxios();
 
-  const uniqueNames = [...new Set(Filter.map((item) => item.name))];
-  const menuItems = uniqueNames.map((nameObj) => {
-    const filterItem = Filter.find((item) => item.name == nameObj);
-    const imgV = filterItem ? filterItem.img : null;
-    return { name: nameObj, imgV };
-  });
+  // const uniqueNames = [...new Set(Filter.map((item) => item.name))];
+  // const menuItems = uniqueNames.map((nameObj) => {
+  //   const filterItem = Filter.find((item) => item.name == nameObj);
+  //   const imgV = filterItem ? filterItem.img : null;
+  //   return { name: nameObj, imgV };
+  // });
 
   const filterItem = (curcat) => {
     const newItem = Filter.filter((newVal) => {
