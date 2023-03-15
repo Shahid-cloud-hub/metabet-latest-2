@@ -58,12 +58,11 @@ function Dropdown() {
       );
     }
   }, [metaMaskAddress, balance, items?.getRender]);
-  console.log("re-render", items?.getRender);
   if (metaMaskAddress.metaMaskAddress) {
     Utils.MetabetBalance(metaMaskAddress.metaMaskAddress.toString()).then(
       function (data) {
         data === 0 ? setBalance(null) : setBalance(data);
-        console.log(data);
+        // console.log(data);
       }
     );
   }
@@ -78,7 +77,6 @@ function Dropdown() {
     { name: "0.00000", img: MATIC, text: "MATIC" },
     { name: "0.00000", img: GOAL, text: "GOAL" },
   ];
-  options.map((item) => console.log(item));
 
   useEffect(() => {
     // console.log(metaMaskAddress, "metaMaskAddress");

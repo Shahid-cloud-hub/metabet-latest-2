@@ -92,8 +92,6 @@ const Dashboard = () => {
   const { items } = useContext(Context);
   const [celebRemove] = useState(true);
 
-  console.log(items, "dashboard");
-
   const availableWidth = window?.screen?.availWidth;
 
   return (

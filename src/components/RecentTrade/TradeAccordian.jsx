@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import BUSD from "../../assets/images/BUSD.png";
+import { Context } from "../../Context";
 import Utils from "../../utilities";
 import Loading from "../Loading/Loading";
 
@@ -7,12 +8,13 @@ const TradeAccordian = (props) => {
   const [isOpen, setOpen] = useState(false);
   const [bets, setAllBets] = useState([]);
   const [odd, setOdd] = useState(0);
+  const { items } = useContext(Context);
 
   useEffect(() => {
     Utils.AllBets(props.id).then(function (data) {
       setAllBets(data);
     });
-  }, [props?.id]);
+  }, [props?.id, items?.getRender]);
 
   const arr = bets;
 

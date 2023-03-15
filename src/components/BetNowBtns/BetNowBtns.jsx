@@ -1,7 +1,6 @@
 import React from "react";
-import { useEffect } from "react";
 import { useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import {
   andrew,
@@ -31,14 +30,11 @@ import { Info } from "../Statistics/Stats.syle";
 
 const BetNowBtns = ({ getPath, callback }) => {
   const [addStyle, setAddStyle] = useState();
-  let { title, id } = useParams();
-  console.log(addStyle, "child");
+  let { id } = useParams();
   const callStyle = (bet_btn_id) => {
     callback(bet_btn_id);
     setAddStyle(bet_btn_id);
   };
-
-  const p_1 = `/trending-event/${title}/statistics/${id}`;
 
   const getBetBowData = (type) => {
     let betNowData;
@@ -85,7 +81,7 @@ const BetNowBtns = ({ getPath, callback }) => {
       case `/trending-event/flights-from-china/statistics/${id}`:
         betNowData = China;
         break;
-      case `/trending-event/world’s-richest-man/statistics/${id}`:
+      case `/trending-event/worlds-richest-man/statistics/${id}`:
         betNowData = Richest;
         break;
       case `/trending-event/dana-white/statistics/${id}`:
@@ -107,15 +103,12 @@ const BetNowBtns = ({ getPath, callback }) => {
         betNowData = crap;
         break;
     }
-    console.log(betNowData === Kardashian, "jksjkdjsk");
     return {
       betNowData,
     };
   };
 
   const { betNowData } = getBetBowData(getPath);
-
-  console.log(betNowData, "test");
 
   return (
     <Info style={{ justifyContent: "space-evenly" }}>

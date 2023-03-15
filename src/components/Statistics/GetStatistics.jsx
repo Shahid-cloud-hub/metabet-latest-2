@@ -37,6 +37,56 @@ const GetStatistics = () => {
     window.scrollTo(0, 0);
   }, [group, title, id]);
 
+  // const FormatDate = (dateNumber) => {
+  //   const date = new Date(dateNumber);
+  //   const options = {
+  //     // weekday: "long",
+  //     year: "numeric",
+  //     month: "long",
+  //     day: "numeric",
+  //     // hour: "numeric",
+  //     // minute: "numeric",
+  //     // second: "numeric",
+  //     timeZoneName: "short",
+  //   };
+  //   const humanReadableDate = date?.toLocaleString("en-US", options);
+  //   const noSpacesDate = humanReadableDate?.replace(/\s/g, "");
+  //   console.log(noSpacesDate);
+
+  //   const day = noSpacesDate.slice(8, 10);
+  //   const month = humanReadableDate.substr(0, 3);
+  //   const year = humanReadableDate.substr(13, 4);
+
+  //   const reversedDate = day + month + year;
+  //   const SpacesDate = reversedDate?.replace(/\s/g, " ");
+
+  //   // const day = humanReadableDate.substr(0, 3);
+  //   console.log(SpacesDate, "date");
+
+  //   return humanReadableDate;
+  // };
+
+  const FormatDate = (dateNumber) => {
+    const date = new Date(dateNumber);
+    const options = {
+      day: "numeric",
+      month: "long",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+      // year: "numeric",
+      timeZoneName: "short",
+    };
+    const formattedDate = new Intl.DateTimeFormat("en-GB", options).format(
+      date
+    );
+    // formattedDate.split(/[\s,]+/) this is used to add or remove the (-, " ") from particular sentence
+    const [day, month, timeZoneName] = formattedDate.split(/[\s,]+/);
+    console.log(day, month, timeZoneName); // Output: "28 Feb 2023"
+
+    return formattedDate;
+  };
+
   return (
     <>
       {loading
@@ -68,11 +118,7 @@ const GetStatistics = () => {
                         <img src={clock2} alt="clock2" />
                       </div>
                     </div>
-                    <span>
-                      {item?.date}
-                      <br />
-                      00:00 GMT
-                    </span>
+                    <span>{FormatDate(item?.date)}</span>
                   </div>
                 </div>
               </div>

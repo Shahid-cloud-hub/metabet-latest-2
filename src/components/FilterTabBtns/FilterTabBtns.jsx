@@ -43,13 +43,13 @@ const FilterTabBtns = ({
   return (
     <>
       {betHis &&
-        tabItem1.map((item) => {
+        tabItem1?.map((item) => {
           return (
             <>
               <button
                 onClick={() => handle(item?.name)}
                 style={
-                  item?.name.toLowerCase() === check
+                  item?.name?.toLowerCase() === check
                     ? { color: "#fff", cursor: "pointer" }
                     : { color: "#577184", cursor: "pointer" }
                 }
@@ -75,7 +75,7 @@ const FilterTabBtns = ({
               <img src={Val?.imgV} alt={Val?.name} />
               <span
                 style={
-                  Val?.name.toLowerCase() === check
+                  Val?.name?.toLowerCase() === check
                     ? { color: "#fff" }
                     : { color: "#577184" }
                 }
