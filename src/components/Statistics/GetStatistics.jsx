@@ -281,7 +281,75 @@ const GetStatistics = () => {
           </StatisticsContainer>
         )
       )}
-      {/* // Currencies and Crypto-Currencies // */}
+      {/* // CryptoCurrencies  */}
+      {/* {loading ? (
+        <Loading />
+      ) : (
+      <StatContainer>
+          <div className="portfolio">
+            <img src={BtcUp} alt="BtcUp" />
+            <span>BTC PRICE UP</span>
+          </div>
+          {result?.map((item) => (
+            <div className="vs">
+              <div id="live">
+                <p>Bitcoin PRICE</p>
+                <p>POOL LIVE</p>
+              </div>
+              <div className="close">
+                <div className="predict">
+                  <div className="clock">
+                    <p>Predict Price on</p>
+                    <div>
+                      {" "}
+                      <img src={clock1} alt="clock1" />
+                    </div>
+                  </div>
+                  <span>
+                    26 February
+                    <br />
+                    00:00 GMT
+                  </span>
+                </div>
+                <div className="predict">
+                  <div className="clock">
+                    <p id="color">Pool Closes on</p>
+                    <div>
+                      {" "}
+                      <img src={clock2} alt="clock2" />
+                    </div>
+                  </div>
+                  <span>
+                    24 Febraury
+                    <br />
+                    12:00 GMT
+                  </span>
+                </div>
+              </div>
+              <div className="rectangle">
+                <div className="stats">
+                  <p>Trading Volume:</p>
+                  <span>{formatDollar(result[0]?.total_volume, 5)} </span>
+                </div>
+                <div className="stats">
+                  {" "}
+                  <p>24h Low / 24h High</p>
+                  <span>
+                    {formatDollar(result[0]?.low_24h, 5)}/{" "}
+                    {formatDollar(result[0]?.high_24h, 5)}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          <div className="portfolio">
+            <div>
+              <img src={BtcDown} alt="BtcDown" />
+            </div>
+            <span>BTC PRICE DOWN</span>
+          </div>
+        </StatContainer>)} */}
       <Info>
         <BetNowBtns getPath={pathname} callback={callback} />
       </Info>

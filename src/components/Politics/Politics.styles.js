@@ -373,7 +373,7 @@ export const StatContainer = styled.div`
       font-size: 16px;
       line-height: 140%;
       color: #ffffff;
-      text-align: justify;
+      text-align: center;
       padding-top: 25px;
     }
   }
