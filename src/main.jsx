@@ -218,7 +218,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/currencies",
-        element: <CURRENCIES group_type="trending-event" />,
+        element: <CURRENCIES group_type="currencies" />,
       },
       {
         path: "/crypto-Currencies",
