@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function Times({ date }) {
+function Times({ date, show }) {
   // function changeTimezone(date, ianatz) {
   //   // suppose the date is 12:00 UTC
   //   const invdate = new Date(
@@ -18,6 +18,8 @@ function Times({ date }) {
   // const getDateObject = (e) => changeTimezone(new Date(e), "Poland");
 
   // console.log("first ew", getDateObject(date));
+
+  console.log("show", show);
   const deadline = new Date(date);
   const gmt = new Date(date);
 
@@ -52,13 +54,13 @@ function Times({ date }) {
 
       // Output the result in an element with id="demo_1"
       document.getElementById("demo_1").innerHTML =
-        (days ? days + "d " : null) +
+        (days ? days + " days " : null) +
         hours +
-        "h " +
+        " hours " +
         minutes +
-        "m " +
-        seconds +
-        "s ";
+        " mins ";
+      // seconds +
+      // "s ";
 
       // If the count down is over, write some text
       if (distance < 0) {
@@ -73,16 +75,25 @@ function Times({ date }) {
   }, [date]);
   return (
     <>
-      <span id="val">{`${newVal}`}</span>
+      {show && <span id="val">{`${newVal}`}</span>}
       {/* <span style={{ fontSize: "14px" }}>00:00 GMT</span> */}
+
       <div
         id="demo_1"
-        style={{
-          textAlign: "center",
-          color: "yellow",
-        }}
+        style={
+          !show
+            ? {
+                textAlign: "left",
+                color: "yellow",
+                marginTop: "5px",
+              }
+            : {
+                textAlign: "center",
+                color: "yellow",
+              }
+        }
       ></div>
-      <span>{deadline.toLocaleTimeString()}</span>
+      {show && <span>{deadline.toLocaleTimeString()}</span>}
     </>
   );
 }

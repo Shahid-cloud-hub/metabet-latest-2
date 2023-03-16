@@ -32,6 +32,8 @@ const GetStatistics = () => {
 
   const item = response?.stats?.data;
 
+  console.log("test", item);
+
   useEffect(() => {
     getBanners();
     window.scrollTo(0, 0);
@@ -71,18 +73,20 @@ const GetStatistics = () => {
     const options = {
       day: "numeric",
       month: "long",
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: false,
-      // year: "numeric",
-      timeZoneName: "short",
+      // hour: "2-digit",
+      // minute: "2-digit",
+      // hour12: false,
+      year: "numeric",
+      // timeZoneName: "short",
+      // "event_timestamp": "2023-03-01T00:00",
+      // 2023-12-25T04:53
     };
     const formattedDate = new Intl.DateTimeFormat("en-GB", options).format(
       date
     );
     // formattedDate.split(/[\s,]+/) this is used to add or remove the (-, " ") from particular sentence
-    const [day, month, timeZoneName] = formattedDate.split(/[\s,]+/);
-    console.log(day, month, timeZoneName); // Output: "28 Feb 2023"
+    const [day, month] = formattedDate.split(/[\s,]+/);
+    console.log(day, month); // Output: "28 Feb 2023"
 
     return formattedDate;
   };
@@ -119,7 +123,30 @@ const GetStatistics = () => {
                         <img src={clock2} alt="clock2" />
                       </div>
                     </div>
-                    <span>{FormatDate(item?.date)}</span>
+                    {item?.date && (
+                      <>
+                        <span>{FormatDate(item?.date)}</span>
+                        {item?.event_status == "no" ? (
+                          ""
+                        ) : item?.event_status === "yes" ? (
+                          <Times date={item?.date} show={false} />
+                        ) : (
+                          ""
+                        )}
+                      </>
+                    )}
+                    {item?.event_status == "no" && (
+                      <div className="total-pool-wrapper">
+                        <div className="item-1">
+                          <span>Total pool</span>
+                          <span>$2143231</span>
+                        </div>
+                        <div className="item-1">
+                          <span>Total no of Bets</span>
+                          <span>12312312</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -192,7 +219,10 @@ const GetStatistics = () => {
               </div>
               <div className="player-VS">
                 <span>VS</span>
-                <Times date={loading ? <Loading /> : item?.event_date} />
+                <Times
+                  date={loading ? <Loading /> : item?.event_date}
+                  show={true}
+                />
                 <span id="val" style={{ color: "yellow" }}>
                   {loading ? <Loading /> : item?.pool_status}
                 </span>

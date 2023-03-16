@@ -6,32 +6,35 @@ import Loading from "../Loading/Loading";
 // import { PoliticsContainer } from "../Components/Politics/Politics.styles";
 import { DashContainer } from "../WorldcupLandingPage/WorldcupLandingPage.styles";
 import { useAxios } from "../../hooks/useAxios";
+import Maintenance from "../Maintenance/Maintenance";
 // import useBreakpoint from "../hooks/useBreakpoints";
 // import { Politics_banner_data } from "../JasonData/FeaturedBannerData";
 
 const CryptoCurrencies = ({ group_type }) => {
-  const { fetchData, response, loading } = useAxios();
-  const navigate = useNavigate();
+  // const { fetchData, response, loading } = useAxios();
+  // const navigate = useNavigate();
 
-  const getEvent = async () => {
-    await fetchData({
-      method: "GET",
-      url: `https://dull-puce-wildebeest-belt.cyclic.app/getGroup/group/type/${group_type}`,
-    });
-  };
+  // const getEvent = async () => {
+  //   await fetchData({
+  //     method: "GET",
+  //     url: `https://dull-puce-wildebeest-belt.cyclic.app/getGroup/group/type/${group_type}`,
+  //   });
+  // };
 
-  useEffect(() => {
-    getEvent();
-  }, []);
+  // useEffect(() => {
+  //   getEvent();
+  // }, []);
 
-  const res = response ? response : [];
-  // console.log("res", response);
+  // const res = response ? response : [];
+  // // console.log("res", response);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
+
   return (
-    <DashContainer>
+    <>
+      {/* <DashContainer>
       {loading ? (
         <div className="loading">
           <Loading />
@@ -62,7 +65,9 @@ const CryptoCurrencies = ({ group_type }) => {
             ))}
         </div>
       )}
-    </DashContainer>
+    </DashContainer> */}
+      <Maintenance />
+    </>
   );
 };
 

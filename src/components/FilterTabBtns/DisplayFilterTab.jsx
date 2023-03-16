@@ -12,7 +12,7 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
   const metaMaskAddress = useSelector((state) => state.wallet);
   const [allEventsData, setallEventsData] = useState([]);
 
-  //console.log("display", smartContractId);
+  console.log("display", smartContractId?.length > 0 ? true : false);
 
   useEffect(() => {
     const check = async (i) => {
@@ -81,17 +81,12 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
     }
   }, [smartContractId?.length]);
 
+  console.log("test", allEventsData);
+
   const formatDate = (seconds) => {
     const s = new Date(seconds * 1000).toLocaleDateString("en-US");
     return s;
   };
-
-  // console.log(getEventName(finallArr[0]?.eventId), "test");
-  // console.log(
-  //   checkOdd(finallArr[0]?.eventId, finallArr[0]?.result, finallArr[0]?.token),
-  //   "test"
-  // );
-  // console.log(allEventsData, "test");
 
   return (
     <ContainerBet>

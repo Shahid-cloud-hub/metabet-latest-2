@@ -81,7 +81,10 @@ const StatsComponent = () => {
           </div>
           <div className="player-VS">
             <span>VS</span>
-            <Times date={loading ? <Loading /> : item?.event_date} />
+            <Times
+              date={loading ? <Loading /> : item?.event_date}
+              show={true}
+            />
             <span id="val" style={{ color: "yellow" }}>
               {loading ? <Loading /> : item?.pool_status}
             </span>

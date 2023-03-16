@@ -31,7 +31,7 @@ const WorldcupLandingPage = () => {
         </div>
       ) : (
         <div className="card-parent">
-          {response?.slice(0, 21).map((item, index) => (
+          {response?.slice(0, 19).map((item, index) => (
             <>
               <div className="card" key={index}>
                 <img

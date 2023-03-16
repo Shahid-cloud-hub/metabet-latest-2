@@ -256,16 +256,18 @@ export const StatContainer = styled.div`
       flex-direction: column;
       gap: 10px;
       padding: 10px;
-      max-width: 160px;
+      width: 193px;
       min-height: 95px;
       background: #0f212e;
       border-radius: 12px;
+      /* justify-content: center; */
+      /* align-items: center; */
 
       span:nth-child(2) {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 140%;
         color: #ffffff;
-        max-width: 100px;
+        max-width: 130px;
         text-align: left;
       }
 
@@ -319,6 +321,23 @@ export const StatContainer = styled.div`
       }
     }
   }
+
+  .total-pool-wrapper {
+    display: flex;
+    gap: 16px;
+
+    .item-1 {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        color: #ffffff;
+        font-size: 12px;
+        text-align: left;
+      }
+    }
+  }
+
   .rectangle {
     width: 100%;
     display: flex;
@@ -356,7 +375,7 @@ export const StatContainer = styled.div`
       color: #ffffff;
       text-align: justify;
       padding-top: 25px;
-      }
+    }
   }
   @media screen and (max-width: 1080px) {
     .portfolio {
