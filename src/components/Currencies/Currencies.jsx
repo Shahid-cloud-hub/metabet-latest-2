@@ -10,6 +10,9 @@ import Maintenance from "../Maintenance/Maintenance";
 // import useBreakpoint from "../hooks/useBreakpoints";
 // import { Politics_banner_data } from "../JasonData/FeaturedBannerData";
 
+import Img from "../../assets/images/Currencies/Euro.webp";
+
+
 const CryptoCurrencies = ({ group_type }) => {
   const { fetchData, response, loading } = useAxios();
   const navigate = useNavigate();
@@ -63,6 +66,7 @@ const CryptoCurrencies = ({ group_type }) => {
                   </div>
                 </>
               ))}
+              <img src={Img} alt="Img" style={{marginLeft: 25}}/>
           </div>
         )}
       </DashContainer>

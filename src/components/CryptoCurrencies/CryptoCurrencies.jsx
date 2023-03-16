@@ -10,7 +10,60 @@ import Maintenance from "../Maintenance/Maintenance";
 // import useBreakpoint from "../hooks/useBreakpoints";
 // import { Politics_banner_data } from "../JasonData/FeaturedBannerData";
 
+
+import AtomImg from "../../assets/images/CryptoCurrencies/Atom.webp";
+import BitcoinCardImg from "../../assets/images/CryptoCurrencies/bitcoinCard.webp";
+import BNBImg from "../../assets/images/CryptoCurrencies/BNB.webp";
+import DotImg from "../../assets/images/CryptoCurrencies/Dot.webp";
+import EthereumImg from "../../assets/images/CryptoCurrencies/Ethereum.webp";
+import LinkImg from "../../assets/images/CryptoCurrencies/Link.webp";
+import MaticImg from "../../assets/images/CryptoCurrencies/Matic.webp";
+import ShibImg from "../../assets/images/CryptoCurrencies/Shib.webp";
+import SolanaImg from "../../assets/images/CryptoCurrencies/Solana.webp";
+
+
+
+
+
 const CryptoCurrencies = ({ group_type }) => {
+  const cryptoImg = [
+    {
+      id: 1,
+      img: AtomImg,
+    },
+    {
+      id: 2,
+      img: BitcoinCardImg,
+    },
+    {
+      id: 3,
+      img: BNBImg,
+    },
+    {
+      id: 4,
+      img: DotImg,
+    },
+    {
+      id: 5,
+      img: EthereumImg,
+    },
+    {
+      id: 6,
+      img: LinkImg,
+    },
+    {
+      id: 7,
+      img: MaticImg,
+    },
+    {
+      id: 8,
+      img: ShibImg,
+    },
+    {
+      id: 9,
+      img: SolanaImg,
+    },
+  ]
   // const { fetchData, response, loading } = useAxios();
   // const navigate = useNavigate();
 
@@ -31,8 +84,22 @@ const CryptoCurrencies = ({ group_type }) => {
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
+
+  const result = cryptoImg?.map((item) => item);
+
+  console.log(result, 'test')
+
   return (
-    <>
+    <DashContainer style={{margin: 50}}>
+      {cryptoImg.map((item) => {
+        return (
+          <>
+          
+          <img src={item?.img} alt="img" />
+          </>
+        )
+      })}
+
       {/* <DashContainer>
       {loading ? (
         <div className="loading">
@@ -65,8 +132,8 @@ const CryptoCurrencies = ({ group_type }) => {
         </div>
       )}
     </DashContainer> */}
-      <Maintenance />
-    </>
+      {/* <Maintenance /> */}
+    </DashContainer>
   );
 };
 
