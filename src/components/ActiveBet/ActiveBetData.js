@@ -162,6 +162,7 @@ export const Filter = [
   },
   {
     id: 5,
+    name: "Football",
     img: Football,
     imgW: FootballW,
     icon1: football,

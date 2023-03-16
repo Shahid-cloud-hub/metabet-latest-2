@@ -796,6 +796,10 @@ export const Info = styled.div`
     flex-direction: column;
     gap: 10px;
   }
+  .Kardashian{
+    margin: 0 auto;
+
+  }
   .betStat {
     display: flex;
     flex-direction: column;

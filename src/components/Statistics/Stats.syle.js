@@ -650,6 +650,10 @@ export const Info = styled.div`
 
     /* gap: 10px; */
   }
+  .Kardashian{
+    margin: 0 auto;
+
+  }
   .betStat {
     display: flex;
     flex-direction: column;
