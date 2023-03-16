@@ -79,12 +79,12 @@ export const sec_array = [
     icon: Bitcoin,
     white: BitcoinW,
   },
-  {
-    display_name: "Bitcoin Price Bets",
-    route: "/Bitcoin",
-    icon: Bitcoin,
-    white: Bitcoin,
-  },
+  // {
+  //   display_name: "Bitcoin Price Bets",
+  //   route: "/Bitcoin",
+  //   icon: Bitcoin,
+  //   white: Bitcoin,
+  // },
   // {
   //   display_name: "Ethereum Price Bets",
   //   route: "/ethereum",
