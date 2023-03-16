@@ -49,7 +49,7 @@ body {
   bottom: 0px;
 }
 
-.slide_img>img {
+.slide_img>a>img {
   width: 100%;
   max-width: 300px;
 }

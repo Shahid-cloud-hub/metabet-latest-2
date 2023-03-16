@@ -8,11 +8,13 @@
 .slick-slider {
   width: 100%;
   max-width: 900px;
-  margin-left: 50px;
-  bottom: 25px;
+  margin: 0 auto;
+  bottom: 0px;
+  /* margin-left: 50px;
+  bottom: 25px; */
 }
 
-.slide_img>img {
+.slide_img > a >img {
   width: 100%;
   max-width: 300px;
 }

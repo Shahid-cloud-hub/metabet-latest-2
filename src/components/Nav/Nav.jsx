@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "./Nav.styles";
 import Dropdown from "./Dropdown";
-import LogoImg from "../../assets/images/Logo/logo.webp";
+import LogoImg from "../../assets/images/Logo/LogoNew.png";
 import FoxImg from "../../assets/images/fox-halo-1.png";
 import { NavLink } from "react-router-dom";
 import useBreakpoint from "../../hooks/useBreakpoints";

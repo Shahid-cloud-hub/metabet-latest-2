@@ -114,7 +114,14 @@ const BetNowBtns = ({ getPath, callback }) => {
     <Info style={{ justifyContent: "space-evenly" }}>
       {betNowData?.map((item) => (
         <>
+        
           <div className="win_wrapper" style={{ gap: item?.gap }}>
+          <div className="Kardashian">
+              {item?.img && (
+               
+                <img src={item?.img} alt="img" />
+              )}
+            </div>
             <div
               className="WIN"
               key={item.id}

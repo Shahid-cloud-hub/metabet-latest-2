@@ -140,6 +140,15 @@ import Contest_Banner_6 from "../assets/images/Cricket/contest_banner_6.png";
 import Contest_Banner_7 from "../assets/images/Cricket/contest_banner_7.png";
 import Contest_Banner_8 from "../assets/images/Cricket/contest_banner_8.png";
 
+
+// kardashians
+import Khloe from "../assets/images/Politics/Kardashian/Khloe.webp";
+import Kendal from "../assets/images/Politics/Kardashian/Kendal.webp";
+import Kim from "../assets/images/Politics/Kardashian/Kim.webp";
+import Kourtney from "../assets/images/Politics/Kardashian/Kourtney.webp";
+import Kris from "../assets/images/Politics/Kardashian/Kris.webp";
+import Kylie from "../assets/images/Politics/Kardashian/Kylie.webp";
+
 export const FeaturedBannersInfo = [
   {
     id: 1,
@@ -2549,6 +2558,7 @@ export const Kardashian = [
   {
     id: 1,
     name: "Khloe",
+    img: Khloe ,
     btn: "Bet",
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
@@ -2561,6 +2571,7 @@ export const Kardashian = [
   {
     id: 2,
     name: "Kendall",
+    img: Kendal ,
     btn: "Bet",
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
@@ -2572,6 +2583,7 @@ export const Kardashian = [
   {
     id: 3,
     name: "Kim",
+    img: Kim ,
     btn: "Bet",
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
@@ -2583,6 +2595,7 @@ export const Kardashian = [
   {
     id: 4,
     name: "Kylie",
+    img: Kylie ,
     btn: "Bet",
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
@@ -2594,6 +2607,7 @@ export const Kardashian = [
   {
     id: 5,
     name: "Kourtney",
+    img: Kourtney ,
     btn: "Bet",
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
@@ -2605,6 +2619,7 @@ export const Kardashian = [
   {
     id: 6,
     name: "Kris",
+    img: Kris ,
     btn: "Bet",
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",

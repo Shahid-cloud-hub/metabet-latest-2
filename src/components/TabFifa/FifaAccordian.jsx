@@ -163,8 +163,9 @@ console.log("parent",callPool )
               </div>
 
               <div className="item changeItem">
-              <span>{callPool ? callPool : 0.0000}</span>
-                <span>{callBets ? callBets:  0.0000}</span>
+                
+              <span>{item?.id === 8 && callPool ? callPool : 0.0000}</span>
+                <span>{item?.id === 8 && callBets ? callBets:  0.0000}</span>
                 <button
                   disabled={
                     !props.eventStatus || props.bitAndEth == false
