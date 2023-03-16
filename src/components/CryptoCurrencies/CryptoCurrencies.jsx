@@ -10,7 +10,6 @@ import Maintenance from "../Maintenance/Maintenance";
 // import useBreakpoint from "../hooks/useBreakpoints";
 // import { Politics_banner_data } from "../JasonData/FeaturedBannerData";
 
-
 import AtomImg from "../../assets/images/CryptoCurrencies/Atom.webp";
 import BitcoinCardImg from "../../assets/images/CryptoCurrencies/bitcoinCard.webp";
 import BNBImg from "../../assets/images/CryptoCurrencies/BNB.webp";
@@ -20,10 +19,6 @@ import LinkImg from "../../assets/images/CryptoCurrencies/Link.webp";
 import MaticImg from "../../assets/images/CryptoCurrencies/Matic.webp";
 import ShibImg from "../../assets/images/CryptoCurrencies/Shib.webp";
 import SolanaImg from "../../assets/images/CryptoCurrencies/Solana.webp";
-
-
-
-
 
 const CryptoCurrencies = ({ group_type }) => {
   const cryptoImg = [
@@ -63,7 +58,7 @@ const CryptoCurrencies = ({ group_type }) => {
       id: 9,
       img: SolanaImg,
     },
-  ]
+  ];
   // const { fetchData, response, loading } = useAxios();
   // const navigate = useNavigate();
 
@@ -87,17 +82,16 @@ const CryptoCurrencies = ({ group_type }) => {
 
   const result = cryptoImg?.map((item) => item);
 
-  console.log(result, 'test')
+  console.log(result, "test");
 
   return (
-    <DashContainer style={{margin: 50}}>
+    <DashContainer style={{ margin: "15px" }}>
       {cryptoImg.map((item) => {
         return (
           <>
-          
-          <img src={item?.img} alt="img" />
+            <img src={item?.img} alt="img" width="33%" />
           </>
-        )
+        );
       })}
 
       {/* <DashContainer>
