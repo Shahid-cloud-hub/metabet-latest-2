@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useAxios } from "../../hooks/useAxios";
 import { betNowData } from "../../JasonData/FeaturedBannerData";
-import { StatContainer } from "../BitcoinPrice/BitcoinPrice.styles";
+import { StatContainerCurrencies } from "../BitcoinPrice/BitcoinPrice.styles";
 import Loading from "../Loading/Loading";
 import Tabs from "../TabFifa/Tab";
 import Times from "../Time/Times";
@@ -60,7 +60,7 @@ const StatsComponent = () => {
   return (
     <>
       {group === "crypto-currencies" && (
-        <StatContainer bgImg={item?.background_img}>
+        <StatContainerCurrencies bgImg={item?.background_img}>
           <div className="portfolio">
             <img src={item?.img_1} alt="BtcUp" />
             <span>{item?.title_1}</span>
@@ -129,7 +129,7 @@ const StatsComponent = () => {
             </div>
             <span>{item?.title_2}</span>
           </div>
-        </StatContainer>
+        </StatContainerCurrencies>
       )}
       {item?.player_Img_1 && (
         <StatisticsContainer text="20px" textGap="12px">

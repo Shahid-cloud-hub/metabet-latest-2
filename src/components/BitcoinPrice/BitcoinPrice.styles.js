@@ -159,7 +159,7 @@ export const Container = styled.div`
   }
 `;
 
-export const StatContainer = styled.div`
+export const StatContainerCurrencies = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;

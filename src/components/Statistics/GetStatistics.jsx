@@ -10,12 +10,15 @@ import clock1 from "../../assets/images/BitcoinPrice/clock1.png";
 import clock2 from "../../assets/images/BitcoinPrice/clock2.png";
 import BetNowBtns from "../BetNowBtns/BetNowBtns";
 import Carousel from "../Politics/Carousel/Carousel";
+import { StatContainerCurrencies } from "../BitcoinPrice/BitcoinPrice.styles";
 
 const GetStatistics = () => {
   let { group, title, id } = useParams();
   const { pathname } = useLocation();
   const { fetchData, response, loading } = useAxios();
   const [addStyle, setAddStyle] = useState();
+
+  console.log(group, title, id, "get Statistics");
 
   const callback = (id) => {
     setAddStyle(id);
@@ -96,7 +99,10 @@ const GetStatistics = () => {
       {/* // Trending Event // */}
       {loading
         ? item?.stats_title && <Loading />
-        : item?.stats_title && (
+        : (group === "ufc" ||
+            group == "football" ||
+            group == "currencies" ||
+            group == "trending-event") && (
             <StatContainer>
               <div className="rectangle">
                 {/* <span>Statistic:</span> */}
@@ -282,74 +288,78 @@ const GetStatistics = () => {
         )
       )}
       {/* // CryptoCurrencies  */}
-      {/* {loading ? (
-        <Loading />
-      ) : (
-      <StatContainer>
+      {group === "crypto-currencies" && (
+        <StatContainerCurrencies bgImg={item?.background_img}>
           <div className="portfolio">
-            <img src={BtcUp} alt="BtcUp" />
-            <span>BTC PRICE UP</span>
+            <img src={item?.img_1} alt="BtcUp" />
+            <span>{item?.title_1}</span>
           </div>
-          {result?.map((item) => (
-            <div className="vs">
-              <div id="live">
-                <p>Bitcoin PRICE</p>
-                <p>POOL LIVE</p>
-              </div>
-              <div className="close">
-                <div className="predict">
-                  <div className="clock">
-                    <p>Predict Price on</p>
-                    <div>
-                      {" "}
-                      <img src={clock1} alt="clock1" />
-                    </div>
+          <div className="vs">
+            <div id="live">
+              <p>{item?.title}</p>
+              <p>POOL LIVE</p>
+            </div>
+            <div className="close">
+              <div className="predict">
+                <div className="clock">
+                  <p>Predict Price on</p>
+                  <div>
+                    <img src={clock1} alt="clock1" />
                   </div>
-                  <span>
-                    26 February
-                    <br />
-                    00:00 GMT
-                  </span>
                 </div>
-                <div className="predict">
-                  <div className="clock">
-                    <p id="color">Pool Closes on</p>
-                    <div>
-                      {" "}
-                      <img src={clock2} alt="clock2" />
-                    </div>
-                  </div>
-                  <span>
-                    24 Febraury
-                    <br />
-                    12:00 GMT
-                  </span>
-                </div>
+                <span>
+                  {FormatDate(
+                    item?.predict_date ? item?.predict_date : "2023-12-12T00:00"
+                  )}
+                  <br />
+                  00:00 GMT
+                </span>
               </div>
-              <div className="rectangle">
-                <div className="stats">
-                  <p>Trading Volume:</p>
-                  <span>{formatDollar(result[0]?.total_volume, 5)} </span>
+              <div className="predict">
+                <div className="clock">
+                  <p id="color">Pool Closes on</p>
+                  <div>
+                    {" "}
+                    <img src={clock2} alt="clock2" />
+                  </div>
                 </div>
-                <div className="stats">
-                  {" "}
-                  <p>24h Low / 24h High</p>
-                  <span>
-                    {formatDollar(result[0]?.low_24h, 5)}/{" "}
-                    {formatDollar(result[0]?.high_24h, 5)}
-                  </span>
-                </div>
+                <span>
+                  {FormatDate(
+                    item?.pool_close_date
+                      ? item?.pool_close_date
+                      : "2023-12-13T00:00"
+                  )}
+                  <br />
+                  12:00 GMT
+                </span>
               </div>
             </div>
-          ))}
+            <div className="rectangle">
+              <div className="stats">
+                <p>Trading Volume:</p>
+                {/* <span>{formatDollar(result[0]?.total_volume, 5)} </span> */}
+                <span>$36,243,475,809</span>
+              </div>
+              <div className="stats">
+                {" "}
+                <p>24h Low / 24h High</p>
+                {/* <span>
+                    {formatDollar(result[0]?.low_24h, 5)}/{" "}
+                    {formatDollar(result[0]?.high_24h, 5)}
+                  </span> */}
+                <span>$16433 / $17097</span>
+              </div>
+            </div>
+          </div>
 
           <div className="portfolio">
             <div>
-              <img src={BtcDown} alt="BtcDown" />
+              <img src={item?.img_2} alt="BtcDown" />
             </div>
-            <span>BTC PRICE DOWN</span>
+            <span>{item?.title_2}</span>
           </div>
-        </StatContainer>)} */}
+        </StatContainerCurrencies>
+      )}
       <Info>
         <BetNowBtns getPath={pathname} callback={callback} />
       </Info>
