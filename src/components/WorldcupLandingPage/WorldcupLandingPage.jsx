@@ -4,6 +4,7 @@ import { useAxios } from "../../hooks/useAxios";
 import Loading from "../Loading/Loading";
 import { DashContainer } from "./WorldcupLandingPage.styles";
 import { useNavigate } from "react-router-dom";
+import { TrendingApi } from "../../api/TrendingApi";
 
 const WorldcupLandingPage = () => {
   const { fetchData, response, loading } = useAxios();
@@ -24,6 +25,7 @@ const WorldcupLandingPage = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
+    <>
     <DashContainer>
       {loading ? (
         <div className="loading">
@@ -31,7 +33,7 @@ const WorldcupLandingPage = () => {
         </div>
       ) : (
         <div className="card-parent">
-          {response?.slice(0, 19).map((item, index) => (
+          {response?.slice(0, 19)?.map((item, index) => (
             <>
               <div className="card" key={index}>
                 <img
@@ -53,6 +55,9 @@ const WorldcupLandingPage = () => {
         </div>
       )}
     </DashContainer>
+          <TrendingApi/></>
+    
+
   );
 };
 
