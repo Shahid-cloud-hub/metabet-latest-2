@@ -10,7 +10,6 @@ import Maintenance from "../Maintenance/Maintenance";
 // import useBreakpoint from "../hooks/useBreakpoints";
 // import { Politics_banner_data } from "../JasonData/FeaturedBannerData";
 
-
 import AtomImg from "../../assets/images/CryptoCurrencies/Atom.webp";
 import BitcoinCardImg from "../../assets/images/CryptoCurrencies/bitcoinCard.webp";
 import BNBImg from "../../assets/images/CryptoCurrencies/BNB.webp";
@@ -20,10 +19,6 @@ import LinkImg from "../../assets/images/CryptoCurrencies/Link.webp";
 import MaticImg from "../../assets/images/CryptoCurrencies/Matic.webp";
 import ShibImg from "../../assets/images/CryptoCurrencies/Shib.webp";
 import SolanaImg from "../../assets/images/CryptoCurrencies/Solana.webp";
-
-
-
-
 
 const CryptoCurrencies = ({ group_type }) => {
   const cryptoImg = [
@@ -63,44 +58,30 @@ const CryptoCurrencies = ({ group_type }) => {
       id: 9,
       img: SolanaImg,
     },
-  ]
-  // const { fetchData, response, loading } = useAxios();
-  // const navigate = useNavigate();
+  ];
+  const { fetchData, response, loading } = useAxios();
+  const navigate = useNavigate();
 
-  // const getEvent = async () => {
-  //   await fetchData({
-  //     method: "GET",
-  //     url: `https://dull-puce-wildebeest-belt.cyclic.app/getGroup/group/type/${group_type}`,
-  //   });
-  // };
+  const getEvent = async () => {
+    await fetchData({
+      method: "GET",
+      url: `https://dull-puce-wildebeest-belt.cyclic.app/getGroup/group/type/${group_type}`,
+    });
+  };
 
-  // useEffect(() => {
-  //   getEvent();
-  // }, []);
+  useEffect(() => {
+    getEvent();
+  }, []);
 
-  // const res = response ? response : [];
-  // // console.log("res", response);
+  const res = response ? response : [];
+  console.log("res", response);
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-
-  const result = cryptoImg?.map((item) => item);
-
-  console.log(result, 'test')
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
-    <DashContainer style={{margin: 50}}>
-      {cryptoImg.map((item) => {
-        return (
-          <>
-          
-          <img src={item?.img} alt="img" />
-          </>
-        )
-      })}
-
-      {/* <DashContainer>
+    <DashContainer>
       {loading ? (
         <div className="loading">
           <Loading />
@@ -119,7 +100,7 @@ const CryptoCurrencies = ({ group_type }) => {
                     style={{ width: "90%" }}
                     onClick={() =>
                       navigate(
-                        `${item?.event?.title}/statistics/${item?.event?.highlights[0]?._id}`,
+                        `${item?.event?.title}/stats/${item?.event?.highlights[0]?._id}`,
                         {
                           state: item?.event?.highlights[0]?._id,
                         }
@@ -131,8 +112,6 @@ const CryptoCurrencies = ({ group_type }) => {
             ))}
         </div>
       )}
-    </DashContainer> */}
-      {/* <Maintenance /> */}
     </DashContainer>
   );
 };

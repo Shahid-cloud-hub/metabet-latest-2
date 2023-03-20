@@ -1347,7 +1347,7 @@ export const CricketFeaturedBanners = [
   },
 ];
 
-export const bData = [
+export const CryptoData = [
   {
     id: 0,
     name: "WIN",
@@ -2478,24 +2478,45 @@ export const RegularFootBall_data = [
 export const betNowData = [
   {
     id: 0,
-    name: "WIN",
-    btn: "Live",
+    name: "More than $18,000",
+    btn: "Bet",
     btnColor: "#7b7b7b",
   },
   {
     id: 2,
-    name: "DRAW",
-    btn: "Live",
+    name: "$17,000 - $18,000",
+    btn: "Bet",
     btnColor: "#000000",
   },
   {
     id: 1,
-    name: "WIN",
-    btn: "Live",
+    name: "Less than $17,000",
+    btn: "Bet",
     btnColor: "#7b7b7b",
   },
 ];
 
+
+const bData = [
+  {
+    id: 1,
+    name: "More than $18,000",
+    btn: "Bet Now",
+    info: "Short information",
+  },
+  {
+    id: 2,
+    name: "$17,000 - $18,000",
+    btn: "Bet Now",
+    info: "Short information",
+  },
+  {
+    id: 3,
+    name: "Less than $17,000",
+    btn: "Bet Now",
+    info: "Short information",
+  },
+];
 export const TruscData = [
   {
     id: 1,
@@ -3004,5 +3025,23 @@ export const crap = [
     btn: "Bet",
     width: "249px",
     height: "106px",
+  },
+];
+export const Currency = [
+  {
+    id: 1,
+    name: "More than $18,000",
+    btn: "Bet",
+  },
+  {
+    id: 2,
+    name: "$17,000 - $18,000",
+    btn: "Bet",
+    btnColor: "#000000",
+  },
+  {
+    id: 3,
+    name: "Less than $17,000",
+    btn: "Bet",
   },
 ];
