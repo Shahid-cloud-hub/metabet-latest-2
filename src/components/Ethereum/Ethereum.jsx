@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player/youtube";
 import {
   Container,
-  StatContainer,
+  StatContainerCurrencies,
   Info,
 } from "../BitcoinPrice/BitcoinPrice.styles";
 import Times from "../Time/Times";
@@ -79,7 +79,7 @@ function Ethereum() {
   return (
     <>
       <Container>
-        <StatContainer>
+        <StatContainerCurrencies>
           <div className="portfolio">
             <img src={BtcUp} alt="BtcUp" />
             <span>ETH PRICE UP</span>
@@ -139,7 +139,7 @@ function Ethereum() {
             <img src={BtcDown} alt="BtcDown" width={206} height={170} />
             <span>ETH PRICE DOWN</span>
           </div>
-        </StatContainer>
+        </StatContainerCurrencies>
         <Info>
           {bData.map((item) => (
             <div className="WIN" key={item.id}>

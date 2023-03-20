@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, StatContainer, Info } from "./BitcoinPrice.styles";
+import { Container, StatContainerCurrencies, Info } from "./BitcoinPrice.styles";
 import Tabs from "../TabFifa/Tab";
 import useBreakpoint from "../../hooks/useBreakpoints";
 import BtcUp from "../../assets/images/Bitcoin/BtcUp.webp";
@@ -66,7 +66,7 @@ function BitcoinPrice() {
   return (
     <>
       <Container>
-        <StatContainer>
+        <StatContainerCurrencies>
           <div className="portfolio">
             <img src={BtcUp} alt="BtcUp" />
             <span>BTC PRICE UP</span>
@@ -130,7 +130,7 @@ function BitcoinPrice() {
             </div>
             <span>BTC PRICE DOWN</span>
           </div>
-        </StatContainer>
+        </StatContainerCurrencies>
         <Info>
           {bData.map((item) => (
             <div className="WIN" key={item.id}>

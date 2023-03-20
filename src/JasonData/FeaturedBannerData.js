@@ -2497,24 +2497,30 @@ export const betNowData = [
 ];
 
 
-const bData = [
+export const bData = [
   {
     id: 1,
     name: "More than $18,000",
     btn: "Bet Now",
     info: "Short information",
+    width: "249px",
+    height: "106px",
   },
   {
     id: 2,
     name: "$17,000 - $18,000",
     btn: "Bet Now",
     info: "Short information",
+    width: "249px",
+    height: "106px",
   },
   {
     id: 3,
     name: "Less than $17,000",
     btn: "Bet Now",
     info: "Short information",
+    width: "249px",
+    height: "106px",
   },
 ];
 export const TruscData = [
@@ -3032,16 +3038,22 @@ export const Currency = [
     id: 1,
     name: "More than $18,000",
     btn: "Bet",
+    width: "249px",
+    height: "106px",
   },
   {
     id: 2,
     name: "$17,000 - $18,000",
     btn: "Bet",
     btnColor: "#000000",
+    width: "249px",
+    height: "106px",
   },
   {
     id: 3,
     name: "Less than $17,000",
     btn: "Bet",
+    width: "249px",
+    height: "106px",
   },
 ];
