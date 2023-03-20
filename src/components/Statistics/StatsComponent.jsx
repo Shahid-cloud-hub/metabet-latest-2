@@ -59,7 +59,7 @@ const StatsComponent = () => {
 
   return (
     <>
-      {group === "crypto-currencies" && (
+      {(group == "crypto-currencies" || group == "currencies") && (
         <StatContainerCurrencies bgImg={item?.background_img}>
           <div className="portfolio">
             <img src={item?.img_1} alt="BtcUp" />

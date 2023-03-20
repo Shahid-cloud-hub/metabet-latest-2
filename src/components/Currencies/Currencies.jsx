@@ -28,7 +28,7 @@ const CryptoCurrencies = ({ group_type }) => {
   }, []);
 
   const res = response ? response : [];
-  // console.log("res", response);
+  console.log("currencies", res);
 
   useEffect(() => {
     window.scrollTo(0, 0);

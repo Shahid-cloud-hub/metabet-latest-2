@@ -35,7 +35,7 @@ const GetStatistics = () => {
 
   const item = response?.stats?.data;
 
-  console.log("test", item);
+  console.log("test curr", item);
 
   useEffect(() => {
     getBanners();
@@ -136,6 +136,18 @@ const GetStatistics = () => {
                           ""
                         ) : item?.event_status === "yes" ? (
                           <Times date={item?.date} show={false} />
+                        ) : (
+                          ""
+                        )}
+                      </>
+                    )}
+                    {item?.event_date && (
+                      <>
+                        <span>{FormatDate(item?.event_date)}</span>
+                        {item?.event_status == "no" ? (
+                          ""
+                        ) : item?.event_status === "yes" ? (
+                          <Times date={item?.event_date} show={false} />
                         ) : (
                           ""
                         )}
