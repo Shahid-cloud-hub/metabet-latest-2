@@ -66,7 +66,7 @@ const CryptoCurrencies = ({ group_type }) => {
                   </div>
                 </>
               ))}
-              <img src={Img} alt="Img" style={{marginLeft: 25}}/>
+             
           </div>
         )}
       </DashContainer>
