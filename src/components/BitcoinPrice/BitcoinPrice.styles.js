@@ -168,9 +168,9 @@ export const StatContainer = styled.div`
   border-radius: 10px;
   margin: 10px 0px;
   padding: 10px 0px;
-  background-image: url(${Banner});
+  background-image: url(${(props) => props.bgImg});
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 
   .portfolio {
     display: flex;

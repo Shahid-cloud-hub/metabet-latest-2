@@ -59,42 +59,29 @@ const CryptoCurrencies = ({ group_type }) => {
       img: SolanaImg,
     },
   ];
-  // const { fetchData, response, loading } = useAxios();
-  // const navigate = useNavigate();
+  const { fetchData, response, loading } = useAxios();
+  const navigate = useNavigate();
 
-  // const getEvent = async () => {
-  //   await fetchData({
-  //     method: "GET",
-  //     url: `https://dull-puce-wildebeest-belt.cyclic.app/getGroup/group/type/${group_type}`,
-  //   });
-  // };
+  const getEvent = async () => {
+    await fetchData({
+      method: "GET",
+      url: `https://dull-puce-wildebeest-belt.cyclic.app/getGroup/group/type/${group_type}`,
+    });
+  };
 
-  // useEffect(() => {
-  //   getEvent();
-  // }, []);
+  useEffect(() => {
+    getEvent();
+  }, []);
 
-  // const res = response ? response : [];
-  // // console.log("res", response);
+  const res = response ? response : [];
+  console.log("res", response);
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-
-  const result = cryptoImg?.map((item) => item);
-
-  console.log(result, "test");
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
-    <DashContainer style={{ margin: "15px" }}>
-      {cryptoImg.map((item) => {
-        return (
-          <>
-            <img src={item?.img} alt="img" width="33%" />
-          </>
-        );
-      })}
-
-      {/* <DashContainer>
+    <DashContainer>
       {loading ? (
         <div className="loading">
           <Loading />
@@ -113,7 +100,7 @@ const CryptoCurrencies = ({ group_type }) => {
                     style={{ width: "90%" }}
                     onClick={() =>
                       navigate(
-                        `${item?.event?.title}/statistics/${item?.event?.highlights[0]?._id}`,
+                        `${item?.event?.title}/stats/${item?.event?.highlights[0]?._id}`,
                         {
                           state: item?.event?.highlights[0]?._id,
                         }
@@ -125,8 +112,6 @@ const CryptoCurrencies = ({ group_type }) => {
             ))}
         </div>
       )}
-    </DashContainer> */}
-      {/* <Maintenance /> */}
     </DashContainer>
   );
 };
