@@ -59,7 +59,7 @@ const StatsComponent = () => {
 
   return (
     <>
-      {(group == "crypto-currencies" || group == "currencies") && (
+      {group === "crypto-currencies" && (
         <StatContainerCurrencies bgImg={item?.background_img}>
           <div className="portfolio">
             <img src={item?.img_1} alt="BtcUp" />
@@ -111,6 +111,7 @@ const StatsComponent = () => {
                 {/* <span>{formatDollar(result[0]?.total_volume, 5)} </span> */}
                 <span>$36,243,475,809</span>
               </div>
+
               <div className="stats">
                 {" "}
                 <p>24h Low / 24h High</p>
@@ -178,7 +179,7 @@ const StatsComponent = () => {
                     <span>Stance: {item?.stance_1}</span>
                     <span>Reach: {item?.reach_1}</span>
                     <span>Age: {item?.age_1}</span>
-                    {/* <span>Ranking:{item?.fifa_club_ranking_1}</span> */}
+                    {/* {/ <span>Ranking:{item?.fifa_club_ranking_1}</span> /} */}
                   </>
                 )
               )}

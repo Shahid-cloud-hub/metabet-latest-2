@@ -4,11 +4,13 @@ import { useParams } from "react-router-dom";
 
 import {
   andrew,
+  bData,
   betNowData,
   China,
   crap,
   crufts,
   Cryptocurrency,
+  Currency,
   Dana,
   DCG,
   DXY,
@@ -30,7 +32,7 @@ import { Info } from "../Statistics/Stats.syle";
 
 const BetNowBtns = ({ getPath, callback }) => {
   const [addStyle, setAddStyle] = useState();
-  let { id } = useParams();
+  let { title, id } = useParams();
   const callStyle = (bet_btn_id) => {
     callback(bet_btn_id);
     setAddStyle(bet_btn_id);
@@ -102,6 +104,18 @@ const BetNowBtns = ({ getPath, callback }) => {
       case `/trending-event/crap-fishing/statistics/${id}`:
         betNowData = crap;
         break;
+        case `/crypto-currencies/${title}/statistics/${id}`:
+          betNowData = bData;
+          break;
+        case `/crypto-currencies/${title}/stats/${id}`:
+          betNowData = bData;
+          break;
+          case `/currencies/${title}/statistics/${id}`:
+            betNowData = Currency;
+            break;
+          case `/currencies/${title}/stats/${id}`:
+            betNowData = Currency;
+            break;
     }
     return {
       betNowData,
@@ -160,6 +174,7 @@ const BetNowBtns = ({ getPath, callback }) => {
           </div>
         </>
       ))}
+
     </Info>
   );
 };

@@ -639,7 +639,10 @@ export const Info = styled.div`
   background: #112533;
   border-radius: 10px;
   gap: 10px;
-  justify-content: center;
+  justify-content: space-evenly;
+  padding: 10px 0px;
+
+  // justify-content: center;
   /* padding: 10px 15px; */
   /* gap: 30px; */
 
@@ -706,10 +709,11 @@ export const Info = styled.div`
     border-radius: 10px;
     padding: 0px 5px;
     /* padding: 10px; */
-    max-width: 215px;
+    max-width: 300px;
     min-height: 106px;
     width: 100%;
     justify-content: space-evenly;
+    
 
     /* gap: 10px; */
     .title {
@@ -739,6 +743,8 @@ export const Info = styled.div`
       font-size: 14px;
       cursor: pointer;
       padding: 10px 60px;
+      max-width: 207px;
+
     }
     span {
       font-weight: 500;
