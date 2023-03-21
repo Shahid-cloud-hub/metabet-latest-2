@@ -60,6 +60,8 @@ import REGFOOTBALL from "./pages/RegFootball";
 // Leagues Section //
 import ALLFOOTBALLEVENTS from "./components/FootballLeagues/Football";
 import GetStatistics from "./components/Statistics/GetStatistics";
+import SocialMedia from "./components/SocialMedia/SocialMedia";
+import Formula1 from "./components/Formula1/Formula1";
 
 let persistor = persistStore(store);
 const router = createBrowserRouter([
@@ -263,6 +265,18 @@ const router = createBrowserRouter([
       {
         path: "/horse-racing",
         element: <HORSERACING />,
+      },
+      {
+        path: "/rugby",
+        element: <HORSERACING />,
+      },
+      {
+        path: "/formula1",
+        element: <Formula1 />,
+      },
+      {
+        path: "/social-media",
+        element: <SocialMedia />,
       },
     ],
   },

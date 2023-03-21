@@ -36,9 +36,11 @@ export const Container = styled.div`
   }
   .dropdown-ai {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
+    padding-left: 40px;
+
   }
   .openai {
     display: flex;

@@ -28,6 +28,13 @@ import Darts from "../assets/images/Darts.png";
 import DartsW from "../assets/images/DartsW.png";
 import Horse from "../assets/images/Horse.png";
 import HorseW from "../assets/images/HorseW.png";
+import Social from "../assets/images/Social.png";
+import SocialW from "../assets/images/SocialW.png";
+import Formula from "../assets/images/Formula.png";
+import FormulaW from "../assets/images/FormulaW.png";
+import Rugby from "../assets/images/Rugby.png";
+import RugbyW from "../assets/images/RugbyW.png";
+
 
 // currcency Logos //
 import currency_1 from "../assets/images/FeaturedEvent/bitmart.png";
@@ -62,11 +69,17 @@ export const first_array = [
     route: "/truth-2-earn",
   },
   {
-    display_name: "TRUSC Token",
-    route: "/trusc-token",
+    display_name: "$BET Token",
+    route: "/bet-token",
   },
 ];
 export const sec_array = [
+  {
+    display_name: "Social Media",
+    route: "/social-media",
+    icon: Social,
+    white: SocialW,
+  },
   {
     display_name: "Currencies",
     route: "/currencies",
@@ -102,7 +115,13 @@ export const sec_array = [
     route: "/football",
     icon: PL,
     white: FootballW,
+  }, {
+    display_name: "Formula 1",
+    route: "/formula1",
+    icon: Formula,
+    white: FormulaW,
   },
+  
   {
     display_name: "Basketball",
     route: "/basketball",
@@ -145,6 +164,12 @@ export const sec_array = [
     route: "/golf",
     icon: Golf,
     white: GolfW,
+  },
+  {
+    display_name: "Rugby",
+    route: "/rugby",
+    icon: Rugby,
+    white: RugbyW,
   },
   {
     display_name: "Volleyball",

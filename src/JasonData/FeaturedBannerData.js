@@ -2565,6 +2565,30 @@ export const TruscData = [
     placeholder: "0",
   },
 ];
+export const TruscData1 = [
+  {
+    id: 1,
+    title: "CIRC SUPPLY",
+    placeholder: "0",
+  },
+ 
+  {
+    id: 2,
+    title: "MARKET CAP",
+    placeholder: "0",
+  },
+  {
+    id: 3,
+    title: "PRICE",
+    placeholder: "$0.99972",
+  },
+  
+  {
+    id: 4,
+    title: "MAX SUPPLY",
+    placeholder: "1b",
+  },
+];
 export const andrew = [
   {
     id: 1,
