@@ -12,7 +12,7 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
   const metaMaskAddress = useSelector((state) => state.wallet);
   const [allEventsData, setallEventsData] = useState([]);
 
-  console.log("display", smartContractId?.length > 0 ? true : false);
+  console.log("display", smartContractId);
 
   useEffect(() => {
     const check = async (i) => {

@@ -4,6 +4,7 @@ import { useAxios } from "../../hooks/useAxios";
 import Loading from "../Loading/Loading";
 import { DashContainer } from "./WorldcupLandingPage.styles";
 import { useNavigate } from "react-router-dom";
+import FilteredEventsList from "../FilterTabBtns/FilteredEventsList";
 
 const WorldcupLandingPage = () => {
   const { fetchData, response, loading } = useAxios();
@@ -31,6 +32,9 @@ const WorldcupLandingPage = () => {
             <Loading />
           </div>
         ) : (
+          // <div className="parent-wrapper">
+          //   <FilteredEventsList />
+          // </div>
           <div className="card-parent">
             {response?.map((item, index) => (
               <>

@@ -246,6 +246,12 @@ export const Container = styled.div`
 export const DashContainer = styled("div")`
   width: 100%;
 
+  .parent-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .card-parent {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
