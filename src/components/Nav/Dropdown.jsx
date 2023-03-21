@@ -12,6 +12,8 @@ import GOAL from "../../assets/images/GOAL.png";
 import USDC from "../../assets/images/usdc.png";
 import foxCircle from "../../assets/images/foxCircle.webp";
 import foxMini from "../../assets/images/fox-mini.webp";
+import tru from "../../assets/images/tru.png";
+import navBet from "../../assets/images/navBet.png";
 import Connect from "../../assets/images/Connect_btn.png";
 import Disconnect from "../../assets/images/discount-1.png";
 import Withdraw from "../../assets/images/withdraw_btn.png";
@@ -97,10 +99,15 @@ function Dropdown() {
               <img src={foxCircle} alt="foxCircle" />
             </label>
             {!metaMaskAddress.metaMaskAddress ? (
-              <label id="label-nav">
-                <input type="text" name="name" placeholder="0.00" disabled />
-                <img src={foxMini} alt="foxMini" />
-              </label>
+              <> <label id="label-nav">
+              <input type="text" name="name" placeholder="0.00" disabled />
+              <img src={tru} alt="tru" />
+            </label>
+             <label >
+             <input type="text" name="name" placeholder="0.00" disabled />
+             <img src={navBet} alt="navBet" />
+           </label></>
+             
             ) : (
               <img id="withdraw" src={Withdraw} alt="Withdraw" />
             )}

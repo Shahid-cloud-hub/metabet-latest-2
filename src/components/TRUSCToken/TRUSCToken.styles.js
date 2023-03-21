@@ -15,15 +15,211 @@ export const TRUSCTokenContainer = styled.div`
 `;
 
 export const Container1 = styled.div`
-  width: 100%;
-  margin: auto 0;
-  justify-content: center;
-  align-items: center;  display: flex;
-  gap: 20px;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  width: 100%;
+  max-width: 983px;
+  min-height: 225px;
+  background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+  border: 1px solid #5f9ea0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  gap: 30px;
+  button {
+    background: #6495ed;
+    border-radius: 12px;
+    width: 108px;
+    height: 34px;
+    font-size: 15px;
+    color: #ffffff;
+    font-family: "Mostra Nuova";
+    border: none;
+  }
+
+  .heading {
+    padding-top: 10px;
+    text-align: center;
+    span {
+      font-family: "Mostra Nuova";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 21px;
+      line-height: 95%;
+      color: #5f9ea0;
+    }
+    hr {
+      height: 2px;
+      width: 433px;
+      background: #5f9ea0;
+      box-shadow: 0px 0px 0px #ffffff;
+      border: none;
+      margin-top: 10px;
+    }
+  }
+  .heading1 {
+    padding-top: 10px;
+    text-align: center;
+    span {
+      font-family: "Mostra Nuova";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 21px;
+      line-height: 95%;
+      color: #1e90ff;
+    }
+    hr {
+      height: 2px;
+      width: 860px;
+      background: #1e90ff;
+      box-shadow: 0px 0px 0px #ffffff;
+      border: none;
+      margin-top: 10px;
+    }
+  }
+  .convert {
+    display: flex;
+    align-items: center;
+    gap:210px;
+  }
+  .balance {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 0px 35px;
+
+    .icon {
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+
+      gap:10px;
+      img{
+        width:60px;
+      }
+      span {
+        font-family: "Junegull";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 140%;
+        color: #ffffff;
+      }
+    }
+  }
+
+  content {
+    position: absolute;
+    display: none;
+  }
+
+  .truai {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .dropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      position: relative;
+
+      input::placeholder {
+        font-family: "Mostra Nuova";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 95%;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    .select {
+      width: 80px;
+      background: #020f18;
+      border-radius: 4px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      transform: translate(-8px, 31px);
+      div {
+        font-family: "Mostra Nuova";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 95%;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 13px;
+      }
+    }
+  }
+
+  label {
+    font-size: 15px;
+    color: #637592;
+    display: flex;
+    gap: 5px;
+
+    input {
+      border: none;
+      background: transparent;
+      padding-left: 10px;
+      max-width: 89px;
+    }
+    input::placeholder {
+      font-size: 15px;
+      color: #ffffff;
+    }
+  }
+  #icon {
+    margin-right: 40px;
+  }
+  span {
+    font-family: "Mostra Nuova";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 95%;
+    color: #ffffff;
+  }
+
+  #grey {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 95%;
+    color: #637592;
+  }
+  #blue {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 95%;
+    color: #3d6eff;
+  }
+  
+ 
+ 
+`;
+
+export const Balance = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   .fox-stats {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     @media screen and (max-width: 1280px) {
       gap: 10px;
     }
@@ -41,7 +237,6 @@ export const Container1 = styled.div`
       flex-wrap: wrap;
     }
   }
-
   .text {
     display: flex;
     flex-direction: column;
@@ -94,26 +289,20 @@ export const Container1 = styled.div`
       }
     }
   }
-`;
-
-export const Balance = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
   .liquidity-pool {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 100%;
-    max-width: 473px;
-    min-height: 225px;
-    background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
-    border: 1px solid #5f9ea0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
-    gap: 30px;
+  margin: auto 0;
+  justify-content: start;
+  align-items: center;  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  max-width: 473px;
+  min-height: 252px;
+  background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+  border: 1px solid #5f9ea0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  gap: 30px;
     button {
       background: #6495ed;
       border-radius: 12px;
@@ -158,7 +347,7 @@ export const Balance = styled.div`
       }
       hr {
         height: 2px;
-        width: 433px;
+        width: 860px;
         background: #1e90ff;
         box-shadow: 0px 0px 0px #ffffff;
         border: none;
@@ -168,6 +357,7 @@ export const Balance = styled.div`
     .convert {
       display: flex;
       align-items: center;
+      gap:210px;
     }
     .balance {
       display: flex;
@@ -176,6 +366,8 @@ export const Balance = styled.div`
       padding: 0px 35px;
 
       .icon {
+        flex-direction: column;
+        display: flex;
         img{
           width:60px;
         }
@@ -537,6 +729,9 @@ export const Balance = styled.div`
       .convert {
         display: flex;
         align-items: center;
+        display: flex;
+        align-items: center;
+        gap:210px;
       }
       .balance {
         display: flex;

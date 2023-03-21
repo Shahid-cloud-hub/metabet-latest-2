@@ -4,7 +4,7 @@ import Trueai from "../../assets/images/TRUSC/Trueai.webp";
 import trusc from "../../assets/images/TRUSC/trusc.webp";
 import TransferBtn from "../../assets/images/TRUSC/Transfer-btn.webp";
 import WithdrawBtn from "../../assets/images/TRUSC/Withdraw-btn.webp";
-import { TruscData } from "../../JasonData/FeaturedBannerData";
+import { TruscData, TruscData1 } from "../../JasonData/FeaturedBannerData";
 import TruscTab from "./TruscTab/TruscTab";
 import Tether from "../../assets/images/TRUSC/Tether.webp";
 import USDC from "../../assets/images/TRUSC/USDC.webp";
@@ -14,7 +14,8 @@ import foxmini from "../../assets/images/TRUSC/fox-mini.webp";
 import usdt from "../../assets/images/TRUSC/usdt-mini.webp";
 import busd from "../../assets/images/TRUSC/busd-mini.webp";
 import usdc from "../../assets/images/TRUSC/usdc-mini.webp";
-import icon from "../../assets/images/TRUSC/switch.webp";
+import icon from "../../assets/images/TRUSC/switch.png";
+import TruscBet from "../../assets/images/TRUSC/TruscBet.png";
 
 const TRUSCToken = () => {
   const [Active, setIsActive] = useState(false);
@@ -32,17 +33,6 @@ const TRUSCToken = () => {
   return (
     <TRUSCTokenContainer>
       <Container1>
-        <div className="fox-stats">
-          {TruscData?.map((item) => (
-            <div className="text">
-              <span id="title">{item.title}</span>
-              <input type="text" placeholder={item.placeholder} disabled />
-            </div>
-          ))}
-        </div>
-      </Container1>
-      <Balance>
-        <div className="liquidity-pool">
           <div className="heading">
             <span>Liquidity Pools</span>
             <hr />
@@ -50,25 +40,52 @@ const TRUSCToken = () => {
           <div className="balance">
             <div className="icon">
               <img src={Tether} al="Tether" />
-              <span>$0.00</span>
+              <span>$125,000.00</span>
             </div>
             <div className="icon">
               <img src={BUSD} al="BUSD" />
-              <span>$0.00</span>
+              <span>$125,000.00</span>
             </div>
             <div className="icon">
-              <img src={USDC} al="USDC" />
-              <span>$0.00</span>
+              <img src={TruscBet} al="TruscBet" />
+              <span>$125,000.00</span>
             </div>
             <div className="icon">
               <img src={liquidityFox} al="liquidityFox" />
-              <span>$0.00</span>
+              <span>$125,000.00</span>
             </div>
           </div>
+      </Container1>
+      <Balance>
+      <div className="liquidity-pool">
+      <img src={liquidityFox} al="liquidityFox" />
+
+      <div className="fox-stats">
+          {TruscData?.map((item) => (
+            <div className="text">
+              <span id="title">{item.title}</span>
+              <input type="text" placeholder={item.placeholder} disabled />
+            </div>
+          ))}
+        </div>
         </div>
         <div className="liquidity-pool">
-          <div className="heading1">
-            <span>TruSwap</span>
+        <img src={TruscBet} al="TruscBet" />
+
+      <div className="fox-stats">
+          {TruscData1?.map((item) => (
+            <div className="text">
+              <span id="title">{item.title}</span>
+              <input type="text" placeholder={item.placeholder} disabled />
+            </div>
+          ))}
+        </div>
+        </div>
+      
+      </Balance>
+      <Container1>
+      <div className="heading1">
+            <span>Swap</span>
             <hr />
           </div>
           <div className="convert">
@@ -118,8 +135,8 @@ const TRUSCToken = () => {
             </div>
           </div>
           <button>Swap</button>
-        </div>
-      </Balance>
+       
+      </Container1>
     </TRUSCTokenContainer>
   );
 };
