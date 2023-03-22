@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "./Footer.styles";
-import footerlogo from "../../assets/images/Logo/footerlogo.webp";
+import footerlogo from "../../assets/images/Logo/footerlogo.svg";
 import { NavLink } from "react-router-dom";
 import { third_array } from "../../JasonData/Sidebar_routes";
 
@@ -118,7 +118,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="currcency-wrapper">
+        {/* <div className="currcency-wrapper">
           {third_array.map((item, index) => (
             <a href={item.route} key={index} target="_blank" rel="noreferrer">
               <SidebarItems
@@ -128,22 +128,22 @@ const Footer = () => {
               />
             </a>
           ))}
-        </div>
+        </div> */}
         <hr className="bottom-hr" />
         <div className="footerlogo">
           <div className="footerlogo-img">
             <img src={footerlogo} alt="footerlogo" />
           </div>
-          <p>© 2022 Metabetmask.com | All rights reserved.</p>
+          <p>© 2022 BetCrypto.Ai | All rights reserved.</p>
         </div>
         <div className="terms">
           <ul>
-            <li>
-              <NavLink to="/cookies">Cookies</NavLink>
-            </li>
-            <li>
+          <li>
               <NavLink to="/privacy">Privacy</NavLink>
             </li>
+            <li>
+              <NavLink to="/cookies">Security</NavLink>
+            </li> 
             <li>
               <NavLink to="/terms">Terms</NavLink>
             </li>
