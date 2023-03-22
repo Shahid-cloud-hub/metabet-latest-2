@@ -90,7 +90,7 @@ const router = createBrowserRouter([
         element: <TRUTH2EARN />,
       },
       {
-        path: "/trusc-token",
+        path: "/bet-token",
         element: <TRUSCTOKEN />,
       },
       {
