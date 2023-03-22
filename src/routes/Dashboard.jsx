@@ -122,7 +122,7 @@ const Dashboard = () => {
             )}
             <div className="main" id="detail">
               {
-                (isMobile || isSmallMobile) && <BalanceButtons />
+                (isMobile || isSmallMobile || isTablet) && <BalanceButtons />
 
               }
               <Outlet />

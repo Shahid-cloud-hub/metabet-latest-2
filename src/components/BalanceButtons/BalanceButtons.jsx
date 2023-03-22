@@ -35,7 +35,7 @@ const BalanceButtons = () => {
         );
       }
   return (
-    <div className="right-nav">
+    <div className="right-nav" >
     <label>
       <input
         type="text"

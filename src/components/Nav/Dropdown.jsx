@@ -87,8 +87,9 @@ function Dropdown() {
   return (
     <>
       <div className="dropdown">
+          {isDesktop &&
         <div className="dropdown-ai">
-          { isDesktop  &&      <div className="right-nav">
+          <div className="right-nav">
             <label>
               <input
                 type="text"
@@ -106,60 +107,10 @@ function Dropdown() {
               <input type="text" name="name" placeholder="0.00" disabled />
               <img src={navBet} alt="navBet" />
             </label>
-
-           
-
-          </div>}
-     
+          </div>
         </div>
+          }
         <div className="dropdownBtn">
-          {/* <div className="Nav-Btn" onClick={() => setIsActive(!Active)}>
-            <div className="Nav-text">
-              {walletAddress ? walletAddress : "0.0000"}
-              <img src={ETH} alt="ETH" />
-            </div>
-            <svg
-              width="17"
-              height="18"
-              viewBox="0 0 21 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clipPath="url(#clip0_4746_66667)">
-                <path
-                  d="M20.1138 6.41986L17.2769 3.58301L10.1138 10.7462L2.95062 3.58301L0.11377 6.41986L10.1138 16.4199L20.1138 6.41986Z"
-                  fill="white"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_4746_66667">
-                  <rect
-                    width="20"
-                    height="20"
-                    fill="white"
-                    transform="translate(20.1138 20) rotate(180)"
-                  />
-                </clipPath>
-              </defs>
-            </svg>
-            {Active && (
-              <div className="dropdownContent">
-                {Object.values(options).map((option, index) => (
-                  <div
-                    onClick={() => setSelected(option)}
-                    key={index}
-                    className="dropdownItem"
-                  >
-                    {option.name?.slice(0, 10)}
-                    <div>
-                      <img src={option.img} alt="option.img" />
-                      {option.text}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div> */}
           {!metaMaskAddress.metaMaskAddress ? (
             <div
               className="connect-btn"
@@ -171,8 +122,8 @@ function Dropdown() {
             <div
               className="connect-btn"
               onClick={() => dispatch(metaMaskDisconnect())}
-            >  
-                <button>Disconnect</button>
+            >
+              <button>Disconnect</button>
             </div>
           )}
         </div>
