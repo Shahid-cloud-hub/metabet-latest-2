@@ -36,7 +36,7 @@ const WorldcupLandingPage = () => {
           //   <FilteredEventsList />
           // </div>
           <div className="card-parent">
-            {response?.map((item, index) => (
+            {response?.slice(0, 31)?.map((item, index) => (
               <>
                 <div className="card" key={index}>
                   <img
