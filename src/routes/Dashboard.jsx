@@ -98,6 +98,34 @@ const ContainerWrapper = styled("div")`
     }
   }
 
+  .wrapper-main-body {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 70px);
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 9;
+    top: 75px;
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.35);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #314552;
+      border-right: none;
+      border-left: none;
+      border-radius: 10px;
+    }
+  }
+
   .active-popup {
     filter: blur(8px);
   }
