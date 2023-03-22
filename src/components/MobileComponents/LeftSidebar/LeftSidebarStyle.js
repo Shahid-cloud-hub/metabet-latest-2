@@ -272,6 +272,7 @@ export const ContainerSidebar = styled("div")`
     }
     .OpenNavBar {
       display: block;
+      margin: 4px 10px 0px;
     }
   }
 

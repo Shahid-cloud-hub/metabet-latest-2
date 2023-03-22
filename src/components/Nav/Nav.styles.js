@@ -84,7 +84,7 @@ export const Container = styled.div`
       gap: 10px;
     }
     .dropdown-ai {
-      justify-content: flex-end;
+      justify-content: center;
       gap: 50px;
     }
     .openai {
@@ -103,8 +103,8 @@ export const Container = styled.div`
   }
   @media screen and (max-width: 920px) {
     .dropdown-ai {
-      justify-content: flex-end;
-      gap: 50px;
+      justify-content: center;
+      // gap: 50px;
     }
     .openai {
       display: flex;
@@ -122,7 +122,9 @@ export const Container = styled.div`
   }
   @media screen and (max-width: 820px) {
     .dropdown-ai {
-      gap: 5px;
+      justify-content: center;
+
+      // gap: 5px;
     }
     .openai {
       gap: 5px;
@@ -137,7 +139,8 @@ export const Container = styled.div`
   }
   @media screen and (max-width: 768px) {
     .background {
-      min-height: 80px;
+      // min-height: 80px;
+padding : 0;
     }
     .dropdown-ai {
       justify-content: center;
