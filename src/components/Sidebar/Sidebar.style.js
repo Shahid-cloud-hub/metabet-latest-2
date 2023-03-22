@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  width: 340px;
+  /* width: 340px; */
   font-family: "CabinetGroteskBold";
 
   /* img {
@@ -32,7 +32,6 @@ export const Container = styled.div`
     a {
       text-decoration: none;
       color: #577184;
-
     }
 
     .bottom-hr {
@@ -89,12 +88,13 @@ export const Container = styled.div`
   .page {
     position: relative;
     width: 100%;
-    height: 550px;
+    /* height: 850px; */
     background: #081d2a;
   }
 
   .content {
     width: 100%;
+    /* height: 850px; */
   }
 
   .wrapper {
@@ -102,18 +102,19 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
     padding: 0;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
-    z-index: 999999;
+    z-index: 999;
   }
 
   .page::after {
+    display: none;
     content: "";
     position: absolute;
     z-index: 1;
-    height: calc(100% - 20px);
-    top: 10px;
-    right: -1px;
+    height: calc(104% - 39px);
+    top: 2px;
+    right: 0px;
     width: 8px;
     background: rgba(0, 0, 0, 0.35);
     border-radius: 10px;
@@ -136,12 +137,12 @@ export const Container = styled.div`
 
   .wrapper::-webkit-scrollbar-track-piece:end {
     background: transparent;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 
   .wrapper::-webkit-scrollbar-track-piece:start {
     background: transparent;
-    margin-top: 9px;
+    margin-top: 0px;
   }
 `;
 

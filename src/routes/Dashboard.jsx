@@ -12,9 +12,7 @@ import Confetti from "react-confetti";
 import BalanceButtons from "../components/BalanceButtons/BalanceButtons";
 import { isValidMnemonic } from "ethers/lib/utils";
 
-
 const ContainerWrapper = styled("div")`
-  display: flex;
   position: relative;
 
   .popup-model {
@@ -28,32 +26,57 @@ const ContainerWrapper = styled("div")`
   .container {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
   }
 
   .wrapper-main {
-    display: flex;
-    flex-direction: row;
+    position: relative;
+    padding-left: 320px;
   }
 
   header {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    z-index: 9;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
   }
 
   .left-sidebar {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    background-color: #081d2a;
+    position: fixed;
+    top: 70px; /* the height of the header (60px) + its bottom margin (20px) */
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    width: 343px;
+    overflow: auto;
+    padding: 0 0 20px;
+    background: #0f212e;
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.35);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #314552;
+      border-right: none;
+      border-left: none;
+      border-radius: 10px;
+    }
   }
 
   .main {
     background: ${(props) => props.bgColorVal};
     width: 100%;
     position: relative;
+    flex-grow: 1;
 
     .main-wrapper-parent {
       display: flex;
@@ -120,13 +143,12 @@ const Dashboard = () => {
                 <Sidebar />
               </div>
             )}
-            <div className="main" id="detail">
-              {
-                (isMobile || isSmallMobile) && <BalanceButtons />
-
-              }
-              <Outlet />
-              <ToastContainer />
+            <div className="wrapper-main-body">
+              <div className="main" id="detail">
+                {(isMobile || isSmallMobile) && <BalanceButtons />}
+                <Outlet />
+                <ToastContainer />
+              </div>
             </div>
           </div>
         </div>

@@ -81,7 +81,7 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
     }
   }, [smartContractId?.length]);
 
-  console.log("test", allEventsData);
+  console.log("test", itemData);
 
   const formatDate = (seconds) => {
     const s = new Date(seconds * 1000).toLocaleDateString("en-US");
@@ -90,10 +90,10 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
 
   return (
     <ContainerBet>
-      {allEventsData?.length === 0 ? (
+      {itemData?.length === 0 ? (
         <Loading />
       ) : (
-        allEventsData?.map((item) => {
+        itemData?.map((item) => {
           return (
             <>
               <div className="betHistory-container">
@@ -103,26 +103,30 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
                   </div>
                   <div className="table-wrapper">
                     <div className="bet-th">
-                      <span>{"Date"}</span>
-                      <span>{"Event"}</span>
+                      <span>Date</span>
+                      <span>Event</span>
                     </div>
                     <div className="bet-td">
                       <span>
-                        {formatDate(Number(item?.finallArr[0]?.timestamp))}
+                        {/* {formatDate(Number(item?.finallArr[0]?.timestamp))} */}
+                        {item?.td_1}
                       </span>
-                      <span>{item?.event[0][1] + "/" + item?.event[0][2]}</span>
+                      {item?.td_2}
+                      {/* <span>{item?.event[0][1] + "/" + item?.event[0][2]}</span> */}
                     </div>
                   </div>
                   <div className="table-wrapper">
                     <div className="bet-th">
-                      <span>{"Bet Amount"}</span>
-                      <span>{"Blockchain"}</span>
-                      <span>{"Current Odds"}</span>
+                      <span>Bet Amount</span>
+                      <span>Blockchain</span>
+                      <span>Current Odds</span>
                     </div>
                     <div className="bet-td1">
-                      <span>{Number(item?.finallArr[0]?.amount) / 1e18}</span>
+                      {item?.td_3}
+                      {/* <span>{Number(item?.finallArr[0]?.amount) / 1e18}</span> */}
                       <img src={item.td_4} alt="" />
-                      <span>{item?.odds}</span>
+                      {/* <span>{item?.odds}</span> */}
+                      <span>{item?.td_5}</span>
                     </div>
                   </div>
                   <div className="status-btn">

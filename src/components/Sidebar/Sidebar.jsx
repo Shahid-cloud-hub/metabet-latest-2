@@ -50,36 +50,38 @@ const Sidebar = () => {
   return (
     <>
       <Container>
-        <div className="wrapper-link">
-          {first_array.map((item, index) => (
-            <Link to={item.route} key={index}>
-              <SidebarItems
-                title={item.display_name}
-                active={index === activeItems}
-              />
-            </Link>
-          ))}
-        </div>
-        <hr />
-        {/* <div className="wrapper-span">
+        <div className="wrapper">
+          <div className="wrapper-link">
+            {first_array.map((item, index) => (
+              <Link to={item.route} key={index}>
+                <SidebarItems
+                  title={item.display_name}
+                  active={index === activeItems}
+                />
+              </Link>
+            ))}
+          </div>
+          <hr />
+          {/* <div className="wrapper-span">
           <NavLink to="/">
             <span>All Events</span>
           </NavLink>
         </div> */}
-        <div className="wrapper-link-1">
-          {sec_array.map((item, index) => (
-            <Link to={item.route} key={index}>
-              <SidebarItems1
-                icon={item?.icon}
-                white={item?.white}
-                title={item.display_name}
-                active1={index === activeSecItems}
-              />
-            </Link>
-          ))}
-        </div>
-        <div>
-          <Footer />
+          <div className="wrapper-link-1">
+            {sec_array.map((item, index) => (
+              <Link to={item.route} key={index}>
+                <SidebarItems1
+                  icon={item?.icon}
+                  white={item?.white}
+                  title={item.display_name}
+                  active1={index === activeSecItems}
+                />
+              </Link>
+            ))}
+          </div>
+          <div>
+            <Footer />
+          </div>
         </div>
       </Container>
     </>
