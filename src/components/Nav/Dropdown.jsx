@@ -10,12 +10,12 @@ import MATIC from "../../assets/images/MATIC.svg";
 import BUSD from "../../assets/images/BUSD.png";
 import GOAL from "../../assets/images/GOAL.png";
 import USDC from "../../assets/images/usdc.png";
-import foxCircle from "../../assets/images/foxCircle.webp";
+import foxCircle from "../../assets/images/foxCircle.svg";
 import foxMini from "../../assets/images/fox-mini.webp";
-import tru from "../../assets/images/tru.png";
-import navBet from "../../assets/images/navBet.png";
-import Connect from "../../assets/images/Connect_btn.png";
-import Disconnect from "../../assets/images/discount-1.png";
+import tru from "../../assets/images/tru.svg";
+import navBet from "../../assets/images/navBet.svg";
+import Connect from "../../assets/images/Connect.webp";
+import Disconnect from "../../assets/images/Disconnect.webp";
 import Withdraw from "../../assets/images/withdraw_btn.png";
 import navFox from "../../assets/images/nav-fox.webp";
 import openai from "../../assets/images/openai.webp";
@@ -88,7 +88,7 @@ function Dropdown() {
     <>
       <div className="dropdown">
         <div className="dropdown-ai">
-          <div className="right-nav">
+          { isDesktop  &&      <div className="right-nav">
             <label>
               <input
                 type="text"
@@ -98,23 +98,22 @@ function Dropdown() {
               />
               <img src={foxCircle} alt="foxCircle" />
             </label>
-            {!metaMaskAddress.metaMaskAddress ? (
-              <> <label id="label-nav">
+            <label>
               <input type="text" name="name" placeholder="0.00" disabled />
-              <img src={tru} alt="tru" />
+              <img id="label-nav" src={tru} alt="tru" />
             </label>
-             <label >
-             <input type="text" name="name" placeholder="0.00" disabled />
-             <img src={navBet} alt="navBet" />
-           </label></>
-             
-            ) : (
-              <img id="withdraw" src={Withdraw} alt="Withdraw" />
-            )}
-          </div>
+            <label >
+              <input type="text" name="name" placeholder="0.00" disabled />
+              <img src={navBet} alt="navBet" />
+            </label>
+
+           
+
+          </div>}
+     
         </div>
         <div className="dropdownBtn">
-          <div className="Nav-Btn" onClick={() => setIsActive(!Active)}>
+          {/* <div className="Nav-Btn" onClick={() => setIsActive(!Active)}>
             <div className="Nav-text">
               {walletAddress ? walletAddress : "0.0000"}
               <img src={ETH} alt="ETH" />
@@ -160,28 +159,20 @@ function Dropdown() {
                 ))}
               </div>
             )}
-          </div>
+          </div> */}
           {!metaMaskAddress.metaMaskAddress ? (
             <div
               className="connect-btn"
               onClick={() => dispatch(metaMaskConnection())}
             >
-              {isTablet || isDesktop ? (
-                <img src={Connect} alt="Wallet-image" />
-              ) : (
-                <img src={navFox} alt="Wallet-image" />
-              )}
+              <button>Connect</button>
             </div>
           ) : (
             <div
               className="connect-btn"
               onClick={() => dispatch(metaMaskDisconnect())}
-            >
-              {isTablet || isDesktop ? (
-                <img src={Disconnect} alt="Wallet-img" />
-              ) : (
-                <img src={navFox} alt="Wallet-image" />
-              )}
+            >  
+                <button>Disconnect</button>
             </div>
           )}
         </div>

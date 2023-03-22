@@ -9,6 +9,9 @@ import { useEffect } from "react";
 import PopUpModel from "../components/PopUpModel/PopUpModel";
 import { Context } from "../Context";
 import Confetti from "react-confetti";
+import BalanceButtons from "../components/BalanceButtons/BalanceButtons";
+import { isValidMnemonic } from "ethers/lib/utils";
+
 
 const ContainerWrapper = styled("div")`
   display: flex;
@@ -88,7 +91,7 @@ const ContainerWrapper = styled("div")`
 `;
 
 const Dashboard = () => {
-  const { isDesktop, isTablet } = useBreakpoint();
+  const { isDesktop, isTablet, isSmallMobile, isMobile } = useBreakpoint();
   const { items } = useContext(Context);
   const [celebRemove] = useState(true);
 
@@ -118,6 +121,10 @@ const Dashboard = () => {
               </div>
             )}
             <div className="main" id="detail">
+              {
+                (isMobile || isSmallMobile) && <BalanceButtons />
+
+              }
               <Outlet />
               <ToastContainer />
             </div>

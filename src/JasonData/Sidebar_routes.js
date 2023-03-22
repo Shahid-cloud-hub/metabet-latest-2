@@ -34,6 +34,8 @@ import Formula from "../assets/images/Formula.png";
 import FormulaW from "../assets/images/FormulaW.png";
 import Rugby from "../assets/images/Rugby.png";
 import RugbyW from "../assets/images/RugbyW.png";
+import ufclogo from "../assets/images/ufclogo.png";
+import ufclogoW from "../assets/images/ufclogoW.png";
 
 
 // currcency Logos //
@@ -92,6 +94,24 @@ export const sec_array = [
     icon: Bitcoin,
     white: BitcoinW,
   },
+  {
+    display_name: "Boxing",
+    route: "/boxing",
+    icon: Boxing,
+    white: BoxingW,
+  },
+  {
+    display_name: "Cricket",
+    route: "/cricket",
+    icon: Cricket,
+    white: CricketW,
+  },
+  {
+    
+    route: "/ufc",
+    icon: ufclogo,
+    white: ufclogoW,
+  },
   // {
   //   display_name: "Bitcoin Price Bets",
   //   route: "/Bitcoin",
@@ -104,12 +124,12 @@ export const sec_array = [
   //   icon: Ethere,
   //   white: EthereW,
   // },
-  {
-    display_name: "Trending Events",
-    route: "/trending-event",
-    icon: Politics,
-    white: PoliticsW,
-  },
+  // {
+  //   display_name: "Trending Events",
+  //   route: "/trending-event",
+  //   icon: Politics,
+  //   white: PoliticsW,
+  // },
   {
     display_name: "Football",
     route: "/football",
@@ -135,17 +155,12 @@ export const sec_array = [
     white: TennisW,
   },
   {
-    display_name: "Football",
+    display_name: "American Football",
     route: "/american-football",
     icon: AmericanFootball,
     white: AmericanFootballW,
   },
-  {
-    display_name: "Cricket",
-    route: "/cricket",
-    icon: Cricket,
-    white: CricketW,
-  },
+
   {
     display_name: "Baseball",
     route: "/baseball",
@@ -176,19 +191,6 @@ export const sec_array = [
     route: "/volleyball",
     icon: Volleyball,
     white: VolleyballW,
-  },
-
-  {
-    display_name: "Boxing",
-    route: "/boxing",
-    icon: Boxing,
-    white: BoxingW,
-  },
-  {
-    display_name: "UFC",
-    route: "/ufc",
-    icon: Boxing,
-    white: BoxingW,
   },
   {
     display_name: "Darts",
@@ -229,13 +231,14 @@ export const third_array = [
 
 export const fourth_array = [
   {
-    display_name: "cookies",
-    route: "/cookies",
-  },
-  {
     display_name: "privacy",
     route: "/privacy",
   },
+  {
+    display_name: "Security",
+    route: "/security",
+  },
+  
   {
     display_name: "terms",
     route: "/terms",

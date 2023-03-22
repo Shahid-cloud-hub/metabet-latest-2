@@ -61,11 +61,11 @@ const Sidebar = () => {
           ))}
         </div>
         <hr />
-        <div className="wrapper-span">
+        {/* <div className="wrapper-span">
           <NavLink to="/">
             <span>All Events</span>
           </NavLink>
-        </div>
+        </div> */}
         <div className="wrapper-link-1">
           {sec_array.map((item, index) => (
             <Link to={item.route} key={index}>
