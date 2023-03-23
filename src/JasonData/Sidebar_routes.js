@@ -74,6 +74,10 @@ export const first_array = [
     display_name: "$BET Token",
     route: "/bet-token",
   },
+  {
+    display_name: "Ai NFT",
+    route: "/ai-nft",
+  },
 ];
 export const sec_array = [
   {
