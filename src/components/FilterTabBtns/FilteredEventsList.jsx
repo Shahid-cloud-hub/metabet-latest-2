@@ -35,8 +35,8 @@ const FilteredEventsList = () => {
           name="dropVal"
           value={formData.dropVal}
           onChange={handleDropdownChange}
-        >
-          <option value="all">All</option>
+        > 
+          <option value="all" class="select-hr">All <hr/> </option>
           <option value="size">Size</option>
           <option value="live">Live</option>
           <option value="ended">Ended</option>

@@ -250,6 +250,37 @@ export const DashContainer = styled("div")`
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    button{
+      width: 108px;
+background: #5F9EA0;
+border-radius: 8px;
+border:none;
+color: #FFFFFF;
+font-size: 14px;
+font-family: 'Mostra Nuova';
+padding: 10px 0px;
+    }
+    select{
+      color: #FFFFFF;
+font-size: 14px;
+font-family: 'Mostra Nuova';  
+padding: 10px 10px;
+border: none;
+background: #5F9EA0;
+border-radius: 8px;
+
+option{
+  position:relative;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+option::after{
+  content:"";
+  position: absolute;
+ border-bottom: 1px dotted #000; 
+}
+
   }
 
   .card-parent {
