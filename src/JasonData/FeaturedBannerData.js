@@ -2526,44 +2526,30 @@ export const bData = [
 export const TruscData = [
   {
     id: 1,
-    title: "CIRC SUPPLY",
-    placeholder: "0",
+    title: "POOL SIZE",
+    placeholder: "$0",
   },
   {
     id: 2,
-    title: "VOLUME 24H",
+    title: "NUMBER OF BETS",
     placeholder: "0",
   },
   {
     id: 3,
-    title: "MARKET CAP",
-    placeholder: "0",
+    title: "ODDS",
+    placeholder: "/",
   },
   {
     id: 4,
-    title: "PRICE",
-    placeholder: "$0.99972",
+    title: "SHARE OF POOL",
+    placeholder: "0%",
   },
   {
     id: 5,
     title: "ACTIVE BETS",
-    placeholder: "0",
+    placeholder: "$0.00",
   },
-  {
-    id: 6,
-    title: "MAX SUPPLY",
-    placeholder: "1b",
-  },
-  {
-    id: 7,
-    title: "TOTAL VOLUME",
-    placeholder: "0",
-  },
-  {
-    id: 8,
-    title: "SWAP TAXES",
-    placeholder: "0",
-  },
+ 
 ];
 export const TruscData1 = [
   {

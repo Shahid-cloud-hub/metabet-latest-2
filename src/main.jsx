@@ -62,6 +62,7 @@ import ALLFOOTBALLEVENTS from "./components/FootballLeagues/Football";
 import GetStatistics from "./components/Statistics/GetStatistics";
 import SocialMedia from "./components/SocialMedia/SocialMedia";
 import Formula1 from "./components/Formula1/Formula1";
+import AiNFT from "./components/AiNFT/AiNFT";
 
 let persistor = persistStore(store);
 const router = createBrowserRouter([
@@ -278,6 +279,10 @@ const router = createBrowserRouter([
         path: "/social-media",
         element: <SocialMedia />,
       },
+    {
+      path: "/ai-nft",
+      element: <AiNFT/>
+    }
     ],
   },
 ]);
