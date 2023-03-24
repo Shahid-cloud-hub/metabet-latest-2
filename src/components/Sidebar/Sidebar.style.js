@@ -4,10 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* width: 340px; */
-  /* font-family: "CabinetGroteskBold"; */
-  /* font-family: "Mostra Nuova"; */
-  font-weight: 900;
+  font-weight: 700;
 
   /* img {
     background-color: #0f212e;

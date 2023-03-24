@@ -1,11 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "CabinetGroteskBold";
-  /* font-family: "Mostra Nuova"; */
-
-}
-
 .Amount span {
   font-size: 13px;
   color: #969696;
@@ -22,7 +14,7 @@
   grid-gap: 12px;
 }
 
-.pool>.Status {
+.pool > .Status {
   display: flex;
   align-items: center;
   grid-gap: 10px;
@@ -40,7 +32,6 @@
   display: flex;
   align-items: center;
   gap: 5px;
-
 }
 
 .pool span {
@@ -89,7 +80,7 @@
   grid-gap: 21px;
 }
 
-.win>.Status {
+.win > .Status {
   display: flex;
   align-items: center;
   grid-gap: 10px;
@@ -129,30 +120,26 @@
   gap: 10px;
 }
 
-.payments-inputs>.openai {
+.payments-inputs > .openai {
   display: flex;
   align-items: center;
   gap: 5px;
   padding: 0px 25px;
 }
 
-
-
-.payments-inputs>.openai>span {
+.payments-inputs > .openai > span {
   font-size: 10px;
   color: #ffffff;
 }
 
-.payments-inputs>.verdict-btn {
+.payments-inputs > .verdict-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-
-
 }
 
-.payments-inputs>.verdict-btn>button {
+.payments-inputs > .verdict-btn > button {
   font-size: 12px;
   color: #ffffff;
   cursor: pointer;
@@ -164,12 +151,11 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
-
 }
 
-.title-text>span {
+.title-text > span {
   font-size: 13px;
-  color: #DADADA;
+  color: #dadada;
   text-align: center;
 }
 
@@ -179,21 +165,19 @@
   align-items: center;
   gap: 15px;
   padding-top: 15px;
-
 }
 
 #grey {
-  color: #6E8799;
+  color: #6e8799;
 }
 
 #green {
-  background: #11A94E;
+  background: #11a94e;
 }
 
 #red {
-  background: #E04545;
+  background: #e04545;
 }
-
 
 @media screen and (max-width: 768px) {
   .Amount {
@@ -236,55 +220,55 @@
     border-radius: 3.56287px;
   }
 
-  .ctn>.pool span {
+  .ctn > .pool span {
     font-weight: 500;
     font-size: 4.63174px;
     line-height: 140%;
   }
 
-  .ctn>.Amount span {
+  .ctn > .Amount span {
     font-weight: 500;
     font-size: 4.63174px;
     line-height: 140%;
   }
 
-  .ctn>.odds span {
+  .ctn > .odds span {
     font-weight: 500;
     font-size: 4.63174px;
     line-height: 140%;
   }
 
-  .ctn>.win span {
+  .ctn > .win span {
     font-weight: 500;
     font-size: 4.63174px;
     line-height: 140%;
   }
 
-  .ctn>.pool input {
+  .ctn > .pool input {
     font-size: 4.63174px;
     width: 20px;
   }
 
-  .ctn>.odds input {
+  .ctn > .odds input {
     font-size: 4.63174px;
     width: 15px;
   }
 
-  .ctn>.Amount input {
+  .ctn > .Amount input {
     font-size: 4.63174px;
     width: 20px;
   }
 
-  .ctn>.win input {
+  .ctn > .win input {
     font-size: 4.63174px;
     width: 15px;
   }
 
-  .pool>.Status {
+  .pool > .Status {
     grid-gap: 5px;
   }
 
-  .Status>img {
+  .Status > img {
     width: 7.13px;
     height: 7.13px;
   }
@@ -306,7 +290,7 @@
     border-radius: 0px;
   }
 
-  .dropdown-Content-stats4>#btn {
+  .dropdown-Content-stats4 > #btn {
     width: 130px;
     height: 14px;
     border-radius: 2.13772px;
@@ -325,7 +309,7 @@
   grid-gap: 2px;
 }
 
-.dropdown .dropdownBtn>#Btn {
+.dropdown .dropdownBtn > #Btn {
   width: 150px;
   height: 21px;
   background: #fc4c1e;
@@ -359,7 +343,7 @@
   text-transform: none;
 }
 
-.Player>span {
+.Player > span {
   font-family: "CabinetGroteskBold";
   font-style: normal;
   font-weight: 800;
@@ -396,7 +380,7 @@
   grid-gap: 20px;
 }
 
-.Values>ul {
+.Values > ul {
   display: flex;
   text-decoration: none;
   list-style: none;
@@ -405,12 +389,12 @@
   text-transform: none;
 }
 
-.Values>ul>li {
+.Values > ul > li {
   display: flex;
   color: #ffffff;
 }
 
-.Values>ul>a {
+.Values > ul > a {
   text-decoration-line: underline;
   color: #4e95ff;
 }
