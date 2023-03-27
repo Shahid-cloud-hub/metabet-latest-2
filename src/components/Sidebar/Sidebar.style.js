@@ -44,7 +44,7 @@ export const Container = styled.div`
     flex-direction: column;
     a {
       text-decoration: none;
-      color: #9eadb9;
+      color: #577184;
     }
   }
 
@@ -74,7 +74,7 @@ export const Container = styled.div`
 
   a {
     text-decoration: none;
-    color: #9eadb9;
+    color: #577184;
   }
 
   hr {

@@ -15,7 +15,6 @@ export const TRUSCTokenContainer = styled.div`
 `;
 
 export const Container1 = styled.div`
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,7 +82,7 @@ export const Container1 = styled.div`
   .convert {
     display: flex;
     align-items: center;
-    gap:210px;
+    gap: 210px;
   }
   .balance {
     display: flex;
@@ -92,13 +91,13 @@ export const Container1 = styled.div`
     padding: 0px 35px;
 
     .icon {
-      display:flex;
+      display: flex;
       flex-direction: column;
       align-items: center;
 
-      gap:10px;
-      img{
-        width:60px;
+      gap: 10px;
+      img {
+        width: 60px;
       }
       span {
         font-family: "Junegull";
@@ -140,15 +139,18 @@ export const Container1 = styled.div`
     }
 
     .select {
-      width: 80px;
       background: #020f18;
       border-radius: 4px;
       padding: 10px;
       display: flex;
+      flex-wrap: wrap;
       flex-direction: column;
       gap: 10px;
       position: absolute;
-      transform: translate(-8px, 31px);
+      transform: translate(30px, 31px);
+      width: 100%;
+      height: 192px;
+      max-width: 174px;
       div {
         font-family: "Mostra Nuova";
         font-style: normal;
@@ -158,7 +160,7 @@ export const Container1 = styled.div`
         color: #ffffff;
         display: flex;
         align-items: center;
-        gap: 13px;
+        gap: 8px;
       }
     }
   }
@@ -204,9 +206,6 @@ export const Container1 = styled.div`
     line-height: 95%;
     color: #3d6eff;
   }
-  
- 
- 
 `;
 
 export const Balance = styled.div`
@@ -290,19 +289,20 @@ export const Balance = styled.div`
     }
   }
   .liquidity-pool {
-  margin: auto 0;
-  justify-content: start;
-  align-items: center;  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  width: 100%;
-  max-width: 473px;
-  min-height: 252px;
-  background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
-  border: 1px solid #5f9ea0;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 12px;
-  gap: 30px;
+    margin: auto 0;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    max-width: 473px;
+    min-height: 252px;
+    background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+    border: 1px solid #5f9ea0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    gap: 30px;
     button {
       background: #6495ed;
       border-radius: 12px;
@@ -357,7 +357,7 @@ export const Balance = styled.div`
     .convert {
       display: flex;
       align-items: center;
-      gap:210px;
+      gap: 210px;
     }
     .balance {
       display: flex;
@@ -368,8 +368,8 @@ export const Balance = styled.div`
       .icon {
         flex-direction: column;
         display: flex;
-        img{
-          width:60px;
+        img {
+          width: 60px;
         }
         span {
           font-family: "Junegull";
@@ -420,6 +420,10 @@ export const Balance = styled.div`
         gap: 10px;
         position: absolute;
         transform: translate(-8px, 31px);
+        width: 100%;
+        min-height: 192px;
+        max-width: 174px;
+
         div {
           font-family: "Mostra Nuova";
           font-style: normal;
@@ -731,7 +735,7 @@ export const Balance = styled.div`
         align-items: center;
         display: flex;
         align-items: center;
-        gap:210px;
+        gap: 210px;
       }
       .balance {
         display: flex;
@@ -789,6 +793,7 @@ export const Balance = styled.div`
           gap: 10px;
           position: absolute;
           transform: translate(-8px, 31px);
+
           div {
             font-family: "Mostra Nuova";
             font-style: normal;

@@ -249,9 +249,11 @@ export const DashContainer = styled("div")`
   .parent-wrapper {
     display: flex;
     /* flex-direction: column; */
-    justify-content: center;
+    justify-content: flex-end;
     width: 100%;
     gap: 20px;
+    padding-top: 10px;
+
     /* padding: 10px 20px; */
 
     .react-dropdown {
@@ -400,6 +402,8 @@ export const DashContainer = styled("div")`
       font-family: "Mostra Nuova";
       padding: 10px 0px;
       cursor: pointer;
+      margin-right: 5%;
+
     }
 
     /* select {
