@@ -23,15 +23,21 @@ import shib from "../../assets/images/TRUSC/shib.png";
 import matic from "../../assets/images/TRUSC/matic.png";
 import btc from "../../assets/images/TRUSC/btc.png";
 import dot from "../../assets/images/TRUSC/dot.png";
+import CoinMarketCap from "../../assets/images/TRUSC/CoinMarketCap.png";
 
 const TRUSCToken = () => {
   const [Active, setIsActive] = useState(false);
+  const [Active1, setIsActive1] = useState(false);
 
   const [selectedCurrency, setSelectedCurrency] = useState("USD");
   const handleCurrencyChange = (event) => {
     setSelectedCurrency(event.target.value);
   };
 
+  const [selectedCurrency1, setSelectedCurrency1] = useState("USD");
+  const handleCurrencyChange1 = (event) => {
+    setSelectedCurrency1(event.target.value);
+  };
   const options = [
     { value: "BET", text: "$BET", img: bet },
     { value: "BUSD", text: "BUSD", img: busd },
@@ -53,19 +59,22 @@ const TRUSCToken = () => {
         <div className="balance">
           <div className="icon">
             <img src={Tether} al="Tether" />
-            <span>$125,000.00</span>
+            <span>$100,000.00</span>
           </div>
           <div className="icon">
             <img src={BUSD} al="BUSD" />
-            <span>$125,000.00</span>
+            <span>$25,000.00</span>
           </div>
-          <div className="icon">
+          {/* <div className="icon">
             <img src={TruscBet} al="TruscBet" />
             <span>$125,000.00</span>
-          </div>
+          </div> */}
           <div className="icon">
             <img src={liquidityFox} al="liquidityFox" />
-            <span>$125,000.00</span>
+            <div className="textspan">
+              <span id="blue">TOTAL:</span>
+              <span>$125,000.00</span>
+            </div>
           </div>
         </div>
       </Container1>
@@ -80,18 +89,10 @@ const TRUSCToken = () => {
                 <input type="text" placeholder={item.placeholder} disabled />
               </div>
             ))}
-          </div>
-        </div>
-        <div className="liquidity-pool">
-          <img src={TruscBet} al="TruscBet" />
-
-          <div className="fox-stats">
-            {TruscData1?.map((item) => (
-              <div className="text">
-                <span id="title">{item.title}</span>
-                <input type="text" placeholder={item.placeholder} disabled />
-              </div>
-            ))}
+            <div className="text1">
+              <span id="title">ACTIVE BETS</span>
+              <input type="text" placeholder="0" disabled />
+            </div>
           </div>
         </div>
       </Balance>
@@ -102,13 +103,17 @@ const TRUSCToken = () => {
         </div>
         <div className="convert">
           <div className="truai">
-            <label>
+            <label onClick={() => setIsActive1(!Active1)}>
               From:
               <img src={foxmini} />
-              <input placeholder="TRUSC" disabled />
+              <input
+                placeholder="TRUSC"
+                style={{ cursor: "pointer" }}
+                disabled
+              />
             </label>{" "}
-            {Active && (
-              <div className="select">
+            {Active1 && (
+              <div className="select1">
                 {" "}
                 {Object.values(options).map((option, index) => (
                   <div
@@ -136,7 +141,11 @@ const TRUSCToken = () => {
             <div className="dropdown">
               <label onClick={() => setIsActive(!Active)}>
                 To: <img src={usdt} />
-                <input placeholder="USDT" disabled />
+                <input
+                  placeholder="USDT"
+                  style={{ cursor: "pointer" }}
+                  disabled
+                />
               </label>
               {Active && (
                 <div className="select">
@@ -166,6 +175,26 @@ const TRUSCToken = () => {
         </div>
         <button>Swap</button>
       </Container1>
+      <Balance>
+        <div className="liquidity-pool1">
+          <div className="images">
+            <img src={TruscBet} al="TruscBet" />
+            <div className="fox-stats">
+              {TruscData1?.map((item) => (
+                <div className="text">
+                  <span id="title">{item.title}</span>
+                  <input type="text" placeholder={item.placeholder} disabled />
+                </div>
+              ))}
+              <div className="text2">
+                <span id="title">ACTIVE BETS</span>
+                <input type="text" placeholder="0" disabled />
+              </div>
+            </div>
+          </div>
+          <img id="coin" src={CoinMarketCap} al="CoinMarketCap" />
+        </div>
+      </Balance>
     </TRUSCTokenContainer>
   );
 };

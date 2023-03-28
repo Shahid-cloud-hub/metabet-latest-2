@@ -8,7 +8,9 @@ export const Container = styled.div`
   /* max-width: 1010px; */
   background: #1b2c38;
   box-shadow: ${(props) =>
-    props.removeShadow ? "0px 4px 10px rgba(0, 0, 0, 0.5)" : "none"};
+    props.removeShadow
+      ? "0px 4px 10px rgba(0, 0, 0, 0.5)"
+      : " 0px 4px 10px rgba(0, 0, 0, 0.5)"};
 
   .background {
     display: flex;
@@ -40,7 +42,6 @@ export const Container = styled.div`
     align-items: center;
     width: 100%;
     padding-left: 40px;
-
   }
   .openai {
     display: flex;
@@ -140,7 +141,7 @@ export const Container = styled.div`
   @media screen and (max-width: 768px) {
     .background {
       // min-height: 80px;
-padding : 0;
+      padding: 0;
     }
     .dropdown-ai {
       justify-content: center;

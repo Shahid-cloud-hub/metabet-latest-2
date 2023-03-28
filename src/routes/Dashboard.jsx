@@ -30,7 +30,8 @@ const ContainerWrapper = styled("div")`
 
   .wrapper-main {
     position: relative;
-    padding-left: 320px;
+    /* padding-left: 320px; */
+    padding-left: ${(props) => props.deskTopPadding};
   }
 
   header {
@@ -50,6 +51,7 @@ const ContainerWrapper = styled("div")`
     left: 0;
     z-index: 99;
     width: 343px;
+    width: ${(props) => props.deskTopWidth};
     overflow: auto;
     padding: 0 0 20px;
     background: #0f212e;
@@ -150,7 +152,10 @@ const Dashboard = () => {
 
   return (
     <>
-      <ContainerWrapper>
+      <ContainerWrapper
+        deskTopWidth={isDesktop ? "343px" : "0px"}
+        deskTopPadding={isDesktop ? "320px" : "0px"}
+      >
         {items?.betMessage ||
           (items?.airDropBetMessage && celebRemove && (
             <Confetti width={availableWidth} height={1200} gravity={0.77} />
@@ -173,7 +178,7 @@ const Dashboard = () => {
             )}
             <div className="wrapper-main-body">
               <div className="main" id="detail">
-                {(isMobile || isSmallMobile) && <BalanceButtons />}
+                {(isTablet || isMobile || isSmallMobile) && <BalanceButtons />}
                 <Outlet />
                 <ToastContainer />
               </div>
