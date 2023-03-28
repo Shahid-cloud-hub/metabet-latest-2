@@ -18,6 +18,7 @@ const ActiveBetHistory = () => {
   });
 
   const filterItem = (curcat) => {
+    console.log(curcat, "filterItem");
     const newItem = Filter.filter((newVal) => {
       return newVal.name === curcat;
     });

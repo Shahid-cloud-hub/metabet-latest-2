@@ -10,17 +10,33 @@ export const Container = styled.div`
     justify-content: space-between;
     gap: 10px;
     button {
-      display: flex;
+      display: flex !important;
       align-items: center;
       justify-content: center;
       font-size: 16px;
-      padding: 0px 15px;
-      min-height: 45px;
-      background: #0f212e;
-      border-radius: 8px;
-      border: none;
+      padding: 12px 0px;
+      max-width: 160px;
+      width: 100%;
+      background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+      border: 1px solid #a8d7ff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 12px;
       gap: 4px;
+      color: #ffffff;
+      span {
+        color: #ffffff;
+      }
     }
+  }
+
+  .slick-prev {
+    transform: translate(46px, 10.6rem);
+    display: none !important;
+  }
+
+  .slick-next {
+    transform: translate(-46px, 10.6rem);
+    display: none !important;
   }
 
   .history_span {

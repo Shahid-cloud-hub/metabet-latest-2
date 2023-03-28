@@ -140,7 +140,7 @@ export const sec_array = [
     icon: PL,
     white: FootballW,
   }, {
-    display_name: "Formula 1",
+    display_name: "Formula One",
     route: "/formula1",
     icon: Formula,
     white: FormulaW,

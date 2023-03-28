@@ -12,7 +12,7 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
   const metaMaskAddress = useSelector((state) => state.wallet);
   const [allEventsData, setallEventsData] = useState([]);
 
-  console.log("display", smartContractId);
+  // console.log("display", smartContractId);
 
   useEffect(() => {
     const check = async (i) => {
@@ -81,7 +81,7 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
     }
   }, [smartContractId?.length]);
 
-  console.log("test", itemData);
+  console.log("DisplayFilter Tab", itemData);
 
   const formatDate = (seconds) => {
     const s = new Date(seconds * 1000).toLocaleDateString("en-US");
@@ -93,64 +93,65 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
       {itemData?.length === 0 ? (
         <Loading />
       ) : (
-        itemData?.map((item) => {
-          return (
-            <>
-              <div className="betHistory-container">
-                <div className="bet-item-1">
-                  <div>
-                    <img src={item.icon1} alt="" />
-                  </div>
-                  <div className="table-wrapper">
-                    <div className="bet-th">
-                      <span>Date</span>
-                      <span>Event</span>
-                    </div>
-                    <div className="bet-td">
-                      <span>
-                        {/* {formatDate(Number(item?.finallArr[0]?.timestamp))} */}
-                        {item?.td_1}
-                      </span>
-                      {item?.td_2}
-                      {/* <span>{item?.event[0][1] + "/" + item?.event[0][2]}</span> */}
-                    </div>
-                  </div>
-                  <div className="table-wrapper">
-                    <div className="bet-th">
-                      <span>Bet Amount</span>
-                      <span>Blockchain</span>
-                      <span>Current Odds</span>
-                    </div>
-                    <div className="bet-td1">
-                      {item?.td_3}
-                      {/* <span>{Number(item?.finallArr[0]?.amount) / 1e18}</span> */}
-                      <img src={item.td_4} alt="" />
-                      {/* <span>{item?.odds}</span> */}
-                      <span>{item?.td_5}</span>
-                    </div>
-                  </div>
-                  <div className="status-btn">
-                    <div className="right-pannel">
-                      <div>
-                        <button>Won</button>
-                        <button>Lost</button>
-                      </div>
-                      <div>
-                        <button>All</button>
-                        <button>Live</button>
-                      </div>
-                    </div>
-                    <div>
-                      <button>Claim</button>
-                      <button className="sell">Sell</button>
-                    </div>
-                  </div>
-                </div>
-                <hr />
-              </div>
-            </>
-          );
-        })
+        // itemData?.map((item) => {
+        //   return (
+        //     <>
+        //       <div className="betHistory-container">
+        //         <div className="bet-item-1">
+        //           <div>
+        //             <img src={item.icon1} alt="" />
+        //           </div>
+        //           <div className="table-wrapper">
+        //             <div className="bet-th">
+        //               <span>Date</span>
+        //               <span>Event</span>
+        //             </div>
+        //             <div className="bet-td">
+        //               <span>
+        //                 {/* {formatDate(Number(item?.finallArr[0]?.timestamp))} */}
+        //                 {item?.td_1}
+        //               </span>
+        //               {item?.td_2}
+        //               {/* <span>{item?.event[0][1] + "/" + item?.event[0][2]}</span> */}
+        //             </div>
+        //           </div>
+        //           <div className="table-wrapper">
+        //             <div className="bet-th">
+        //               <span>Bet Amount</span>
+        //               <span>Blockchain</span>
+        //               <span>Current Odds</span>
+        //             </div>
+        //             <div className="bet-td1">
+        //               {item?.td_3}
+        //               {/* <span>{Number(item?.finallArr[0]?.amount) / 1e18}</span> */}
+        //               <img src={item.td_4} alt="" />
+        //               {/* <span>{item?.odds}</span> */}
+        //               <span>{item?.td_5}</span>
+        //             </div>
+        //           </div>
+        //           <div className="status-btn">
+        //             <div className="right-pannel">
+        //               <div>
+        //                 <button>Won</button>
+        //                 <button>Lost</button>
+        //               </div>
+        //               <div>
+        //                 <button>All</button>
+        //                 <button>Live</button>
+        //               </div>
+        //             </div>
+        //             <div>
+        //               <button>Claim</button>
+        //               <button className="sell">Sell</button>
+        //             </div>
+        //           </div>
+        //         </div>
+        //         <hr />
+        //       </div>
+        //     </>
+        //   );
+        // })
+        <h1>kdjfkdjf</h1>
       )}
     </ContainerBet>
   );

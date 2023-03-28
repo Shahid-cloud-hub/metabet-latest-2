@@ -55,7 +55,20 @@ body {
 
 .slide_img > a > img {
   width: 100%;
-  max-width: 300px;
+  max-width: 110px;
+}
+.slick-slide > div > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 110px;
+}
+.slick-slide > img {
+  display: flex;
+  align-items: center;
+}
+.slick-arrow {
+  display: none;
 }
 
 #demo_1 {
