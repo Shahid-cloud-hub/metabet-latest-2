@@ -104,18 +104,18 @@ const BetNowBtns = ({ getPath, callback }) => {
       case `/trending-event/crap-fishing/statistics/${id}`:
         betNowData = crap;
         break;
-        case `/crypto-currencies/${title}/statistics/${id}`:
-          betNowData = bData;
-          break;
-        case `/crypto-currencies/${title}/stats/${id}`:
-          betNowData = bData;
-          break;
-          case `/currencies/${title}/statistics/${id}`:
-            betNowData = Currency;
-            break;
-          case `/currencies/${title}/stats/${id}`:
-            betNowData = Currency;
-            break;
+      case `/crypto-currencies/${title}/statistics/${id}`:
+        betNowData = bData;
+        break;
+      case `/crypto-currencies/${title}/stats/${id}`:
+        betNowData = bData;
+        break;
+      case `/currencies/${title}/statistics/${id}`:
+        betNowData = Currency;
+        break;
+      case `/currencies/${title}/stats/${id}`:
+        betNowData = Currency;
+        break;
     }
     return {
       betNowData,
@@ -174,7 +174,6 @@ const BetNowBtns = ({ getPath, callback }) => {
           </div>
         </>
       ))}
-
     </Info>
   );
 };
