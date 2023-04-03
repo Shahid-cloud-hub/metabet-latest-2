@@ -2,17 +2,21 @@ import styled from "styled-components";
 export const ContainerBet = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  /* padding: 24px; */
   gap: 30px;
-  margin-top: 20px;
-  background: #081824;
-  border-radius: 10px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  /* margin-top: 20px; */
+  /* background: #081824; */
+  /* border-radius: 10px; */
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
 
   .betHistory-container {
     display: flex;
     justify-content: space-between;
     position: relative;
+    background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 20px;
 
     hr {
       position: absolute;
@@ -40,7 +44,7 @@ export const ContainerBet = styled.div`
 
         .bet-th {
           display: flex;
-          gap: 69px;
+          gap: 77px;
           font-weight: 700;
           font-size: 12px;
           color: #f4cd68;
@@ -105,7 +109,15 @@ export const ContainerBet = styled.div`
       }
     }
   }
+  .slick-prev {
+    transform: translate(46px, 10.6rem);
+    display: none !important;
+  }
 
+  .slick-next {
+    transform: translate(-46px, 10.6rem);
+    display: none !important;
+  }
   @media screen and (max-width: 1280px) {
     .betHistory-container {
       hr {

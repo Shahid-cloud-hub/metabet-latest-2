@@ -6,6 +6,18 @@ export const Container = styled.div`
   width: 100%;
   max-width: 989px;
   margin: 0 auto;
+  margin-top: 60px;
+
+  .wrapper-main-active {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 240px);
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 9;
+    top: 6px;
+  }
 
   .filter-btn {
     display: flex;
@@ -21,11 +33,13 @@ export const Container = styled.div`
       max-width: 160px;
       width: 100%;
       background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
-      border: 1px solid #a8d7ff;
+      border: 2px solid #a8d7ff;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 12px;
       gap: 4px;
       color: #ffffff;
+      margin: 4px;
+
       span {
         color: #ffffff;
       }
@@ -292,7 +306,7 @@ export const ContainerBet = styled.div`
       position: absolute;
       max-width: 835px;
       right: 1%;
-      top: 45%;
+      top: 52%;
       border: none;
       width: 100%;
       height: 2px;
@@ -316,6 +330,7 @@ export const ContainerBet = styled.div`
         align-items: center;
         justify-content: center;
         gap: 10px;
+        padding-bottom: 22px;
 
         div {
           display: flex;
@@ -414,7 +429,7 @@ export const ContainerBet = styled.div`
       gap: 20px;
       div {
         display: flex;
-        gap: 10px;
+        justify-content: center;
       }
       button {
         width: 100%;

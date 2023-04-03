@@ -1,12 +1,6 @@
 import React, { useState, useRef } from "react";
-import { Filter } from "../ActiveBet/ActiveBetData";
-import foxCircle from "../../assets/images/foxCircle.webp";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import NextArrow from "../../assets/images/ActiveBets/next.png";
-import PreArrow from "../../assets/images/ActiveBets/prev.png";
-import { CarouselContainer } from "./Carousel.style";
 import PreviousNextMethods from "./ClassBaseCarousel";
 import { useLocation } from "react-router-dom";
 
@@ -30,36 +24,28 @@ const FilterTabBtns = ({
   const tabItem1 = uName?.map((nameObjs) => {
     const filterItem = tabItem.find((item) => item.name == nameObjs);
     const imgV = filterItem ? filterItem.img : null;
+    const imgO = filterItem ? filterItem.imgO : null;
     console.log("first", imgV);
-    return { name: nameObjs, imgV };
+    return { name: nameObjs, imgV, imgO };
   });
 
   const handle = (nameValue) => {
     console.log("name from handle funciton", nameValue);
-    let lowerCaseName = nameValue?.toLowerCase();
 
-    setCheck(lowerCaseName);
-    callback(lowerCaseName);
+    setCheck(nameValue);
+    callback(nameValue);
   };
 
   const getTabName = (name, data) => {
-    console.log(name, data);
-    let lowerCaseName = name?.toLowerCase();
+    console.log(name, data, "name and date");
 
     filterItem(name);
-    setCheck(lowerCaseName);
-    callbackName(lowerCaseName);
+    setCheck(name);
+    callbackName(name);
 
     if (name === "All") {
       setItemData(data);
     }
-  };
-  var settings = {
-    // dots: true,
-    // infinite: true,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 1,
   };
 
   return (

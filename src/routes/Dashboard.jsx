@@ -127,6 +127,33 @@ const ContainerWrapper = styled("div")`
       border-radius: 10px;
     }
   }
+  .wrapper-main-active {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 70px);
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 9;
+    top: 6px;
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.35);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #314552;
+      border-right: none;
+      border-left: none;
+      border-radius: 10px;
+    }
+  }
 
   .active-popup {
     filter: blur(8px);
@@ -147,6 +174,8 @@ const Dashboard = () => {
   const { isDesktop, isTablet, isSmallMobile, isMobile } = useBreakpoint();
   const { items } = useContext(Context);
   const [celebRemove] = useState(true);
+
+  const pathname = window.location.pathname;
 
   const availableWidth = window?.screen?.availWidth;
 
@@ -176,7 +205,12 @@ const Dashboard = () => {
                 <Sidebar />
               </div>
             )}
-            <div className="wrapper-main-body">
+
+            <div
+              className={
+                pathname === "/my-active-bets" ? "" : "wrapper-main-body"
+              }
+            >
               <div className="main" id="detail">
                 {(isTablet || isMobile || isSmallMobile) && <BalanceButtons />}
                 <Outlet />
