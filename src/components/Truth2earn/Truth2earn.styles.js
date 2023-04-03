@@ -114,43 +114,60 @@ export const Truth2earnContainer = styled.div`
     justify-content: center;
   } */
 
+  .confirmed-date {
+    text-align: center;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 12px;
+    color: #6a6a6a;
+  }
+
+  .event-live {
+    text-align: center;
+    font-family: "Inter";
+    font-weight: 700;
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+
+    span {
+      font-family: "Inter";
+      font-weight: 700;
+      color: #18dd67;
+      font-size: 20px;
+    }
+  }
+
+  span {
+    text-align: center;
+    font-family: "Inter";
+    font-weight: 700;
+    color: #18dd67;
+    font-size: 14px;
+  }
+
+  .e-live {
+    font-family: "Inter";
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    font-size: 20px;
+    color: #ffeb34;
+  }
+
   .payments-inputs > .openai {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 5px;
     padding: 0px 25px;
   }
 
   .payments-inputs > .openai > span {
-    font-size: 10px;
+    font-size: 16px;
     color: #ffffff;
-  }
-
-  .payments-inputs > .verdict-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .payments-inputs > .verdict-btn > button {
-    font-size: 12px;
-    color: #ffffff;
-    cursor: pointer;
-    border: none;
-    width: 125px;
-    height: 36px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .title-text > span {
-    font-size: 13px;
-    color: #dadada;
-    text-align: center;
+    font-family: "Inter";
+    font-weight: 700;
   }
 
   .title-text {
@@ -158,19 +175,34 @@ export const Truth2earnContainer = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    padding-top: 15px;
+    padding-top: 5px;
   }
 
-  #grey {
-    color: #6e8799;
+  .title-text > span {
+    font-size: 14px;
+    color: #dadada;
+    text-align: center;
+    font-family: "Inter";
+    font-weight: 700;
   }
 
-  #green {
+  .payments-inputs > .verdict-btn > .de-active-grey {
+    background: #bbbbbb;
+    color: #fff;
+    cursor: not-allowed;
+  }
+
+  .active-green {
     background: #11a94e;
   }
 
-  #red {
+  .active-red {
     background: #e04545;
+  }
+
+  button {
+    font-family: "Inter";
+    font-weight: 700;
   }
 
   .vote {

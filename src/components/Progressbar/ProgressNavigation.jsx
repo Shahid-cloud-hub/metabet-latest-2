@@ -27,7 +27,14 @@ export default function StepNavigation(props) {
             ></Step>
           ))}
         </div>
-        <span style={{ color: "#6E8799", paddingLeft: "35px" }}>
+        <span
+          style={{
+            color: "#6E8799",
+            paddingLeft: "35px",
+            fontFamily: "Inter",
+            fontWeight: "700",
+          }}
+        >
           {props.currentStep}/20
         </span>
       </div>
@@ -43,7 +50,14 @@ export default function StepNavigation(props) {
             ></Step1>
           ))}
         </div>
-        <span style={{ color: "#6E8799", paddingLeft: "35px" }}>
+        <span
+          style={{
+            color: "#6E8799",
+            paddingLeft: "35px",
+            fontFamily: "Inter",
+            fontWeight: "700",
+          }}
+        >
           {props.currentStep1}/20
         </span>
       </div>
