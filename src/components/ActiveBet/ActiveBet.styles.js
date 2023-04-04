@@ -17,6 +17,23 @@ export const Container = styled.div`
     overflow-x: hidden;
     z-index: 9;
     top: 6px;
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.35);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #314552;
+      border-right: none;
+      border-left: none;
+      border-radius: 10px;
+    }
   }
 
   .filter-btn {
@@ -24,6 +41,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+
     button {
       display: flex !important;
       align-items: center;

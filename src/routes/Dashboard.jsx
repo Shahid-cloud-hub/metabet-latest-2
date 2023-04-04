@@ -11,6 +11,7 @@ import { Context } from "../Context";
 import Confetti from "react-confetti";
 import BalanceButtons from "../components/BalanceButtons/BalanceButtons";
 import { isValidMnemonic } from "ethers/lib/utils";
+const pathname = window.location.pathname;
 
 const ContainerWrapper = styled("div")`
   position: relative;
@@ -55,6 +56,35 @@ const ContainerWrapper = styled("div")`
     overflow: auto;
     padding: 0 0 20px;
     background: #0f212e;
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.35);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #314552;
+      border-right: none;
+      border-left: none;
+      border-radius: 10px;
+    }
+  }
+  .left-sidebar-purple {
+    position: fixed;
+    top: 70px; /* the height of the header (60px) + its bottom margin (20px) */
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    width: 343px;
+    width: ${(props) => props.deskTopWidth};
+    overflow: auto;
+    padding: 0 0 20px;
+    background: #130e19;
 
     &::-webkit-scrollbar {
       display: block;
@@ -195,14 +225,22 @@ const Dashboard = () => {
           </header>
           <div className="wrapper-main">
             {(isDesktop || isTablet) && (
-              <div className="left-sidebar">
+              <div
+                className={
+                  pathname === "/ai-nft"
+                    ? "left-sidebar-purple"
+                    : "left-sidebar"
+                }
+              >
                 <Sidebar />
               </div>
             )}
-            <div className="main" id="detail">
-              {(isMobile || isSmallMobile) && <BalanceButtons />}
-              <Outlet />
-              <ToastContainer />
+            <div className="wrapper-main-body">
+              <div className="main" id="detail">
+                {(isTablet || isMobile || isSmallMobile) && <BalanceButtons />}
+                <Outlet />
+                <ToastContainer />
+              </div>
             </div>
           </div>
         </div>
