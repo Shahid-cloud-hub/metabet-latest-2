@@ -242,9 +242,6 @@ function Tokenomics() {
                   </div>
                 </div>
 
-                {/* <div className="mini-rectangle">
-              <hr />
-            </div> */}
                 <div className="UFC">
                   <div className="heading">
                     <img src={ufc} alt="ufc" />
@@ -412,10 +409,6 @@ function Tokenomics() {
                     </div>
                   </div>
                 </div>
-
-                {/* <div className="mini-rectangle1">
-                  <hr />
-                </div> */}
                 <div className="footline1">
                   <p>1</p>
                   <p>NFT</p>

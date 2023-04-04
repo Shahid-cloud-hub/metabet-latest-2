@@ -14,12 +14,15 @@ const ActiveBetHistory = () => {
   const menuItems = uniqueNames.map((nameObj) => {
     const filterItem = Filter.find((item) => item.name == nameObj);
     const imgV = filterItem ? filterItem.img : null;
-    return { name: nameObj, imgV };
+    const imgO = filterItem ? filterItem.imgO : null;
+
+    return { name: nameObj, imgV, imgO };
   });
 
   const filterItem = (curcat) => {
     console.log(curcat, "filterItem");
     const newItem = Filter.filter((newVal) => {
+      console.log("check", newVal.name === curcat);
       return newVal.name === curcat;
     });
     setItemData(newItem);
@@ -35,7 +38,6 @@ const ActiveBetHistory = () => {
     const getAllEvents = async () => {
       await fetchData({
         method: "GET",
-        // url: `https://dull-puce-wildebeest-belt.cyclic.app/getGroup/group/${title}`,
         url: `https://dull-puce-wildebeest-belt.cyclic.app/group`,
       });
     };
@@ -49,7 +51,6 @@ const ActiveBetHistory = () => {
       await fetchData({
         method: "GET",
         url: `https://dull-puce-wildebeest-belt.cyclic.app/getGroup/group/${title}`,
-        // url: `https://dull-puce-wildebeest-belt.cyclic.app/group`,
       });
     };
     useEffect(() => {
@@ -65,7 +66,6 @@ const ActiveBetHistory = () => {
   const arrData =
     hightlightData == undefined ? [] : Object.values(hightlightData);
 
-  // console.log("get name from child", arrData);
   return (
     <>
       <Container>
@@ -81,11 +81,13 @@ const ActiveBetHistory = () => {
             activeBet={true}
           />
         </div>
-        <DisplayFilterTab
-          itemData={itemData}
-          smartContractId={arrData}
-          getName={getName}
-        />
+        <div className="wrapper-main-active">
+          <DisplayFilterTab
+            itemData={itemData}
+            smartContractId={arrData}
+            getName={getName}
+          />
+        </div>
       </Container>
     </>
   );

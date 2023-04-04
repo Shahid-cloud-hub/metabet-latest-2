@@ -263,14 +263,11 @@ export const DashContainer = styled("div")`
       min-width: 8em;
       cursor: pointer;
       user-select: none;
-      /* border: 0.2em solid #367beb; */
       border-radius: 0.4em;
       box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
       outline: none;
       box-sizing: border-box;
-      /* background: #f0f0f0; */
       background: #5f9ea0;
-      /* background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0); */
       z-index: 10;
       color: #fff;
 
@@ -403,27 +400,7 @@ export const DashContainer = styled("div")`
       padding: 10px 0px;
       cursor: pointer;
       margin-right: 5%;
-
     }
-
-    /* select {
-      color: #ffffff;
-      font-size: 14px;
-      font-family: "Mostra Nuova";
-      padding: 10px 10px;
-      border: none;
-      background: #5f9ea0;
-      border-radius: 8px;
-
-      option {
-        text-align: center;
-        position: relative;
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
-        font-family: "Mostra Nuova";
-        border-bottom: 1px solid #000;
-      }
-    } */
   }
 
   .card-parent {

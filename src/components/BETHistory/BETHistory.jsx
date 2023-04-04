@@ -9,16 +9,34 @@ import { useSelector } from "react-redux";
 import Utils from "../../utilities.js";
 
 const BetHistory = () => {
+  const [itemData, setItemData] = useState(Filter);
   const [getName, setGetName] = useState("all");
   const [bets, setBets] = useState([]);
   const metaMaskAddress = useSelector((state) => state.wallet);
 
-  const callback = (name) => {
+  const uniqueNames = [...new Set(Filter.map((item) => item.name))];
+  const menuItems = uniqueNames.map((nameObj) => {
+    const filterItem = Filter.find((item) => item.name == nameObj);
+    const imgV = filterItem ? filterItem.img : null;
+    const imgO = filterItem ? filterItem.imgO : null;
+
+    return { name: nameObj, imgV, imgO };
+  });
+
+  const filterItem = (curcat) => {
+    console.log(curcat, "filterItem");
+    const newItem = Filter.filter((newVal) => {
+      console.log("check", newVal.name === curcat);
+      return newVal.name === curcat;
+    });
+    setItemData(newItem);
+  };
+
+  const callbackName = (name) => {
     setGetName(name);
   };
 
   let group = "ufc";
-  // let title = "trending-event";
   let title = getName;
 
   console.log(getName);
@@ -29,7 +47,6 @@ const BetHistory = () => {
     await fetchData({
       method: "GET",
       url: `https://dull-puce-wildebeest-belt.cyclic.app/getGroup/group/${title}`,
-      // url: `https://dull-puce-wildebeest-belt.cyclic.app/group`,
     });
   };
 
@@ -71,17 +88,6 @@ const BetHistory = () => {
     }
   }, [metaMaskAddress]);
 
-  // if (metaMaskAddress.metaMaskAddress) {
-  //   Utils.AllUserBets_id(
-  //     metaMaskAddress.metaMaskAddress.toString(),
-  //     hightlightData
-  //   ).then(function (data) {
-  //     setBets(data);
-  //   });
-  // }
-
-  //console.log(bets);
-
   console.log("====================================>");
 
   return (
@@ -91,7 +97,14 @@ const BetHistory = () => {
           <span>BET HISTORY</span>
         </div>
         <div className="filter-btn">
-          <FilterTabBtns tabItem={Filter} callback={callback} betHis={true} />
+          <FilterTabBtns
+            filterItem={filterItem}
+            setItemData={setItemData}
+            menuItems={menuItems}
+            tabItem={Filter}
+            callbackName={callbackName}
+            betHis={true}
+          />
         </div>
         <BetContainer data={arrData} name={getName} />
         {!metaMaskAddress.metaMaskAddress ? (

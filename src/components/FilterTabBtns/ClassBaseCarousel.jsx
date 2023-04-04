@@ -19,17 +19,40 @@ export default class PreviousNextMethods extends Component {
       hanlderFunc: props.handle,
       compareNames: props.check,
       check: "",
+      // check1: "",
       getTabName: props.getTabName,
     };
-    console.log("Carousel", props.getTabName);
+    this.state1 = {
+      data: props?.data,
+      text_1: props.test,
+      hanlderFunc: props.handle,
+      compareNames: props.check,
+      check1: "",
+      getTabName: props.getTabName,
+    };
   }
-
   handle = (nameValue) => {
-    let lowerCaseName = nameValue?.toLowerCase();
-    console.log("lowerCaseName", lowerCaseName);
-    this.state.getTabName(lowerCaseName, Filter);
+    this.state.getTabName(nameValue, Filter);
+    this.setState({ check: nameValue });
+  };
+  handle1 = (nameValueHistory) => {
+    this.state1.getTabName(nameValueHistory, Filter);
+    this.setState1({ check1: nameValueHistory });
   };
 
+  // handle = (nameValue, nameValueHistory) => {
+  //   this.state.getTabName(nameValue, Filter);
+  //   this.state.getNameValue(nameValueHistory, Filter);
+  //   this.setState({ check: (nameValue, nameValueHistory) });
+  // };
+  // handle = (nameValueHistory) => {
+  //   // let lowerCaseName = nameValue?.toLowerCase();
+  //   // console.log("lowerCaseName", lowerCaseName);
+  //   // this.state.getTabName(nameValue, Filter);
+  //   this.state.getNameValue(nameValueHistory, Filter);
+
+  //   this.setState({ check: nameValue });
+  // };
   next() {
     this.slider.slickNext();
   }
@@ -48,12 +71,11 @@ export default class PreviousNextMethods extends Component {
       <CarouselContainer>
         <Slider ref={(c) => (this.slider = c)} {...settings}>
           {this.state.data?.map((Val, id) => {
-            console.log(Val?.name?.toLowerCase() === this.state.check);
             return (
               <button
                 onClick={() => this.handle(Val?.name)}
                 style={
-                  Val?.name?.toLowerCase() === this.state.check
+                  Val?.name === this.state.check
                     ? { cursor: "pointer", border: "1px solid #a8d7ff" }
                     : {
                         cursor: "pointer",
@@ -62,13 +84,24 @@ export default class PreviousNextMethods extends Component {
                       }
                 }
                 className={
-                  Val?.name?.toLowerCase() === this.state.check
-                    ? "betactive betactive-pseudo "
+                  Val?.name === this.state.check
+                    ? "betactive betactive-pseudo"
                     : ""
                 }
               >
-                {Val.imgV && <img src={Val?.imgV} alt={Val?.name} />}
-                <span style={{ cursor: "pointer" }}>
+                {(Val?.imgV || Val?.imgO) && (
+                  <img
+                    src={Val?.name === this.state.check ? Val?.imgO : Val?.imgV}
+                    alt={Val.name}
+                  />
+                )}
+
+                <span
+                  style={{ cursor: "pointer" }}
+                  className={
+                    Val?.name === this.state.check ? "gradient-text" : ""
+                  }
+                >
                   {Val?.name == "Trending-Event"
                     ? "Trending Events"
                     : Val?.name}

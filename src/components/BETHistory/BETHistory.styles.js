@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import Banner_2 from "../../assets/images/Event-Banner-Images/HotEvent.webp";
+import NextArrow from "../../assets/images/ActiveBets/next.png";
+import PreArrow from "../../assets/images/ActiveBets/prev.png";
 export const Container = styled.div`
   width: 100%;
   max-width: 989px;
   margin: 0 auto;
+  margin-top: 60px;
+
   .filter-btn {
     display: flex;
     align-items: center;
@@ -18,30 +22,110 @@ export const Container = styled.div`
       max-width: 160px;
       width: 100%;
       background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
-      border: 1px solid #a8d7ff;
+      border: 2px solid #a8d7ff;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 12px;
       gap: 4px;
       color: #ffffff;
+      margin: 4px;
       span {
         color: #ffffff;
       }
     }
-  }
+    .betactive {
+      border: 1px solid;
+      border-image: linear-gradient(45deg, #997860, #ffa133) 1;
+    }
+    .betactive-pseudo {
+      position: relative;
+      margin: 4px;
+      border-radius: 12px;
+    }
+    .betactive-pseudo::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -4px;
+      border-radius: inherit;
+      background-image: linear-gradient(45deg, #997860, #ffa133);
+    }
+    .betactive-pseudo-mask {
+      position: relative;
+    }
 
-  .slick-prev {
-    transform: translate(46px, 10.6rem);
-    display: none !important;
-  }
+    .slick-prev {
+      transform: translate(46px, 10.6rem);
+      display: none !important;
+    }
 
-  .slick-next {
-    transform: translate(-46px, 10.6rem);
-    display: none !important;
+    .slick-next {
+      transform: translate(-46px, 10.6rem);
+      display: none !important;
+    }
+
+    .betactive-pseudo-mask::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      background: linear-gradient(45deg, #997860, #ffa133) border-box;
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #997860, #ffa133);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .slick-track {
+      display: flex;
+      gap: 10px;
+    }
+
+    .slick-slider {
+      .slick-prev,
+      .slick-next {
+        background: none;
+        border: none;
+      }
+
+      .slick-next:before {
+        content: "";
+        background-image: url(${NextArrow});
+        width: 21px;
+        height: 33px;
+        position: absolute;
+      }
+      .slick-prev:before {
+        content: "";
+        background-image: url(${PreArrow});
+        width: 21px;
+        height: 33px;
+        position: absolute;
+      }
+    }
+
+    .slick-arrow {
+      button {
+        display: none;
+      }
+    }
+    .active {
+      color: #ffffff;
+    }
   }
 
   .history_span {
     padding: 20px 5px;
-    /* margin-left: 10px; */
     span {
       font-weight: 800;
       font-size: 16px;
@@ -225,15 +309,12 @@ export const Container = styled.div`
 `;
 export const UfcContainer = styled.div`
   min-height: 210px;
-  /* margin: 16px; */
-  /* margin-right: 35px; */
   background: #223743;
   box-shadow: -3px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 
   img {
     background: none;
-    /* padding: 18px; */
   }
   p {
     font-size: 12px;
@@ -274,19 +355,12 @@ export const UfcContainer = styled.div`
   #live span {
     color: #ffd600;
   }
-  /* span:nth-child(2n + 1) {
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 140%;
-    color: #FFD600;
-  } */
+
   .Time {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 0px 5px 0px;
-    /* grid-gap: 84px; */
-    /* padding: 5px 30px 5px 15px; */
     hr {
       height: 2px;
       width: 100%;
@@ -310,7 +384,6 @@ export const UfcContainer = styled.div`
     border-radius: 6px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     padding: 0px 5px;
     grid-gap: 10px;

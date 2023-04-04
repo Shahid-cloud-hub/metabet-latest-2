@@ -27,23 +27,54 @@ import PoliticsW from "../../assets/images/PoliticsW.webp";
 import FootballW from "../../assets/images/FootballW.webp";
 import UFCW from "../../assets/images/UFCW.webp";
 import twitter from "../../assets/images/ActiveBets/twitter.png";
+import twitterO from "../../assets/images/ActiveBets/twitterO.png";
+import twittericon from "../../assets/images/ActiveBets/twittericon.png";
 import currency from "../../assets/images/ActiveBets/currency.png";
+import currencyicon from "../../assets/images/ActiveBets/currencyicon.png";
 import crypto from "../../assets/images/ActiveBets/crypto.png";
 import boxing from "../../assets/images/ActiveBets/boxing.png";
+import boxingicon from "../../assets/images/boxingicon.png";
 import footballicon from "../../assets/images/ActiveBets/footballicon.png";
 import CricketNew from "../../assets/images/ActiveBets/cricketnew.png";
 import RugbyW from "../../assets/images/RugbyW.png";
+import Rugbyicon from "../../assets/images/rugbyicon.png";
 import FormulaW from "../../assets/images/FormulaW.png";
+import Formulaicon from "../../assets/images/formulaicon.png";
 import HorseW from "../../assets/images/HorseW.png";
+import Horseicon from "../../assets/images/horseicon.png";
 import DartsW from "../../assets/images/DartsW.png";
+import Dartsicon from "../../assets/images/darticon.png";
 import VolleyballW from "../../assets/images/VolleyballW.webp";
+import Volleyballicon from "../../assets/images/volleyballicon.png";
 import GolfW from "../../assets/images/GolfW.png";
+import golficon from "../../assets/images/golficon.png";
 import SnookerW from "../../assets/images/SnookerW.png";
+import Snookericon from "../../assets/images/snookericon.png";
 import BaseballW from "../../assets/images/BaseballW.webp";
+import baseballicon from "../../assets/images/baseballicon.png";
 import TennisW from "../../assets/images/TennisW.webp";
+import tennisicon from "../../assets/images/tennisicon.png";
 import AmericanFootballW from "../../assets/images/AmericanFootballW.webp";
+import americanfootballicon from "../../assets/images/americanfootballicon.png";
 import BasketballW from "../../assets/images/BasketballW.webp";
-
+import basketballicon from "../../assets/images/basketballicon.png";
+import foxsmall from "../../assets/images/foxsmall.png";
+import currencyO from "../../assets/images/ActiveBets/currencyO.png";
+import cryptoO from "../../assets/images/ActiveBets/cryptoO.png";
+import boxingO from "../../assets/images/ActiveBets/boxingO.png";
+import CricketO from "../../assets/images/ActiveBets/CricketO.png";
+import FootballO from "../../assets/images/ActiveBets/FootballO.png";
+import FormulaO from "../../assets/images/ActiveBets/FormulaO.png";
+import BasketballO from "../../assets/images/ActiveBets/BasketballO.png";
+import TennisO from "../../assets/images/ActiveBets/TennisO.png";
+import AmericanFootballO from "../../assets/images/ActiveBets/AmericanFootballO.png";
+import BaseballO from "../../assets/images/ActiveBets/BaseballO.png";
+import SnookerO from "../../assets/images/ActiveBets/SnookerO.png";
+import GolfO from "../../assets/images/ActiveBets/GolfO.png";
+import RugbyO from "../../assets/images/ActiveBets/RugbyO.png";
+import DartsO from "../../assets/images/ActiveBets/DartsO.png";
+import HorseO from "../../assets/images/ActiveBets/HorseO.png";
+import VolleyballO from "../../assets/images/ActiveBets/VolleyballO.png";
 
 export const betData = [
   {
@@ -137,6 +168,8 @@ export const Filter = [
     id: 2,
     name: "Social Media",
     img: twitter,
+    imgO: twitterO,
+    icon1: twittericon,
     th_1: "Date",
     th_2: "Event",
     th_3: "Bet Amount",
@@ -152,8 +185,9 @@ export const Filter = [
     id: 3,
     name: "Currencies",
     img: currency,
-    imgW: BitcoinW,
-    icon1: bitcoin,
+    imgO: currencyO,
+    imgW: currencyicon,
+    icon1: currencyicon,
     th_1: "Date",
     th_2: "Event",
     th_3: "Bet Amount",
@@ -169,20 +203,24 @@ export const Filter = [
     id: 4,
     name: "Crypto Currencies",
     img: crypto,
+    imgO: cryptoO,
+    imgW: BitcoinW,
+    icon1: bitcoin,
     th_1: "Date",
     th_5: "Current Odds",
     td_1: "12.01.2022",
-    td_2: "England/France",
-    td_3: "1.28",
-    td_4: bnb,
-    td_5: "2.25",
+    td_2: "Bitcoin",
+    td_3: "0.5",
+    td_4: foxsmall,
+    td_5: "1.07",
   },
   {
     id: 5,
     name: "Boxing",
     img: boxing,
-    imgW: FootballW,
-    icon1: football,
+    imgO: boxingO,
+    imgW: boxingicon,
+    icon1: boxingicon,
     th_1: "Date",
     th_2: "Event",
     th_3: "Bet Amount",
@@ -198,6 +236,7 @@ export const Filter = [
     id: 6,
     name: "Cricket",
     img: CricketNew,
+    imgO: CricketO,
     imgW: CricketW,
     icon1: Cricket,
     th_1: "Date",
@@ -215,23 +254,25 @@ export const Filter = [
     id: 7,
     name: "UFC",
     img: boxing,
+    imgO: boxingO,
     imgW: UFCW,
-     icon1: UFC,
-      th_1: "Date",
-      th_2: "Event",
-      th_3: "Bet Amount",
-      th_4: "Blockchain",
-      th_5: "Current Odds",
-      td_1: "12.01.2022",
-      td_2: "Jon Jones",
-      td_3: "500",
-      td_4: usdt,
-      td_5: "1.15",
+    icon1: UFC,
+    th_1: "Date",
+    th_2: "Event",
+    th_3: "Bet Amount",
+    th_4: "Blockchain",
+    th_5: "Current Odds",
+    td_1: "12.01.2022",
+    td_2: "Jon Jones",
+    td_3: "500",
+    td_4: usdt,
+    td_5: "1.15",
   },
   {
     id: 8,
     name: "Football",
     img: FootballW,
+    imgO: FootballO,
     imgW: FootballW,
     icon1: football,
     th_1: "Date",
@@ -249,8 +290,9 @@ export const Filter = [
     id: 9,
     name: "Formula One",
     img: FormulaW,
-    imgW: FormulaW,
-    icon1: FormulaW,
+    imgO: FormulaO,
+    imgW: Formulaicon,
+    icon1: Formulaicon,
     th_1: "Date",
     th_2: "Event",
     th_3: "Bet Amount",
@@ -266,8 +308,9 @@ export const Filter = [
     id: 10,
     name: "Basketball",
     img: BasketballW,
-    imgW: BasketballW,
-    icon1: BasketballW,
+    imgO: BasketballO,
+    imgW: basketballicon,
+    icon1: basketballicon,
     th_1: "Date",
     th_2: "Event",
     th_3: "Bet Amount",
@@ -283,8 +326,9 @@ export const Filter = [
     id: 11,
     name: "Tennis",
     img: TennisW,
-    imgW: TennisW,
-    icon1: TennisW,
+    imgO: TennisO,
+    imgW: tennisicon,
+    icon1: tennisicon,
     th_1: "Date",
     th_2: "Event",
     th_3: "Bet Amount",
@@ -300,8 +344,9 @@ export const Filter = [
     id: 12,
     name: "American Football",
     img: AmericanFootballW,
-    imgW: AmericanFootballW,
-    icon1: AmericanFootballW,
+    imgO: AmericanFootballO,
+    imgW: americanfootballicon,
+    icon1: americanfootballicon,
     th_1: "Date",
     th_2: "Event",
     th_3: "Bet Amount",
@@ -312,12 +357,14 @@ export const Filter = [
     td_3: "1.28",
     td_4: bnb,
     td_5: "2.25",
-  }, {
+  },
+  {
     id: 13,
     name: "Baseball",
     img: BaseballW,
-    imgW: BaseballW,
-    icon1: BaseballW,
+    imgO: BaseballO,
+    imgW: baseballicon,
+    icon1: baseballicon,
     th_1: "Date",
     th_2: "Event",
     th_3: "Bet Amount",
@@ -333,8 +380,9 @@ export const Filter = [
     id: 14,
     name: "Snooker",
     img: SnookerW,
-    imgW: SnookerW,
-    icon1: SnookerW,
+    imgO: SnookerO,
+    imgW: Snookericon,
+    icon1: Snookericon,
     th_1: "Date",
     th_2: "Event",
     th_3: "Bet Amount",
@@ -350,8 +398,9 @@ export const Filter = [
     id: 15,
     name: "Golf",
     img: GolfW,
-    imgW: GolfW,
-    icon1: GolfW,
+    imgO: GolfO,
+    imgW: golficon,
+    icon1: golficon,
     th_1: "Date",
     th_2: "Event",
     th_3: "Bet Amount",
@@ -367,8 +416,9 @@ export const Filter = [
     id: 16,
     name: "Rugby",
     img: RugbyW,
-    imgW: RugbyW,
-    icon1: RugbyW,
+    imgO: RugbyO,
+    imgW: Rugbyicon,
+    icon1: Rugbyicon,
     th_1: "Date",
     th_2: "Event",
     th_3: "Bet Amount",
@@ -384,40 +434,9 @@ export const Filter = [
     id: 17,
     name: "Volleyball",
     img: VolleyballW,
-    imgW: VolleyballW,
-    icon1: VolleyballW,
-    th_1: "Date",
-    th_2: "Event",
-    th_3: "Bet Amount",
-    th_4: "Blockchain",
-    th_5: "Current Odds",
-    td_1: "12.01.2022",
-    td_2: "England/France",
-    td_3: "1.28",
-    td_4: bnb,
-    td_5: "2.25",
-  }, {
-    id: 18,
-    name: "Darts",
-    img: DartsW,
-    imgW: DartsW,
-    icon1: DartsW,
-    th_1: "Date",
-    th_2: "Event",
-    th_3: "Bet Amount",
-    th_4: "Blockchain",
-    th_5: "Current Odds",
-    td_1: "12.01.2022",
-    td_2: "England/France",
-    td_3: "1.28",
-    td_4: bnb,
-    td_5: "2.25",
-  }, {
-    id: 19,
-    name: "Horse Racing",
-    img: HorseW,
-    imgW: HorseW,
-    icon1: HorseW,
+    imgO: VolleyballO,
+    imgW: Volleyballicon,
+    icon1: Volleyballicon,
     th_1: "Date",
     th_2: "Event",
     th_3: "Bet Amount",
@@ -429,7 +448,42 @@ export const Filter = [
     td_4: bnb,
     td_5: "2.25",
   },
-  
+  {
+    id: 18,
+    name: "Darts",
+    img: DartsW,
+    imgO: DartsO,
+    imgW: Dartsicon,
+    icon1: Dartsicon,
+    th_1: "Date",
+    th_2: "Event",
+    th_3: "Bet Amount",
+    th_4: "Blockchain",
+    th_5: "Current Odds",
+    td_1: "12.01.2022",
+    td_2: "England/France",
+    td_3: "1.28",
+    td_4: bnb,
+    td_5: "2.25",
+  },
+  {
+    id: 19,
+    name: "Horse Racing",
+    img: HorseW,
+    imgO: HorseO,
+    imgW: Horseicon,
+    icon1: Horseicon,
+    th_1: "Date",
+    th_2: "Event",
+    th_3: "Bet Amount",
+    th_4: "Blockchain",
+    th_5: "Current Odds",
+    td_1: "12.01.2022",
+    td_2: "England/France",
+    td_3: "1.28",
+    td_4: bnb,
+    td_5: "2.25",
+  },
 
   // {
   //   id: 8,

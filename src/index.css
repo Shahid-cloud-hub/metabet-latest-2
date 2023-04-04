@@ -74,6 +74,15 @@ body {
 #demo_1 {
   font-size: 13px;
 }
+.slick-prev {
+  transform: translate(46px, 10.6rem);
+  display: none !important;
+}
+
+.slick-next {
+  transform: translate(-46px, 10.6rem);
+  display: none !important;
+}
 
 @media screen and (max-width: 1280px) {
   .slick-slider {

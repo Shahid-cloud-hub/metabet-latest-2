@@ -4,13 +4,13 @@ import {
   StatContainerCurrencies,
   Info,
 } from "./BitcoinPrice.styles";
-import Tabs from "../TabFifa/Tab";
+// import Tabs from "../TabFifa/Tab";
 import useBreakpoint from "../../hooks/useBreakpoints";
 import BtcUp from "../../assets/images/Bitcoin/BtcUp.webp";
 import BtcDown from "../../assets/images/Bitcoin/BtcDown.webp";
 import clock1 from "../../assets/images/BitcoinPrice/clock1.png";
 import clock2 from "../../assets/images/BitcoinPrice/clock2.png";
-import AirdropFooterBanner from "../FooterBanners/AirdropFooterBanner";
+// import AirdropFooterBanner from "../FooterBanners/AirdropFooterBanner";
 import useFetch from "../../hooks/useFetch";
 import { useAxios } from "../../hooks/useAxios";
 

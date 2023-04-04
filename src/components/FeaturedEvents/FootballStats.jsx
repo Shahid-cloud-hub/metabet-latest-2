@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { BetContainer, Info } from "../CricketBanners/CricketEvent.styles";
-import Tabs from "../TabFifa/Tab";
+// import Tabs from "../TabFifa/Tab";
 import Times from "../Time/Times";
 import { betNowData } from "../../JasonData/FeaturedBannerData";
 

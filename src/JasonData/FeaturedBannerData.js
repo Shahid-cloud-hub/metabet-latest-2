@@ -140,7 +140,6 @@ import Contest_Banner_6 from "../assets/images/Cricket/contest_banner_6.png";
 import Contest_Banner_7 from "../assets/images/Cricket/contest_banner_7.png";
 import Contest_Banner_8 from "../assets/images/Cricket/contest_banner_8.png";
 
-
 // kardashians
 import Khloe from "../assets/images/Politics/Kardashian/Khloe.webp";
 import Kendal from "../assets/images/Politics/Kardashian/Kendal.webp";
@@ -2496,7 +2495,6 @@ export const betNowData = [
   },
 ];
 
-
 export const bData = [
   {
     id: 1,
@@ -2526,53 +2524,65 @@ export const bData = [
 export const TruscData = [
   {
     id: 1,
-    title: "POOL SIZE",
-    placeholder: "$0",
+    title: "MAX SUPPLY",
+    placeholder: "1b",
   },
   {
     id: 2,
-    title: "NUMBER OF BETS",
+    title: "TOTAL SUPPLY",
     placeholder: "0",
   },
   {
     id: 3,
-    title: "ODDS",
-    placeholder: "/",
+    title: "CIRCULATING SUPPLY",
+    placeholder: "0",
   },
   {
     id: 4,
-    title: "SHARE OF POOL",
-    placeholder: "0%",
+    title: "PRICE",
+    placeholder: "$0.99972",
   },
   {
     id: 5,
-    title: "ACTIVE BETS",
-    placeholder: "$0.00",
-  },
- 
-];
-export const TruscData1 = [
-  {
-    id: 1,
-    title: "CIRC SUPPLY",
-    placeholder: "0",
-  },
- 
-  {
-    id: 2,
     title: "MARKET CAP",
     placeholder: "0",
   },
   {
-    id: 3,
-    title: "PRICE",
-    placeholder: "$0.99972",
+    id: 6,
+    title: "VOLUME 24H",
+    placeholder: "0",
   },
-  
+];
+export const TruscData1 = [
   {
-    id: 4,
+    id: 1,
     title: "MAX SUPPLY",
     placeholder: "1b",
+  },
+  {
+    id: 2,
+    title: "TOTAL SUPPLY",
+    placeholder: "0",
+  },
+  {
+    id: 3,
+    title: "CIRCULATING SUPPLY",
+    placeholder: "0",
+  },
+  {
+    id: 4,
+    title: "PRICE",
+    placeholder: "$0.02",
+  },
+  {
+    id: 5,
+    title: "MARKET CAP",
+    placeholder: "0",
+  },
+  {
+    id: 6,
+    title: "VOLUME 24H",
+    placeholder: "0",
   },
 ];
 export const andrew = [
@@ -2595,7 +2605,7 @@ export const Kardashian = [
   {
     id: 1,
     name: "Khloe",
-    img: Khloe ,
+    img: Khloe,
     btn: "Bet",
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
@@ -2608,7 +2618,7 @@ export const Kardashian = [
   {
     id: 2,
     name: "Kendall",
-    img: Kendal ,
+    img: Kendal,
     btn: "Bet",
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
@@ -2620,7 +2630,7 @@ export const Kardashian = [
   {
     id: 3,
     name: "Kim",
-    img: Kim ,
+    img: Kim,
     btn: "Bet",
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
@@ -2632,7 +2642,7 @@ export const Kardashian = [
   {
     id: 4,
     name: "Kylie",
-    img: Kylie ,
+    img: Kylie,
     btn: "Bet",
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
@@ -2644,7 +2654,7 @@ export const Kardashian = [
   {
     id: 5,
     name: "Kourtney",
-    img: Kourtney ,
+    img: Kourtney,
     btn: "Bet",
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
@@ -2656,7 +2666,7 @@ export const Kardashian = [
   {
     id: 6,
     name: "Kris",
-    img: Kris ,
+    img: Kris,
     btn: "Bet",
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
