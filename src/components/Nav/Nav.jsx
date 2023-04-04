@@ -8,6 +8,7 @@ import useBreakpoint from "../../hooks/useBreakpoints";
 import LeftSidebar from "../MobileComponents/LeftSidebar/LeftSidebar";
 
 const Header = (props) => {
+  const pathname = window.location.pathname;
   const { isDesktop, isTablet, isMobile, isSmallMobile } = useBreakpoint();
 
   return (
@@ -16,8 +17,13 @@ const Header = (props) => {
         changeColor={isTablet || isMobile || isSmallMobile ? false : true}
         removeShadow={isTablet || isMobile || isSmallMobile ? false : true}
         removeWidth={isTablet || isMobile || isSmallMobile ? false : true}
+        purpleBackground={pathname === "/ai-nft" ? "#130e19" : "#1b2c38"}
       >
-        <div className="background ">
+        <div
+          className={
+            pathname === "/ai-nft" ? "background-purple" : "background"
+          }
+        >
           <NavLink to="/">
             <img
               src={isSmallMobile || isMobile || isTablet ? FoxImg : LogoImg}
