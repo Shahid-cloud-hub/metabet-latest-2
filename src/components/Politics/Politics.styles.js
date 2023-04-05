@@ -208,6 +208,77 @@ export const StatContainer = styled.div`
   background-size: contain;
   gap: 15px;
 
+  .event-first-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding: 0px 12px 0px 40px;
+
+    .event-details-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 10px;
+      width: 100%;
+      max-width: 945px;
+      min-height: 225px;
+      background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+      border: 1px solid #5f9ea0;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 12px;
+      gap: 30px;
+      margin: 0 auto;
+
+      .event-title {
+        color: #1e90ff;
+        font-weight: 700;
+        font-size: ${(props) => props.increaseFontSize};
+      }
+
+      span {
+        color: #b6b6b6;
+        font-weight: 300;
+        font-size: 10px;
+      }
+
+      .img-wrapper {
+        display: flex;
+        gap: 15px;
+
+        img {
+          max-width: 450px;
+        }
+
+        .event-desc {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          font-size: 13px;
+          color: #b6b6b6;
+        }
+        .event-time {
+          display: flex;
+          flex-direction: column;
+          #yellow {
+            color: #ffd646;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background: #435b6a;
+      border-radius: 12px;
+    }
+  }
+
   .portfolio {
     display: flex;
     flex-direction: column;
@@ -815,9 +886,8 @@ export const Info = styled.div`
     flex-direction: column;
     gap: 10px;
   }
-  .Kardashian{
+  .Kardashian {
     margin: 0 auto;
-
   }
   .betStat {
     display: flex;

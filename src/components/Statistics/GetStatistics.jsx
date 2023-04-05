@@ -12,6 +12,10 @@ import BetNowBtns from "../BetNowBtns/BetNowBtns";
 import Carousel from "../Politics/Carousel/Carousel";
 import { StatContainerCurrencies } from "../BitcoinPrice/BitcoinPrice.styles";
 
+import Polygon from "../../assets/images/Polygon.png";
+import clock from "../../assets/images/clock.png";
+import banner from "../../assets/images/newBanner.png";
+
 const GetStatistics = () => {
   let { group, title, id } = useParams();
   const { pathname } = useLocation();
@@ -42,35 +46,6 @@ const GetStatistics = () => {
     window.scrollTo(0, 0);
   }, [group, title, id]);
 
-  // const FormatDate = (dateNumber) => {
-  //   const date = new Date(dateNumber);
-  //   const options = {
-  //     // weekday: "long",
-  //     year: "numeric",
-  //     month: "long",
-  //     day: "numeric",
-  //     // hour: "numeric",
-  //     // minute: "numeric",
-  //     // second: "numeric",
-  //     timeZoneName: "short",
-  //   };
-  //   const humanReadableDate = date?.toLocaleString("en-US", options);
-  //   const noSpacesDate = humanReadableDate?.replace(/\s/g, "");
-  //   console.log(noSpacesDate);
-
-  //   const day = noSpacesDate.slice(8, 10);
-  //   const month = humanReadableDate.substr(0, 3);
-  //   const year = humanReadableDate.substr(13, 4);
-
-  //   const reversedDate = day + month + year;
-  //   const SpacesDate = reversedDate?.replace(/\s/g, " ");
-
-  //   // const day = humanReadableDate.substr(0, 3);
-  //   console.log(SpacesDate, "date");
-
-  //   return humanReadableDate;
-  // };
-
   const FormatDate = (dateNumber) => {
     const date = new Date(dateNumber);
     const options = {
@@ -94,6 +69,10 @@ const GetStatistics = () => {
     return formattedDate;
   };
 
+  const result = item?.verdict_title?.length;
+
+  console.log(result, "test");
+
   return (
     <>
       {/* // Trending Event // */}
@@ -103,9 +82,44 @@ const GetStatistics = () => {
             group == "football" ||
             group == "currencies" ||
             group == "trending-event") && (
-            <StatContainer>
-              <div className="rectangle">
-                {/* <span>Statistic:</span> */}
+            <StatContainer increaseFontSize={result > 45 ? "18px" : "26px"}>
+              <div className="event-first-item">
+                <div className="event-details-wrapper">
+                  <span className="event-title">{item?.verdict_title}</span>
+                  <div className="img-wrapper">
+                    <img
+                      src={item?.background_img}
+                      width="200px"
+                      height="100px"
+                      alt="event image"
+                    />
+                    <div className="event-desc">
+                      <p>
+                        In Q2 2022 Musk disclosed the idea of adding Dogecoin as
+                        a payment method for the Twitter subscription service,
+                        Blue, triggering a price surge.
+                      </p>
+                      <div className="event-time">
+                        <div>
+                          <img src={clock} alt="clock" />
+                        </div>
+                        <span id="yellow">18:40:20</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span>
+                    Only 8 previous Championships have recorded as being without
+                    rain interuptions since 1922, 1931, 1976, 1977, 1993, 1995,
+                    2009, 2010, 2019.
+                  </span>
+                </div>
+                <div className="video-wrapper">
+                  <div>
+                    <img src={Polygon} alt="video" />
+                  </div>
+                </div>
+              </div>
+              {/* <div className="rectangle">
                 <span>{item?.stats_title}</span>
               </div>
               <div className="vs">
@@ -174,7 +188,7 @@ const GetStatistics = () => {
                   width={450}
                   alt="Politics_member"
                 />
-              </div>
+              </div> */}
             </StatContainer>
           )}
       {/* // UFC && Football // */}
