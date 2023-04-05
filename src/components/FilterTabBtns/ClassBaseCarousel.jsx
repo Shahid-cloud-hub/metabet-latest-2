@@ -91,7 +91,7 @@ export default class PreviousNextMethods extends Component {
               >
                 {(Val?.imgV || Val?.imgO) && (
                   <img
-                    src={Val?.name === this.state.check ? Val?.imgO : Val?.imgV}
+                    src={Val?.name === this.state.check ? Val?.imgP : Val?.imgV}
                     alt={Val.name}
                   />
                 )}

@@ -57,6 +57,7 @@ export const Container = styled.div`
     align-items: center;
     width: 100%;
     padding-left: 40px;
+    gap: 15px;
   }
   .openai {
     display: flex;

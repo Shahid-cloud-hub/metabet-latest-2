@@ -16,8 +16,9 @@ const AiNFT = () => {
     const filterItem = Filter.find((item) => item.name == nameObj);
     const imgV = filterItem ? filterItem.img : null;
     const imgO = filterItem ? filterItem.imgO : null;
+    const imgP = filterItem ? filterItem.imgP : null;
 
-    return { name: nameObj, imgV, imgO };
+    return { name: nameObj, imgV, imgO, imgP };
   });
 
   const filterItem = (curcat) => {
