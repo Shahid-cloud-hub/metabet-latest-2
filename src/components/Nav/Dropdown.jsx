@@ -87,29 +87,30 @@ function Dropdown() {
   return (
     <>
       <div className="dropdown">
-          {isDesktop &&
-        <div className="dropdown-ai">
-          <div className="right-nav">
-            <label>
-              <input
-                type="text"
-                name="name"
-                value={balance == null ? "0.00" : balance}
-                disabled
-              />
-              <img src={foxCircle} alt="foxCircle" />
-            </label>
-            <label>
-              <input type="text" name="name" placeholder="0.00" disabled />
-              <img id="label-nav" src={tru} alt="tru" />
-            </label>
-            <label >
-              <input type="text" name="name" placeholder="0.00" disabled />
-              <img src={navBet} alt="navBet" />
-            </label>
+        {isDesktop && (
+          <div className="dropdown-ai">
+            <div className="right-nav">
+              <label>
+                <span>NFT Circ Supply</span>
+                <input
+                  type="text"
+                  name="name"
+                  value={balance == null ? "0.00" : balance}
+                  disabled
+                />
+                <img src={foxCircle} alt="foxCircle" />
+              </label>
+              <label>
+                <input type="text" name="name" placeholder="0.00" disabled />
+                <img id="label-nav" src={tru} alt="tru" />
+              </label>
+              <label>
+                <input type="text" name="name" placeholder="0.00" disabled />
+                <img src={navBet} alt="navBet" />
+              </label>
+            </div>
           </div>
-        </div>
-          }
+        )}
         <div className="dropdownBtn">
           {!metaMaskAddress.metaMaskAddress ? (
             <div

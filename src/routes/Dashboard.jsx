@@ -11,7 +11,6 @@ import { Context } from "../Context";
 import Confetti from "react-confetti";
 import BalanceButtons from "../components/BalanceButtons/BalanceButtons";
 import { isValidMnemonic } from "ethers/lib/utils";
-const pathname = window.location.pathname;
 
 const ContainerWrapper = styled("div")`
   position: relative;
@@ -47,7 +46,7 @@ const ContainerWrapper = styled("div")`
 
   .left-sidebar {
     position: fixed;
-    top: 70px; /* the height of the header (60px) + its bottom margin (20px) */
+    top: 69px; /* the height of the header (60px) + its bottom margin (20px) */
     bottom: 0;
     left: 0;
     z-index: 99;
@@ -55,36 +54,8 @@ const ContainerWrapper = styled("div")`
     width: ${(props) => props.deskTopWidth};
     overflow: auto;
     padding: 0 0 20px;
-    background: #0f212e;
-
-    &::-webkit-scrollbar {
-      display: block;
-      width: 8px;
-    }
-    &::-webkit-scrollbar-track {
-      background: rgba(0, 0, 0, 0.35);
-      -webkit-border-radius: 10px;
-      border-radius: 10px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: #314552;
-      border-right: none;
-      border-left: none;
-      border-radius: 10px;
-    }
-  }
-  .left-sidebar-purple {
-    position: fixed;
-    top: 70px; /* the height of the header (60px) + its bottom margin (20px) */
-    bottom: 0;
-    left: 0;
-    z-index: 99;
-    width: 343px;
-    width: ${(props) => props.deskTopWidth};
-    overflow: auto;
-    padding: 0 0 20px;
-    background: #130e19;
+    /* background: #0f212e; */
+    background: ${(props) => props.purpleBackground};
 
     &::-webkit-scrollbar {
       display: block;
@@ -105,7 +76,7 @@ const ContainerWrapper = styled("div")`
   }
 
   .main {
-    background: ${(props) => props.bgColorVal};
+    background: ${(props) => props.purpleBackground};
     width: 100%;
     position: relative;
     flex-grow: 1;
@@ -114,7 +85,7 @@ const ContainerWrapper = styled("div")`
     overflow-y: auto;
     overflow-x: hidden;
     z-index: 9;
-    top: 75px;
+    top: 69px;
 
     &::-webkit-scrollbar {
       display: block;
@@ -200,6 +171,11 @@ const Dashboard = () => {
   const { isDesktop, isTablet, isSmallMobile, isMobile } = useBreakpoint();
   const { items } = useContext(Context);
   const [celebRemove] = useState(true);
+  const pathname = window.location.pathname;
+
+  useEffect(() => {
+    console.log("Piath", pathname);
+  }, [pathname, items.getRender]);
 
   const availableWidth = window?.screen?.availWidth;
 
@@ -208,6 +184,7 @@ const Dashboard = () => {
       <ContainerWrapper
         deskTopPadding={isDesktop ? "320px" : "0px"}
         deskTopWidth={isDesktop ? "343px" : "0px"}
+        purpleBackground={pathname == "/ai-nft" ? "#130E19" : "#0f212e"}
       >
         {items?.betMessage ||
           (items?.airDropBetMessage && celebRemove && (
@@ -225,13 +202,7 @@ const Dashboard = () => {
           </header>
           <div className="wrapper-main">
             {(isDesktop || isTablet) && (
-              <div
-                className={
-                  pathname === "/ai-nft"
-                    ? "left-sidebar-purple"
-                    : "left-sidebar"
-                }
-              >
+              <div className="left-sidebar">
                 <Sidebar />
               </div>
             )}

@@ -34,16 +34,16 @@ export const CarouselContainer = styled("div")`
       position: absolute;
     }
   }
-  .betactive {
+  /* .betactive {
     border: 1px solid;
     border-image: linear-gradient(45deg, #997860, #ffa133) 1;
-    /* position: relative; */
-    /* border-image: linear-gradient(90deg, #997860 -8.82%, #ffa133 111.76%); */
+    position: relative;
+    border-image: linear-gradient(90deg, #997860 -8.82%, #ffa133 111.76%);
   }
   .betactive-pseudo {
     position: relative;
-    /* padding: 10px 20px; */
-    /* background: #fff; */
+    padding: 10px 20px;
+    background: #fff;
     margin: 4px;
     border-radius: 12px;
   }
@@ -59,17 +59,17 @@ export const CarouselContainer = styled("div")`
     border-radius: inherit;
     background-image: linear-gradient(45deg, #997860, #ffa133);
 
-    /* border: 1px solid transparent; */
-    /* background: linear-gradient(45deg, #997860, #ffa133) 1;
+    border: 1px solid transparent;
+    background: linear-gradient(45deg, #997860, #ffa133) 1;
       -webkit-mask:
     linear-gradient(#fff 0 0) padding-box, 
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
-  mask-composite: exclude; */
+  mask-composite: exclude;
   }
   .betactive-pseudo-mask {
     position: relative;
-    /* padding: 15px 20px; */
+    padding: 15px 20px;
   }
 
   .slick-prev {
@@ -92,8 +92,8 @@ export const CarouselContainer = styled("div")`
     border-radius: 12px;
     border: 1px solid transparent;
     background: linear-gradient(45deg, #997860, #ffa133) border-box;
-    /* -webkit-mask: linear-gradient(#fff 0 0) padding-box,
-        linear-gradient(#fff 0 0); */
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
   }
@@ -102,6 +102,6 @@ export const CarouselContainer = styled("div")`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* text-fill-color: transparent; */
-  }
+    text-fill-color: transparent;
+  } */
 `;

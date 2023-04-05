@@ -38,7 +38,6 @@ const WorldcupLandingPage = () => {
             <div className="parent-wrapper">
               <>
                 <FilteredEventsList
-                  name="fruit"
                   options={[
                     { name: "All", value: "all", defaultValue: true },
                     { name: "Size", value: "size" },
@@ -50,7 +49,6 @@ const WorldcupLandingPage = () => {
                   onChange={(e) => {
                     console.log(e.target.value);
                   }}
-                  // style={{ width: "20em" }}
                 />
               </>
             </div>

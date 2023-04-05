@@ -341,14 +341,14 @@ export const DashContainer = styled("div")`
         text-overflow: ellipsis;
         vertical-align: top;
         text-align: center;
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
       }
       .option {
         padding: 10px;
         font-size: 14px;
         opacity: 0;
         animation-delay: calc(40ms * var(--index)) !important;
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
 
         hr {
           border-top: 1px solid #fff;
@@ -396,7 +396,7 @@ export const DashContainer = styled("div")`
       border: none;
       color: #ffffff;
       font-size: 14px;
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       padding: 10px 0px;
       cursor: pointer;
       margin-right: 5%;

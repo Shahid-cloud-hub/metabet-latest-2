@@ -41,7 +41,7 @@ export const Container1 = styled.div`
     height: 34px;
     font-size: 15px;
     color: #ffffff;
-    font-family: "Mostra Nuova";
+    font-family: "mostra-nuova", sans-serif;
     border: none;
   }
 
@@ -49,7 +49,7 @@ export const Container1 = styled.div`
     padding-top: 10px;
     text-align: center;
     span {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 900;
       font-size: 21px;
@@ -69,7 +69,7 @@ export const Container1 = styled.div`
     padding-top: 10px;
     text-align: center;
     span {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 900;
       font-size: 21px;
@@ -106,7 +106,7 @@ export const Container1 = styled.div`
         justify-content: center;
         gap: 5px;
         #blue {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-size: 20px;
           color: #1e90ff;
         }
@@ -142,7 +142,7 @@ export const Container1 = styled.div`
       position: relative;
 
       input::placeholder {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 15px;
@@ -168,7 +168,7 @@ export const Container1 = styled.div`
       height: 192px;
       max-width: 174px;
       div {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 15px;
@@ -193,7 +193,7 @@ export const Container1 = styled.div`
       height: 192px;
       max-width: 174px;
       div {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 15px;
@@ -227,7 +227,7 @@ export const Container1 = styled.div`
     margin-right: 40px;
   }
   span {
-    font-family: "Mostra Nuova";
+    font-family: "mostra-nuova", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
@@ -294,7 +294,7 @@ export const Container1 = styled.div`
         position: relative;
 
         input::placeholder {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 700;
           font-size: 14px;
@@ -415,7 +415,7 @@ export const Container1 = styled.div`
         position: relative;
 
         input::placeholder {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 700;
           font-size: 14px;
@@ -536,7 +536,7 @@ export const Container1 = styled.div`
         position: relative;
 
         input::placeholder {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 700;
           font-size: 14px;
@@ -688,7 +688,7 @@ export const Balance = styled.div`
     border-radius: 8px;
 
     #title {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 12px;
@@ -703,11 +703,11 @@ export const Balance = styled.div`
       padding: 5px 18px;
       text-align: center;
       border: none;
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-weight: 800;
     }
     input::placeholder {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 20px;
@@ -730,7 +730,7 @@ export const Balance = styled.div`
     margin-left: 40px;
 
     #title {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 12px;
@@ -744,11 +744,11 @@ export const Balance = styled.div`
       padding: 5px 18px;
       text-align: center;
       border: none;
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-weight: 800;
     }
     input::placeholder {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 20px;
@@ -771,7 +771,7 @@ export const Balance = styled.div`
     margin-left: 10px;
 
     #title {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 12px;
@@ -785,11 +785,11 @@ export const Balance = styled.div`
       padding: 5px 18px;
       text-align: center;
       border: none;
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-weight: 800;
     }
     input::placeholder {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 20px;
@@ -832,7 +832,7 @@ export const Balance = styled.div`
       height: 34px;
       font-size: 15px;
       color: #ffffff;
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       border: none;
     }
 
@@ -840,7 +840,7 @@ export const Balance = styled.div`
       padding-top: 10px;
       text-align: center;
       span {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 21px;
@@ -860,7 +860,7 @@ export const Balance = styled.div`
       padding-top: 10px;
       text-align: center;
       span {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 21px;
@@ -920,7 +920,7 @@ export const Balance = styled.div`
         position: relative;
 
         input::placeholder {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 700;
           font-size: 15px;
@@ -947,7 +947,7 @@ export const Balance = styled.div`
         max-width: 174px;
 
         div {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 700;
           font-size: 15px;
@@ -981,7 +981,7 @@ export const Balance = styled.div`
       margin-right: 40px;
     }
     span {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 22px;
@@ -1026,7 +1026,7 @@ export const Balance = styled.div`
       height: 34px;
       font-size: 15px;
       color: #ffffff;
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       border: none;
     }
     .images {
@@ -1040,7 +1040,7 @@ export const Balance = styled.div`
       padding-top: 10px;
       text-align: center;
       span {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 21px;
@@ -1060,7 +1060,7 @@ export const Balance = styled.div`
       padding-top: 10px;
       text-align: center;
       span {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 21px;
@@ -1120,7 +1120,7 @@ export const Balance = styled.div`
         position: relative;
 
         input::placeholder {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 700;
           font-size: 15px;
@@ -1147,7 +1147,7 @@ export const Balance = styled.div`
         max-width: 174px;
 
         div {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 700;
           font-size: 15px;
@@ -1181,7 +1181,7 @@ export const Balance = styled.div`
       margin-right: 40px;
     }
     span {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 22px;
@@ -1225,7 +1225,7 @@ export const Balance = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
-    font-family: "Mostra Nuova";
+    font-family: "mostra-nuova", sans-serif;
   }
 
   .text {
@@ -1235,7 +1235,7 @@ export const Balance = styled.div`
     span {
       font-size: 12px;
       color: #999999;
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
     }
 
     #rate {

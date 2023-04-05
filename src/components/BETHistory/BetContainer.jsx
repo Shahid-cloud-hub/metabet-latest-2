@@ -107,7 +107,6 @@ const BetContainer = (props) => {
       {betData.map((item, index, arr) => {
         return (
           <>
-            {console.log(arr)}
             <div className="betHistory-container">
               <div className="bet-item-1">
                 <div>

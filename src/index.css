@@ -12,7 +12,7 @@
 }
 
 @font-face {
-  font-family: "Mostra Nuova";
+  font-family: "mostra-nuova", sans-serif;
   src: local("Mostra Nuova"),
     url("./Font/MostraNuova/FontsFree-Net-aa.ttf") format("truetype");
 }

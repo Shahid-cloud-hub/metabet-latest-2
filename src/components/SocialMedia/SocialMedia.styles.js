@@ -1,17 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-display:flex;
-width:100%;
-flex-direction: column;
-align-items: cenetr;
-justify-content:center;
-gap: 30px;
-margin: 20px 0px;
-
-`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: cenetr;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0px;
+`;
 export const Container1 = styled.div`
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +24,6 @@ export const Container1 = styled.div`
   border-radius: 12px;
   gap: 30px;
   margin: 0 auto;
- 
 
   button {
     background: #6495ed;
@@ -35,7 +32,7 @@ export const Container1 = styled.div`
     height: 34px;
     font-size: 15px;
     color: #ffffff;
-    font-family: "Mostra Nuova";
+    font-family: "mostra-nuova", sans-serif;
     border: none;
   }
 
@@ -43,7 +40,7 @@ export const Container1 = styled.div`
     padding-top: 10px;
     text-align: center;
     span {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 900;
       font-size: 21px;
@@ -63,7 +60,7 @@ export const Container1 = styled.div`
     padding-top: 10px;
     text-align: center;
     span {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 900;
       font-size: 21px;
@@ -82,7 +79,7 @@ export const Container1 = styled.div`
   .convert {
     display: flex;
     align-items: center;
-    gap:210px;
+    gap: 210px;
   }
   .balance {
     display: flex;
@@ -91,13 +88,13 @@ export const Container1 = styled.div`
     padding: 0px 35px;
 
     .icon {
-      display:flex;
+      display: flex;
       flex-direction: column;
       align-items: center;
 
-      gap:10px;
-      img{
-        width:60px;
+      gap: 10px;
+      img {
+        width: 60px;
       }
       span {
         font-family: "Junegull";
@@ -126,7 +123,7 @@ export const Container1 = styled.div`
       position: relative;
 
       input::placeholder {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 15px;
@@ -149,7 +146,7 @@ export const Container1 = styled.div`
       position: absolute;
       transform: translate(-8px, 31px);
       div {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 15px;
@@ -183,7 +180,7 @@ export const Container1 = styled.div`
     margin-right: 40px;
   }
   span {
-    font-family: "Mostra Nuova";
+    font-family: "mostra-nuova", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
@@ -203,9 +200,6 @@ export const Container1 = styled.div`
     line-height: 95%;
     color: #3d6eff;
   }
-  
- 
- 
 `;
 
 export const Balance = styled.div`
@@ -273,11 +267,11 @@ border-radius: 12px;
         padding: 5px 5px;
         text-align: center;
         border: none;
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-weight: 800;
       }
       input::placeholder {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
@@ -319,14 +313,14 @@ border-radius: 12px;
     justify-content: center;
     padding: 0px 5px;
     max-width: 120px;
-    font-family: "Mostra Nuova";
+    font-family: "mostra-nuova", sans-serif;
     min-height: 72px;
     background: linear-gradient(180deg, #1c1c1c 39.58%, #28516b 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #1e90ff;
     border-radius: 8px;
 
     #title {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 14px;
@@ -340,11 +334,11 @@ border-radius: 12px;
       padding: 5px 5px;
       text-align: center;
       border: none;
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-weight: 800;
     }
     input::placeholder {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 20px;
@@ -401,7 +395,7 @@ border-radius: 12px;
 
   }
       #title {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 14px;
@@ -415,13 +409,13 @@ border-radius: 12px;
         padding: 5px 5px;
         text-align: end;
         border: none;
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-weight: 800;
         color: #FFFFFF;
 
       }
       input::placeholder {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
@@ -456,7 +450,7 @@ border-radius: 12px;
       height: 34px;
       font-size: 15px;
       color: #ffffff;
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       border: none;
     }
 
@@ -464,7 +458,7 @@ border-radius: 12px;
       padding-top: 10px;
       text-align: center;
       span {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 21px;
@@ -484,7 +478,7 @@ border-radius: 12px;
       padding-top: 10px;
       text-align: center;
       span {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 21px;
@@ -544,7 +538,7 @@ border-radius: 12px;
         position: relative;
 
         input::placeholder {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 700;
           font-size: 15px;
@@ -567,7 +561,7 @@ border-radius: 12px;
         position: absolute;
         transform: translate(-8px, 31px);
         div {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 700;
           font-size: 15px;
@@ -601,7 +595,7 @@ border-radius: 12px;
       margin-right: 40px;
     }
     // span {
-    //   font-family: "Mostra Nuova";
+    //   font-family: "mostra-nuova", sans-serif;
     //   font-style: normal;
     //   font-weight: 700;
     //   font-size: 22px;
@@ -645,7 +639,7 @@ border-radius: 12px;
     display: flex;
     align-items: center;
     gap: 10px;
-    font-family: "Mostra Nuova";
+    font-family: "mostra-nuova", sans-serif;
   }
 
   .text {
@@ -655,7 +649,7 @@ border-radius: 12px;
     span {
       font-size: 12px;
       color: #999999;
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
     }
 
     #rate {
@@ -828,7 +822,7 @@ border-radius: 12px;
         height: 34px;
         font-size: 15px;
         color: #ffffff;
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         border: none;
       }
 
@@ -836,7 +830,7 @@ border-radius: 12px;
         padding-top: 10px;
         text-align: center;
         span {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 900;
           font-size: 21px;
@@ -856,7 +850,7 @@ border-radius: 12px;
         padding-top: 10px;
         text-align: center;
         span {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 900;
           font-size: 21px;
@@ -913,7 +907,7 @@ border-radius: 12px;
           position: relative;
 
           input::placeholder {
-            font-family: "Mostra Nuova";
+            font-family: "mostra-nuova", sans-serif;
             font-style: normal;
             font-weight: 700;
             font-size: 15px;
@@ -936,7 +930,7 @@ border-radius: 12px;
           position: absolute;
           transform: translate(-8px, 31px);
           div {
-            font-family: "Mostra Nuova";
+            font-family: "mostra-nuova", sans-serif;
             font-style: normal;
             font-weight: 700;
             font-size: 15px;
@@ -970,7 +964,7 @@ border-radius: 12px;
         margin-right: 40px;
       }
       span {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 22px;
@@ -1197,11 +1191,11 @@ color: #B6B6B6;
         padding: 5px 5px;
         text-align: center;
         border: none;
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-weight: 800;
       }
       input::placeholder {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
@@ -1243,14 +1237,14 @@ color: #B6B6B6;
     justify-content: center;
     padding: 0px 5px;
     max-width: 120px;
-    font-family: "Mostra Nuova";
+    font-family: "mostra-nuova", sans-serif;
     min-height: 72px;
     background: linear-gradient(180deg, #1c1c1c 39.58%, #28516b 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #1e90ff;
     border-radius: 8px;
 
     #title {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 14px;
@@ -1264,11 +1258,11 @@ color: #B6B6B6;
       padding: 5px 5px;
       text-align: center;
       border: none;
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-weight: 800;
     }
     input::placeholder {
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 20px;
@@ -1325,7 +1319,7 @@ color: #B6B6B6;
 
   }
       #title {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 14px;
@@ -1339,13 +1333,13 @@ color: #B6B6B6;
         padding: 5px 5px;
         text-align: end;
         border: none;
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-weight: 800;
         color: #FFFFFF;
 
       }
       input::placeholder {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
@@ -1380,7 +1374,7 @@ color: #B6B6B6;
       height: 34px;
       font-size: 15px;
       color: #ffffff;
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
       border: none;
     }
 
@@ -1388,7 +1382,7 @@ color: #B6B6B6;
       padding-top: 10px;
       text-align: center;
       span {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 21px;
@@ -1408,7 +1402,7 @@ color: #B6B6B6;
       padding-top: 10px;
       text-align: center;
       span {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 900;
         font-size: 21px;
@@ -1468,7 +1462,7 @@ color: #B6B6B6;
         position: relative;
 
         input::placeholder {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 700;
           font-size: 15px;
@@ -1491,7 +1485,7 @@ color: #B6B6B6;
         position: absolute;
         transform: translate(-8px, 31px);
         div {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 700;
           font-size: 15px;
@@ -1525,7 +1519,7 @@ color: #B6B6B6;
       margin-right: 40px;
     }
     // span {
-    //   font-family: "Mostra Nuova";
+    //   font-family: "mostra-nuova", sans-serif;
     //   font-style: normal;
     //   font-weight: 700;
     //   font-size: 22px;
@@ -1569,7 +1563,7 @@ color: #B6B6B6;
     display: flex;
     align-items: center;
     gap: 10px;
-    font-family: "Mostra Nuova";
+    font-family: "mostra-nuova", sans-serif;
   }
 
   .text {
@@ -1579,7 +1573,7 @@ color: #B6B6B6;
     span {
       font-size: 12px;
       color: #999999;
-      font-family: "Mostra Nuova";
+      font-family: "mostra-nuova", sans-serif;
     }
 
     #rate {
@@ -1752,7 +1746,7 @@ color: #B6B6B6;
         height: 34px;
         font-size: 15px;
         color: #ffffff;
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         border: none;
       }
 
@@ -1760,7 +1754,7 @@ color: #B6B6B6;
         padding-top: 10px;
         text-align: center;
         span {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 900;
           font-size: 21px;
@@ -1780,7 +1774,7 @@ color: #B6B6B6;
         padding-top: 10px;
         text-align: center;
         span {
-          font-family: "Mostra Nuova";
+          font-family: "mostra-nuova", sans-serif;
           font-style: normal;
           font-weight: 900;
           font-size: 21px;
@@ -1837,7 +1831,7 @@ color: #B6B6B6;
           position: relative;
 
           input::placeholder {
-            font-family: "Mostra Nuova";
+            font-family: "mostra-nuova", sans-serif;
             font-style: normal;
             font-weight: 700;
             font-size: 15px;
@@ -1860,7 +1854,7 @@ color: #B6B6B6;
           position: absolute;
           transform: translate(-8px, 31px);
           div {
-            font-family: "Mostra Nuova";
+            font-family: "mostra-nuova", sans-serif;
             font-style: normal;
             font-weight: 700;
             font-size: 15px;
@@ -1894,7 +1888,7 @@ color: #B6B6B6;
         margin-right: 40px;
       }
       span {
-        font-family: "Mostra Nuova";
+        font-family: "mostra-nuova", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 22px;

@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Container } from "./Sidebar.style";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import Footer from "../Footer/Footer";
 
 import { first_array, sec_array } from "../../JasonData/Sidebar_routes";
+import { Context } from "../../Context";
 
 const SidebarItems = (props) => {
   const active = props.active ? "active" : "";
@@ -37,6 +38,8 @@ const SidebarItems1 = (props) => {
 
 const Sidebar = () => {
   const location = useLocation();
+  const [show, setShow] = useState(false);
+  const { setItems } = useContext(Context);
 
   const activeItems = first_array.findIndex(
     (item) => item.route === location.pathname
@@ -47,13 +50,25 @@ const Sidebar = () => {
 
   useEffect(() => {}, [location, activeItems, activeSecItems]);
 
+  const callback = () => {
+    setShow(true);
+    setItems((prevState) => ({
+      ...prevState,
+      betMessage: false,
+      airDropBetMessage: false,
+      getRender: true,
+    }));
+  };
+
+  console.log("true", show);
+
   return (
     <>
       <Container>
         <div className="wrapper">
           <div className="wrapper-link">
             {first_array.map((item, index) => (
-              <Link to={item.route} key={index}>
+              <Link to={item.route} key={index} onClick={callback}>
                 <SidebarItems
                   title={item.display_name}
                   active={index === activeItems}
@@ -63,13 +78,13 @@ const Sidebar = () => {
           </div>
           <hr />
           {/* <div className="wrapper-span">
-          <NavLink to="/">
-            <span>All Events</span>
-          </NavLink>
-        </div> */}
+            <NavLink to="/">
+              <span>All Events</span>
+            </NavLink>
+          </div> */}
           <div className="wrapper-link-1">
             {sec_array.map((item, index) => (
-              <Link to={item.route} key={index}>
+              <Link to={item.route} key={index} onClick={callback}>
                 <SidebarItems1
                   icon={item?.icon}
                   white={item?.white}
