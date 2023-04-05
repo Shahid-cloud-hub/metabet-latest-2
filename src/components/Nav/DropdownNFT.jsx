@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import "./Styles.css";
-import Component from "../../assets/images/BNB.svg";
 import ETH from "../../assets/images/ETH.png";
 import WETH from "../../assets/images/WETH.svg";
 import USDT from "../../assets/images/USDT.svg";
@@ -11,15 +10,12 @@ import BUSD from "../../assets/images/BUSD.png";
 import GOAL from "../../assets/images/GOAL.png";
 import USDC from "../../assets/images/usdc.png";
 import foxCircle from "../../assets/images/foxCircle.svg";
-import foxMini from "../../assets/images/fox-mini.webp";
 import tru from "../../assets/images/tru.svg";
+import trubet from "../../assets/images/Ai-NFT/trubet.png";
+import dollar from "../../assets/images/Ai-NFT/dollar.png";
+import trolly from "../../assets/images/Ai-NFT/trolly.png";
 import navBet from "../../assets/images/navBet.svg";
-import Connect from "../../assets/images/Connect.webp";
-import Disconnect from "../../assets/images/Disconnect.webp";
-import Withdraw from "../../assets/images/withdraw_btn.png";
-import navFox from "../../assets/images/nav-fox.webp";
-import openai from "../../assets/images/openai.webp";
-import verified from "../../assets/images/verified.webp";
+
 import { useDispatch, useSelector } from "react-redux";
 import {
   metaMaskConnection,
@@ -31,7 +27,7 @@ import truncateEthAddress from "truncate-eth-address";
 import Utils from "../../utilities";
 import { Context } from "../../Context";
 
-function Dropdown() {
+const DropdownNFT = () => {
   const [selected, setSelected] = useState();
   const [Active, setIsActive] = useState(false);
   const metaMaskAddress = useSelector((state) => state.wallet);
@@ -89,38 +85,46 @@ function Dropdown() {
       <div className="dropdown">
         {isDesktop && (
           <div className="dropdown-ai">
-            <div className="right-nav">
+            <div className="right-nav-nft">
               <label>
+                <span>NFT Circ Supply</span>
                 <input
                   type="text"
                   name="name"
                   value={balance == null ? "0.00" : balance}
                   disabled
                 />
-                <img src={foxCircle} alt="foxCircle" />
               </label>
               <label>
-                <input type="text" name="name" placeholder="0.00" disabled />
-                <img id="label-nav" src={tru} alt="tru" />
+                <span>Market Cap</span>
+                <input type="text" name="name" placeholder="$0.00" disabled />
               </label>
               <label>
-                <input type="text" name="name" placeholder="0.00" disabled />
-                <img src={navBet} alt="navBet" />
+                <img src={trubet} alt="trubet" />
+                <input type="text" name="name" placeholder="$0.00" disabled />
               </label>
+            </div>
+            <div className="dollar">
+              <img src={dollar} alt="dollar" />
+              <div className="dollar-text">
+                <input type="text" name="name" placeholder="$0.00" disabled />
+                <span>Total fees Earnt</span>
+              </div>
             </div>
           </div>
         )}
         <div className="dropdownBtn">
+          <img src={trolly} alt="trolly" />
           {!metaMaskAddress.metaMaskAddress ? (
             <div
-              className="connect-btn"
+              className="connect-btn-nft"
               onClick={() => dispatch(metaMaskConnection())}
             >
               <button>Connect</button>
             </div>
           ) : (
             <div
-              className="connect-btn"
+              className="connect-btn-nft"
               onClick={() => dispatch(metaMaskDisconnect())}
             >
               <button>Disconnect</button>
@@ -130,6 +134,6 @@ function Dropdown() {
       </div>
     </>
   );
-}
+};
 
-export default Dropdown;
+export default DropdownNFT;

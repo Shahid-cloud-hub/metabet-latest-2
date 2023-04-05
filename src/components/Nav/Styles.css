@@ -7,7 +7,6 @@
 }
 
 .dropdown .dropdownBtn {
-  background: #1b2c37;
   box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
   font-weight: bold;
   color: #333;
@@ -15,11 +14,9 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  /* padding-right: 40px; */
-}
+  gap: 20px;
 
-.dropdown .dropdownBtn > img {
-  background: #1b2c37;
+  /* padding-right: 40px; */
 }
 
 .dropdown .dropdownContent {
@@ -82,15 +79,24 @@
   background: #f4f4f4;
 }
 
-.dropdown .dropdownBtn .connect-btn {
-  /* width: 113px; */
-  /* padding: 13px; */
-  /* padding: 5px 0px 0px 0px; */
-
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+.dropdown .dropdownBtn .connect-btn-nft > button {
+  width: 100%;
+  max-width: 100px;
+  min-height: 39px;
+  background: linear-gradient(90deg, #607099 -8.82%, #a533ff 111.76%);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "mostra-nuova", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  padding: 0px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .dropdown .dropdownBtn .connect-btn > button {
   width: 100%;
   max-width: 100px;
@@ -169,11 +175,11 @@
   margin-left: 10px;
 } */
 
-.right-nav {
+.right-nav,
+.right-nav-nft {
   display: flex;
   gap: 20px;
 }
-
 .right-nav > label {
   display: flex;
   align-items: center;
@@ -183,6 +189,24 @@
   border-radius: 6px;
   padding: 3px 10px;
   max-width: 200px;
+}
+.right-nav-nft > label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #1d1625;
+  border-radius: 6px;
+  padding: 5px 10px;
+  max-width: 222px;
+}
+.right-nav-nft > label > span {
+  font-size: 16px;
+  color: #ffffff;
+  width: 100%;
+  font-family: "Mostra Nuova";
+  font-style: normal;
+  font-weight: 500;
 }
 
 .right-nav > label > input {
@@ -198,8 +222,28 @@
   line-height: 140%;
   color: #ffffff;
 }
+.right-nav-nft > label > input {
+  width: 100%;
+  /* max-width: 138px; */
+  /* min-height: 25px; */
+  min-height: 30px;
+  border-radius: 6px;
+  border: none;
+  background: #1d1625;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: #ffffff;
+  text-align: end;
+}
 
 .right-nav > label > input::placeholder {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: #ffffff;
+}
+.right-nav-nft > label > input::placeholder {
   font-weight: 700;
   font-size: 18px;
   line-height: 140%;
@@ -208,6 +252,39 @@
 
 #label-nav {
   padding-top: 6px;
+}
+.dollar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.dollar-text {
+  display: flex;
+  flex-direction: column;
+}
+.dollar-text > span {
+  font-size: 12px;
+  color: #999999;
+}
+.dollar-text > input {
+  width: 100%;
+  min-height: 30px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: #ffffff;
+  max-width: 60px;
+}
+
+.dollar-text > input::placeholder {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1080px) {

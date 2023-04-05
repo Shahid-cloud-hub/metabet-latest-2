@@ -28,6 +28,7 @@ import FootballW from "../../assets/images/FootballW.webp";
 import UFCW from "../../assets/images/UFCW.webp";
 import twitter from "../../assets/images/ActiveBets/twitter.png";
 import twitterO from "../../assets/images/ActiveBets/twitterO.png";
+import twitterP from "../../assets/images/ActiveBets/twitterP.png";
 import twittericon from "../../assets/images/ActiveBets/twittericon.png";
 import currency from "../../assets/images/ActiveBets/currency.png";
 import currencyicon from "../../assets/images/ActiveBets/currencyicon.png";
@@ -60,21 +61,37 @@ import BasketballW from "../../assets/images/BasketballW.webp";
 import basketballicon from "../../assets/images/basketballicon.png";
 import foxsmall from "../../assets/images/foxsmall.png";
 import currencyO from "../../assets/images/ActiveBets/currencyO.png";
+import currencyP from "../../assets/images/ActiveBets/currencyP.png";
 import cryptoO from "../../assets/images/ActiveBets/cryptoO.png";
+import cryptoP from "../../assets/images/ActiveBets/cryptoP.png";
 import boxingO from "../../assets/images/ActiveBets/boxingO.png";
+import boxingP from "../../assets/images/ActiveBets/boxingP.png";
 import CricketO from "../../assets/images/ActiveBets/CricketO.png";
+import CricketP from "../../assets/images/ActiveBets/CricketP.png";
 import FootballO from "../../assets/images/ActiveBets/FootballO.png";
+import FootballP from "../../assets/images/ActiveBets/FootballP.png";
 import FormulaO from "../../assets/images/ActiveBets/FormulaO.png";
+import FormulaP from "../../assets/images/ActiveBets/FormulaP.png";
 import BasketballO from "../../assets/images/ActiveBets/BasketballO.png";
+import BasketballP from "../../assets/images/ActiveBets/BasketballP.png";
 import TennisO from "../../assets/images/ActiveBets/TennisO.png";
+import TennisP from "../../assets/images/ActiveBets/TennisP.png";
 import AmericanFootballO from "../../assets/images/ActiveBets/AmericanFootballO.png";
+import AmericanFootballP from "../../assets/images/ActiveBets/AmericanFootballP.png";
 import BaseballO from "../../assets/images/ActiveBets/BaseballO.png";
+import BaseballP from "../../assets/images/ActiveBets/BaseballP.png";
 import SnookerO from "../../assets/images/ActiveBets/SnookerO.png";
+import SnookerP from "../../assets/images/ActiveBets/SnookerP.png";
 import GolfO from "../../assets/images/ActiveBets/GolfO.png";
+import GolfP from "../../assets/images/ActiveBets/GolfP.png";
 import RugbyO from "../../assets/images/ActiveBets/RugbyO.png";
+import RugbyP from "../../assets/images/ActiveBets/RugbyP.png";
 import DartsO from "../../assets/images/ActiveBets/DartsO.png";
+import DartsP from "../../assets/images/ActiveBets/DartsP.png";
 import HorseO from "../../assets/images/ActiveBets/HorseO.png";
+import HorseP from "../../assets/images/ActiveBets/HorseP.png";
 import VolleyballO from "../../assets/images/ActiveBets/VolleyballO.png";
+import VolleyballP from "../../assets/images/ActiveBets/VolleyballP.png";
 
 export const betData = [
   {
@@ -169,6 +186,7 @@ export const Filter = [
     name: "Social Media",
     img: twitter,
     imgO: twitterO,
+    imgP: twitterP,
     icon1: twittericon,
     th_1: "Date",
     th_2: "Event",
@@ -186,6 +204,7 @@ export const Filter = [
     name: "Currencies",
     img: currency,
     imgO: currencyO,
+    imgP: currencyP,
     imgW: currencyicon,
     icon1: currencyicon,
     th_1: "Date",
@@ -204,6 +223,7 @@ export const Filter = [
     name: "Crypto Currencies",
     img: crypto,
     imgO: cryptoO,
+    imgP: cryptoP,
     imgW: BitcoinW,
     icon1: bitcoin,
     th_1: "Date",
@@ -219,6 +239,7 @@ export const Filter = [
     name: "Boxing",
     img: boxing,
     imgO: boxingO,
+    imgP: boxingP,
     imgW: boxingicon,
     icon1: boxingicon,
     th_1: "Date",
@@ -237,6 +258,7 @@ export const Filter = [
     name: "Cricket",
     img: CricketNew,
     imgO: CricketO,
+    imgP: CricketP,
     imgW: CricketW,
     icon1: Cricket,
     th_1: "Date",
@@ -255,6 +277,7 @@ export const Filter = [
     name: "UFC",
     img: boxing,
     imgO: boxingO,
+    imgP: boxingP,
     imgW: UFCW,
     icon1: UFC,
     th_1: "Date",
@@ -273,6 +296,7 @@ export const Filter = [
     name: "Football",
     img: FootballW,
     imgO: FootballO,
+    imgP: FootballP,
     imgW: FootballW,
     icon1: football,
     th_1: "Date",
@@ -291,6 +315,7 @@ export const Filter = [
     name: "Formula One",
     img: FormulaW,
     imgO: FormulaO,
+    imgP: FormulaP,
     imgW: Formulaicon,
     icon1: Formulaicon,
     th_1: "Date",
@@ -309,6 +334,7 @@ export const Filter = [
     name: "Basketball",
     img: BasketballW,
     imgO: BasketballO,
+    imgP: BasketballP,
     imgW: basketballicon,
     icon1: basketballicon,
     th_1: "Date",
@@ -327,6 +353,7 @@ export const Filter = [
     name: "Tennis",
     img: TennisW,
     imgO: TennisO,
+    imgP: TennisP,
     imgW: tennisicon,
     icon1: tennisicon,
     th_1: "Date",
@@ -345,6 +372,7 @@ export const Filter = [
     name: "American Football",
     img: AmericanFootballW,
     imgO: AmericanFootballO,
+    imgP: AmericanFootballP,
     imgW: americanfootballicon,
     icon1: americanfootballicon,
     th_1: "Date",
@@ -363,6 +391,7 @@ export const Filter = [
     name: "Baseball",
     img: BaseballW,
     imgO: BaseballO,
+    imgP: BaseballP,
     imgW: baseballicon,
     icon1: baseballicon,
     th_1: "Date",
@@ -381,6 +410,7 @@ export const Filter = [
     name: "Snooker",
     img: SnookerW,
     imgO: SnookerO,
+    imgP: SnookerP,
     imgW: Snookericon,
     icon1: Snookericon,
     th_1: "Date",
@@ -399,6 +429,7 @@ export const Filter = [
     name: "Golf",
     img: GolfW,
     imgO: GolfO,
+    imgP: GolfP,
     imgW: golficon,
     icon1: golficon,
     th_1: "Date",
@@ -417,6 +448,7 @@ export const Filter = [
     name: "Rugby",
     img: RugbyW,
     imgO: RugbyO,
+    imgP: RugbyP,
     imgW: Rugbyicon,
     icon1: Rugbyicon,
     th_1: "Date",
@@ -435,6 +467,7 @@ export const Filter = [
     name: "Volleyball",
     img: VolleyballW,
     imgO: VolleyballO,
+    imgP: VolleyballP,
     imgW: Volleyballicon,
     icon1: Volleyballicon,
     th_1: "Date",
@@ -453,6 +486,7 @@ export const Filter = [
     name: "Darts",
     img: DartsW,
     imgO: DartsO,
+    imgP: DartsP,
     imgW: Dartsicon,
     icon1: Dartsicon,
     th_1: "Date",
@@ -471,6 +505,7 @@ export const Filter = [
     name: "Horse Racing",
     img: HorseW,
     imgO: HorseO,
+    imgP: HorseP,
     imgW: Horseicon,
     icon1: Horseicon,
     th_1: "Date",

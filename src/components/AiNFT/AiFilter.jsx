@@ -25,8 +25,9 @@ const AiFilter = ({
     const filterItem = tabItem.find((item) => item.name == nameObjs);
     const imgV = filterItem ? filterItem.img : null;
     const imgO = filterItem ? filterItem.imgO : null;
+    const imgP = filterItem ? filterItem.imgP : null;
     console.log("first", imgV);
-    return { name: nameObjs, imgV, imgO };
+    return { name: nameObjs, imgV, imgO, imgP };
   });
 
   const handle = (nameValue) => {
