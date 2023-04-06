@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Container } from "./Sidebar.style";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Footer from "../Footer/Footer";
 
 import { first_array, sec_array } from "../../JasonData/Sidebar_routes";
@@ -38,7 +38,6 @@ const SidebarItems1 = (props) => {
 
 const Sidebar = () => {
   const location = useLocation();
-  const [show, setShow] = useState(false);
   const { setItems } = useContext(Context);
 
   const activeItems = first_array.findIndex(
@@ -51,7 +50,6 @@ const Sidebar = () => {
   useEffect(() => {}, [location, activeItems, activeSecItems]);
 
   const callback = () => {
-    setShow(true);
     setItems((prevState) => ({
       ...prevState,
       betMessage: false,
@@ -59,8 +57,6 @@ const Sidebar = () => {
       getRender: true,
     }));
   };
-
-  console.log("true", show);
 
   return (
     <>

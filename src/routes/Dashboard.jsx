@@ -174,7 +174,7 @@ const Dashboard = () => {
   const pathname = window.location.pathname;
 
   useEffect(() => {
-    console.log("Piath", pathname);
+    window.scrollTo(0, 0);
   }, [pathname, items.getRender]);
 
   const availableWidth = window?.screen?.availWidth;
@@ -206,12 +206,10 @@ const Dashboard = () => {
                 <Sidebar />
               </div>
             )}
-            <div className="wrapper-main-body">
-              <div className="main" id="detail">
-                {(isTablet || isMobile || isSmallMobile) && <BalanceButtons />}
-                <Outlet />
-                <ToastContainer />
-              </div>
+            <div className="main" id="detail">
+              {(isTablet || isMobile || isSmallMobile) && <BalanceButtons />}
+              <Outlet />
+              <ToastContainer />
             </div>
           </div>
         </div>

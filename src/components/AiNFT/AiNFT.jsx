@@ -5,6 +5,7 @@ import AiFilter from "./AiFilter";
 import { Filter } from "../ActiveBet/ActiveBetData";
 import { useAxios } from "../../hooks/useAxios";
 import AiDropDownFilter from "./AiDropDownFilter";
+import Maintenance from "../Maintenance/Maintenance";
 
 const AiNFT = () => {
   const [itemData, setItemData] = useState(Filter);
@@ -134,6 +135,7 @@ const AiNFT = () => {
           />
         </div>
       </div>
+      <Maintenance />
     </AINFTContainer>
   );
 };

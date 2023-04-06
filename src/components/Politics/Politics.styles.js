@@ -197,23 +197,24 @@ export const PoliticsContainer = styled.div`
 
 export const StatContainer = styled.div`
   display: flex;
-  justify-content: space-around;
   align-items: center;
   width: 100%;
   background: #0f212e;
-  border-radius: 10px;
   margin: 10px 0px;
   padding: 10px 0px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  gap: 15px;
 
   .event-first-item {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 15px;
     width: 100%;
     padding: 0px 12px 0px 40px;
+
+    .event-detials-main {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
     .event-details-wrapper {
       display: flex;
@@ -222,13 +223,13 @@ export const StatContainer = styled.div`
       justify-content: space-around;
       padding: 10px;
       width: 100%;
-      max-width: 945px;
-      min-height: 225px;
+      max-width: 473px;
+      min-height: 203px;
       background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
       border: 1px solid #5f9ea0;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 12px;
-      gap: 30px;
+      gap: 26px;
       margin: 0 auto;
 
       .event-title {
@@ -269,13 +270,87 @@ export const StatContainer = styled.div`
       }
     }
 
-    .video-wrapper {
+    .video-main-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .video-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: #435b6a;
+        border-radius: 12px;
+        max-width: 473px;
+        max-height: 225px;
+
+        iframe {
+          border-radius: 12px;
+          height: 225px;
+        }
+      }
+
+      .event-status-main {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 8px;
+
+        .event-mini-main {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          /* gap: 5px; */
+          background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+          border: 1px solid #4682b4;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 12px;
+          padding: 2px 5px;
+          width: 100%;
+
+          span:nth-child(1) {
+            color: #fff;
+          }
+
+          span:nth-child(2) {
+            color: #87cefa;
+          }
+
+          span:nth-child(3) {
+            color: #fff;
+          }
+        }
+        .event-mini-main:nth-child(1) {
+          border: 1px solid #ffcd4b;
+        }
+      }
+    }
+  }
+
+  .event-status-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .event-mini-wrapper {
       display: flex;
       justify-content: center;
-      align-items: center;
-      width: 100%;
-      background: #435b6a;
+      gap: 5px;
+      background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+      border: 1px solid #4682b4;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 12px;
+      padding: 10px 45px;
+
+      span:nth-child(1) {
+        color: #fff;
+        font-size: 14px;
+      }
+
+      span:nth-child(2) {
+        color: #87cefa;
+      }
     }
   }
 
