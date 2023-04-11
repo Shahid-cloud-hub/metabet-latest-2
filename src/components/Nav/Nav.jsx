@@ -13,11 +13,9 @@ import DropdownNFT from "./DropdownNFT";
 const Header = (props) => {
   const pathname = window.location.pathname;
   const { isDesktop, isTablet, isMobile, isSmallMobile } = useBreakpoint();
-  const [show, setShow] = useState(false);
   const { setItems } = useContext(Context);
 
   const callback = () => {
-    setShow(true);
     setItems((prevState) => ({
       ...prevState,
       betMessage: false,
