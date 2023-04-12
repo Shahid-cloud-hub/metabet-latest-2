@@ -27,7 +27,7 @@ const MarketPlaceComponent = () => {
     <MarketPlaceContainer>
       <div className="cryptoAi">
         <div className="head">
-          <span id="purple">CryptoAi</span>
+          <span id="purple">CryptoAi NFT #1</span>
           <img src={mainImg1} alt="mainImg1" />
           <span id="white">Donald Trump</span>
         </div>

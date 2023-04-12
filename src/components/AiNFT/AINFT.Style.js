@@ -341,7 +341,7 @@ export const MarketPlaceContainer = styled("div")`
 
     #white {
       font-family: "mostra-nuova";
-      font-weight: 700;
+      font-weight: 800;
       font-size: 16px;
       line-height: 95%;
       color: #e1f5fe;
@@ -361,7 +361,7 @@ export const MarketPlaceContainer = styled("div")`
       background-clip: text;
       font-family: "mostra-nuova";
       font-style: normal;
-      font-weight: 700;
+      font-weight: 900;
       font-size: 14px;
     }
     .head {
