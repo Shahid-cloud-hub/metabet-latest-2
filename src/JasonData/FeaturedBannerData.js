@@ -2501,7 +2501,6 @@ export const bData = [
     name: "More than $18,000",
     btn: "Bet Now",
     info: "Short information",
-    width: "249px",
     height: "106px",
   },
   {
@@ -2509,7 +2508,7 @@ export const bData = [
     name: "$17,000 - $18,000",
     btn: "Bet Now",
     info: "Short information",
-    width: "249px",
+    width: "447px",
     height: "106px",
   },
   {
@@ -2517,40 +2516,34 @@ export const bData = [
     name: "Less than $17,000",
     btn: "Bet Now",
     info: "Short information",
-    width: "249px",
     height: "106px",
   },
 ];
 export const TruscData = [
   {
     id: 1,
-    title: "MAX SUPPLY",
-    placeholder: "1b",
+    title: "POOL SIZE",
+    placeholder: "$1",
   },
   {
     id: 2,
-    title: "TOTAL SUPPLY",
+    title: "NUMBER OF BETS",
     placeholder: "0",
   },
   {
     id: 3,
-    title: "CIRCULATING SUPPLY",
-    placeholder: "0",
+    title: "ODDS",
+    placeholder: "/",
   },
   {
     id: 4,
-    title: "PRICE",
-    placeholder: "$0.99972",
+    title: "SHARE OF POOL",
+    placeholder: "0 %",
   },
   {
     id: 5,
-    title: "MARKET CAP",
-    placeholder: "0",
-  },
-  {
-    id: 6,
-    title: "VOLUME 24H",
-    placeholder: "0",
+    title: "PAYOUT",
+    placeholder: "$0.00",
   },
 ];
 export const TruscData1 = [
@@ -2590,15 +2583,12 @@ export const andrew = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const Kardashian = [
@@ -2611,8 +2601,6 @@ export const Kardashian = [
     bet_number: "Number of Bets",
     odds: "Odds",
     gap: "10px",
-    width: "145px",
-    height: "90px",
     padding: "10px 40px",
   },
   {
@@ -2623,8 +2611,7 @@ export const Kardashian = [
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
     odds: "Odds",
-    width: "145px",
-    height: "90px",
+    width: "447px",
     gap: "10px",
   },
   {
@@ -2635,8 +2622,6 @@ export const Kardashian = [
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
     odds: "Odds",
-    width: "145px",
-    height: "90px",
     gap: "10px",
   },
   {
@@ -2647,8 +2632,7 @@ export const Kardashian = [
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
     odds: "Odds",
-    width: "145px",
-    height: "90px",
+    width: "447px",
     gap: "10px",
   },
   {
@@ -2659,8 +2643,6 @@ export const Kardashian = [
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
     odds: "Odds",
-    width: "145px",
-    height: "90px",
     gap: "10px",
   },
   {
@@ -2671,8 +2653,7 @@ export const Kardashian = [
     Pool_size: "Pool Size",
     bet_number: "Number of Bets",
     odds: "Odds",
-    width: "145px",
-    height: "90px",
+    width: "447px",
     gap: "10px",
   },
 ];
@@ -2681,29 +2662,23 @@ export const FED = [
     id: 1,
     name: "25",
     btn: "Bet",
-    width: "249px",
-    height: "101px",
   },
   {
     id: 2,
     name: "50",
     btn: "Bet",
-    width: "249px",
-    height: "101px",
+    width: "447px",
   },
   {
     id: 3,
     name: "75",
     btn: "Bet",
-    width: "249px",
-    height: "101px",
   },
   {
     id: 4,
     name: "100",
     btn: "Bet",
-    width: "249px",
-    height: "101px",
+    width: "447px",
   },
 ];
 export const crufts = [
@@ -2711,15 +2686,12 @@ export const crufts = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const DXY = [
@@ -2727,22 +2699,17 @@ export const DXY = [
     id: 1,
     name: "More than $104",
     btn: "Bet",
-    width: "237px",
-    height: "101px",
   },
   {
     id: 2,
     name: "Between $104-$102",
     btn: "Bet",
-    width: "237px",
-    height: "101px",
+    width: "447px",
   },
   {
     id: 3,
     name: "Less than $102",
     btn: "Bet",
-    width: "237px",
-    height: "101px",
   },
 ];
 export const SBF = [
@@ -2750,29 +2717,23 @@ export const SBF = [
     id: 1,
     name: "Stays in Bahamas 🏝️ Prison",
     btn: "Bet",
-    width: "237px",
-    height: "101px",
   },
   {
     id: 2,
     name: "Prison 🇺🇸 ⛓️ ",
     btn: "Bet",
-    width: "237px",
-    height: "101px",
+    width: "447px",
   },
   {
     id: 3,
     name: "Suicide 👻 ",
     btn: "Bet",
-    width: "237px",
-    height: "101px",
   },
   {
     id: 4,
     name: "Freedom 😂",
     btn: "Bet",
-    width: "237px",
-    height: "101px",
+    width: "447px",
   },
 ];
 export const Cryptocurrency = [
@@ -2781,24 +2742,19 @@ export const Cryptocurrency = [
     icon: binance,
     name: "BINANCE",
     btn: "Bet",
-    width: "245px",
-    height: "101px",
   },
   {
     id: 2,
     icon: dodge,
     name: "DODGE",
     btn: "Bet",
-    width: "245px",
-    height: "101px",
+    width: "447px",
   },
   {
     id: 3,
     icon: twitter,
     name: "ELON'S TWITTER TOKEN",
     btn: "Bet",
-    width: "245px",
-    height: "101px",
   },
 ];
 export const Grayscale = [
@@ -2806,15 +2762,12 @@ export const Grayscale = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const Twitter = [
@@ -2822,15 +2775,12 @@ export const Twitter = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const ethereum = [
@@ -2838,15 +2788,12 @@ export const ethereum = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const Genesis = [
@@ -2854,15 +2801,12 @@ export const Genesis = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const DCG = [
@@ -2870,15 +2814,12 @@ export const DCG = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const Silvergate = [
@@ -2886,15 +2827,12 @@ export const Silvergate = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const China = [
@@ -2902,15 +2840,12 @@ export const China = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const Richest = [
@@ -2918,43 +2853,34 @@ export const Richest = [
     id: 1,
     name: "Elon Musk",
     btn: "Bet",
-    width: "150px",
-    height: "106px",
   },
   {
     id: 2,
     name: "Bill Gate",
     btn: "Bet",
-    width: "150px",
-    height: "106px",
+    width: "447px",
   },
   {
     id: 3,
     name: "Gautam Adani",
     btn: "Bet",
-    width: "150px",
-    height: "106px",
   },
   {
     id: 4,
     name: "Jeff Bezos",
     btn: "Bet",
-    width: "150px",
-    height: "106px",
+    width: "447px",
   },
   {
     id: 5,
     name: "Bernard Arnault",
     btn: "Bet",
-    width: "150px",
-    height: "106px",
   },
   {
     id: 6,
     name: "None of these",
     btn: "Bet",
-    width: "150px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const Dana = [
@@ -2962,15 +2888,12 @@ export const Dana = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const US = [
@@ -2978,15 +2901,12 @@ export const US = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const Volodymyr = [
@@ -2994,15 +2914,12 @@ export const Volodymyr = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const Win = [
@@ -3010,15 +2927,12 @@ export const Win = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const rain = [
@@ -3026,15 +2940,12 @@ export const rain = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
 ];
 export const crap = [
@@ -3042,15 +2953,12 @@ export const crap = [
     id: 1,
     name: "YES",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "NO",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
 ];
 export const Currency = [
@@ -3058,22 +2966,17 @@ export const Currency = [
     id: 1,
     name: "More than $18,000",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
   {
     id: 2,
     name: "$17,000 - $18,000",
     btn: "Bet",
     btnColor: "#000000",
-    width: "249px",
-    height: "106px",
+    width: "447px",
   },
   {
     id: 3,
     name: "Less than $17,000",
     btn: "Bet",
-    width: "249px",
-    height: "106px",
   },
 ];

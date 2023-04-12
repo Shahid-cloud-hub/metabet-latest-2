@@ -5,12 +5,22 @@ import Loading from "../Loading/Loading";
 import { StatContainer } from "../Politics/Politics.styles";
 import Tabs from "../TabFifa/Tab";
 import Times from "../Time/Times";
-import { Info, StatisticsContainer } from "./Stats.syle";
+import { GetStatContainer, Info, StatisticsContainer } from "./Stats.syle";
 import clock1 from "../../assets/images/BitcoinPrice/clock1.png";
 import clock2 from "../../assets/images/BitcoinPrice/clock2.png";
 import BetNowBtns from "../BetNowBtns/BetNowBtns";
 import Carousel from "../Politics/Carousel/Carousel";
 import { StatContainerCurrencies } from "../BitcoinPrice/BitcoinPrice.styles";
+
+import Polygon from "../../assets/images/Polygon.png";
+import clock from "../../assets/images/clock.png";
+import banner from "../../assets/images/newBanner.png";
+
+import BetUiImg from "../../assets/images/bet-ui/bet.png";
+import StruImg from "../../assets/images/bet-ui/stru.png";
+import FreeBetImg from "../../assets/images/bet-ui/betFree.png";
+import ReactPlayer from "react-player/youtube";
+import CurrencyConvertor from "../CurrencyConvertor/CurrencyConvertor";
 
 const GetStatistics = () => {
   let { group, title, id } = useParams();
@@ -18,13 +28,14 @@ const GetStatistics = () => {
   const { fetchData, response, loading } = useAxios();
   const [addStyle, setAddStyle] = useState();
 
-  console.log(group, title, id, "get Statistics");
+  useEffect(() => {
+    getBanners();
+    window.scrollTo(0, 0);
+  }, [group, title, id]);
 
   const callback = (id) => {
     setAddStyle(id);
   };
-
-  console.log("Get Parent ", addStyle);
 
   const getBanners = async () => {
     await fetchData({
@@ -34,42 +45,6 @@ const GetStatistics = () => {
   };
 
   const item = response?.stats?.data;
-
-  console.log("test curr", item);
-
-  useEffect(() => {
-    getBanners();
-    window.scrollTo(0, 0);
-  }, [group, title, id]);
-
-  // const FormatDate = (dateNumber) => {
-  //   const date = new Date(dateNumber);
-  //   const options = {
-  //     // weekday: "long",
-  //     year: "numeric",
-  //     month: "long",
-  //     day: "numeric",
-  //     // hour: "numeric",
-  //     // minute: "numeric",
-  //     // second: "numeric",
-  //     timeZoneName: "short",
-  //   };
-  //   const humanReadableDate = date?.toLocaleString("en-US", options);
-  //   const noSpacesDate = humanReadableDate?.replace(/\s/g, "");
-  //   console.log(noSpacesDate);
-
-  //   const day = noSpacesDate.slice(8, 10);
-  //   const month = humanReadableDate.substr(0, 3);
-  //   const year = humanReadableDate.substr(13, 4);
-
-  //   const reversedDate = day + month + year;
-  //   const SpacesDate = reversedDate?.replace(/\s/g, " ");
-
-  //   // const day = humanReadableDate.substr(0, 3);
-  //   console.log(SpacesDate, "date");
-
-  //   return humanReadableDate;
-  // };
 
   const FormatDate = (dateNumber) => {
     const date = new Date(dateNumber);
@@ -94,8 +69,10 @@ const GetStatistics = () => {
     return formattedDate;
   };
 
+  const result = item?.verdict_title?.length;
+
   return (
-    <>
+    <GetStatContainer>
       {/* // Trending Event // */}
       {loading
         ? item?.stats_title && <Loading />
@@ -103,9 +80,84 @@ const GetStatistics = () => {
             group == "football" ||
             group == "currencies" ||
             group == "trending-event") && (
-            <StatContainer>
-              <div className="rectangle">
-                {/* <span>Statistic:</span> */}
+            <StatContainer increaseFontSize={result > 45 ? "18px" : "26px"}>
+              <div className="event-first-item">
+                <div className="event-detials-main">
+                  <div className="event-details-wrapper">
+                    <span className="event-title">{item?.verdict_title}</span>
+                    <div className="img-wrapper">
+                      <img
+                        src={item?.background_img}
+                        width="200px"
+                        height="100px"
+                        alt="event image"
+                      />
+                      <div className="event-desc">
+                        <p>
+                          In Q2 2022 Musk disclosed the idea of adding Dogecoin
+                          as a payment method for the Twitter subscription
+                          service, Blue, triggering a price surge.
+                        </p>
+                        <div className="event-time">
+                          <div>
+                            <img src={clock} alt="clock" />
+                          </div>
+                          <span id="yellow">18:40:20</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span>
+                      Only 8 previous Championships have recorded as being
+                      without rain interuptions since 1922, 1931, 1976, 1977,
+                      1993, 1995, 2009, 2010, 2019.
+                    </span>
+                  </div>
+                  <div className="event-status-wrapper">
+                    <div className="event-mini-wrapper">
+                      <span>Total Pool Size:</span>
+                      <span>$0.00</span>
+                    </div>
+                    <div className="event-mini-wrapper">
+                      <span>Total number of Bets:</span>
+                      <span>0</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="video-main-wrapper">
+                  <div className="video-wrapper">
+                    {item?.prediction_video?.length ? (
+                      <ReactPlayer
+                        url={item?.prediction_video}
+                        style={{
+                          maxWidth: "472px",
+                          maxHeight: "225px",
+                        }}
+                      />
+                    ) : (
+                      <div>
+                        <img src={Polygon} alt="video" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="event-status-main">
+                    <div className="event-mini-main">
+                      <img src={BetUiImg} alt="bet" />
+                      <span>$0.00</span>
+                    </div>
+                    <div className="event-mini-main">
+                      <img src={StruImg} alt="bet" />
+                      <span>$0.00</span>
+                    </div>
+                    <div className="event-mini-main">
+                      <div style={{ display: "flex" }}>
+                        <img src={FreeBetImg} alt="bet" />
+                      </div>
+                      <span>0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="rectangle">
                 <span>{item?.stats_title}</span>
               </div>
               <div className="vs">
@@ -174,7 +226,7 @@ const GetStatistics = () => {
                   width={450}
                   alt="Politics_member"
                 />
-              </div>
+              </div> */}
             </StatContainer>
           )}
       {/* // UFC && Football // */}
@@ -372,19 +424,18 @@ const GetStatistics = () => {
           </div>
         </StatContainerCurrencies>
       )}
-      <Info>
-        <BetNowBtns getPath={pathname} callback={callback} />
-      </Info>
-      <Tabs
+      <BetNowBtns getPath={pathname} callback={callback} />
+      <CurrencyConvertor />
+      {/* <Tabs
         getId={item?.smart_contract_id}
         winId={addStyle}
         // getName={getName}
         getPrediction={item?.prediction_video || item?.u_prediction_video}
         getReview={item?.review_video || item?.u_preview_video}
         // eventStatus={eventStatus}
-      />
-      <Carousel />
-    </>
+      /> */}
+      {/* <Carousel /> */}
+    </GetStatContainer>
   );
 };
 

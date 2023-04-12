@@ -327,6 +327,10 @@ export const AINFTContainer = styled("div")`
 
 export const MarketPlaceContainer = styled("div")`
   display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
   .cryptoAi {
     display: flex;
     flex-direction: column;

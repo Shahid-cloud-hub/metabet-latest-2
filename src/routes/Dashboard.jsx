@@ -10,6 +10,7 @@ import PopUpModel from "../components/PopUpModel/PopUpModel";
 import { Context } from "../Context";
 import Confetti from "react-confetti";
 import BalanceButtons from "../components/BalanceButtons/BalanceButtons";
+import BalanceButtonsNFT from "../components/BalanceButtons/BalanceButtonsNFT";
 import { isValidMnemonic } from "ethers/lib/utils";
 
 const ContainerWrapper = styled("div")`
@@ -174,7 +175,7 @@ const Dashboard = () => {
   const pathname = window.location.pathname;
 
   useEffect(() => {
-    console.log("Piath", pathname);
+    window.scrollTo(0, 0);
   }, [pathname, items.getRender]);
 
   const availableWidth = window?.screen?.availWidth;
@@ -206,12 +207,14 @@ const Dashboard = () => {
                 <Sidebar />
               </div>
             )}
-            <div className="wrapper-main-body">
-              <div className="main" id="detail">
-                {(isTablet || isMobile || isSmallMobile) && <BalanceButtons />}
-                <Outlet />
-                <ToastContainer />
-              </div>
+            <div className="main" id="detail">
+              {pathname === "/ai-nft"
+                ? (isTablet || isMobile || isSmallMobile) && (
+                    <BalanceButtonsNFT />
+                  )
+                : (isTablet || isMobile || isSmallMobile) && <BalanceButtons />}
+              <Outlet />
+              <ToastContainer />
             </div>
           </div>
         </div>

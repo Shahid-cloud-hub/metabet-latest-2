@@ -26,6 +26,9 @@ const WorldcupLandingPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  console.log("first", response);
+
   return (
     <>
       <DashContainer>
@@ -56,20 +59,38 @@ const WorldcupLandingPage = () => {
               {response?.slice(0, 31)?.map((item, index) => (
                 <>
                   <div className="card" key={index}>
-                    <img
-                      src={item?.event?.banner}
-                      alt={item?.event?.title}
-                      style={{ width: "85%" }}
-                      s
-                      onClick={() =>
-                        navigate(
-                          `${item?.group}/${item?.event?.title}/statistics/${item?.event?.highlights[0]?._id}`,
-                          {
-                            state: item?.event?.highlights[0]?._id,
-                          }
-                        )
-                      }
-                    />
+                    {item?.event?.banner && (
+                      <img
+                        src={item?.event?.banner}
+                        alt={item?.event?.title}
+                        style={{ width: "85%" }}
+                        s
+                        onClick={() =>
+                          navigate(
+                            `${item?.group}/${item?.event?.title}/statistics/${item?.event?.highlights[0]?._id}`,
+                            {
+                              state: item?.event?.highlights[0]?._id,
+                            }
+                          )
+                        }
+                      />
+                    )}
+                    {item?.event?.bet_banner && (
+                      <img
+                        src={item?.event?.bet_banner}
+                        alt={item?.event?.title}
+                        style={{ width: "85%" }}
+                        
+                        onClick={() =>
+                          navigate(
+                            `${item?.group}/${item?.event?.title}/statistics/${item?.event?.possibleComes[0]?._id}`,
+                            {
+                              state: item?.event?.possibleComes[0]?._id,
+                            }
+                          )
+                        }
+                      />
+                    )}
                   </div>
                 </>
               ))}

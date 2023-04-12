@@ -374,7 +374,7 @@ border-radius: 12px;
   gap: 20px;
 
 
-  .amount{
+  .amount {
     display:flex;
     flex-direction: column;
     align-items: center;

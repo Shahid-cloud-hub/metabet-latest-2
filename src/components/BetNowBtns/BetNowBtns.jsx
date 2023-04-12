@@ -23,12 +23,22 @@ import {
   Richest,
   SBF,
   Silvergate,
+  TruscData,
   Twitter,
   US,
   Volodymyr,
   Win,
 } from "../../JasonData/FeaturedBannerData";
 import { Info } from "../Statistics/Stats.syle";
+import { Balance } from "../SocialMedia/SocialMedia.styles";
+import { StatContainer } from "../Politics/Politics.styles";
+import Polygon from "../../assets/images/Polygon.png";
+import clock from "../../assets/images/clock.png";
+import BetUiImg from "../../assets/images/bet-ui/bet.png";
+import StruImg from "../../assets/images/bet-ui/stru.png";
+import FreeBetImg from "../../assets/images/bet-ui/betFree.png";
+import ReactPlayer from "react-player/youtube";
+import banner from "../../assets/images/newBanner.png";
 
 const BetNowBtns = ({ getPath, callback }) => {
   const [addStyle, setAddStyle] = useState();
@@ -124,18 +134,70 @@ const BetNowBtns = ({ getPath, callback }) => {
 
   const { betNowData } = getBetBowData(getPath);
 
+  const size = betNowData?.length;
+
   return (
-    <Info style={{ justifyContent: "space-evenly" }}>
+    <Info
+      betType={size > 2 || size >= 3 ? "flex" : "" ? "grid" : "flex"}
+      betWrap={size >= 3 ? "wrap" : ""}
+      betDir={size > 2 || size >= 3 ? "1fr 1fr" : ""}
+      betMaxWidth={size > 2 || size >= 3 ? "1000px" : "" ? "971px" : ""}
+      betMargin={size > 2 || size >= 3 ? "0 auto" : ""}
+    >
       {betNowData?.map((item) => (
         <>
-          <div className="win_wrapper" style={{ gap: item?.gap }}>
-            <div className="Kardashian">
-              {item?.img && <img src={item?.img} alt="img" />}
+          <div
+            className="bet-details-wrapper"
+            style={{ width: item?.width && item?.width }}
+          >
+            <span className="bet-title">{item.name}</span>
+            <hr />
+            <div className="bet-status-box-wrapper">
+              {TruscData?.map((item) => (
+                <div className="bet-status-box">
+                  <span className="bet-status-title">{item.title}</span>
+                  <span className="bet-status-count">{item.placeholder}</span>
+                </div>
+              ))}
             </div>
+            <div className="bet-amount-wrapper">
+              <div className="bet-amount">
+                <span>Amount</span>
+                <input type="text" placeholder="$0.00" disabled />
+              </div>
+              <button>Bet</button>
+            </div>
+          </div>
+          {/* <div className="liquidity-pool">
+            <span>Yes</span>
+            <hr />
+
+            <div className="fox-stats">
+              {TruscData?.map((item) => (
+                <div className="text">
+                  <span id="title">{item.title}</span>
+                  <input type="text" placeholder={item.placeholder} disabled />
+                </div>
+              ))}
+            </div>
+            <div className="amount">
+              <div className="amountText">
+                <span>Amount</span>
+                <input type="text" placeholder="$0.00" disabled />
+              </div>
+              <button>Bet</button>
+            </div>
+          </div> */}
+          {/* <div className="win_wrapper" style={{ gap: item?.gap }}>
+            {item?.img && (
+              <div className="Kardashian">
+                <img src={item?.img} alt="img" />
+              </div>
+            )}
             <div
               className="WIN"
               key={item.id}
-              style={{ width: item?.width, height: item?.height }}
+              // style={{ width: item?.width, height: item?.height }}
             >
               <p>
                 {" "}
@@ -153,8 +215,8 @@ const BetNowBtns = ({ getPath, callback }) => {
                 {item.btn}
               </button>
             </div>
-            <div>
-              {item?.Pool_size && (
+            {item?.Pool_size && (
+              <div>
                 <div className="betStat">
                   <div>
                     <span>{item?.Pool_size}</span>
@@ -169,9 +231,9 @@ const BetNowBtns = ({ getPath, callback }) => {
                     <span id="clr">1.2</span>
                   </div>
                 </div>
-              )}
-            </div>
-          </div>
+              </div>
+            )}
+          </div> */}
         </>
       ))}
     </Info>

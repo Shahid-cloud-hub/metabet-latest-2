@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const GetStatContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+`;
+
 export const StatisticsContainer = styled.div`
   display: flex;
   justify-content: space-around;
@@ -8,12 +15,11 @@ export const StatisticsContainer = styled.div`
   border-radius: 10px;
   margin: 10px auto;
   max-width: 975px;
-  .rectangle{
-    span{
+  .rectangle {
+    span {
       font-size: 14px;
       text-align: center;
       color: #ffffff;
-
     }
   }
 
@@ -634,29 +640,208 @@ export const StatisticsContainer = styled.div`
 `;
 
 export const Info = styled.div`
-  display: flex;
-  /* justify-content: space-around; */
-  background: #112533;
-  border-radius: 10px;
-  gap: 10px;
-  justify-content: space-evenly;
+  display: ${(props) => props.betType};
+  grid-template-columns: ${(props) => props.betDir};
+  flex-wrap: ${(props) => props.betWrap};
+  align-items: center;
+  width: 100%;
+  background: #0f212e;
+  margin: 10px 0px;
   padding: 10px 0px;
+  justify-content: center;
+  gap: 16px;
+  transform: translate(12px, 0px);
+  max-width: ${(props) => props.betMaxWidth};
+  margin: ${(props) => props.betMargin};
 
-  // justify-content: center;
-  /* padding: 10px 15px; */
-  /* gap: 30px; */
+  .bet-detials-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bet-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    width: 100%;
+    width: 473px;
+    min-height: 203px;
+    background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+    border: 1px solid #5f9ea0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    gap: 30px;
+
+    .bet-title {
+      color: #1e90ff;
+      font-weight: 700;
+      font-size: 21px;
+      padding-top: 20px;
+    }
+
+    hr {
+      height: 2px;
+      width: 100%;
+      background: #1e90ff;
+      box-shadow: 0px 0px 0px #ffffff;
+      border: none;
+    }
+
+    .bet-status-box-wrapper {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      .bet-status-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 5px;
+        max-width: 120px;
+        width: 100%;
+        font-family: "mostra-nuova", sans-serif;
+        min-height: 72px;
+        background: linear-gradient(180deg, #1c1c1c 39.58%, #28516b 100%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #1e90ff;
+        border-radius: 8px;
+        gap: 12px;
+
+        .bet-status-title {
+          color: #5f9ea0;
+          font-weight: 600;
+          font-size: 14px;
+        }
+
+        .bet-status-count {
+          color: #0070c0;
+          text-shadow: 0px 0px 30px #000000;
+          font-weight: 700;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .bet-amount-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 200px;
+      gap: 15px;
+
+      .bet-amount {
+        display: flex;
+        justify-content: space-around;
+        padding: 8px;
+        background: linear-gradient(180deg, #1c1c1c 39.58%, #28516b 100%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #1e90ff;
+        border-radius: 8px;
+
+        span {
+          color: #fff;
+        }
+
+        input {
+          background: transparent;
+          border: none;
+          text-align: right;
+
+          &::placeholder {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 14px;
+          }
+        }
+      }
+
+      button {
+        background: linear-gradient(180deg, #fab263 0%, #5f3a12 80.03%);
+        border-radius: 8px;
+        border: none;
+        padding: 8px 15px;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .bet-main-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .bet-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background: #435b6a;
+      border-radius: 12px;
+      min-width: 473px;
+      max-height: 225px;
+
+      iframe {
+        border-radius: 12px;
+        height: 225px;
+      }
+    }
+
+    .bet-status-main {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 8px;
+
+      .bet-mini-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* gap: 5px; */
+        background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+        border: 1px solid #4682b4;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+        padding: 2px 5px;
+        width: 100%;
+
+        span:nth-child(1) {
+          color: #fff;
+        }
+
+        span:nth-child(2) {
+          color: #87cefa;
+        }
+
+        span:nth-child(3) {
+          color: #fff;
+        }
+      }
+      .event-mini-main:nth-child(1) {
+        border: 1px solid #ffcd4b;
+      }
+    }
+  }
 
   .win_wrapper {
     display: flex;
-    flex-direction: column;
-    padding: 10px 0px;
-
-    /* gap: 10px; */
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    /* padding: 0px 12px 0px 40px; */
   }
-  .Kardashian{
+
+  .Kardashian {
     margin: 0 auto;
-
   }
+
   .betStat {
     display: flex;
     flex-direction: column;
@@ -666,6 +851,7 @@ export const Info = styled.div`
     padding: 10px;
     max-width: 135px;
     width: 100%;
+
     div {
       display: flex;
       align-items: center;
@@ -705,17 +891,13 @@ export const Info = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: #0a1a25;
-    border-radius: 10px;
-    padding: 0px 5px;
-    /* padding: 10px; */
-    max-width: 300px;
-    min-height: 106px;
     width: 100%;
-    justify-content: space-evenly;
-    
+    background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+    border: 1px solid #4682b4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    max-width: 473px;
 
-    /* gap: 10px; */
     .title {
       display: flex;
       gap: 2px;
@@ -744,7 +926,6 @@ export const Info = styled.div`
       cursor: pointer;
       padding: 10px 60px;
       max-width: 207px;
-
     }
     span {
       font-weight: 500;

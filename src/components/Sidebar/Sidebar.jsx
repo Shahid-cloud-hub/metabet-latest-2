@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Container } from "./Sidebar.style";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Footer from "../Footer/Footer";
 
 import { first_array, sec_array } from "../../JasonData/Sidebar_routes";
