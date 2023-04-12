@@ -5,6 +5,31 @@ export const GetStatContainer = styled("div")`
   flex-direction: column;
   width: 100%;
   justify-content: center;
+
+  @media screen and (max-width: 1080px) {
+    max-width: 950px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 820px) {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 620px) {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 420px) {
+    max-width: 370px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 375px) {
+    max-width: 320px;
+    margin: 0 auto;
+  }
 `;
 
 export const StatisticsContainer = styled.div`
@@ -645,7 +670,7 @@ export const Info = styled.div`
   flex-wrap: ${(props) => props.betWrap};
   align-items: center;
   width: 100%;
-  background: #0f212e;
+  /* background: #0f212e; */
   margin: 10px 0px;
   padding: 10px 0px;
   justify-content: center;
@@ -887,7 +912,7 @@ export const Info = styled.div`
     padding: 10px;
   }
 
-  .WIN {
+  /* .WIN {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -916,7 +941,7 @@ export const Info = styled.div`
     }
     button {
       align-items: center;
-      /* max-width: 171px; */
+      max-width: 171px;
       min-height: 38px;
       background: #fc4c1e;
       border-radius: 6px;
@@ -932,121 +957,111 @@ export const Info = styled.div`
       font-size: 10px;
       color: #d6d6d6;
     }
-  }
+  } */
 
-  @media screen and (max-width: 1080px) {
-    max-width: 690px;
-    margin: 0px 5px;
+  @media screen and (max-width: 1380px) {
+    transform: translate(22px, 0px);
+    .bet-details-wrapper {
+      width: 380px;
 
-    .WIN {
-      padding: 10px;
-      max-width: 145px;
-
-      p {
-        font-size: 12px;
-      }
-
-      button {
-        font-size: 10px;
-        padding: 5px 55px;
-        min-height: 20px;
+      .bet-status-box-wrapper {
+        .bet-status-box {
+          max-width: 98px;
+        }
       }
     }
   }
 
-  @media screen and (max-width: 820px) {
-    max-width: 420px;
-    margin: 0px 5px;
+  @media screen and (max-width: 1280px) {
+    transform: translate(25px, 0px);
+    .bet-details-wrapper {
+      width: 340px;
 
-    .WIN {
-      padding: 5px;
-      max-width: 76px;
-      gap: 5px;
-      border-radius: 3.75px;
-
-      p {
-        font-size: 9px;
+      .bet-status-box-wrapper {
+        .bet-status-box {
+          max-width: 75px;
+          .bet-status-title {
+            font-size: 10px;
+          }
+        }
       }
+    }
+  }
 
-      button {
-        padding: 0px 25px;
-        font-size: 7px;
-        border-radius: 2.25px;
-        min-height: 15px;
+  @media screen and (max-width: 1080px) {
+    transform: none;
+  }
+
+  @media screen and (max-width: 820px) {
+    .bet-details-wrapper {
+      width: 100%;
+
+      .bet-status-box-wrapper {
+        .bet-status-box {
+          max-width: 75px;
+          .bet-status-title {
+            font-size: 10px;
+          }
+        }
       }
     }
   }
 
   @media screen and (max-width: 768px) {
-    .WIN {
-      padding: 10px;
-      max-width: 150px;
+    .bet-details-wrapper {
+      width: 100%;
 
-      p {
-        font-size: 12px;
-      }
-
-      button {
-        font-size: 10px;
-        padding: 5px 45px;
-        min-height: 20px;
+      .bet-status-box-wrapper {
+        .bet-status-box {
+          max-width: 105px;
+          .bet-status-title {
+            font-size: 14px;
+          }
+        }
       }
     }
   }
+
   @media screen and (max-width: 620px) {
-    .WIN {
-      padding: 5px 5px;
-      max-width: 115px;
+    padding: 0px;
+    .bet-details-wrapper {
+      width: 100%;
 
-      p {
-        font-size: 9px;
-      }
-
-      button {
-        font-size: 8.386px;
-        padding: 0px 35px;
-        min-height: 20px;
+      .bet-status-box-wrapper {
+        .bet-status-box {
+          max-width: 105px;
+          .bet-status-title {
+            font-size: 14px;
+          }
+        }
       }
     }
   }
   @media screen and (max-width: 420px) {
-    .WIN {
-      padding: 5px;
-      max-width: 76px;
-      gap: 5px;
-      border-radius: 3.75px;
+    .bet-details-wrapper {
+      width: 100%;
 
-      p {
-        font-size: 6px;
-      }
-
-      button {
-        padding: 0px 25px;
-        font-size: 5.25px;
-        border-radius: 2.25px;
-        min-height: 15px;
+      .bet-status-box-wrapper {
+        .bet-status-box {
+          max-width: 70px;
+          .bet-status-title {
+            font-size: 10px;
+          }
+        }
       }
     }
   }
   @media screen and (max-width: 375px) {
-    max-width: 340px;
-    margin: 0 auto;
+    .bet-details-wrapper {
+      width: 100%;
 
-    .WIN {
-      padding: 5px;
-      max-width: 76px;
-      gap: 5px;
-      border-radius: 3.75px;
-
-      p {
-        font-size: 6px;
-      }
-
-      button {
-        padding: 0px 25px;
-        font-size: 5.25px;
-        border-radius: 2.25px;
-        min-height: 15px;
+      .bet-status-box-wrapper {
+        .bet-status-box {
+          max-width: 70px;
+          .bet-status-title {
+            font-size: 10px;
+          }
+        }
       }
     }
   }

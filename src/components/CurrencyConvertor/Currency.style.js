@@ -4,18 +4,20 @@ export const CurrencyConvertorContainer = styled("div")`
   display: flex;
   align-items: center;
   width: 100%;
-  background: #0f212e;
+  /* background: #0f212e; */
   margin: 10px 0px;
   padding: 10px 0px;
   justify-content: center;
   gap: 16px;
-  transform: translate(12px, 0px);
 
   .background {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 985px;
+    width: 100%;
+    max-width: 980px;
+    /* padding: 0px 30px; */
+    transform: translate(12px, 0px);
   }
 
   .tabs {
@@ -156,7 +158,7 @@ export const CurrencyConvertorContainer = styled("div")`
         -webkit-appearance: none;
         margin: 0;
       }
-      .dropdown {
+      .dropdown-cur {
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -229,10 +231,35 @@ export const CurrencyConvertorContainer = styled("div")`
     }
   }
 
+  @media screen and (max-width: 1080px) {
+    .background {
+      max-width: 790px;
+      margin: 0 auto;
+      transform: none;
+    }
+
+    .tabs-btn {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    .background {
+      max-width: 750px;
+      margin: 0 auto;
+      transform: none;
+    }
+
+    .tabs-btn {
+      justify-content: center;
+    }
+  }
+
   @media screen and (max-width: 820px) {
     .background {
       max-width: 790px;
       margin: 0 auto;
+      transform: none;
     }
 
     .tabs-btn {
@@ -268,6 +295,11 @@ export const CurrencyConvertorContainer = styled("div")`
   }
 
   @media screen and (max-width: 420px) {
+    .background {
+      padding: 0px 0px;
+      max-width: 550px;
+      margin: 0 auto;
+    }
     .activated-2::after {
       width: 150px;
     }

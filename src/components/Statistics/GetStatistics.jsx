@@ -21,12 +21,14 @@ import StruImg from "../../assets/images/bet-ui/stru.png";
 import FreeBetImg from "../../assets/images/bet-ui/betFree.png";
 import ReactPlayer from "react-player/youtube";
 import CurrencyConvertor from "../CurrencyConvertor/CurrencyConvertor";
+import useBreakpoint from "../../hooks/useBreakpoints";
 
 const GetStatistics = () => {
   let { group, title, id } = useParams();
   const { pathname } = useLocation();
   const { fetchData, response, loading } = useAxios();
   const [addStyle, setAddStyle] = useState();
+  const { isDesktop, isTablet } = useBreakpoint();
 
   useEffect(() => {
     getBanners();
@@ -71,6 +73,14 @@ const GetStatistics = () => {
 
   const result = item?.verdict_title?.length;
 
+  let screenSize = window?.screen?.availWidth;
+
+  const youTubeCode = item?.prediction_video.slice(17, 35);
+
+  console.log("youTubeCode", youTubeCode);
+
+  const videoSrc = `https://www.youtube.com/embed/${youTubeCode}`;
+
   return (
     <GetStatContainer>
       {/* // Trending Event // */}
@@ -112,33 +122,78 @@ const GetStatistics = () => {
                       1993, 1995, 2009, 2010, 2019.
                     </span>
                   </div>
-                  <div className="event-status-wrapper">
-                    <div className="event-mini-wrapper">
-                      <span>Total Pool Size:</span>
-                      <span>$0.00</span>
+                  {(isDesktop || isTablet) && (
+                    <div className="event-status-wrapper">
+                      <div className="event-mini-wrapper">
+                        <span>Total Pool Size:</span>
+                        <span>$0.00</span>
+                      </div>
+                      <div className="event-mini-wrapper">
+                        <span>Total number of Bets:</span>
+                        <span>0</span>
+                      </div>
                     </div>
-                    <div className="event-mini-wrapper">
-                      <span>Total number of Bets:</span>
-                      <span>0</span>
-                    </div>
-                  </div>
+                  )}
                 </div>
                 <div className="video-main-wrapper">
                   <div className="video-wrapper">
                     {item?.prediction_video?.length ? (
-                      <ReactPlayer
-                        url={item?.prediction_video}
-                        style={{
-                          maxWidth: "472px",
-                          maxHeight: "225px",
-                        }}
-                      />
+                      // <ReactPlayer
+                      //   url={item?.prediction_video}
+                      //   style={
+                      //     screenSize < 1380 ||
+                      //     screenSize < 1280 ||
+                      //     screenSize < 768 ||
+                      //     screenSize < 620 ||
+                      //     screenSize < 420 ||
+                      //     screenSize < 375
+                      //       ? {
+                      //           maxWidth: "320px",
+                      //         }
+                      //       : { maxWidth: "420px" }
+                      //       ? { maxWidth: "420px" }
+                      //       : {}
+                      //       ? { maxWidth: "520px" }
+                      //       : {}
+                      //       ? { minWidth: "650px" }
+                      //       : {}
+                      //       ? { maxWidth: "355px", maxHeight: "240px" }
+                      //       : {}
+                      //       ? { maxWidth: "395px", maxHeight: "232px" }
+                      //       : {
+                      //           maxWidth: "472px",
+                      //           maxHeight: "225px",
+                      //         }
+                      //   }
+                      // />
+                      <iframe
+                        width="560"
+                        height="315"
+                        src={videoSrc}
+                        title="YouTube video"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
                     ) : (
                       <div>
                         <img src={Polygon} alt="video" />
                       </div>
                     )}
                   </div>
+                  {screenSize < 768 ||
+                    (screenSize < 821 && (
+                      <div className="event-status-wrapper">
+                        <div className="event-mini-wrapper">
+                          <span>Total Pool Size:</span>
+                          <span>$0.00</span>
+                        </div>
+                        <div className="event-mini-wrapper">
+                          <span>Total number of Bets:</span>
+                          <span>0</span>
+                        </div>
+                      </div>
+                    ))}
                   <div className="event-status-main">
                     <div className="event-mini-main">
                       <img src={BetUiImg} alt="bet" />
@@ -157,76 +212,6 @@ const GetStatistics = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className="rectangle">
-                <span>{item?.stats_title}</span>
-              </div>
-              <div className="vs">
-                <div id="live">
-                  <span>POOL LIVE</span>
-                </div>
-                {item?.title && <span>{item?.title}</span>}
-                <div className="close">
-                  <div className="outcome">
-                    <div className="clock">
-                      <span>Predict Outcome</span>
-                      <div>
-                        <img src={clock1} alt="clock1" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="predict">
-                    <div className="clock">
-                      <span>Pool Closes on</span>
-                      <div>
-                        <img src={clock2} alt="clock2" />
-                      </div>
-                    </div>
-                    {item?.date && (
-                      <>
-                        <span>{FormatDate(item?.date)}</span>
-                        {item?.event_status == "no" ? (
-                          ""
-                        ) : item?.event_status === "yes" ? (
-                          <Times date={item?.date} show={false} />
-                        ) : (
-                          ""
-                        )}
-                      </>
-                    )}
-                    {item?.event_date && (
-                      <>
-                        <span>{FormatDate(item?.event_date)}</span>
-                        {item?.event_status == "no" ? (
-                          ""
-                        ) : item?.event_status === "yes" ? (
-                          <Times date={item?.event_date} show={false} />
-                        ) : (
-                          ""
-                        )}
-                      </>
-                    )}
-                    {item?.event_status == "no" && (
-                      <div className="total-pool-wrapper">
-                        <div className="item-1">
-                          <span>Total pool</span>
-                          <span>$2143231</span>
-                        </div>
-                        <div className="item-1">
-                          <span>Total no of Bets</span>
-                          <span>12312312</span>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-              <div className="portfolio">
-                <img
-                  src={item?.background_img}
-                  width={450}
-                  alt="Politics_member"
-                />
-              </div> */}
             </StatContainer>
           )}
       {/* // UFC && Football // */}
