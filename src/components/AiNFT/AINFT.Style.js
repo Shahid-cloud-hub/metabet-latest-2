@@ -148,8 +148,11 @@ export const AINFTContainer = styled("div")`
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 12px;
       gap: 4px;
-      color: #ffffff;
+      color: #87cefa;
       cursor: pointer;
+    }
+    .myNFT-active {
+      color: #ffffff;
     }
   }
 
@@ -317,6 +320,300 @@ export const AINFTContainer = styled("div")`
         padding: 10px 0px;
         cursor: pointer;
         margin-right: 5%;
+      }
+    }
+  }
+`;
+
+export const MarketPlaceContainer = styled("div")`
+  display: flex;
+  .cryptoAi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0px;
+    gap: 24px;
+    background: linear-gradient(180.07deg, #422347 -1.92%, #18021c 98.15%);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 322px;
+    border: 1px solid #ff33f7;
+
+    #white {
+      font-family: "mostra-nuova";
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 95%;
+      color: #e1f5fe;
+    }
+    span {
+      font-family: "mostra-nuova";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 95%;
+      color: #b1b1b1;
+    }
+    #purple {
+      background: linear-gradient(90deg, #986099 -8.82%, #ff33f7 111.76%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-family: "mostra-nuova";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .head {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .stats {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .cryptoScore {
+        display: flex;
+        gap: 10px;
+        .score {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+        }
+      }
+      .Address {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .cryptoId {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          span {
+            text-decoration-line: underline;
+          }
+        }
+      }
+    }
+    .Social {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 11px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+      .list1 {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+    }
+    .priceButton {
+      display: flex;
+      gap: 10px;
+
+      .last-price {
+        width: 100%;
+        max-width: 90px;
+        min-height: 42px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, #1c1c1c 39.58%, #62286b 100%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #d036ae;
+        border-radius: 34px;
+        padding: 5px 21px;
+
+        span {
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 12px;
+          font-family: "mostra-nuova";
+          color: #9c67ae;
+        }
+        div {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          span {
+            font-family: "mostra-nuova";
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 143.7%;
+            color: #ec9eff;
+            text-shadow: 0px 0px 30px #000000;
+          }
+        }
+      }
+      .sale-price {
+        width: 100%;
+        max-width: 90px;
+        min-height: 42px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, #0f120f 39.58%, #225321 100%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #50ff6c;
+        border-radius: 34px;
+        padding: 5px 21px;
+
+        span {
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 12px;
+          font-family: "mostra-nuova";
+          color: #5f9ea0;
+        }
+        div {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          span {
+            font-family: "mostra-nuova";
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 143.7%;
+            color: #89ffa3;
+            text-shadow: 0px 0px 30px #000000;
+          }
+        }
+      }
+      .next-price {
+        width: 100%;
+        max-width: 90px;
+        min-height: 42px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #1e90ff;
+        border-radius: 34px;
+        padding: 5px 21px;
+
+        span {
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 12px;
+          font-family: "mostra-nuova";
+          color: #70a1bc;
+        }
+        div {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          span {
+            font-family: "mostra-nuova";
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 143.7%;
+            color: #64baff;
+            text-shadow: 0px 0px 30px #000000;
+          }
+        }
+      }
+    }
+
+    .wallet {
+      display: flex;
+      gap: 110px;
+      width: 100%;
+      margin-bottom: 10px;
+
+      #buy {
+        font-family: "mostra-nuova";
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 95%;
+        color: #89ffa3;
+        text-decoration-line: none;
+      }
+      .wallet-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        span {
+          text-decoration-line: underline;
+          display: flex;
+          gap: 7px;
+        }
+      }
+      #wallet {
+        font-family: "mostra-nuova";
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 95%;
+        background: linear-gradient(
+          118.51deg,
+          #e1f5fe -4.48%,
+          #ff67f9 56.27%,
+          #e1f5fe 107.68%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration-line: none;
+      }
+
+      .price-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        span {
+          display: flex;
+          gap: 5px;
+        }
+      }
+      .wrapper-main-nft {
+        position: relative;
+        width: 100%;
+        height: calc(10vh - 4px);
+        padding: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 9;
+        top: 6px;
+        padding: 0px 20px;
+        margin-right: 10px;
+
+        &::-webkit-scrollbar {
+          display: block;
+          width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+          background: rgba(0, 0, 0, 0.35);
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #314552;
+          border-right: none;
+          border-left: none;
+          border-radius: 10px;
+        }
+        div {
+          display: flex;
+          gap: 7px;
+          justify-content: space-between;
+        }
       }
     }
   }

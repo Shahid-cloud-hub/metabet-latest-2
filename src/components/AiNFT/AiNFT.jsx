@@ -5,12 +5,21 @@ import AiFilter from "./AiFilter";
 import { Filter } from "../ActiveBet/ActiveBetData";
 import { useAxios } from "../../hooks/useAxios";
 import AiDropDownFilter from "./AiDropDownFilter";
-import Maintenance from "../Maintenance/Maintenance";
+
+// Components //
+import MarketPlaceComponent from "./MarketPlaceComponent/MarketPlaceComponent";
+import MyNFTComponent from "./MyNFTComponent/MyNFTComponent";
+import LeaderboardComponent from "./LeaderboardComponent/LeaderboardComponent";
 
 const AiNFT = () => {
   const [itemData, setItemData] = useState(Filter);
   const [getName, setGetName] = useState("all");
   const { fetchData, response } = useAxios();
+  const [change, setChange] = useState({
+    myNFT: false,
+    MarketPlace: true,
+    Leaderboard: false,
+  });
 
   const uniqueNames = [...new Set(Filter.map((item) => item.name))];
   const menuItems = uniqueNames.map((nameObj) => {
@@ -84,9 +93,45 @@ const AiNFT = () => {
         />
       </div>
       <div className="market-place-btn">
-        <button>My NFTS</button>
-        <button>Marketplace</button>
-        <button>Leaderboard</button>
+        <button
+          className={change.myNFT ? "myNFT-active" : "myNFT-de-active"}
+          onClick={() =>
+            setChange((prev) => ({
+              ...prev,
+              myNFT: true,
+              MarketPlace: false,
+              Leaderboard: false,
+            }))
+          }
+        >
+          My NFTS
+        </button>
+        <button
+          className={change.MarketPlace ? "myNFT-active" : "myNFT-de-active"}
+          onClick={() =>
+            setChange((prev) => ({
+              ...prev,
+              myNFT: false,
+              MarketPlace: true,
+              Leaderboard: false,
+            }))
+          }
+        >
+          Marketplace
+        </button>
+        <button
+          className={change.Leaderboard ? "myNFT-active" : "myNFT-de-active"}
+          onClick={() =>
+            setChange((prev) => ({
+              ...prev,
+              myNFT: false,
+              MarketPlace: false,
+              Leaderboard: true,
+            }))
+          }
+        >
+          Leaderboard
+        </button>
       </div>
       <div className="market-place-filter-btn">
         <div className="parent-wrapper">
@@ -135,7 +180,9 @@ const AiNFT = () => {
           />
         </div>
       </div>
-      <Maintenance />
+      {(change.myNFT && <MyNFTComponent />) ||
+        (change.MarketPlace && <MarketPlaceComponent />) ||
+        (change.Leaderboard && <LeaderboardComponent />)}
     </AINFTContainer>
   );
 };
