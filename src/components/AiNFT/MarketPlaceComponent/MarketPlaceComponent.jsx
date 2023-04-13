@@ -12,122 +12,141 @@ import forbes from "../../../assets/images/Ai-NFT/forbes.png";
 import trading from "../../../assets/images/Ai-NFT/trading.png";
 import pencil from "../../../assets/images/Ai-NFT/pencil.png";
 import dollarYellow from "../../../assets/images/Ai-NFT/dollar-yellow.png";
-import mainImg1 from "../../../assets/images/Ai-NFT/main-img1.svg";
+import { NftData } from "../AiNFTData";
+import { useState } from "react";
+import ReactPopUpModel from "../../ReactPopUpModel/ReactPopUpModel";
 
 const MarketPlaceComponent = () => {
+  const [getImg, setGetImg] = useState("");
+
+  const changeHandle = (img) => {
+    setGetImg(img);
+  };
+
+  console.log("getImg", getImg);
+
   return (
     <MarketPlaceContainer>
-      <div className="cryptoAi">
-        <div className="head">
-          <span id="purple">CryptoAi</span>
-          <img src={mainImg1} alt="mainImg1" />
-          <span id="white">Donald Trump</span>
-        </div>
-        <div className="stats">
-          <div className="cryptoScore">
-            <div className="score">
-              <span id="purple">CryptoAi Score:</span>
-              <span id="white">149</span>
-            </div>
-            <div className="score">
-              <span id="purple">Rank:</span>
-              <span id="white">12</span>
-            </div>
+      {NftData.map((item) => (
+        <div className="cryptoAi">
+          <div className="head">
+            <span id="purple">{item.heading}</span>
+            <img
+              src={item.main_img}
+              onClick={() => changeHandle(item?.main_img)}
+              alt="mainImg1"
+            />
+            <span id="white">{item.name}</span>
           </div>
-          <div className="Address">
-            <div className="cryptoId">
-              <span>3BV2...76D723623</span>
-              <img src={stick} alt="stick" />
-            </div>
-            <img src={chainlink} alt="chainlink" />
-            <img src={upload} alt="upload" />
-          </div>
-        </div>
-        <div className="Social">
-          <div className="list">
-            <div className="item">
-              <img src={instagram} alt="instagram" />
-              <span>Instagram Followers:</span>
-            </div>
-            <div className="item">
-              <img src={twitter} alt="twitter" />
-              <span>Twitter Followers:</span>
-            </div>
-            <div className="item">
-              <img src={facebook} alt="facebook" />
-              <span>Facebook Followers:</span>
-            </div>
-            <div className="item">
-              <img src={forbes} alt="forbes" />
-              <span>Rich List Billions:</span>
-            </div>
-            <div className="item">
-              <img src={trading} alt="trading" />
-              <span>Trading Volume $:</span>
-            </div>
-          </div>
-          <div className="list1">
-            <span>23m</span>
-            <span>87m</span>
-            <span>34m</span>
-            <span>3b</span>
-            <span>22</span>
-          </div>
-        </div>
-        <div className="priceButton">
-          <div className="last-price">
-            <span>Last Price</span>
-            <div>
-              <img src={dollarYellow} alt="dollarYellow" />
-              <span>12.00</span>
-            </div>
-          </div>
-          <div className="sale-price">
-            <span>Sale Price</span>
-            <div>
-              <img src={dollarYellow} alt="dollarYellow" />
-              <span>12.00</span>
-              <img src={pencil} alt="pencil" />
-            </div>
-          </div>
-          <div className="next-price">
-            <span>Next Price</span>
-            <div>
-              <img src={dollarYellow} alt="dollarYellow" />
-              <span>17.28</span>
-            </div>
-          </div>
-        </div>
-        <div className="wallet">
-          <div className="wrapper-main-nft">
-            <div>
-              <div className="wallet-list">
-                <span id="wallet">Wallet</span>
-                <span id="buy">BUY</span>
-                <span>
-                  be23x......326bdg2v <img src={stick} alt="icon" />
-                </span>
-                <span>
-                  be23x......326bdg2v <img src={stick} alt="icon" />
-                </span>
-                <span></span>
+          <div className="stats">
+            <div className="cryptoScore">
+              <div className="score">
+                <span id="purple">CryptoAi Score:</span>
+                <span id="white">{item.score}</span>
               </div>
-              <div className="price-list">
-                <span id="buy">Price</span>
-                <span>
-                  <img src={dollarYellow} alt="icon" /> 14.00
-                </span>
-                <span>
-                  <img src={dollarYellow} alt="icon" /> 12.00
-                </span>
-                <span>
-                  <img src={dollarYellow} alt="icon" /> 10.00
-                </span>
+              <div className="score">
+                <span id="purple">Rank:</span>
+                <span id="white">{item.rank}</span>
+              </div>
+            </div>
+            <div className="Address">
+              <div className="cryptoId">
+                <span>{item.id}</span>
+                <img src={stick} alt="stick" />
+              </div>
+              <img src={chainlink} alt="chainlink" />
+              <img src={upload} alt="upload" />
+            </div>
+          </div>
+          <div className="Social">
+            <div className="list">
+              <div className="item">
+                <img src={instagram} alt="instagram" />
+                <span>Instagram Followers:</span>
+              </div>
+              <div className="item">
+                <img src={twitter} alt="twitter" />
+                <span>Twitter Followers:</span>
+              </div>
+              <div className="item">
+                <img src={facebook} alt="facebook" />
+                <span>Facebook Followers:</span>
+              </div>
+              <div className="item">
+                <img src={forbes} alt="forbes" />
+                <span>Rich List Billions:</span>
+              </div>
+              <div className="item">
+                <img src={trading} alt="trading" />
+                <span>Trading Volume $:</span>
+              </div>
+            </div>
+            <div className="list1">
+              <span>{item.instagram_followers}</span>
+              <span>{item.twitter_followers}</span>
+              <span>{item.facebook_followers}</span>
+              <span style={{ color: item?.color && item?.color }}>
+                {item.forbes}
+              </span>
+              <span>{item.trading_volume}</span>
+            </div>
+          </div>
+          <div className="priceButton">
+            <div className="last-price">
+              <span>Last Price</span>
+              <div>
+                <img src={dollarYellow} alt="dollarYellow" />
+                <span>{item.last_price}</span>
+              </div>
+            </div>
+            <div className="sale-price">
+              <span>Sale Price</span>
+              <div>
+                <img src={dollarYellow} alt="dollarYellow" />
+                <span>{item.sale_price}</span>
+                <img src={pencil} alt="pencil" />
+              </div>
+            </div>
+            <div className="next-price">
+              <span>Next Price</span>
+              <div>
+                <img src={dollarYellow} alt="dollarYellow" />
+                <span>{item.next_price}</span>
               </div>
             </div>
           </div>
+          <div className="wallet">
+            <div className="wrapper-main-nft">
+              <div>
+                <div className="wallet-list">
+                  <span id="wallet">Wallet</span>
+                  <span id="buy">BUY</span>
+                  <span>
+                    {item.wallet_id1} <img src={stick} alt="icon" />
+                  </span>
+                  <span>
+                    {item.wallet_id2} <img src={stick} alt="icon" />
+                  </span>
+                  <span></span>
+                </div>
+                <div className="price-list">
+                  <span id="buy">Price</span>
+                  <span>
+                    <img src={dollarYellow} alt="icon" /> {item.price_1}
+                  </span>
+                  <span>
+                    <img src={dollarYellow} alt="icon" /> {item.price_2}
+                  </span>
+                  <span>
+                    <img src={dollarYellow} alt="icon" /> {item.price_3}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      ))}
+      <ReactPopUpModel />
     </MarketPlaceContainer>
   );
 };

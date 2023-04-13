@@ -326,7 +326,13 @@ export const AINFTContainer = styled("div")`
 `;
 
 export const MarketPlaceContainer = styled("div")`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
+  padding: 30px 0px;
+  /* center items */
+
   .cryptoAi {
     display: flex;
     flex-direction: column;
@@ -341,7 +347,7 @@ export const MarketPlaceContainer = styled("div")`
 
     #white {
       font-family: "mostra-nuova";
-      font-weight: 700;
+      font-weight: 800;
       font-size: 16px;
       line-height: 95%;
       color: #e1f5fe;
@@ -361,7 +367,7 @@ export const MarketPlaceContainer = styled("div")`
       background-clip: text;
       font-family: "mostra-nuova";
       font-style: normal;
-      font-weight: 700;
+      font-weight: 900;
       font-size: 14px;
     }
     .head {

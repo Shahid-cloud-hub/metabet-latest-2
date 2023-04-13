@@ -362,7 +362,8 @@
     padding: 0px 5px;
   }
 
-  .right-nav {
+  .right-nav,
+  .right-nav-nft {
     gap: 5px;
     height: 39px;
     width: 100%;
@@ -371,7 +372,7 @@
     margin: 20px 0px 35px;
   }
 
-  /* .right-nav > label > input {
+  .right-nav-nft > label > input {
     width: 100%;
     max-width: 40px;
     min-height: 25px;
@@ -382,15 +383,29 @@
     font-size: 11px;
     line-height: 140%;
     color: #ffffff;
-  } */
+  }
 
   .right-nav > label > input > img {
+    width: 12px;
+    height: 12px;
+  }
+  .right-nav-nft > label > input > img {
     width: 12px;
     height: 12px;
   }
 
   .right-nav > label {
     padding: 0px 5px;
+  }
+  .right-nav-nft > label {
+    padding: 0px 5px;
+  }
+
+  .right-nav > label > input::placeholder {
+    font-size: 11px;
+  }
+  .right-nav-nft > label > input::placeholder {
+    font-size: 11px;
   }
 }
 @media screen and (max-width: 920px) {
@@ -427,8 +442,16 @@
     /* flex-wrap: wrap; */
     margin: 20px 0px 35px;
   }
+  .right-nav-nft {
+    gap: 5px;
+    height: 39px;
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin: 20px 0px 35px;
+  }
 
-  /* .right-nav > label > input {
+  .right-nav-nft > label > input {
     width: 100%;
     max-width: 40px;
     min-height: 25px;
@@ -436,18 +459,32 @@
     border: none;
     background: #0f212e;
     font-weight: 700;
-    font-size: 19px;
+    font-size: 11px;
     line-height: 140%;
     color: #ffffff;
-  } */
+  }
 
   .right-nav > label > input > img {
+    width: 12px;
+    height: 12px;
+  }
+  .right-nav-nft > label > input > img {
     width: 12px;
     height: 12px;
   }
 
   .right-nav > label {
     padding: 0px 5px;
+  }
+  .right-nav-nft > label {
+    padding: 0px 5px;
+  }
+
+  .right-nav > label > input::placeholder {
+    font-size: 11px;
+  }
+  .right-nav-nft > label > input::placeholder {
+    font-size: 11px;
   }
 }
 
@@ -483,8 +520,16 @@
     /* flex-wrap: wrap; */
     margin: 20px 0px;
   }
+  .right-nav-nft {
+    gap: 5px;
+    height: 39px;
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin: 20px 0px;
+  }
 
-  /* .right-nav > label > input {
+  .right-nav-nft > label > input {
     width: 100%;
     max-width: 40px;
     min-height: 25px;
@@ -492,23 +537,39 @@
     border: none;
     background: #0f212e;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 11px;
     line-height: 140%;
     color: #ffffff;
-  } */
+  }
 
   .right-nav > label > input > img {
     width: 12px;
     height: 12px;
   }
-
+  .right-nav-nft > label > input > img {
+    width: 12px;
+    height: 12px;
+  }
   .right-nav > label {
     padding: 0px 5px;
+  }
+  .right-nav-nft > label {
+    padding: 0px 5px;
+  }
+
+  .right-nav > label > input::placeholder {
+    font-size: 11px;
+  }
+  .right-nav-nft > label > input::placeholder {
+    font-size: 11px;
   }
 }
 
 @media screen and (max-width: 640px) {
   .right-nav {
+    margin: 20px 0px 35px;
+  }
+  .right-nav-nft {
     margin: 20px 0px 35px;
   }
 }
@@ -526,7 +587,13 @@
   .right-nav {
     margin: 20px 0px 40px;
   }
+  .right-nav-nft {
+    margin: 20px 0px 40px;
+  }
   .right-nav > label {
+    max-width: 150px;
+  }
+  .right-nav-nft > label {
     max-width: 150px;
   }
   .dropdown {
@@ -560,7 +627,10 @@
   .right-nav {
     margin: 20px 0px 40px;
   }
-  .right-nav > label {
+  .right-nav-nft {
+    margin: 20px 0px 40px;
+  }
+  .right-nav-nft > label {
     max-width: 150px;
   }
   .dropdown {
@@ -595,7 +665,14 @@
     display: flex;
     margin: 20px 0px 40px;
   }
+  .right-nav-nft {
+    display: flex;
+    margin: 20px 0px 40px;
+  }
   .right-nav > label {
+    max-width: 135px;
+  }
+  .right-nav-nft > label {
     max-width: 135px;
   }
   .dropdown {

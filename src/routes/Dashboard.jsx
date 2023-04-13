@@ -10,6 +10,7 @@ import PopUpModel from "../components/PopUpModel/PopUpModel";
 import { Context } from "../Context";
 import Confetti from "react-confetti";
 import BalanceButtons from "../components/BalanceButtons/BalanceButtons";
+import BalanceButtonsNFT from "../components/BalanceButtons/BalanceButtonsNFT";
 import { isValidMnemonic } from "ethers/lib/utils";
 
 const ContainerWrapper = styled("div")`
@@ -55,7 +56,7 @@ const ContainerWrapper = styled("div")`
     overflow: auto;
     padding: 0 0 20px;
     /* background: #0f212e; */
-    background: ${(props) => props.purpleBackground};
+    background: ${(props) => props.purpleLeftSidebar};
 
     &::-webkit-scrollbar {
       display: block;
@@ -75,7 +76,7 @@ const ContainerWrapper = styled("div")`
     }
   }
 
-  .main {
+  .main-content {
     background: ${(props) => props.purpleBackground};
     width: 100%;
     position: relative;
@@ -185,6 +186,7 @@ const Dashboard = () => {
         deskTopPadding={isDesktop ? "320px" : "0px"}
         deskTopWidth={isDesktop ? "343px" : "0px"}
         purpleBackground={pathname == "/ai-nft" ? "#130E19" : "#1B2C37"}
+        purpleLeftSidebar={pathname == "/ai-nft" ? "#130E19" : "#0f212e"}
       >
         {items?.betMessage ||
           (items?.airDropBetMessage && celebRemove && (
@@ -206,8 +208,12 @@ const Dashboard = () => {
                 <Sidebar />
               </div>
             )}
-            <div className="main" id="detail">
-              {(isTablet || isMobile || isSmallMobile) && <BalanceButtons />}
+            <div className="main-content" id="detail">
+              {pathname === "/ai-nft"
+                ? (isTablet || isMobile || isSmallMobile) && (
+                    <BalanceButtonsNFT />
+                  )
+                : (isTablet || isMobile || isSmallMobile) && <BalanceButtons />}
               <Outlet />
               <ToastContainer />
             </div>
