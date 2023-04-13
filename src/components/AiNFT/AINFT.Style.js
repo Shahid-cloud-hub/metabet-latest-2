@@ -329,9 +329,8 @@ export const MarketPlaceContainer = styled("div")`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-
   padding: 30px 0px;
-  /* center items */
+  place-items: center;
 
   .cryptoAi {
     display: flex;
@@ -476,7 +475,7 @@ export const MarketPlaceContainer = styled("div")`
         background: linear-gradient(180deg, #0f120f 39.58%, #225321 100%);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #50ff6c;
         border-radius: 34px;
-        padding: 5px 21px;
+        padding: 5px 15px;
 
         span {
           font-weight: 500;

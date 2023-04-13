@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { MarketPlaceContainer } from "../AINFT.Style";
 
 // Images //
@@ -17,25 +18,35 @@ import { useState } from "react";
 import ReactPopUpModel from "../../ReactPopUpModel/ReactPopUpModel";
 
 const MarketPlaceComponent = () => {
-  const [getImg, setGetImg] = useState("");
+  const [modalOpen, setModalOpen] = useState(false);
+  const [imageSrc, setImageSrc] = useState("");
 
-  const changeHandle = (img) => {
-    setGetImg(img);
+  const handleImageClick = (src) => {
+    setModalOpen(true);
+    setImageSrc(src);
   };
 
-  console.log("getImg", getImg);
+  const closeModal = () => {
+    setModalOpen(false);
+    setImageSrc("");
+  };
+
+  console.log("getImg", imageSrc);
 
   return (
     <MarketPlaceContainer>
-      {NftData.map((item) => (
+      <h1>testing</h1>
+      {/* {NftData.map((item) => (
         <div className="cryptoAi">
           <div className="head">
             <span id="purple">{item.heading}</span>
-            <img
-              src={item.main_img}
-              onClick={() => changeHandle(item?.main_img)}
-              alt="mainImg1"
-            />
+            <ImageContainer>
+              <img
+                src={item.main_img}
+                onClick={() => handleImageClick(item?.main_img)}
+                alt="mainImg1"
+              />
+            </ImageContainer>
             <span id="white">{item.name}</span>
           </div>
           <div className="stats">
@@ -145,10 +156,47 @@ const MarketPlaceComponent = () => {
             </div>
           </div>
         </div>
-      ))}
-      <ReactPopUpModel />
+      ))} */}
+      {modalOpen && <ReactPopUpModel src={imageSrc} closeModal={closeModal} />}
     </MarketPlaceContainer>
   );
 };
+
+const ImageContainer = styled.div`
+  position: relative;
+  /* width: 200px; */
+  /* height: 200px; */
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  img {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* object-fit: cover; */
+    transition: transform 0.3s ease-out;
+  }
+
+  img:hover {
+    transform: scale(1.05);
+  }
+
+  ${({ isModalOpen }) =>
+    isModalOpen &&
+    `
+      position: fixed;
+      top: 40%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+    `}
+`;
 
 export default MarketPlaceComponent;
