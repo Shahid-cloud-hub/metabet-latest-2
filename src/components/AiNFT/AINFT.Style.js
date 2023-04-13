@@ -4,7 +4,7 @@ export const AINFTContainer = styled("div")`
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding: 20px 9px 20px 47px;
+  padding: 0px 20px;
 
   .ai-filter-btn {
     display: flex;
@@ -319,8 +319,14 @@ export const AINFTContainer = styled("div")`
         font-family: "mostra-nuova", sans-serif;
         padding: 10px 0px;
         cursor: pointer;
-        margin-right: 5%;
+        margin-right: 4%;
       }
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    .ai-filter-btn {
+      display: none;
     }
   }
 `;

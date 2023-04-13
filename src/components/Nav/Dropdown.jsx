@@ -30,6 +30,7 @@ import useBreakpoint from "../../hooks/useBreakpoints";
 import truncateEthAddress from "truncate-eth-address";
 import Utils from "../../utilities";
 import { Context } from "../../Context";
+import { BetStatusContainer } from "./Nav.styles";
 
 function Dropdown() {
   const [selected, setSelected] = useState();
@@ -85,50 +86,44 @@ function Dropdown() {
   }, [metaMaskAddress]);
 
   return (
-    <>
-      <div className="dropdown">
+    <BetStatusContainer>
+      <div className="bet-status-container">
         {isDesktop && (
-          <div className="dropdown-ai">
-            <div className="right-nav">
-              <label>
-                <input
-                  type="text"
-                  name="name"
-                  value={balance == null ? "0.00" : balance}
-                  disabled
-                />
-                <img src={foxCircle} alt="foxCircle" />
-              </label>
-              <label>
-                <input type="text" name="name" placeholder="0.00" disabled />
-                <img id="label-nav" src={tru} alt="tru" />
-              </label>
-              <label>
-                <input type="text" name="name" placeholder="0.00" disabled />
-                <img src={navBet} alt="navBet" />
-              </label>
-            </div>
+          <div className="bet-status-boxes">
+            <label>
+              <input
+                type="text"
+                name="name"
+                value={balance == null ? "0.00" : balance}
+                disabled
+              />
+              <img src={foxCircle} alt="foxCircle" />
+            </label>
+            <label>
+              <input type="text" name="name" placeholder="0.00" disabled />
+              <img id="label-nav" src={tru} alt="tru" />
+            </label>
+            <label>
+              <input type="text" name="name" placeholder="0.00" disabled />
+              <img src={navBet} alt="navBet" />
+            </label>
           </div>
         )}
-        <div className="dropdownBtn">
-          {!metaMaskAddress.metaMaskAddress ? (
-            <div
-              className="connect-btn"
-              onClick={() => dispatch(metaMaskConnection())}
-            >
-              <button>Connect</button>
-            </div>
-          ) : (
-            <div
-              className="connect-btn"
-              onClick={() => dispatch(metaMaskDisconnect())}
-            >
-              <button>Disconnect</button>
-            </div>
-          )}
-        </div>
+        {!metaMaskAddress.metaMaskAddress ? (
+          <>
+            <button onClick={() => dispatch(metaMaskConnection())}>
+              Connect
+            </button>
+          </>
+        ) : (
+          <>
+            <button onClick={() => dispatch(metaMaskDisconnect())}>
+              Disconnect
+            </button>
+          </>
+        )}
       </div>
-    </>
+    </BetStatusContainer>
   );
 }
 

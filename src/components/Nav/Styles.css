@@ -66,7 +66,6 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 140%;
   /* background-color: #ffffff; */
 }
 
@@ -218,7 +217,6 @@
   background: #0f212e;
   font-weight: 700;
   font-size: 18px;
-  line-height: 140%;
   color: #ffffff;
 }
 .right-nav-nft > label > input {
@@ -231,7 +229,6 @@
   background: #1d1625;
   font-weight: 700;
   font-size: 18px;
-  line-height: 140%;
   color: #ffffff;
   text-align: end;
 }
@@ -239,13 +236,11 @@
 .right-nav > label > input::placeholder {
   font-weight: 700;
   font-size: 18px;
-  line-height: 140%;
   color: #ffffff;
 }
 .right-nav-nft > label > input::placeholder {
   font-weight: 700;
   font-size: 18px;
-  line-height: 140%;
   color: #ffffff;
 }
 
@@ -274,7 +269,6 @@
   background: transparent;
   font-weight: 700;
   font-size: 18px;
-  line-height: 140%;
   color: #ffffff;
   max-width: 60px;
 }
@@ -282,7 +276,6 @@
 .dollar-text > input::placeholder {
   font-weight: 700;
   font-size: 18px;
-  line-height: 140%;
   color: #ffffff;
 }
 
@@ -310,7 +303,7 @@
     padding: 0px 5px;
   }
 
-  .right-nav {
+  /* .right-nav {
     gap: 5px;
     height: 39px;
     width: 100%;
@@ -329,7 +322,6 @@
     background: #0f212e;
     font-weight: 700;
     font-size: 15px;
-    line-height: 140%;
     color: #ffffff;
   }
 
@@ -340,13 +332,13 @@
 
   .right-nav > label {
     padding: 0px 5px;
-  }
+  } */
 }
 
 @media screen and (max-width: 1024px) {
   .dropdown {
     justify-content: flex-end;
-    margin-right: 50px;
+    margin-right: 25px;
   }
   .dropdown .dropdownContent {
     max-width: 175px;
@@ -381,7 +373,6 @@
     background: #0f212e;
     font-weight: 700;
     font-size: 11px;
-    line-height: 140%;
     color: #ffffff;
   }
 
@@ -460,7 +451,6 @@
     background: #0f212e;
     font-weight: 700;
     font-size: 11px;
-    line-height: 140%;
     color: #ffffff;
   }
 
@@ -538,7 +528,6 @@
     background: #0f212e;
     font-weight: 700;
     font-size: 11px;
-    line-height: 140%;
     color: #ffffff;
   }
 

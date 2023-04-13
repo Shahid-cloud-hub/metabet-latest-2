@@ -53,9 +53,13 @@ const Header = (props) => {
         </div>
         {(isSmallMobile || isMobile || isTablet) && <Dropdown />}
         {isDesktop && (
-          <div className="dropdown-section">
-            {pathname === "/ai-nft" ? <DropdownNFT /> : <Dropdown />}
-          </div>
+          <>
+            {pathname === "/ai-nft" ? (
+              <DropdownNFT show={true} />
+            ) : (
+              <Dropdown />
+            )}
+          </>
         )}
         {(isSmallMobile || isMobile || isTablet) && <LeftSidebar {...props} />}
       </Container>

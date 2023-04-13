@@ -31,12 +31,9 @@ const MarketPlaceComponent = () => {
     setImageSrc("");
   };
 
-  console.log("getImg", imageSrc);
-
   return (
     <MarketPlaceContainer>
-      <h1>testing</h1>
-      {/* {NftData.map((item) => (
+      {NftData.map((item) => (
         <div className="cryptoAi">
           <div className="head">
             <span id="purple">{item.heading}</span>
@@ -156,7 +153,7 @@ const MarketPlaceComponent = () => {
             </div>
           </div>
         </div>
-      ))} */}
+      ))}
       {modalOpen && <ReactPopUpModel src={imageSrc} closeModal={closeModal} />}
     </MarketPlaceContainer>
   );
