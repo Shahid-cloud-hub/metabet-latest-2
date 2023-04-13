@@ -1,52 +1,49 @@
-import Donald from "../../assets/images/Ai-NFT/main-img1.svg";
-import Cristiano from "../../assets/images/Ai-NFT/Cristiano.png";
-import Lebron from "../../assets/images/Ai-NFT/Lebron.png";
-import Elon from "../../assets/images/Ai-NFT/Elon.png";
-import Jeff from "../../assets/images/Ai-NFT/Jeff.png";
-import Sylvester from "../../assets/images/Ai-NFT/Sylvester.png";
-import Kim from "../../assets/images/Ai-NFT/Kim.png";
-import Volodymyr from "../../assets/images/Ai-NFT/Volodymyr.png";
-import Dana from "../../assets/images/Ai-NFT/Dana.png";
-import Jake from "../../assets/images/Ai-NFT/Jake.png";
-import Bill from "../../assets/images/Ai-NFT/Bill.png";
-import Gautam from "../../assets/images/Ai-NFT/Gautam.png";
-import Bernard from "../../assets/images/Ai-NFT/Bernard.png";
-import Vladimir from "../../assets/images/Ai-NFT/Vladimir.png";
-import Joe from "../../assets/images/Ai-NFT/Joe.png";
-import Tyson from "../../assets/images/Ai-NFT/Tyson.png";
-import Lionel from "../../assets/images/Ai-NFT/Lionel.png";
-import Connor from "../../assets/images/Ai-NFT/Connor.png";
-import Tiger from "../../assets/images/Ai-NFT/Tiger.png";
-import Barak from "../../assets/images/Ai-NFT/Barak.png";
-import Lewis from "../../assets/images/Ai-NFT/Lewis.png";
-import Arnold from "../../assets/images/Ai-NFT/Arnold.png";
-import Tom from "../../assets/images/Ai-NFT/Tom.png";
-import Floyd from "../../assets/images/Ai-NFT/Tom.png";
-import Kanye from "../../assets/images/Ai-NFT/Kanye.png";
-import Roger from "../../assets/images/Ai-NFT/Roger.png";
-import Serena from "../../assets/images/Ai-NFT/Serena.png";
-import Mike from "../../assets/images/Ai-NFT/Mike.png";
-import Janet from "../../assets/images/Ai-NFT/Janet.png";
-import Gervonta from "../../assets/images/Ai-NFT/Gervonta.png";
-import Khabib from "../../assets/images/Ai-NFT/Khabib.png";
-import Canelo from "../../assets/images/Ai-NFT/Canelo.png";
-import Novak from "../../assets/images/Ai-NFT/Novak.png";
-import Usain from "../../assets/images/Ai-NFT/Novak.png";
-import Virat from "../../assets/images/Ai-NFT/Novak.png";
-import Rafael from "../../assets/images/Ai-NFT/Rafael.png";
-import Christine from "../../assets/images/Ai-NFT/Christine.png";
-import Beyonce from "../../assets/images/Ai-NFT/Beyonce.png";
-import Michael from "../../assets/images/Ai-NFT/Michael.png";
-import Changpeng from "../../assets/images/Ai-NFT/Changpeng.png";
-import Dwayne from "../../assets/images/Ai-NFT/Dwayne.png";
-import Harry from "../../assets/images/Ai-NFT/Harry.png";
-import Mukesh from "../../assets/images/Ai-NFT/Mukesh.png";
+import Donald from "../../assets/images/Ai-NFT/Donald.svg";
+import Cristiano from "../../assets/images/Ai-NFT/Cristiano.svg";
+import Lebron from "../../assets/images/Ai-NFT/Lebron.svg";
+import Elon from "../../assets/images/Ai-NFT/Elon.svg";
+import Jeff from "../../assets/images/Ai-NFT/Jeff.svg";
+import Sylvester from "../../assets/images/Ai-NFT/Sylvester.svg";
+import Kim from "../../assets/images/Ai-NFT/Kim.svg";
+import Volodymyr from "../../assets/images/Ai-NFT/Volodymyr.svg";
+import Dana from "../../assets/images/Ai-NFT/Dana.svg";
+import Jake from "../../assets/images/Ai-NFT/Jake.svg";
+import Bill from "../../assets/images/Ai-NFT/Bill.svg";
+import Gautam from "../../assets/images/Ai-NFT/Gautam.svg";
+import Bernard from "../../assets/images/Ai-NFT/Bernard.svg";
+import Vladimir from "../../assets/images/Ai-NFT/Vladimir.svg";
+import Joe from "../../assets/images/Ai-NFT/Joe.svg";
+import Tyson from "../../assets/images/Ai-NFT/Tyson.svg";
+import Lionel from "../../assets/images/Ai-NFT/Lionel.svg";
+import Connor from "../../assets/images/Ai-NFT/Connor.svg";
+import Tiger from "../../assets/images/Ai-NFT/Tiger.svg";
+import Barak from "../../assets/images/Ai-NFT/Barak.svg";
+import Lewis from "../../assets/images/Ai-NFT/Lewis.svg";
+import Arnold from "../../assets/images/Ai-NFT/Arnold.svg";
+import Tom from "../../assets/images/Ai-NFT/Tom.svg";
+import Floyd from "../../assets/images/Ai-NFT/Tom.svg";
+import Kanye from "../../assets/images/Ai-NFT/Kanye.svg";
+import Roger from "../../assets/images/Ai-NFT/Roger.svg";
+import Serena from "../../assets/images/Ai-NFT/Serena.svg";
+import Mike from "../../assets/images/Ai-NFT/Mike.svg";
+import Janet from "../../assets/images/Ai-NFT/Janet.svg";
+import Gervonta from "../../assets/images/Ai-NFT/Gervonta.svg";
+import Khabib from "../../assets/images/Ai-NFT/Khabib.svg";
+import Canelo from "../../assets/images/Ai-NFT/Canelo.svg";
+import Novak from "../../assets/images/Ai-NFT/Novak.svg";
+import Usain from "../../assets/images/Ai-NFT/Novak.svg";
+import Virat from "../../assets/images/Ai-NFT/Novak.svg";
+import Rafael from "../../assets/images/Ai-NFT/Rafael.svg";
+import Christine from "../../assets/images/Ai-NFT/Christine.svg";
+import Beyonce from "../../assets/images/Ai-NFT/Beyonce.svg";
+import Michael from "../../assets/images/Ai-NFT/Michael.svg";
+import Changpeng from "../../assets/images/Ai-NFT/Changpeng.svg";
+import Dwayne from "../../assets/images/Ai-NFT/Dwayne.svg";
+import Harry from "../../assets/images/Ai-NFT/Harry.svg";
+import Mukesh from "../../assets/images/Ai-NFT/Mukesh.svg";
 
 //leaderboard images
 
-import cristiano from "../../assets/images/Ai-NFT/Leaderboard/Cristiano.png";
-import lionel from "../../assets/images/Ai-NFT/Leaderboard/lionel.png";
-import kim from "../../assets/images/Ai-NFT/Leaderboard/kim.png";
 import dwayne from "../../assets/images/Ai-NFT/Leaderboard/dwayne.svg";
 import beyonce from "../../assets/images/Ai-NFT/Leaderboard/beyonce.svg";
 import elon from "../../assets/images/Ai-NFT/Leaderboard/elon.svg";
@@ -77,8 +74,8 @@ import sylvester from "../../assets/images/Ai-NFT/Leaderboard/sylvester.svg";
 import tom from "../../assets/images/Ai-NFT/Leaderboard/tom.svg";
 import canelo from "../../assets/images/Ai-NFT/Leaderboard/canelo.svg";
 import volodymyr from "../../assets/images/Ai-NFT/Leaderboard/volodymyr.svg";
-import changpeng from "../../assets/images/Ai-NFT/Leaderboard/chengpeng.svg";
-import kanye from "../../assets/images/Ai-NFT/Leaderboard/kanye.svg";
+import changpeng_2 from "../../assets/images/Ai-NFT/Leaderboard/changpeng_2.svg";
+import kanye_2 from "../../assets/images/Ai-NFT/Leaderboard/kanye_2.svg";
 import dana from "../../assets/images/Ai-NFT/Leaderboard/dana.svg";
 import tiger from "../../assets/images/Ai-NFT/Leaderboard/tiger.svg";
 import tyson from "../../assets/images/Ai-NFT/Leaderboard/tyson.svg";
@@ -1233,7 +1230,7 @@ export const Leaderboard = [
     id: 31,
     number: "№34",
     name: "ChangPeng Zhao",
-    img: changpeng,
+    img: changpeng_2,
     score: "20",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1242,7 +1239,7 @@ export const Leaderboard = [
     id: 32,
     number: "№35",
     name: "KanYe West",
-    img: kanye,
+    img: kanye_2,
     score: "19",
     address: "3BV2...76D723623",
     dollar_price: "12.00",

@@ -13,10 +13,26 @@ import trading from "../../../assets/images/Ai-NFT/trading.png";
 import pencil from "../../../assets/images/Ai-NFT/pencil.png";
 import dollarYellow from "../../../assets/images/Ai-NFT/dollar-yellow.png";
 import { NftData } from "../AiNFTData";
+import { useSelector } from "react-redux";
 
 const MarketPlaceComponent = () => {
+  const metaMaskAddress = useSelector((state) => state.wallet);
   return (
-    <MarketPlaceContainer>
+    <MarketPlaceContainer
+    // notConnectedbg={
+    //   !metaMaskAddress.metaMaskAddress
+    //     ? "linear-gradient(173.49deg, #0f120f -58.84%, #31802f 103.9%)"
+    //     : "linear-gradient(180deg, #1c1c1c 39.58%, #62286b 100%)"
+    // }
+    // notConnectedbs={
+    //   !metaMaskAddress.metaMaskAddress
+    //     ? "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #50ff6c"
+    //     : "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #d036ae"
+    // }
+    // notConnectedcolor={
+    //   !metaMaskAddress.metaMaskAddress ? "#89ffa3" : "#ec9eff"
+    // }
+    >
       {NftData.map((item) => (
         <div className="cryptoAi">
           <div className="head">
@@ -78,26 +94,78 @@ const MarketPlaceComponent = () => {
             </div>
           </div>
           <div className="priceButton">
-            <div className="last-price">
-              <span>Last Price</span>
+            <div
+              className={
+                !metaMaskAddress.metaMaskAddress
+                  ? "wallet-not-connected"
+                  : "last-price"
+              }
+            >
+              {!metaMaskAddress.metaMaskAddress ? (
+                <span> Connect wallet</span>
+              ) : (
+                <span> Last Price</span>
+              )}
               <div>
-                <img src={dollarYellow} alt="dollarYellow" />
-                <span>{item.last_price}</span>
+                {!metaMaskAddress.metaMaskAddress ? (
+                  ""
+                ) : (
+                  <img src={dollarYellow} alt="dollarYellow" />
+                )}
+                <span>
+                  {!metaMaskAddress.metaMaskAddress ? "" : item.last_price}
+                </span>
               </div>
             </div>
-            <div className="sale-price">
-              <span>Sale Price</span>
+            <div
+              className={
+                !metaMaskAddress.metaMaskAddress
+                  ? "wallet-not-connected"
+                  : "sale-price"
+              }
+            >
+              {!metaMaskAddress.metaMaskAddress ? (
+                <span> Connect wallet</span>
+              ) : (
+                <span>Sale Price</span>
+              )}
               <div>
-                <img src={dollarYellow} alt="dollarYellow" />
-                <span>{item.sale_price}</span>
-                <img src={pencil} alt="pencil" />
+                {!metaMaskAddress.metaMaskAddress ? (
+                  ""
+                ) : (
+                  <img src={dollarYellow} alt="dollarYellow" />
+                )}{" "}
+                <span>
+                  {!metaMaskAddress.metaMaskAddress ? "" : item.sale_price}
+                </span>
+                {!metaMaskAddress.metaMaskAddress ? (
+                  ""
+                ) : (
+                  <img src={pencil} alt="pencil" />
+                )}
               </div>
             </div>
-            <div className="next-price">
-              <span>Next Price</span>
+            <div
+              className={
+                !metaMaskAddress.metaMaskAddress
+                  ? "wallet-not-connected"
+                  : "next-price"
+              }
+            >
+              {!metaMaskAddress.metaMaskAddress ? (
+                <span> Connect wallet</span>
+              ) : (
+                <span>Next Price</span>
+              )}
               <div>
-                <img src={dollarYellow} alt="dollarYellow" />
-                <span>{item.next_price}</span>
+                {!metaMaskAddress.metaMaskAddress ? (
+                  ""
+                ) : (
+                  <img src={dollarYellow} alt="dollarYellow" />
+                )}{" "}
+                <span>
+                  {!metaMaskAddress.metaMaskAddress ? "" : item.next_price}
+                </span>
               </div>
             </div>
           </div>

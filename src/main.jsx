@@ -6,11 +6,12 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
-import "./Font/Cabinet-Medium/CabinetGrotesk-Bold.ttf";
-// Import the font file
-import "./Font/MostraNuova/Mostra-Nuova-AltA-Bold.otf";
 import { RouterProvider } from "react-router";
 import { ContextProvider } from "./Context";
+
+// Import the font file
+import "./Font/Cabinet-Medium/CabinetGrotesk-Bold.ttf";
+import "./Font/MostraNuova/Mostra-Nuova-AltA-Bold.otf";
 
 // Routes //
 import Dashboard from "./routes/Dashboard";
@@ -279,10 +280,10 @@ const router = createBrowserRouter([
         path: "/social-media",
         element: <SocialMedia />,
       },
-    {
-      path: "/ai-nft",
-      element: <AiNFT/>
-    }
+      {
+        path: "/ai-nft",
+        element: <AiNFT />,
+      },
     ],
   },
 ]);

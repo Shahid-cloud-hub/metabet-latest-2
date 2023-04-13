@@ -56,7 +56,7 @@ const ContainerWrapper = styled("div")`
     overflow: auto;
     padding: 0 0 20px;
     /* background: #0f212e; */
-    background: ${(props) => props.purpleBackground};
+    background: ${(props) => props.purpleLeftSidebar};
 
     &::-webkit-scrollbar {
       display: block;
@@ -76,7 +76,7 @@ const ContainerWrapper = styled("div")`
     }
   }
 
-  .main {
+  .main-content {
     background: ${(props) => props.purpleBackground};
     width: 100%;
     position: relative;
@@ -183,9 +183,10 @@ const Dashboard = () => {
   return (
     <>
       <ContainerWrapper
-        deskTopPadding={isDesktop ? "320px" : "0px"}
+        deskTopPadding={isDesktop ? "343px" : "0px"}
         deskTopWidth={isDesktop ? "343px" : "0px"}
-        purpleBackground={pathname == "/ai-nft" ? "#130E19" : "#0f212e"}
+        purpleBackground={pathname == "/ai-nft" ? "#130E19" : "#1B2C37"}
+        purpleLeftSidebar={pathname == "/ai-nft" ? "#130E19" : "#0f212e"}
       >
         {items?.betMessage ||
           (items?.airDropBetMessage && celebRemove && (
@@ -207,7 +208,7 @@ const Dashboard = () => {
                 <Sidebar />
               </div>
             )}
-            <div className="main" id="detail">
+            <div className="main-content" id="detail">
               {pathname === "/ai-nft"
                 ? (isTablet || isMobile || isSmallMobile) && (
                     <BalanceButtonsNFT />

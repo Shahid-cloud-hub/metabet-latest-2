@@ -322,13 +322,13 @@
 
   .right-nav > label > input {
     width: 100%;
-    max-width: 40px;
+    max-width: 60px;
     min-height: 25px;
     border-radius: 6px;
     border: none;
     background: #0f212e;
     font-weight: 700;
-    font-size: 11px;
+    font-size: 15px;
     line-height: 140%;
     color: #ffffff;
   }
@@ -340,10 +340,6 @@
 
   .right-nav > label {
     padding: 0px 5px;
-  }
-
-  .right-nav > label > input::placeholder {
-    font-size: 11px;
   }
 }
 
@@ -376,18 +372,6 @@
     margin: 20px 0px 35px;
   }
 
-  .right-nav > label > input {
-    width: 100%;
-    max-width: 40px;
-    min-height: 25px;
-    border-radius: 6px;
-    border: none;
-    background: #0f212e;
-    font-weight: 700;
-    font-size: 11px;
-    line-height: 140%;
-    color: #ffffff;
-  }
   .right-nav-nft > label > input {
     width: 100%;
     max-width: 40px;
@@ -443,7 +427,7 @@
   }
 
   .dropdown .dropdownBtn .connect-btn {
-    padding: 5px 0px 0px 0px;
+    padding: 0px;
   }
 
   .dropdown .dropdownBtn .Nav-Btn {
@@ -467,18 +451,6 @@
     margin: 20px 0px 35px;
   }
 
-  .right-nav > label > input {
-    width: 100%;
-    max-width: 40px;
-    min-height: 25px;
-    border-radius: 6px;
-    border: none;
-    background: #0f212e;
-    font-weight: 700;
-    font-size: 11px;
-    line-height: 140%;
-    color: #ffffff;
-  }
   .right-nav-nft > label > input {
     width: 100%;
     max-width: 40px;
@@ -518,7 +490,8 @@
 
 @media screen and (max-width: 768px) {
   .dropdown {
-    width: 50px;
+    max-width: 160px;
+    margin: 0 auto;
   }
 
   .dropdown .dropdownContent {
@@ -532,7 +505,7 @@
   }
 
   .dropdown .dropdownBtn .connect-btn {
-    padding: 5px 0px 0px 0px;
+    padding: 0px;
   }
 
   .dropdown .dropdownBtn .Nav-Btn {
@@ -556,18 +529,6 @@
     margin: 20px 0px;
   }
 
-  .right-nav > label > input {
-    width: 100%;
-    max-width: 40px;
-    min-height: 25px;
-    border-radius: 6px;
-    border: none;
-    background: #0f212e;
-    font-weight: 700;
-    font-size: 11px;
-    line-height: 140%;
-    color: #ffffff;
-  }
   .right-nav-nft > label > input {
     width: 100%;
     max-width: 40px;
@@ -638,7 +599,7 @@
   .dropdown {
     align-items: center;
 
-    width: 180px;
+    /* width: 180px; */
   }
   .dropdown .dropdownBtn {
     padding-right: 0px;
@@ -675,7 +636,7 @@
   .dropdown {
     align-items: center;
 
-    width: 180px;
+    /* width: 180px; */
   }
   .dropdown .dropdownBtn {
     padding-right: 0px;
@@ -717,7 +678,7 @@
   .dropdown {
     align-items: center;
 
-    width: 180px;
+    /* width: 180px; */
   }
   .dropdown .dropdownBtn {
     padding-right: 0px;

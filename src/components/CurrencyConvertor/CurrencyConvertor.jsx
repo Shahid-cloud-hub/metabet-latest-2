@@ -91,7 +91,7 @@ const CurrencyConvertor = () => {
               onClick={handleSwap}
             />
             <div className="truai">
-              <div className="dropdown">
+              <div className="dropdown-cur">
                 <label>
                   To:{" "}
                   <img

@@ -10,11 +10,13 @@ import AiDropDownFilter from "./AiDropDownFilter";
 import MarketPlaceComponent from "./MarketPlaceComponent/MarketPlaceComponent";
 import MyNFTComponent from "./MyNFTComponent/MyNFTComponent";
 import LeaderboardComponent from "./LeaderboardComponent/LeaderboardComponent";
+import useBreakpoint from "../../hooks/useBreakpoints";
 
 const AiNFT = () => {
   const [itemData, setItemData] = useState(Filter);
   const [getName, setGetName] = useState("all");
   const { fetchData, response } = useAxios();
+  const { isDesktop } = useBreakpoint();
   const [change, setChange] = useState({
     myNFT: false,
     MarketPlace: true,
@@ -46,30 +48,30 @@ const AiNFT = () => {
 
   let title = getName;
 
-  if (getName === "all") {
-    const getAllEvents = async () => {
-      await fetchData({
-        method: "GET",
-        url: `https://dull-puce-wildebeest-belt.cyclic.app/group`,
-      });
-    };
+  // if (getName === "all") {
+  //   const getAllEvents = async () => {
+  //     await fetchData({
+  //       method: "GET",
+  //       url: `https://dull-puce-wildebeest-belt.cyclic.app/group`,
+  //     });
+  //   };
 
-    useEffect(() => {
-      getAllEvents();
-      window.scrollTo(0, 0);
-    }, [title]);
-  } else {
-    const getBanners = async () => {
-      await fetchData({
-        method: "GET",
-        url: `https://dull-puce-wildebeest-belt.cyclic.app/getGroup/group/${title}`,
-      });
-    };
-    useEffect(() => {
-      getBanners();
-      window.scrollTo(0, 0);
-    }, [title]);
-  }
+  //   useEffect(() => {
+  //     getAllEvents();
+  //     window.scrollTo(0, 0);
+  //   }, [title]);
+  // } else {
+  //   const getBanners = async () => {
+  //     await fetchData({
+  //       method: "GET",
+  //       url: `https://dull-puce-wildebeest-belt.cyclic.app/getGroup/group/${title}`,
+  //     });
+  //   };
+  //   useEffect(() => {
+  //     getBanners();
+  //     window.scrollTo(0, 0);
+  //   }, [title]);
+  // }
 
   const hightlightData = response?.map(
     (item) => item?.event?.highlights[0]?.stats?.data?.smart_contract_id
@@ -83,15 +85,18 @@ const AiNFT = () => {
       <div className="ai-logo">
         <img src={AILogoImg} alt="AI NFT" />
       </div>
-      <div className="ai-filter-btn">
-        <AiFilter
-          filterItem={filterItem}
-          setItemData={setItemData}
-          menuItems={menuItems}
-          callbackName={callbackName}
-          activeBet={true}
-        />
-      </div>
+      {isDesktop && (
+        <div className="ai-filter-btn">
+          <AiFilter
+            filterItem={filterItem}
+            setItemData={setItemData}
+            menuItems={menuItems}
+            callbackName={callbackName}
+            activeBet={true}
+          />
+        </div>
+      )}
+
       <div className="market-place-btn">
         <button
           className={change.myNFT ? "myNFT-active" : "myNFT-de-active"}
@@ -135,19 +140,21 @@ const AiNFT = () => {
       </div>
       <div className="market-place-filter-btn">
         <div className="parent-wrapper">
-          <AiDropDownFilter
-            options={[
-              { name: "Sales High/Low", value: "all", defaultValue: true },
-              { name: "Size", value: "size" },
-              { name: "Live", value: "live" },
-              { name: "Ended", value: "ended" },
-              { name: "Number Bets", value: "number_bets" },
-              { name: "Ending Soon", value: "ending_soon" },
-            ]}
-            onChange={(e) => {
-              console.log(e.target.value);
-            }}
-          />
+          {(change.myNFT || change.MarketPlace) && (
+            <AiDropDownFilter
+              options={[
+                { name: "Sales High/Low", value: "all", defaultValue: true },
+                { name: "Size", value: "size" },
+                { name: "Live", value: "live" },
+                { name: "Ended", value: "ended" },
+                { name: "Number Bets", value: "number_bets" },
+                { name: "Ending Soon", value: "ending_soon" },
+              ]}
+              onChange={(e) => {
+                // console.log(e.target.value);
+              }}
+            />
+          )}
         </div>
         <div className="parent-wrapper">
           <AiDropDownFilter
@@ -160,7 +167,7 @@ const AiNFT = () => {
               { name: "Ending Soon", value: "ending_soon" },
             ]}
             onChange={(e) => {
-              console.log(e.target.value);
+              // console.log(e.target.value);
             }}
           />
         </div>

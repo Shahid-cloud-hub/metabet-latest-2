@@ -136,19 +136,37 @@ const BetNowBtns = ({ getPath, callback }) => {
 
   const size = betNowData?.length;
 
+  const screenSize = window?.screen?.availWidth;
+
   return (
     <Info
       betType={size > 2 || size >= 3 ? "flex" : "" ? "grid" : "flex"}
       betWrap={size >= 3 ? "wrap" : ""}
       betDir={size > 2 || size >= 3 ? "1fr 1fr" : ""}
-      betMaxWidth={size > 2 || size >= 3 ? "1000px" : "" ? "971px" : ""}
+      betMaxWidth={size > 2 || size >= 3 ? "1080px" : "" ? "971px" : ""}
       betMargin={size > 2 || size >= 3 ? "0 auto" : ""}
     >
       {betNowData?.map((item) => (
         <>
           <div
             className="bet-details-wrapper"
-            style={{ width: item?.width && item?.width }}
+            // style={
+            //   screenSize < 1380 ||
+            //   screenSize < 1280 ||
+            //   screenSize < 768 ||
+            //   screenSize > 1380 ||
+            //   screenSize < 825
+            //     ? { width: "100%" }
+            //     : {}
+            //     ? { width: item?.width && item?.width }
+            //     : {}
+            //     ? { width: "100%" }
+            //     : {}
+            //     ? { width: "340px" }
+            //     : {}
+            //     ? { width: "380px" }
+            //     : { width: item?.width && item?.width }
+            // }
           >
             <span className="bet-title">{item.name}</span>
             <hr />
