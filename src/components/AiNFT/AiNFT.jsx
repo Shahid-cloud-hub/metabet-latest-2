@@ -158,19 +158,21 @@ const AiNFT = () => {
       </div>
       <div className="market-place-filter-btn">
         <div className="parent-wrapper">
-          <AiDropDownFilter
-            options={[
-              { name: "Sales High/Low", value: "all", defaultValue: true },
-              { name: "Size", value: "size" },
-              { name: "Live", value: "live" },
-              { name: "Ended", value: "ended" },
-              { name: "Number Bets", value: "number_bets" },
-              { name: "Ending Soon", value: "ending_soon" },
-            ]}
-            onChange={(e) => {
-              // console.log(e.target.value);
-            }}
-          />
+          {(change.myNFT || change.MarketPlace) && (
+            <AiDropDownFilter
+              options={[
+                { name: "Sales High/Low", value: "all", defaultValue: true },
+                { name: "Size", value: "size" },
+                { name: "Live", value: "live" },
+                { name: "Ended", value: "ended" },
+                { name: "Number Bets", value: "number_bets" },
+                { name: "Ending Soon", value: "ending_soon" },
+              ]}
+              onChange={(e) => {
+                // console.log(e.target.value);
+              }}
+            />
+          )}
         </div>
         <div className="parent-wrapper">
           <AiDropDownFilter

@@ -180,8 +180,6 @@ const Dashboard = () => {
 
   const availableWidth = window?.screen?.availWidth;
 
-  console.log("availableWidth", availableWidth);
-
   return (
     <>
       <ContainerWrapper

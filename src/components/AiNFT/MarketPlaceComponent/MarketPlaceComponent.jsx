@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { MarketPlaceContainer } from "../AINFT.Style";
 
 // Images //
@@ -14,36 +13,17 @@ import trading from "../../../assets/images/Ai-NFT/trading.png";
 import pencil from "../../../assets/images/Ai-NFT/pencil.png";
 import dollarYellow from "../../../assets/images/Ai-NFT/dollar-yellow.png";
 import { NftData } from "../AiNFTData";
-import { useState } from "react";
-import ReactPopUpModel from "../../ReactPopUpModel/ReactPopUpModel";
+import { useSelector } from "react-redux";
 
 const MarketPlaceComponent = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [imageSrc, setImageSrc] = useState("");
-
-  const handleImageClick = (src) => {
-    setModalOpen(true);
-    setImageSrc(src);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-    setImageSrc("");
-  };
-
+  const metaMaskAddress = useSelector((state) => state.wallet);
   return (
     <MarketPlaceContainer>
       {NftData.map((item) => (
         <div className="cryptoAi">
           <div className="head">
             <span id="purple">{item.heading}</span>
-            <ImageContainer>
-              <img
-                src={item.main_img}
-                onClick={() => handleImageClick(item?.main_img)}
-                alt="mainImg1"
-              />
-            </ImageContainer>
+            <img src={item.main_img} alt="mainImg1" />
             <span id="white">{item.name}</span>
           </div>
           <div className="stats">
@@ -100,26 +80,78 @@ const MarketPlaceComponent = () => {
             </div>
           </div>
           <div className="priceButton">
-            <div className="last-price">
-              <span>Last Price</span>
+            <div
+              className={
+                !metaMaskAddress.metaMaskAddress
+                  ? "wallet-not-connected"
+                  : "last-price"
+              }
+            >
+              {!metaMaskAddress.metaMaskAddress ? (
+                <span> Connect wallet</span>
+              ) : (
+                <span> Last Price</span>
+              )}
               <div>
-                <img src={dollarYellow} alt="dollarYellow" />
-                <span>{item.last_price}</span>
+                {!metaMaskAddress.metaMaskAddress ? (
+                  ""
+                ) : (
+                  <img src={dollarYellow} alt="dollarYellow" />
+                )}
+                <span>
+                  {!metaMaskAddress.metaMaskAddress ? "" : item.last_price}
+                </span>
               </div>
             </div>
-            <div className="sale-price">
-              <span>Sale Price</span>
+            <div
+              className={
+                !metaMaskAddress.metaMaskAddress
+                  ? "wallet-not-connected"
+                  : "sale-price"
+              }
+            >
+              {!metaMaskAddress.metaMaskAddress ? (
+                <span> Connect wallet</span>
+              ) : (
+                <span>Sale Price</span>
+              )}
               <div>
-                <img src={dollarYellow} alt="dollarYellow" />
-                <span>{item.sale_price}</span>
-                <img src={pencil} alt="pencil" />
+                {!metaMaskAddress.metaMaskAddress ? (
+                  ""
+                ) : (
+                  <img src={dollarYellow} alt="dollarYellow" />
+                )}{" "}
+                <span>
+                  {!metaMaskAddress.metaMaskAddress ? "" : item.sale_price}
+                </span>
+                {!metaMaskAddress.metaMaskAddress ? (
+                  ""
+                ) : (
+                  <img src={pencil} alt="pencil" />
+                )}
               </div>
             </div>
-            <div className="next-price">
-              <span>Next Price</span>
+            <div
+              className={
+                !metaMaskAddress.metaMaskAddress
+                  ? "wallet-not-connected"
+                  : "next-price"
+              }
+            >
+              {!metaMaskAddress.metaMaskAddress ? (
+                <span> Connect wallet</span>
+              ) : (
+                <span>Next Price</span>
+              )}
               <div>
-                <img src={dollarYellow} alt="dollarYellow" />
-                <span>{item.next_price}</span>
+                {!metaMaskAddress.metaMaskAddress ? (
+                  ""
+                ) : (
+                  <img src={dollarYellow} alt="dollarYellow" />
+                )}{" "}
+                <span>
+                  {!metaMaskAddress.metaMaskAddress ? "" : item.next_price}
+                </span>
               </div>
             </div>
           </div>
@@ -154,46 +186,8 @@ const MarketPlaceComponent = () => {
           </div>
         </div>
       ))}
-      {modalOpen && <ReactPopUpModel src={imageSrc} closeModal={closeModal} />}
     </MarketPlaceContainer>
   );
 };
-
-const ImageContainer = styled.div`
-  position: relative;
-  /* width: 200px; */
-  /* height: 200px; */
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  img {
-    /* width: 100%; */
-    /* height: 100%; */
-    /* object-fit: cover; */
-    transition: transform 0.3s ease-out;
-  }
-
-  img:hover {
-    transform: scale(1.05);
-  }
-
-  ${({ isModalOpen }) =>
-    isModalOpen &&
-    `
-      position: fixed;
-      top: 40%;
-    left: 50%;
-    width: 50%;
-    height: 50%;
-      background-color: rgba(0, 0, 0, 0.6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-      transform: translate(-50%, -50%);
-    `}
-`;
 
 export default MarketPlaceComponent;

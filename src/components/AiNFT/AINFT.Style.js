@@ -354,15 +354,12 @@ export const MarketPlaceContainer = styled("div")`
       font-family: "mostra-nuova";
       font-weight: 800;
       font-size: 16px;
-      line-height: 95%;
       color: #e1f5fe;
     }
     span {
       font-family: "mostra-nuova";
-      font-style: normal;
       font-weight: 300;
       font-size: 14px;
-      line-height: 95%;
       color: #b1b1b1;
     }
     #purple {
@@ -371,7 +368,6 @@ export const MarketPlaceContainer = styled("div")`
       -webkit-text-fill-color: transparent;
       background-clip: text;
       font-family: "mostra-nuova";
-      font-style: normal;
       font-weight: 900;
       font-size: 14px;
     }
@@ -444,15 +440,16 @@ export const MarketPlaceContainer = styled("div")`
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(180deg, #1c1c1c 39.58%, #62286b 100%);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #d036ae;
+        /* background: linear-gradient(180deg, #1c1c1c 39.58%, #62286b 100%); */
+        background: ${(props) => props.notConnectedbg};
+        /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #d036ae; */
+        box-shadow: ${(props) => props.notConnectedbs};
         border-radius: 34px;
         padding: 5px 21px;
 
         span {
           font-weight: 500;
           font-size: 10px;
-          line-height: 12px;
           font-family: "mostra-nuova";
           color: #9c67ae;
         }
@@ -464,13 +461,16 @@ export const MarketPlaceContainer = styled("div")`
             font-family: "mostra-nuova";
             font-weight: 700;
             font-size: 14px;
-            line-height: 143.7%;
-            color: #ec9eff;
+            /* color: #ec9eff; */
+
+            color: ${(props) => props.notConnectedcolor};
             text-shadow: 0px 0px 30px #000000;
           }
         }
       }
+
       .sale-price {
+        content: inherit;
         width: 100%;
         max-width: 90px;
         min-height: 42px;
@@ -486,7 +486,6 @@ export const MarketPlaceContainer = styled("div")`
         span {
           font-weight: 500;
           font-size: 10px;
-          line-height: 12px;
           font-family: "mostra-nuova";
           color: #5f9ea0;
         }
@@ -498,12 +497,12 @@ export const MarketPlaceContainer = styled("div")`
             font-family: "mostra-nuova";
             font-weight: 700;
             font-size: 14px;
-            line-height: 143.7%;
             color: #89ffa3;
             text-shadow: 0px 0px 30px #000000;
           }
         }
       }
+
       .next-price {
         width: 100%;
         max-width: 90px;
@@ -520,7 +519,6 @@ export const MarketPlaceContainer = styled("div")`
         span {
           font-weight: 500;
           font-size: 10px;
-          line-height: 12px;
           font-family: "mostra-nuova";
           color: #70a1bc;
         }
@@ -532,7 +530,6 @@ export const MarketPlaceContainer = styled("div")`
             font-family: "mostra-nuova";
             font-weight: 700;
             font-size: 14px;
-            line-height: 143.7%;
             color: #64baff;
             text-shadow: 0px 0px 30px #000000;
           }
@@ -550,7 +547,6 @@ export const MarketPlaceContainer = styled("div")`
         font-family: "mostra-nuova";
         font-weight: 700;
         font-size: 16px;
-        line-height: 95%;
         color: #89ffa3;
         text-decoration-line: none;
       }
@@ -569,7 +565,6 @@ export const MarketPlaceContainer = styled("div")`
         font-family: "mostra-nuova";
         font-weight: 700;
         font-size: 16px;
-        line-height: 95%;
         background: linear-gradient(
           118.51deg,
           #e1f5fe -4.48%,
@@ -628,6 +623,19 @@ export const MarketPlaceContainer = styled("div")`
       }
     }
   }
+
+  .wallet-not-connected {
+    background: linear-gradient(173.49deg, #0f120f -58.84%, #31802f 103.9%);
+    box-shadow: none;
+    border-radius: 34px;
+    padding: 13px 7px;
+    span {
+      color: #89ffa3;
+      font-size: 14px;
+      font-family: "mostra-nuova";
+      font-weight: 700;
+    }
+  }
 `;
 
 export const LeaderboardContainer = styled("div")`
@@ -656,10 +664,8 @@ export const LeaderboardContainer = styled("div")`
 
     span {
       font-family: "Junegull";
-      font-style: normal;
       font-weight: 400;
       font-size: 24px;
-      line-height: 95%;
       color: #f5f5f5;
     }
   }
@@ -686,7 +692,6 @@ export const LeaderboardContainer = styled("div")`
       span {
         font-weight: 700;
         font-size: 16px;
-        line-height: 95%;
         font-family: "mostra-nuova";
         color: #e1f5fe;
       }
@@ -694,7 +699,6 @@ export const LeaderboardContainer = styled("div")`
         font-family: "mostra-nuova";
         font-weight: 700;
         font-size: 14px;
-        line-height: 95%;
         background: linear-gradient(90deg, #986099 -8.82%, #ff33f7 111.76%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -709,7 +713,6 @@ export const LeaderboardContainer = styled("div")`
         font-family: "mostra-nuova";
         font-weight: 300;
         font-size: 11px;
-        line-height: 95%;
         text-decoration-line: underline;
         color: #b1b1b1;
         align-items: center;
@@ -725,7 +728,6 @@ export const LeaderboardContainer = styled("div")`
         font-family: "mostra-nuova";
         font-weight: 300;
         font-size: 14px;
-        line-height: 95%;
         color: #b1b1b1;
       }
     }
@@ -752,7 +754,6 @@ export const LeaderboardContainer = styled("div")`
       span {
         font-weight: 700;
         font-size: 16px;
-        line-height: 95%;
         font-family: "mostra-nuova";
         color: #e1f5fe;
       }
@@ -760,7 +761,6 @@ export const LeaderboardContainer = styled("div")`
         font-family: "mostra-nuova";
         font-weight: 700;
         font-size: 14px;
-        line-height: 95%;
         background: linear-gradient(90deg, #986099 -8.82%, #ff33f7 111.76%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -775,7 +775,6 @@ export const LeaderboardContainer = styled("div")`
         font-family: "mostra-nuova";
         font-weight: 300;
         font-size: 11px;
-        line-height: 95%;
         text-decoration-line: underline;
         color: #b1b1b1;
         align-items: center;
@@ -791,7 +790,6 @@ export const LeaderboardContainer = styled("div")`
         font-family: "mostra-nuova";
         font-weight: 300;
         font-size: 14px;
-        line-height: 95%;
         color: #b1b1b1;
       }
     }
@@ -823,7 +821,6 @@ export const LeaderboardContainer = styled("div")`
         font-family: "Junegull";
         font-weight: 400;
         font-size: 16px;
-        line-height: 95%;
         background: linear-gradient(90deg, #986099 -8.82%, #ff33f7 111.76%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -839,7 +836,6 @@ export const LeaderboardContainer = styled("div")`
       span {
         font-weight: 700;
         font-size: 16px;
-        line-height: 95%;
         font-family: "mostra-nuova";
         color: #e1f5fe;
       }
@@ -847,7 +843,6 @@ export const LeaderboardContainer = styled("div")`
         font-family: "mostra-nuova";
         font-weight: 700;
         font-size: 14px;
-        line-height: 95%;
         background: linear-gradient(90deg, #986099 -8.82%, #ff33f7 111.76%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -862,7 +857,6 @@ export const LeaderboardContainer = styled("div")`
         font-family: "mostra-nuova";
         font-weight: 300;
         font-size: 11px;
-        line-height: 95%;
         text-decoration-line: underline;
         color: #b1b1b1;
         align-items: center;
@@ -878,7 +872,6 @@ export const LeaderboardContainer = styled("div")`
         font-family: "mostra-nuova";
         font-weight: 300;
         font-size: 14px;
-        line-height: 95%;
         color: #b1b1b1;
       }
     }

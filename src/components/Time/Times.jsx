@@ -19,7 +19,6 @@ function Times({ date, show }) {
 
   // console.log("first ew", getDateObject(date));
 
-  console.log("show", show);
   const deadline = new Date(date);
   const gmt = new Date(date);
 

@@ -81,7 +81,6 @@ const DropdownNFT = ({ show }) => {
     // console.log(metaMaskAddress, "metaMaskAddress");
   }, [metaMaskAddress]);
 
-  console.log("show", show);
   const availableWidth = window?.screen?.availWidth;
 
   return (
