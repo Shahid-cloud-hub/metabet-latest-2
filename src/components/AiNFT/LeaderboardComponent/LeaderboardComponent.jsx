@@ -1,12 +1,12 @@
 import React from "react";
 import Maintenance from "../../Maintenance/Maintenance";
 import { LeaderboardContainer } from "../AINFT.Style";
-import crown1 from "../../../assets/images/Ai-NFT/Leaderboard/crown-silver.png";
-import crown2 from "../../../assets/images/Ai-NFT/Leaderboard/crown-gold.png";
-import crown3 from "../../../assets/images/Ai-NFT/Leaderboard/crown-bronze.svg";
-import cristiano from "../../../assets/images/Ai-NFT/Leaderboard/Cristiano.svg";
+import crown1 from "../../../assets/images/Ai-NFT/Leaderboard/silver.svg";
+import crown2 from "../../../assets/images/Ai-NFT/Leaderboard/gold.svg";
+import crown3 from "../../../assets/images/Ai-NFT/Leaderboard/bronze.svg";
+import cristiano from "../../../assets/images/Ai-NFT/Leaderboard/cristiano.svg";
 import lionel from "../../../assets/images/Ai-NFT/Leaderboard/lionel.svg";
-import kim from "../../../assets/images/Ai-NFT/Leaderboard/kim.png";
+import kim from "../../../assets/images/Ai-NFT/Leaderboard/kim.svg";
 import stick from "../../../assets/images/Ai-NFT/Leaderboard/stick.svg";
 import chainlink from "../../../assets/images/Ai-NFT/Leaderboard/chainlink.svg";
 import dollarYellow from "../../../assets/images/Ai-NFT/Leaderboard/dollar-yellow.svg";

@@ -44,9 +44,6 @@ import Mukesh from "../../assets/images/Ai-NFT/Mukesh.svg";
 
 //leaderboard images
 
-import cristiano from "../../assets/images/Ai-NFT/Leaderboard/Cristiano.png";
-import lionel from "../../assets/images/Ai-NFT/Leaderboard/lionel.png";
-import kim from "../../assets/images/Ai-NFT/Leaderboard/kim.png";
 import dwayne from "../../assets/images/Ai-NFT/Leaderboard/dwayne.svg";
 import beyonce from "../../assets/images/Ai-NFT/Leaderboard/beyonce.svg";
 import elon from "../../assets/images/Ai-NFT/Leaderboard/elon.svg";
@@ -77,8 +74,8 @@ import sylvester from "../../assets/images/Ai-NFT/Leaderboard/sylvester.svg";
 import tom from "../../assets/images/Ai-NFT/Leaderboard/tom.svg";
 import canelo from "../../assets/images/Ai-NFT/Leaderboard/canelo.svg";
 import volodymyr from "../../assets/images/Ai-NFT/Leaderboard/volodymyr.svg";
-import changpeng from "../../assets/images/Ai-NFT/Leaderboard/chengpeng.svg";
-import kanye from "../../assets/images/Ai-NFT/Leaderboard/kanye.svg";
+import changpeng_2 from "../../assets/images/Ai-NFT/Leaderboard/changpeng_2.svg";
+import kanye_2 from "../../assets/images/Ai-NFT/Leaderboard/kanye_2.svg";
 import dana from "../../assets/images/Ai-NFT/Leaderboard/dana.svg";
 import tiger from "../../assets/images/Ai-NFT/Leaderboard/tiger.svg";
 import tyson from "../../assets/images/Ai-NFT/Leaderboard/tyson.svg";
@@ -1241,7 +1238,7 @@ export const Leaderboard = [
     id: 32,
     number: "№35",
     name: "ChangPeng Zhao",
-    img: changpeng,
+    img: changpeng_2,
     score: "20",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1250,7 +1247,7 @@ export const Leaderboard = [
     id: 33,
     number: "№36",
     name: "KanYe West",
-    img: kanye,
+    img: kanye_2,
     score: "19",
     address: "3BV2...76D723623",
     dollar_price: "12.00",

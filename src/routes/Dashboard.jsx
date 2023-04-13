@@ -183,7 +183,7 @@ const Dashboard = () => {
   return (
     <>
       <ContainerWrapper
-        deskTopPadding={isDesktop ? "320px" : "0px"}
+        deskTopPadding={isDesktop ? "343px" : "0px"}
         deskTopWidth={isDesktop ? "343px" : "0px"}
         purpleBackground={pathname == "/ai-nft" ? "#130E19" : "#1B2C37"}
         purpleLeftSidebar={pathname == "/ai-nft" ? "#130E19" : "#0f212e"}
