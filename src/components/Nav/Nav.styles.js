@@ -564,4 +564,20 @@ export const BetAINFTStatusContainer = styled("div")`
       }
     }
   }
+
+  @media screen and (max-width: 680px) {
+    .bet-status-ai-nft-container {
+      max-width: 500px;
+      margin: 0 auto;
+      .bet-ai-nft-status-boxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        label {
+          width: 100%;
+          max-width: none;
+        }
+      }
+    }
+  }
 `;

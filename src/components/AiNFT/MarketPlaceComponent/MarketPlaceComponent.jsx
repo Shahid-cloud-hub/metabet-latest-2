@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import styled from "styled-components";
 import { MarketPlaceContainer } from "../AINFT.Style";
+import { useSelector } from "react-redux";
 
 // Images //
 import stick from "../../../assets/images/Ai-NFT/stick.png";
@@ -13,17 +15,36 @@ import trading from "../../../assets/images/Ai-NFT/trading.png";
 import pencil from "../../../assets/images/Ai-NFT/pencil.png";
 import dollarYellow from "../../../assets/images/Ai-NFT/dollar-yellow.png";
 import { NftData } from "../AiNFTData";
-import { useSelector } from "react-redux";
+import ReactPopUpModel from "../../ReactPopUpModel/ReactPopUpModel";
 
 const MarketPlaceComponent = () => {
   const metaMaskAddress = useSelector((state) => state.wallet);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [imageSrc, setImageSrc] = useState("");
+
+  const handleImageClick = (src) => {
+    setModalOpen(true);
+    setImageSrc(src);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setImageSrc("");
+  };
+
   return (
     <MarketPlaceContainer>
-      {NftData.map((item) => (
+      {/* {NftData.map((item) => (
         <div className="cryptoAi">
           <div className="head">
             <span id="purple">{item.heading}</span>
-            <img src={item.main_img} alt="mainImg1" />
+            <ImageContainer>
+              <img
+                src={item.main_img}
+                onClick={() => handleImageClick(item?.main_img)}
+                alt="mainImg1"
+              />
+            </ImageContainer>
             <span id="white">{item.name}</span>
           </div>
           <div className="stats">
@@ -148,7 +169,7 @@ const MarketPlaceComponent = () => {
                   ""
                 ) : (
                   <img src={dollarYellow} alt="dollarYellow" />
-                )}{" "}
+                )}
                 <span>
                   {!metaMaskAddress.metaMaskAddress ? "" : item.next_price}
                 </span>
@@ -185,9 +206,43 @@ const MarketPlaceComponent = () => {
             </div>
           </div>
         </div>
-      ))}
+      ))} */}
+      {modalOpen && <ReactPopUpModel src={imageSrc} closeModal={closeModal} />}
     </MarketPlaceContainer>
   );
 };
+
+const ImageContainer = styled.div`
+  position: relative;
+  /* width: 200px; */
+  /* height: 200px; */
+  &:hover {
+    cursor: pointer;
+  }
+  img {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* object-fit: cover; */
+    transition: transform 0.3s ease-out;
+  }
+  img:hover {
+    transform: scale(1.05);
+  }
+  ${({ isModalOpen }) =>
+    isModalOpen &&
+    `
+      position: fixed;
+      top: 40%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+    `}
+`;
 
 export default MarketPlaceComponent;

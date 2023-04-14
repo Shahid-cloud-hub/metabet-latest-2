@@ -40,7 +40,7 @@ const Header = (props) => {
           <NavLink to="/" onClick={callback}>
             {pathname === "/ai-nft" ? (
               <img
-                src={isSmallMobile || isMobile || isTablet ? LogoImg : logoAi}
+                src={isSmallMobile || isMobile || isTablet ? logoAi : logoAi}
                 alt=""
               />
             ) : (
@@ -51,7 +51,15 @@ const Header = (props) => {
             )}
           </NavLink>
         </div>
-        {(isSmallMobile || isMobile || isTablet) && <Dropdown />}
+        {(isSmallMobile || isMobile || isTablet) && (
+          <>
+            {pathname === "/ai-nft" ? (
+              <DropdownNFT show={true} />
+            ) : (
+              <Dropdown />
+            )}
+          </>
+        )}
         {isDesktop && (
           <>
             {pathname === "/ai-nft" ? (
