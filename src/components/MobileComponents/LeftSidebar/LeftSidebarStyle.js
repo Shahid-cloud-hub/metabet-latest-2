@@ -9,10 +9,18 @@ export const ContainerSidebar = styled("div")`
     z-index: 1;
     top: 70px;
     left: 0;
-    background: #0f212e;
+    /* background: #0f212e; */
+    background: ${(props) => props.purpleBackground};
     overflow: hidden;
     transition: 0.5s;
     padding-top: 60px;
+  }
+
+  .menu-main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
 
   .menu {
@@ -236,6 +244,13 @@ export const ContainerSidebar = styled("div")`
     }
   }
 
+  @media screen and (max-width: 880px) {
+    .OpenNavBar {
+      display: block;
+      margin: 4px 10px 0px;
+    }
+  }
+
   @media screen and (max-width: 820px) {
     .menu {
       .page-mobile {
@@ -269,10 +284,6 @@ export const ContainerSidebar = styled("div")`
       .close-img {
         transform: translate(-16px, 0px);
       }
-    }
-    .OpenNavBar {
-      display: block;
-      margin: 4px 10px 0px;
     }
   }
 

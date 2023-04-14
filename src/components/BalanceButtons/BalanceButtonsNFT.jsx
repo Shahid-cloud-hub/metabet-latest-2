@@ -117,27 +117,6 @@ const DropdownNFT = ({ show }) => {
             </div>
           </div>
         </div>
-
-        {/* {show && (
-          <div className="ai-nft-wallet-connect-btn">
-            <div>
-              <img src={trolly} alt="trolly" />
-            </div>
-            {!metaMaskAddress.metaMaskAddress ? (
-              <>
-                <button onClick={() => dispatch(metaMaskConnection())}>
-                  Connect
-                </button>
-              </>
-            ) : (
-              <>
-                <button onClick={() => dispatch(metaMaskDisconnect())}>
-                  Disconnect
-                </button>
-              </>
-            )}
-          </div>
-        )} */}
       </div>
     </BetAINFTStatusContainer>
   );

@@ -34,7 +34,7 @@ const MarketPlaceComponent = () => {
 
   return (
     <MarketPlaceContainer>
-      {/* {NftData.map((item) => (
+      {NftData.map((item) => (
         <div className="cryptoAi">
           <div className="head">
             <span id="purple">{item.heading}</span>
@@ -206,7 +206,7 @@ const MarketPlaceComponent = () => {
             </div>
           </div>
         </div>
-      ))} */}
+      ))}
       {modalOpen && <ReactPopUpModel src={imageSrc} closeModal={closeModal} />}
     </MarketPlaceContainer>
   );

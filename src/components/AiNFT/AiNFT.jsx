@@ -96,7 +96,6 @@ const AiNFT = () => {
           activeBet={true}
         />
       </div>
-
       {isSmallDesktop && (
         <div className="parent-wrapper">
           <AiDropDownFilter

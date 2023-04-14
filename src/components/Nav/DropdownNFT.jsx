@@ -123,7 +123,7 @@ const DropdownNFT = ({ show }) => {
         )}
 
         <div className="ai-nft-wallet-connect-btn">
-          <div>
+          <div className="shop-img">
             <img src={trolly} alt="trolly" />
           </div>
           {!metaMaskAddress.metaMaskAddress ? (

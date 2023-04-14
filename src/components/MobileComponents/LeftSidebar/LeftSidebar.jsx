@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { ContainerSidebar } from "./LeftSidebarStyle";
 import MenuIcon from "../../../assets/images/mobile-view/humburger/menu.svg";
 import CloseMenuIcon from "../../../assets/images/mobile-view/humburger/close-menu.svg";
 import { Link, useLocation } from "react-router-dom";
 import Footer from "../../Footer/Footer";
+import trolly from "../../../assets/images/Ai-NFT/trolly.png";
 
 import {
   first_array,
@@ -11,6 +12,7 @@ import {
   third_array,
 } from "../../../JasonData/Sidebar_routes";
 import OutsideClick from "./helperFunction";
+import { Context } from "../../../Context";
 
 const SidebarItems = (props) => {
   const active = props.active ? "active" : "";
@@ -48,6 +50,8 @@ const SidebarItems2 = (props) => {
 
 const LeftSidebar = () => {
   const location = useLocation();
+  const pathname = window.location.pathname;
+  const { items } = useContext(Context);
 
   const activeItems = first_array.findIndex(
     (item) => item.route === location.pathname
@@ -73,10 +77,19 @@ const LeftSidebar = () => {
   const boxOutsideClick = OutsideClick(boxRef);
   // console.log("Value", boxOutsideClick);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname, items.getRender]);
+
   return (
-    <ContainerSidebar>
-      <div className="OpenNavBar" onClick={OpenNav}>
-        <img src={MenuIcon} alt="Menu" />
+    <ContainerSidebar
+      purpleBackground={pathname === "/ai-nft" ? "#130e19" : "rgb(15, 33, 46)"}
+    >
+      <div className="menu-main-wrapper">
+        <img src={trolly} alt="Menu" />
+        <div className="OpenNavBar" onClick={OpenNav}>
+          <img src={MenuIcon} alt="Menu" />
+        </div>
       </div>
 
       <div
