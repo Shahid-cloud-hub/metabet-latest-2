@@ -6,6 +6,7 @@ import navBet from "../../assets/images/navBet.svg";
 import Utils from "../../utilities";
 import { useDispatch, useSelector } from "react-redux";
 import { Context } from "../../Context";
+import { BetStatusContainer } from "../Nav/Nav.styles";
 
 const BalanceButtons = () => {
   const metaMaskAddress = useSelector((state) => state.wallet);
@@ -33,27 +34,29 @@ const BalanceButtons = () => {
   }
 
   return (
-    <div className="right-nav">
-      <label>
-        <input
-          type="text"
-          name="name"
-          value={balance == null ? "0.00" : balance}
-          disabled
-        />
-        <img src={foxCircle} alt="foxCircle" />
-      </label>
-      <label>
-        <input type="text" name="name" placeholder="0.00" disabled />
-        <img id="label-nav" src={tru} alt="tru" />
-      </label>
-      <label>
-        <input type="text" name="name" placeholder="0.00" disabled />
-        <img src={navBet} alt="navBet" />
-      </label>
-
-      {/* <img id="withdraw" src={Withdraw} alt="Withdraw" /> */}
-    </div>
+    <BetStatusContainer>
+      <div className="bet-status-container">
+        <div className="bet-status-boxes">
+          <label>
+            <input
+              type="text"
+              name="name"
+              value={balance == null ? "0.00" : balance}
+              disabled
+            />
+            <img src={foxCircle} alt="foxCircle" />
+          </label>
+          <label>
+            <input type="text" name="name" placeholder="0.00" disabled />
+            <img id="label-nav" src={tru} alt="tru" />
+          </label>
+          <label>
+            <input type="text" name="name" placeholder="0.00" disabled />
+            <img src={navBet} alt="navBet" />
+          </label>
+        </div>
+      </div>
+    </BetStatusContainer>
   );
 };
 

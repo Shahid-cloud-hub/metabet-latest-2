@@ -219,9 +219,7 @@ const Dashboard = () => {
                       }
                     />
                   )
-                : (isDesktop || isTablet || isMobile || isSmallMobile) && (
-                    <BalanceButtons />
-                  )}
+                : (isTablet || isMobile || isSmallMobile) && <BalanceButtons />}
               <Outlet />
               <ToastContainer />
             </div>

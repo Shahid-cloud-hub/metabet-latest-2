@@ -271,6 +271,101 @@ export const BetStatusContainer = styled("div")`
       }
     }
   }
+
+  @media screen and (max-width: 880px) {
+    padding: 0;
+    .bet-status-container {
+      justify-content: center;
+      padding: 20px 0px;
+      .main-connect-btn {
+        margin-left: 35px;
+      }
+      .bet-status-boxes {
+        label {
+          input {
+            font-size: 15px;
+
+            &::placeholder {
+              font-size: 16px;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    .bet-status-container {
+      justify-content: center;
+      padding: 20px 0px;
+      .main-connect-btn {
+        margin-left: 50px;
+      }
+    }
+  }
+  @media screen and (max-width: 690px) {
+    padding: 0;
+
+    .bet-status-container {
+      justify-content: center;
+      padding: 10px 0px;
+      .bet-status-boxes {
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+        label {
+          max-width: 148px;
+
+          input {
+            font-size: 12px;
+
+            &::placeholder {
+              font-size: 12px;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 375px) {
+    padding: 0;
+    .bet-status-container {
+      justify-content: center;
+      padding: 20px 0px;
+      .main-connect-btn {
+        margin-left: 80px;
+      }
+    }
+  }
+  @media screen and (max-width: 350px) {
+    padding: 0;
+    .bet-status-container {
+      justify-content: center;
+      padding: 10px 0px;
+      .bet-status-boxes {
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+        label {
+          max-width: 115px;
+
+          input {
+            font-size: 12px;
+
+            &::placeholder {
+              font-size: 12px;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const BetAINFTStatusContainer = styled("div")`

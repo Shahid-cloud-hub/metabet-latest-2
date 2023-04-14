@@ -110,17 +110,17 @@ function Dropdown() {
           </div>
         )}
         {!metaMaskAddress.metaMaskAddress ? (
-          <>
+          <div className="main-connect-btn">
             <button onClick={() => dispatch(metaMaskConnection())}>
               Connect
             </button>
-          </>
+          </div>
         ) : (
-          <>
+          <div className="main-connect-btn">
             <button onClick={() => dispatch(metaMaskDisconnect())}>
               Disconnect
             </button>
-          </>
+          </div>
         )}
       </div>
     </BetStatusContainer>
