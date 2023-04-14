@@ -26,8 +26,9 @@ import useBreakpoint from "../../hooks/useBreakpoints";
 import truncateEthAddress from "truncate-eth-address";
 import Utils from "../../utilities";
 import { Context } from "../../Context";
+import { BetAINFTStatusContainer } from "../Nav/Nav.styles";
 
-const DropdownNFT = () => {
+const DropdownNFT = ({ show }) => {
   const [selected, setSelected] = useState();
   const [Active, setIsActive] = useState(false);
   const metaMaskAddress = useSelector((state) => state.wallet);
@@ -80,10 +81,17 @@ const DropdownNFT = () => {
     // console.log(metaMaskAddress, "metaMaskAddress");
   }, [metaMaskAddress]);
 
+  const availableWidth = window?.screen?.availWidth;
+
   return (
-    <>
-      <div className="dropdown-ai">
-        <div className="right-nav-nft">
+    <BetAINFTStatusContainer paddTop="20px" removePadd={show ? "none" : "0px"}>
+      <div
+        className="bet-status-ai-nft-container"
+        style={
+          availableWidth > 1080 ? { display: "none" } : { display: "flex" }
+        }
+      >
+        <div className="bet-ai-nft-status-boxes">
           <label>
             <span>NFT Circ Supply</span>
             <input
@@ -101,35 +109,37 @@ const DropdownNFT = () => {
             <img src={trubet} alt="trubet" />
             <input type="text" name="name" placeholder="$0.00" disabled />
           </label>
-        </div>
-        <div className="dollar">
-          <img src={dollar} alt="dollar" />
-          <div className="dollar-text">
-            <input type="text" name="name" placeholder="$0.00" disabled />
-            <span>Total fees Earnt</span>
+          <div className="dollar-wrapper">
+            <img src={dollar} alt="dollar" />
+            <div className="dollar-status-text">
+              <input type="text" name="name" placeholder="$0.00" disabled />
+              <span>Total fees Earnt</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="dropdownBtn">
-        <img src={trolly} alt="trolly" />
-        {!metaMaskAddress.metaMaskAddress ? (
-          <div
-            className="connect-btn-nft"
-            onClick={() => dispatch(metaMaskConnection())}
-          >
-            <button>Connect</button>
+        {/* {show && (
+          <div className="ai-nft-wallet-connect-btn">
+            <div>
+              <img src={trolly} alt="trolly" />
+            </div>
+            {!metaMaskAddress.metaMaskAddress ? (
+              <>
+                <button onClick={() => dispatch(metaMaskConnection())}>
+                  Connect
+                </button>
+              </>
+            ) : (
+              <>
+                <button onClick={() => dispatch(metaMaskDisconnect())}>
+                  Disconnect
+                </button>
+              </>
+            )}
           </div>
-        ) : (
-          <div
-            className="connect-btn-nft"
-            onClick={() => dispatch(metaMaskDisconnect())}
-          >
-            <button>Disconnect</button>
-          </div>
-        )}
+        )} */}
       </div>
-    </>
+    </BetAINFTStatusContainer>
   );
 };
 

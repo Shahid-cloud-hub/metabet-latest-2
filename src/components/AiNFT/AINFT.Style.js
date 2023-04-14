@@ -4,7 +4,7 @@ export const AINFTContainer = styled("div")`
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding: 20px 9px 20px 47px;
+  padding: 0px 20px;
 
   .ai-filter-btn {
     display: flex;
@@ -319,8 +319,14 @@ export const AINFTContainer = styled("div")`
         font-family: "mostra-nuova", sans-serif;
         padding: 10px 0px;
         cursor: pointer;
-        margin-right: 5%;
+        margin-right: 4%;
       }
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    .ai-filter-btn {
+      display: none;
     }
   }
 `;
@@ -341,7 +347,7 @@ export const MarketPlaceContainer = styled("div")`
     background: linear-gradient(180.07deg, #422347 -1.92%, #18021c 98.15%);
     border-radius: 12px;
     width: 100%;
-    max-width: 322px;
+    /* max-width: 322px; */
     border: 1px solid #ff33f7;
 
     #white {
@@ -626,6 +632,131 @@ export const MarketPlaceContainer = styled("div")`
       font-size: 14px;
       font-family: "mostra-nuova";
       font-weight: 700;
+    }
+  }
+
+  @media screen and (max-width: 1385px) {
+    .wallet-not-connected {
+      padding: 13px 7px;
+
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    grid-template-columns: 1fr 1fr;
+    .cryptoAi {
+      .priceButton {
+        gap: 5px;
+        .wallet-not-connected {
+          padding: 13px 7px;
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    .cryptoAi {
+      .priceButton {
+        gap: 5px;
+        .wallet-not-connected {
+          padding: 13px 7px;
+
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    grid-template-columns: 1fr;
+
+    .cryptoAi {
+      max-width: 400px;
+      .priceButton {
+        gap: 5px;
+        .wallet-not-connected {
+          padding: 13px 7px;
+
+          span {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 880px) {
+    grid-template-columns: 1fr 1fr;
+
+    .cryptoAi {
+      .priceButton {
+        gap: 5px;
+        .wallet-not-connected {
+          padding: 13px 7px;
+
+          span {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .cryptoAi {
+      .priceButton {
+        gap: 5px;
+        .wallet-not-connected {
+          padding: 13px 7px;
+
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    grid-template-columns: 1fr;
+    .cryptoAi {
+      max-width: 400px;
+      .priceButton {
+        gap: 5px;
+        .wallet-not-connected {
+          padding: 13px 13px;
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    grid-template-columns: 1fr;
+    .cryptoAi {
+      max-width: 400px;
+      .priceButton {
+        gap: 5px;
+        .wallet-not-connected {
+          padding: 10px;
+
+          span {
+            font-size: 12px;
+          }
+        }
+      }
     }
   }
 `;

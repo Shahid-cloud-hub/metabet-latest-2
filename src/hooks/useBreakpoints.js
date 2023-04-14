@@ -12,7 +12,7 @@ const getDeviceConfig = (width) => {
     DeviceConfig.isSmallMobile = true;
   } else if (width <= 500) {
     DeviceConfig.isMobile = true;
-  } else if (width >= 500 && width <= 1080) {
+  } else if (width >= 500 && width <= 880) {
     DeviceConfig.isTablet = true;
   } else {
     DeviceConfig.isDesktop = true;

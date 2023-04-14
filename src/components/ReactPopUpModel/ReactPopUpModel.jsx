@@ -43,6 +43,26 @@ const ImageContainer = styled.div`
     /* height: 50%; */
     /* object-fit: cover; */
   }
+
+  @media screen and (max-width: 980px) {
+    transform: translate(38%, 90px);
+  }
+
+  @media screen and (max-width: 880px) {
+    transform: translate(0%, 90px);
+  }
+
+  @media screen and (max-width: 420px) {
+    transform: translate(-2%, 90px);
+    width: 380px;
+    height: 380px;
+
+    img {
+      width: 60%;
+      /* height: 50%; */
+      /* object-fit: cover; */
+    }
+  }
 `;
 
 const CloseButton = styled.span`
@@ -58,6 +78,11 @@ const CloseButton = styled.span`
   img {
     width: 80%;
     height: 80%;
+  }
+
+  @media screen and (max-width: 420px) {
+    right: 27px;
+    top: 46px;
   }
 `;
 

@@ -26,8 +26,9 @@ import useBreakpoint from "../../hooks/useBreakpoints";
 import truncateEthAddress from "truncate-eth-address";
 import Utils from "../../utilities";
 import { Context } from "../../Context";
+import { BetAINFTStatusContainer } from "./Nav.styles";
 
-const DropdownNFT = () => {
+const DropdownNFT = ({ show }) => {
   const [selected, setSelected] = useState();
   const [Active, setIsActive] = useState(false);
   const metaMaskAddress = useSelector((state) => state.wallet);
@@ -64,6 +65,7 @@ const DropdownNFT = () => {
       }
     );
   }
+
   const options = [
     { name: "0.00000", img: ETH, text: "ETH" },
     { name: "0.00000", img: WETH, text: "WETH" },
@@ -80,59 +82,66 @@ const DropdownNFT = () => {
     // console.log(metaMaskAddress, "metaMaskAddress");
   }, [metaMaskAddress]);
 
+  const screenSize = window.screen.availWidth;
+
+  // console.log("firsts", screenSize < 1080 && show == false);
+
   return (
-    <>
-      <div className="dropdown">
+    <BetAINFTStatusContainer
+      flexStart={show == false ? "flex-start" : "flex-end"}
+    >
+      <div className="bet-status-ai-nft-container">
         {isDesktop && (
-          <div className="dropdown-ai">
-            <div className="right-nav-nft">
-              <label>
-                <span>NFT Circ Supply</span>
-                <input
-                  type="text"
-                  name="name"
-                  value={balance == null ? "0.00" : balance}
-                  disabled
-                />
-              </label>
-              <label>
-                <span>Market Cap</span>
-                <input type="text" name="name" placeholder="$0.00" disabled />
-              </label>
-              <label>
-                <img src={trubet} alt="trubet" />
-                <input type="text" name="name" placeholder="$0.00" disabled />
-              </label>
-            </div>
-            <div className="dollar">
+          <div
+            className={screenSize < 1080 ? "hide" : "bet-ai-nft-status-boxes"}
+          >
+            <label>
+              <span>NFT Circ Supply</span>
+              <input
+                type="text"
+                name="name"
+                value={balance == null ? "0.00" : balance}
+                disabled
+              />
+            </label>
+            <label>
+              <span>Market Cap</span>
+              <input type="text" name="name" placeholder="$0.00" disabled />
+            </label>
+            <label>
+              <img src={trubet} alt="trubet" />
+              <input type="text" name="name" placeholder="$0.00" disabled />
+            </label>
+            <div className="dollar-wrapper">
               <img src={dollar} alt="dollar" />
-              <div className="dollar-text">
+              <div className="dollar-status-text">
                 <input type="text" name="name" placeholder="$0.00" disabled />
                 <span>Total fees Earnt</span>
               </div>
             </div>
           </div>
         )}
-        <div className="dropdownBtn">
-          <img src={trolly} alt="trolly" />
+
+        <div className="ai-nft-wallet-connect-btn">
+          <div>
+            <img src={trolly} alt="trolly" />
+          </div>
           {!metaMaskAddress.metaMaskAddress ? (
-            <div
-              className="connect-btn-nft"
-              onClick={() => dispatch(metaMaskConnection())}
-            >
-              <button>Connect</button>
-            </div>
+            <>
+              <button onClick={() => dispatch(metaMaskConnection())}>
+                Connect
+              </button>
+            </>
           ) : (
-            <div
-              className="connect-btn-nft"
-              onClick={() => dispatch(metaMaskDisconnect())}
-            >
-              <button>Disconnect</button>
-            </div>
+            <>
+              <button onClick={() => dispatch(metaMaskDisconnect())}>
+                Disconnect
+              </button>
+            </>
           )}
         </div>
       </div>
-    </>
+    </BetAINFTStatusContainer>
   );
 };
 

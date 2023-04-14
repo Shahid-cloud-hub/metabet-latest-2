@@ -210,10 +210,18 @@ const Dashboard = () => {
             )}
             <div className="main-content" id="detail">
               {pathname === "/ai-nft"
-                ? (isTablet || isMobile || isSmallMobile) && (
-                    <BalanceButtonsNFT />
+                ? (isDesktop || isTablet || isMobile || isSmallMobile) && (
+                    <BalanceButtonsNFT
+                      show={
+                        availableWidth > 1080 || availableWidth < 1080
+                          ? true
+                          : false
+                      }
+                    />
                   )
-                : (isTablet || isMobile || isSmallMobile) && <BalanceButtons />}
+                : (isDesktop || isTablet || isMobile || isSmallMobile) && (
+                    <BalanceButtons />
+                  )}
               <Outlet />
               <ToastContainer />
             </div>

@@ -16,7 +16,7 @@ const AiNFT = () => {
   const [itemData, setItemData] = useState(Filter);
   const [getName, setGetName] = useState("all");
   const { fetchData, response } = useAxios();
-  const { isDesktop } = useBreakpoint();
+  const { isDesktop, isSmallDesktop, isTablet } = useBreakpoint();
   const [change, setChange] = useState({
     myNFT: false,
     MarketPlace: true,
@@ -80,19 +80,37 @@ const AiNFT = () => {
   const arrData =
     hightlightData == undefined ? [] : Object.values(hightlightData);
 
+  const screenSize = window.screen.availWidth;
+
   return (
     <AINFTContainer>
       <div className="ai-logo">
         <img src={AILogoImg} alt="AI NFT" />
       </div>
-      {isDesktop && (
-        <div className="ai-filter-btn">
-          <AiFilter
-            filterItem={filterItem}
-            setItemData={setItemData}
-            menuItems={menuItems}
-            callbackName={callbackName}
-            activeBet={true}
+      <div className="ai-filter-btn">
+        <AiFilter
+          filterItem={filterItem}
+          setItemData={setItemData}
+          menuItems={menuItems}
+          callbackName={callbackName}
+          activeBet={true}
+        />
+      </div>
+
+      {isSmallDesktop && (
+        <div className="parent-wrapper">
+          <AiDropDownFilter
+            options={[
+              { name: "Sales High/Low", value: "all", defaultValue: true },
+              { name: "Size", value: "size" },
+              { name: "Live", value: "live" },
+              { name: "Ended", value: "ended" },
+              { name: "Number Bets", value: "number_bets" },
+              { name: "Ending Soon", value: "ending_soon" },
+            ]}
+            onChange={(e) => {
+              // console.log(e.target.value);
+            }}
           />
         </div>
       )}

@@ -191,193 +191,393 @@ export const Container = styled.div`
   }
 `;
 
-// export const ContainerAi = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   width: 100%;
-//   /* max-width: 1010px; */
-//   /* background: #130e19; */
-//   background: ${(props) => props.purpleBackground};
+export const BetStatusContainer = styled("div")`
+  width: 100%;
+  padding: 0px 30px;
 
-//   box-shadow: ${(props) =>
-//     props.removeShadow
-//       ? "0px 4px 10px rgba(0, 0, 0, 0.5)"
-//       : " 0px 4px 10px rgba(0, 0, 0, 0.5)"};
+  .bet-status-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
 
-//   .background {
-//     display: flex;
-//     max-width: ${(props) => (props.removeWidth ? "300px" : "0px")};
-//     width: 100%;
-//     padding: 10px 20px;
-//     min-height: 49px;
-//     background: ${(props) => (props.changeColor ? "#0f212e" : "#1b2c38")};
-//     box-shadow: ${(props) =>
-//       props.removeShadow ? "0px 4px 10px rgba(0, 0, 0, 0.5)" : "none"};
+    .bet-status-boxes {
+      display: flex;
+      gap: 20px;
 
-//     a {
-//       transform: translate(10px, 5px);
-//     }
-//   }
-//   .background-purple {
-//     display: flex;
-//     max-width: ${(props) => (props.removeWidth ? "300px" : "0px")};
-//     width: 100%;
-//     padding: 10px 20px;
-//     min-height: 49px;
-//     background: ${(props) => (props.changeColor ? "#130e19" : "#130e19")};
-//     box-shadow: ${(props) =>
-//       props.removeShadow ? "0px 4px 10px rgba(0, 0, 0, 0.5)" : "none"};
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background: #0f212e;
+        border-radius: 6px;
+        padding: 3px 10px;
+        max-width: 200px;
 
-//     a {
-//       transform: translate(10px, 5px);
-//     }
-//   }
+        input {
+          background: transparent;
+          border: none;
+          font-size: 18px;
+          color: #fff;
+          font-weight: 600;
+          width: 100%;
 
-//   .dropdown-section {
-//     display: flex;
-//     padding: 0px 8px;
-//     width: 100%;
+          &::placeholder {
+            font-size: 18px;
+            color: #fff;
+            font-weight: 600;
+          }
+        }
+      }
+    }
 
-//     #google_element {
-//       padding: 0px 10px;
-//     }
-//   }
-//   .dropdown-ai {
-//     display: flex;
-//     justify-content: flex-start;
-//     align-items: center;
-//     width: 100%;
-//     padding-left: 40px;
-//   }
-//   .openai {
-//     display: flex;
-//     align-items: center;
-//     gap: 10px;
+    button {
+      width: 100%;
+      max-width: 100px;
+      min-height: 39px;
+      background: linear-gradient(180deg, #fab263 0%, #5f3a12 80.03%);
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: mostra-nuova, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      color: #fff;
+      border: none;
+      padding: 0 23px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 
-//     div {
-//       display: flex;
-//       align-items: end;
-//       span {
-//         font-size: 16px;
-//         color: #ffffff;
-//       }
-//     }
-//   }
-//   @media screen and (max-width: 1080px) {
-//     .dropdown-section {
-//       gap: 10px;
-//     }
-//     .dropdown-ai {
-//       justify-content: flex-end;
-//       gap: 50px;
-//     }
-//     .openai {
-//       display: flex;
-//       img {
-//         height: 34px;
-//         width: 34px;
-//       }
-//       div {
-//         img {
-//           width: 15px;
-//           height: 15px;
-//         }
-//       }
-//     }
-//   }
+  @media screen and (max-width: 940px) {
+    .bet-status-container {
+      justify-content: flex-end;
+      .bet-status-boxes {
+        label {
+          input {
+            font-size: 15px;
 
-//   @media screen and (max-width: 1024px) {
-//     .dropdown-section {
-//       gap: 10px;
-//     }
-//     .dropdown-ai {
-//       justify-content: center;
-//       gap: 50px;
-//     }
-//     .openai {
-//       display: flex;
-//       img {
-//         height: 34px;
-//         width: 34px;
-//       }
-//       div {
-//         img {
-//           width: 15px;
-//           height: 15px;
-//         }
-//       }
-//     }
-//   }
-//   @media screen and (max-width: 920px) {
-//     .dropdown-ai {
-//       justify-content: center;
-//       // gap: 50px;
-//     }
-//     .openai {
-//       display: flex;
-//       img {
-//         height: 34px;
-//         width: 34px;
-//       }
-//       div {
-//         img {
-//           width: 15px;
-//           height: 15px;
-//         }
-//       }
-//     }
-//   }
-//   @media screen and (max-width: 820px) {
-//     .dropdown-ai {
-//       justify-content: center;
+            &::placeholder {
+              font-size: 16px;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
-//       // gap: 5px;
-//     }
-//     .openai {
-//       gap: 5px;
-//       div {
-//         gap: 2px;
-//       }
-//       img {
-//         height: 22px;
-//         width: 22px;
-//       }
-//     }
-//   }
-//   @media screen and (max-width: 768px) {
-//     .background {
-//       // min-height: 80px;
-//       padding: 0;
-//     }
-//     .dropdown-ai {
-//       justify-content: center;
-//     }
-//   }
-//   @media screen and (max-width: 414px) {
-//     .dropdown-ai {
-//       justify-content: center;
-//     }
-//   }
-//   @media screen and (max-width: 375px) {
-//     .openai {
-//       img {
-//         height: 22px;
-//         width: 22px;
-//       }
-//       div {
-//         gap: 5px;
-//         img {
-//           margin: 0px;
-//           width: 15px;
-//           height: 15px;
-//         }
-//       }
-//     }
-//   }
-//   @media screen and (max-width: 360px) {
-//     .dropdown-ai {
-//       justify-content: center;
-//     }
-//   }
-// `;
+export const BetAINFTStatusContainer = styled("div")`
+  width: 100%;
+  padding: 0px 30px;
+
+  .bet-status-ai-nft-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 20px; */
+    width: 100%;
+    padding-top: ${(props) => props.paddTop};
+
+    .bet-ai-nft-status-boxes {
+      display: flex;
+      /* display: ${(props) => props.hideBtns}; */
+      gap: 20px;
+
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #1d1625;
+        border-radius: 6px;
+        padding: 3px 10px;
+        max-width: 200px;
+        gap: 25px;
+
+        span {
+          color: #ffffff;
+          font-weight: 500;
+          font-size: 18px;
+        }
+
+        input {
+          background: transparent;
+          border: none;
+          font-size: 18px;
+          color: #fff;
+          font-weight: 600;
+          max-width: 60px;
+          text-align: right;
+
+          &::placeholder {
+            font-size: 18px;
+            color: #fff;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .dollar-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        .dollar-status-text {
+          display: flex;
+          flex-direction: column;
+
+          input {
+            background: transparent;
+            border: none;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 600;
+            max-width: 58px;
+            text-align: right;
+
+            &::placeholder {
+              font-size: 18px;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+
+          span {
+            font-size: 12px;
+            color: #999999;
+          }
+        }
+      }
+    }
+
+    .bet-ai-nft-status-boxes-1 {
+      display: flex;
+      gap: 20px;
+
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #1d1625;
+        border-radius: 6px;
+        padding: 3px 10px;
+        max-width: 200px;
+        gap: 25px;
+
+        span {
+          color: #ffffff;
+          font-weight: 500;
+          font-size: 18px;
+        }
+
+        input {
+          background: transparent;
+          border: none;
+          font-size: 18px;
+          color: #fff;
+          font-weight: 600;
+          max-width: 60px;
+          text-align: right;
+
+          &::placeholder {
+            font-size: 18px;
+            color: #fff;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .dollar-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        .dollar-status-text {
+          display: flex;
+          flex-direction: column;
+
+          input {
+            background: transparent;
+            border: none;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 600;
+            max-width: 58px;
+            text-align: right;
+
+            &::placeholder {
+              font-size: 18px;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+
+          span {
+            font-size: 12px;
+            color: #999999;
+          }
+        }
+      }
+    }
+
+    .ai-nft-wallet-connect-btn {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+
+      button {
+        width: 100%;
+        max-width: 100px;
+        min-height: 39px;
+        background: linear-gradient(90deg, #607099 -8.82%, #a533ff 111.76%);
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: mostra-nuova, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: #fff;
+        border: none;
+        padding: 0 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+  @media screen and (max-width: 1340px) {
+    .bet-status-ai-nft-container {
+      .bet-ai-nft-status-boxes {
+        gap: 10px;
+        label {
+          max-width: 169px;
+          gap: 10px;
+          span {
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 14px;
+          }
+          input {
+            font-size: 15px;
+            max-width: 47px;
+
+            &::placeholder {
+              font-size: 16px;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1180px) {
+    .bet-status-ai-nft-container {
+      .bet-ai-nft-status-boxes {
+        gap: 7px;
+        label {
+          max-width: 169px;
+          gap: 5px;
+          span {
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 11px;
+          }
+          input {
+            font-size: 15px;
+            max-width: 35px;
+
+            &::placeholder {
+              font-size: 12px;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    /* padding: 0px; */
+    padding: ${(props) => props.removePadd};
+    .bet-status-ai-nft-container {
+      /* justify-content: flex-end; */
+      justify-content: ${(props) => props.flexStart};
+      .bet-ai-nft-status-boxes {
+        gap: 10px;
+        label {
+          max-width: 169px;
+          gap: 10px;
+          span {
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 14px;
+          }
+          input {
+            font-size: 15px;
+            max-width: 47px;
+
+            &::placeholder {
+              font-size: 16px;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 940px) {
+    .bet-status-ai-nft-container {
+      .bet-ai-nft-status-boxes {
+        label {
+          span {
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 14px;
+          }
+          input {
+            font-size: 15px;
+
+            &::placeholder {
+              font-size: 16px;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 680px) {
+    .bet-status-ai-nft-container {
+      max-width: 500px;
+      margin: 0 auto;
+      .bet-ai-nft-status-boxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        label {
+          width: 100%;
+          max-width: none;
+        }
+      }
+    }
+  }
+`;
