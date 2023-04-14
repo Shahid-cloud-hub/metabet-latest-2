@@ -507,6 +507,78 @@ export const AINFTContainer = styled("div")`
     .ai-filter-btn {
       display: none;
     }
+
+    .ai-logo {
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
+    }
+  }
+
+  @media screen and (max-width: 880px) {
+    .market-place-btn {
+      justify-content: center;
+    }
+    .market-place-filter-btn {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .market-place-btn {
+      button {
+        font-size: 14px;
+      }
+    }
+
+    .market-place-filter-btn {
+      gap: 10px;
+
+      .parent-wrapper {
+        .react-dropdown {
+          min-width: 130px;
+
+          .value {
+            font-size: 12px;
+            padding-top: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .market-place-filter-btn {
+      gap: 10px;
+
+      .parent-wrapper {
+        .react-dropdown {
+          min-width: 115px;
+          padding: 15px 27px 15px 7px;
+
+          .value {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .market-place-filter-btn {
+      gap: 10px;
+
+      .parent-wrapper {
+        .react-dropdown {
+          min-width: 55px;
+          padding: 15px 27px 15px 7px;
+
+          .value {
+            font-size: 11px;
+          }
+        }
+      }
+    }
   }
 `;
 

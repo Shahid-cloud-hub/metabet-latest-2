@@ -24,7 +24,7 @@ export const Container = styled.div`
       props.removeShadow ? "0px 4px 10px rgba(0, 0, 0, 0.5)" : "none"};
 
     a {
-      transform: translate(10px, 5px);
+      transform: translate(-6px, 8px);
     }
   }
   .background-purple {
@@ -38,7 +38,7 @@ export const Container = styled.div`
       props.removeShadow ? "0px 4px 10px rgba(0, 0, 0, 0.5)" : "none"};
 
     a {
-      transform: translate(10px, 5px);
+      transform: translate(-6px, 8px);
     }
   }
 
@@ -137,6 +137,17 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 880px) {
+    .background-purple {
+      padding: 10px 0px;
+
+      a {
+        transform: translate(10px, 10px);
+      }
+    }
+  }
+
   @media screen and (max-width: 820px) {
     .dropdown-ai {
       justify-content: center;
@@ -164,6 +175,16 @@ export const Container = styled.div`
     }
   }
   @media screen and (max-width: 414px) {
+    .background-purple {
+      padding: 10px 0px;
+
+      a {
+        transform: translate(10px, 10px);
+        img {
+          width: 96px;
+        }
+      }
+    }
     .dropdown-ai {
       justify-content: center;
     }
@@ -527,6 +548,7 @@ export const BetAINFTStatusContainer = styled("div")`
       display: flex;
       gap: 15px;
       align-items: center;
+      margin-left: 98px;
 
       button {
         width: 100%;
@@ -637,7 +659,98 @@ export const BetAINFTStatusContainer = styled("div")`
     }
   }
 
+  @media screen and (max-width: 1024px) {
+    padding: 0px;
+    .bet-status-ai-nft-container {
+      max-width: 500px;
+      margin: 0 auto;
+
+      .bet-ai-nft-status-boxes {
+        flex-wrap: wrap;
+        gap: 10px;
+        label {
+          max-width: 225px;
+          width: 100%;
+          gap: 10px;
+          padding: 11px 8px;
+
+          span {
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 14px;
+          }
+          input {
+            font-size: 15px;
+            max-width: 47px;
+
+            &::placeholder {
+              font-size: 16px;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+        }
+        label:nth-child(1) {
+          padding: 14px 8px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 880px) {
+    padding: 0px;
+    .bet-status-ai-nft-container {
+      justify-content: center;
+      max-width: 700px;
+      margin: 0 auto;
+
+      .bet-ai-nft-status-boxes {
+        flex-wrap: nowrap;
+        gap: 10px;
+        width: 100%;
+
+        label {
+          max-width: 225px;
+          width: 100%;
+          gap: 10px;
+          padding: 11px 8px;
+
+          span {
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 14px;
+          }
+          input {
+            font-size: 15px;
+            max-width: 47px;
+
+            &::placeholder {
+              font-size: 16px;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+        }
+        label:nth-child(1) {
+          padding: 14px 8px;
+        }
+
+        .dollar-wrapper {
+          width: 100%;
+          justify-content: flex-start;
+        }
+      }
+
+      .ai-nft-wallet-connect-btn {
+        .shop-img {
+          display: none;
+        }
+      }
+    }
+  }
+
   @media screen and (max-width: 940px) {
+    padding: 0px;
     .bet-status-ai-nft-container {
       .bet-ai-nft-status-boxes {
         label {
@@ -670,7 +783,55 @@ export const BetAINFTStatusContainer = styled("div")`
         width: 100%;
         label {
           width: 100%;
-          max-width: none;
+          max-width: 227px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    .bet-status-ai-nft-container {
+      max-width: 450px;
+      margin: 0 auto;
+      .bet-ai-nft-status-boxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        label {
+          width: 100%;
+          max-width: 205px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .bet-status-ai-nft-container {
+      max-width: 380px;
+      margin: 0 auto;
+      .bet-ai-nft-status-boxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        label {
+          width: 100%;
+          max-width: 170px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 395px) {
+    .bet-status-ai-nft-container {
+      max-width: 330px;
+      margin: 0 auto;
+      .bet-ai-nft-status-boxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        label {
+          width: 100%;
+          max-width: 140px;
         }
       }
     }

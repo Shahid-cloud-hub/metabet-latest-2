@@ -287,7 +287,6 @@ const AiNFT = () => {
           ]}
         />
       </div>
-
       {isSmallDesktop && (
         <div className="parent-wrapper">
           <AiDropDownFilter
