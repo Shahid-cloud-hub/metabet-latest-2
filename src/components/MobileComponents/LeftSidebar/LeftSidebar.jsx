@@ -86,7 +86,7 @@ const LeftSidebar = () => {
       purpleBackground={pathname === "/ai-nft" ? "#130e19" : "rgb(15, 33, 46)"}
     >
       <div className="menu-main-wrapper">
-        <img src={trolly} alt="Menu" />
+        {pathname === "/ai-nft" && <img src={trolly} alt="Menu" />}
         <div className="OpenNavBar" onClick={OpenNav}>
           <img src={MenuIcon} alt="Menu" />
         </div>
