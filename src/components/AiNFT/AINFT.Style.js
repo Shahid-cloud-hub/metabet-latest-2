@@ -155,6 +155,12 @@ export const AINFTContainer = styled("div")`
       color: #ffffff;
     }
   }
+  #title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
 
   .market-place-filter-btn {
     display: flex;
@@ -175,7 +181,7 @@ export const AINFTContainer = styled("div")`
         position: relative;
         display: inline-block;
         padding: 15px 10px;
-        min-width: 10em;
+        min-width: 11em;
         cursor: pointer;
         user-select: none;
         border-radius: 0.4em;
@@ -187,6 +193,12 @@ export const AINFTContainer = styled("div")`
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 12px;
         color: #fff;
+
+        #title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
 
         &:focus-visible {
           outline: none;
@@ -255,7 +267,7 @@ export const AINFTContainer = styled("div")`
         .value {
           display: inline-block;
           font-size: 14px;
-          width: 100%;
+          /* width: 100%; */
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
@@ -421,7 +433,7 @@ export const AINFTContainer = styled("div")`
       .value {
         display: inline-block;
         font-size: 14px;
-        width: 100%;
+        /* width: 100%; */
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;

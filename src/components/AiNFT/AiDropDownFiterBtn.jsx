@@ -27,8 +27,8 @@ const DropdownOptions = ({
             className={"option" + (i === highlightedIndex ? " highlight" : "")}
             role="option"
           >
-            {el.name}
             {el.img && <img src={el.img} alt="img" />}
+            {el.name}
           </li>
         );
       })}
@@ -105,6 +105,9 @@ const AiDropDownFilterBtn = ({ name, options, style, ...props }) => {
     console.log("first", options[selectedIndex].img);
     return options[selectedIndex].value ?? options.selectedIndex.name;
   };
+  const getSelectedOptionValueImg = () => {
+    return options[selectedIndex].img ?? options.selectedIndex.img;
+  };
 
   const getSelectedOptionText = () => {
     return options[selectedIndex].name;
@@ -141,8 +144,8 @@ const AiDropDownFilterBtn = ({ name, options, style, ...props }) => {
         {options.map((el, i) => {
           return (
             <option key={i} value={el.value ? el.value : el.name}>
-              {el.name}
               {el.img && <img src={el.img} alt="img" />}
+              {el.name}
             </option>
           );
         })}
@@ -166,15 +169,25 @@ const AiDropDownFilterBtn = ({ name, options, style, ...props }) => {
         style={style}
         // getSelectedOptionValueImg={getSelectedOptionValueImg()}
       >
-        <span className="value">{getSelectedOptionText()}</span>
-        <img
-          src={options[selectedIndex].img ?? options.selectedIndex.img}
-          alt="img"
-        />
+        <div id="title">
+          {/* {options[selectedIndex].img ?? options.selectedIndex ? (
+            <img
+              src={options[selectedIndex].img ?? options.selectedIndex}
+              alt="img"
+            />
+          ) : (
+            ""
+          )} */}
+          <img
+            src={options[selectedIndex].img ?? options.selectedIndex}
+            alt="img"
+          />
+          <span className="value">{getSelectedOptionText()}</span>
+        </div>
 
         <ul
           ref={optList}
-          className={"optList" + (isActive ? "" : " hidden")}
+          className={"optList" + (isActive ? "" : "hidden")}
           role="presentation"
         >
           <DropdownOptions
