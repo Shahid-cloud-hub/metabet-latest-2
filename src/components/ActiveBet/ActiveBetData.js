@@ -92,6 +92,9 @@ import HorseO from "../../assets/images/ActiveBets/HorseO.png";
 import HorseP from "../../assets/images/ActiveBets/HorseP.png";
 import VolleyballO from "../../assets/images/ActiveBets/VolleyballO.png";
 import VolleyballP from "../../assets/images/ActiveBets/VolleyballP.png";
+import UFCN from "../../assets/images/ActiveBets/UFC.png";
+import UFCP from "../../assets/images/ActiveBets/UFCP.png";
+import UFCO from "../../assets/images/ActiveBets/UFCO.png";
 
 export const betData = [
   {
@@ -274,10 +277,9 @@ export const Filter = [
   },
   {
     id: 7,
-    name: "UFC",
-    img: boxing,
-    imgO: boxingO,
-    imgP: boxingP,
+    img: UFCN,
+    imgO: UFCO,
+    imgP: UFCP,
     imgW: UFCW,
     icon1: UFC,
     th_1: "Date",

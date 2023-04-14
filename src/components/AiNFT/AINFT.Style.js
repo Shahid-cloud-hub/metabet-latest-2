@@ -155,6 +155,12 @@ export const AINFTContainer = styled("div")`
       color: #ffffff;
     }
   }
+  #title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
 
   .market-place-filter-btn {
     display: flex;
@@ -175,7 +181,7 @@ export const AINFTContainer = styled("div")`
         position: relative;
         display: inline-block;
         padding: 15px 10px;
-        min-width: 10em;
+        min-width: 11em;
         cursor: pointer;
         user-select: none;
         border-radius: 0.4em;
@@ -187,6 +193,12 @@ export const AINFTContainer = styled("div")`
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 12px;
         color: #fff;
+
+        #title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
 
         &:focus-visible {
           outline: none;
@@ -255,7 +267,7 @@ export const AINFTContainer = styled("div")`
         .value {
           display: inline-block;
           font-size: 14px;
-          width: 100%;
+          /* width: 100%; */
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
@@ -321,6 +333,185 @@ export const AINFTContainer = styled("div")`
         cursor: pointer;
         margin-right: 4%;
       }
+    }
+  }
+  .parent-wrapper-filter {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: flex-end; */
+    /* width: 100%; */
+    /* gap: 20px; */
+    padding-top: 10px;
+
+    /* padding: 10px 20px; */
+
+    .react-dropdown {
+      position: relative;
+      display: inline-block;
+      padding: 15px 10px;
+      min-width: 10em;
+      cursor: pointer;
+      user-select: none;
+      border-radius: 0.4em;
+      box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+      outline: none;
+      box-sizing: border-box;
+      background: linear-gradient(180deg, #331f3d 0%, #1c1c1c 112.83%);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border: 1px solid #a533ff;
+      border-radius: 12px;
+      color: #fff;
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 2px #ed6f1e;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        box-sizing: border-box;
+        height: 100%;
+        /* width: 3em; */
+        padding-top: 0.6em;
+        /* border-left: 0.2em solid #1c1c1c; */
+        border-radius: 0 0.4em 0.4em 0;
+        /* background-color: #5f9ea0; */
+        background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+      }
+      &::after {
+        content: ""; /* If not empty make sure to set a charset meta tag */
+        position: absolute;
+        z-index: 10;
+        box-sizing: border-box;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: initial;
+        background: white;
+        top: 50%;
+        right: 0;
+        transform: translate(-90%, -50%);
+        transition: clip-path 330ms ease;
+        clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+      }
+      .optList {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        list-style: none;
+        /* !important will affect the rest of your CSS despite being in a layer */
+        /* margin: 0 !important; */
+        /* padding: 0 !important; */
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 318px;
+        max-height: 430px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border: 0.2em solid #a533ff;
+        border-top-width: 0.1em;
+        border-radius: 0.4em;
+        box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+        /* background: #5f9ea0; */
+        background: linear-gradient(180deg, #331f3d 0%, #1c1c1c 112.83%);
+        transition: transform 330ms ease, opacity 330ms ease;
+        transform: translateY(1px);
+        z-index: 5;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: flex-start;
+        padding-left: 25px;
+        margin-top: 10px;
+        &.hidden {
+          max-height: 0;
+          visibility: hidden;
+        }
+      }
+      .value {
+        display: inline-block;
+        font-size: 14px;
+        /* width: 100%; */
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        vertical-align: top;
+        text-align: center;
+        font-family: "mostra-nuova", sans-serif;
+      }
+      .option {
+        padding: 10px 0px;
+        font-size: 14px;
+        font-weight: 500;
+        opacity: 0;
+        animation-delay: calc(40ms * var(--index)) !important;
+        font-family: "mostra-nuova", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        hr {
+          border-top: 1px solid #fff;
+          max-width: 100px;
+          margin: 0 auto;
+        }
+      }
+      &.active {
+        &::after {
+          clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
+        }
+        .option {
+          animation: drop 220ms ease forwards;
+        }
+      }
+      .highlight {
+        /* background-color: #5f9ea0; */
+        background: linear-gradient(
+          118.51deg,
+          #e1f5fe -4.48%,
+          #ff67f9 56.27%,
+          #e1f5fe 107.68%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: white;
+        font-weight: bold;
+      }
+      select {
+        visibility: hidden;
+        max-height: 0;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    @keyframes drop {
+      from {
+        transform: translateY(-5px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    button {
+      width: 108px;
+      background: #5f9ea0;
+      border-radius: 8px;
+      border: none;
+      color: #ffffff;
+      font-size: 14px;
+      font-family: "mostra-nuova", sans-serif;
+      padding: 10px 0px;
+      cursor: pointer;
+      margin-right: 4%;
     }
   }
 
