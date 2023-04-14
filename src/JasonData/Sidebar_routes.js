@@ -37,7 +37,6 @@ import RugbyW from "../assets/images/RugbyW.png";
 import ufclogo from "../assets/images/ufclogo.png";
 import ufclogoW from "../assets/images/ufclogoW.png";
 
-
 // currcency Logos //
 import currency_1 from "../assets/images/FeaturedEvent/bitmart.png";
 import currency_2 from "../assets/images/FeaturedEvent/Hotbit.webp";
@@ -75,7 +74,7 @@ export const first_array = [
     route: "/bet-token",
   },
   {
-    display_name: "Ai NFT",
+    display_name: "AiNFT",
     route: "/ai-nft",
   },
 ];
@@ -111,7 +110,6 @@ export const sec_array = [
     white: CricketW,
   },
   {
-    
     route: "/ufc",
     icon: ufclogo,
     white: ufclogoW,
@@ -139,13 +137,14 @@ export const sec_array = [
     route: "/football",
     icon: PL,
     white: FootballW,
-  }, {
+  },
+  {
     display_name: "Formula One",
     route: "/formula1",
     icon: Formula,
     white: FormulaW,
   },
-  
+
   {
     display_name: "Basketball",
     route: "/basketball",
@@ -242,7 +241,7 @@ export const fourth_array = [
     display_name: "Security",
     route: "/security",
   },
-  
+
   {
     display_name: "terms",
     route: "/terms",

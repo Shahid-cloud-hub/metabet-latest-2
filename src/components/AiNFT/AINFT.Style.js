@@ -434,10 +434,8 @@ export const MarketPlaceContainer = styled("div")`
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /* background: linear-gradient(180deg, #1c1c1c 39.58%, #62286b 100%); */
-        background: ${(props) => props.notConnectedbg};
-        /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #d036ae; */
-        box-shadow: ${(props) => props.notConnectedbs};
+        background: linear-gradient(180deg, #1c1c1c 39.58%, #62286b 100%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #d036ae;
         border-radius: 34px;
         padding: 5px 21px;
 
