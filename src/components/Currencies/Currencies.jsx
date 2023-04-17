@@ -12,7 +12,7 @@ import Maintenance from "../Maintenance/Maintenance";
 
 import Img from "../../assets/images/Currencies/Euro.webp";
 
-const CryptoCurrencies = ({ group_type }) => {
+const Currencies = ({ group_type }) => {
   const { fetchData, response, loading } = useAxios();
   const navigate = useNavigate();
 
@@ -73,4 +73,4 @@ const CryptoCurrencies = ({ group_type }) => {
   );
 };
 
-export default CryptoCurrencies;
+export default Currencies;

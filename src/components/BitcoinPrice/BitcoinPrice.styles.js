@@ -193,7 +193,7 @@ export const StatContainerCurrencies = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     max-width: 399px;
     padding: 5px;
     width: 100%;
@@ -301,35 +301,620 @@ export const StatContainerCurrencies = styled.div`
     }
   }
 
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 1024px) {
     .portfolio {
-      img {
-        max-width: 110px;
-      }
-
       span {
-        font-size: 20px;
+        font-size: 18px;
+      }
+      img {
+        width: 180px;
       }
     }
-
     .vs {
-      max-width: 352px;
-      span:nth-child(1) {
-        font-size: 50px;
+      max-width: 225px;
+      min-height: 140px;
+
+      .predict {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        max-width: 90px;
+        min-height: 60px;
+        background: #0f212e;
+        border-radius: 0px;
+
+        p {
+          font-size: 10px;
+        }
+        .clock {
+          display: flex;
+          align-items: baseline;
+          gap: 3px;
+          p {
+            font-size: 10px;
+          }
+        }
+
+        #color {
+          color: #ff9393;
+        }
+        .time {
+          font-size: 12px;
+          color: #ffd600;
+        }
+      }
+      .predict p:after {
+        background-image: url(${clock1}) no-repeat;
+        content: "";
       }
 
       .close {
+        display: flex;
         gap: 10px;
       }
 
+      /* span:nth-child(1) {
+      font-weight: 700;
+      font-size: 60px;
+      color: #ffffff;
+    } */
+      span {
+        font-weight: 500;
+        font-size: 8px;
+      }
       #live {
-        gap: 84px;
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        /* align-items: center; */
+        padding: 5px;
+        gap: 75px;
+
+        p:nth-child(1) {
+          font-size: 12px;
+        }
+
+        p {
+          font-size: 6.01px;
+        }
       }
     }
-
     .rectangle {
-      max-width: 300px;
-      gap: 80px;
+      display: flex;
+      padding: 5px;
+      max-width: 355px;
+      margin: 0 auto;
+      gap: 38px;
+
+      p {
+        font-size: 8px;
+        color: #b6b6b6;
+        text-align: center;
+      }
+      .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+  @media screen and (max-width: 920px) {
+    background-size: contain;
+    .portfolio {
+      span {
+        font-size: 14px;
+      }
+      img {
+        width: 150px;
+      }
+    }
+    .vs {
+      max-width: 225px;
+      min-height: 140px;
+
+      .predict {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        max-width: 90px;
+        min-height: 60px;
+        background: #0f212e;
+        border-radius: 0px;
+
+        p {
+          font-size: 10px;
+        }
+        .clock {
+          display: flex;
+          align-items: baseline;
+          gap: 3px;
+          p {
+            font-size: 10px;
+          }
+        }
+
+        #color {
+          color: #ff9393;
+        }
+        .time {
+          font-size: 12px;
+          color: #ffd600;
+        }
+      }
+      .predict p:after {
+        background-image: url(${clock1}) no-repeat;
+        content: "";
+      }
+
+      .close {
+        display: flex;
+        gap: 10px;
+      }
+
+      /* span:nth-child(1) {
+      font-weight: 700;
+      font-size: 60px;
+      color: #ffffff;
+    } */
+      span {
+        font-weight: 500;
+        font-size: 8px;
+      }
+      #live {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        /* align-items: center; */
+        padding: 5px;
+        gap: 55px;
+
+        p:nth-child(1) {
+          font-size: 12px;
+        }
+
+        p {
+          font-size: 6.01px;
+        }
+      }
+    }
+    .rectangle {
+      display: flex;
+      padding: 5px;
+      max-width: 355px;
+      margin: 0 auto;
+      gap: 38px;
+
+      p {
+        font-size: 8px;
+        color: #b6b6b6;
+        text-align: center;
+      }
+      .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+  @media screen and (max-width: 820px) {
+    background-size: cover;
+    .portfolio {
+      span {
+        font-size: 14px;
+      }
+      img {
+        width: 150px;
+      }
+    }
+    .vs {
+      max-width: 225px;
+      min-height: 140px;
+
+      .predict {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        max-width: 90px;
+        min-height: 60px;
+        background: #0f212e;
+        border-radius: 0px;
+
+        p {
+          font-size: 10px;
+        }
+        .clock {
+          display: flex;
+          align-items: baseline;
+          gap: 3px;
+          p {
+            font-size: 10px;
+          }
+        }
+
+        #color {
+          color: #ff9393;
+        }
+        .time {
+          font-size: 12px;
+          color: #ffd600;
+        }
+      }
+      .predict p:after {
+        background-image: url(${clock1}) no-repeat;
+        content: "";
+      }
+
+      .close {
+        display: flex;
+        gap: 10px;
+      }
+
+      /* span:nth-child(1) {
+      font-weight: 700;
+      font-size: 60px;
+      color: #ffffff;
+    } */
+      span {
+        font-weight: 500;
+        font-size: 8px;
+      }
+      #live {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        /* align-items: center; */
+        padding: 5px;
+        gap: 55px;
+
+        p:nth-child(1) {
+          font-size: 12px;
+        }
+
+        p {
+          font-size: 6.01px;
+        }
+      }
+    }
+    .rectangle {
+      display: flex;
+      padding: 5px;
+      max-width: 355px;
+      margin: 0 auto;
+      gap: 38px;
+
+      p {
+        font-size: 8px;
+        color: #b6b6b6;
+        text-align: center;
+      }
+      .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+  @media screen and (max-width: 620px) {
+    .vs {
+      max-width: 175px;
+      min-height: 139px;
+
+      .predict {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        padding: 10px;
+        max-width: 63px;
+        min-height: 42px;
+        background: #0f212e;
+        border-radius: 0px;
+
+        p {
+          font-size: 10px;
+        }
+        .clock {
+          display: flex;
+          align-items: baseline;
+          gap: 3px;
+          p {
+            font-size: 8px;
+          }
+          img {
+            width: 4.5px;
+          }
+        }
+
+        #color {
+          color: #ff9393;
+        }
+        .time {
+          font-size: 12px;
+          color: #ffd600;
+        }
+      }
+      .predict p:after {
+        background-image: url(${clock1}) no-repeat;
+        content: "";
+      }
+
+      .close {
+        display: flex;
+        gap: 20px;
+      }
+
+      /* span:nth-child(1) {
+      font-weight: 700;
+      font-size: 60px;
+      color: #ffffff;
+    } */
+      span {
+        font-weight: 500;
+        font-size: 7.21px;
+      }
+      #live {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        /* align-items: center; */
+        padding: 5px;
+        gap: 75px;
+
+        p:nth-child(1) {
+          font-size: 12px;
+        }
+
+        p {
+          font-size: 6.01px;
+        }
+      }
+    }
+    .rectangle {
+      display: flex;
+      padding: 5px;
+      max-width: 355px;
+      margin: 0 auto;
+      gap: 94px;
+
+      p {
+        font-size: 6.01px;
+        color: #b6b6b6;
+        text-align: center;
+      }
+      .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      span {
+        font-size: 7.88px;
+      }
+    }
+  }
+  @media screen and (max-width: 520px) {
+    .vs {
+      max-width: 175px;
+      min-height: 139px;
+
+      .predict {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        padding: 10px;
+        max-width: 63px;
+        min-height: 42px;
+        background: #0f212e;
+        border-radius: 0px;
+
+        p {
+          font-size: 10px;
+        }
+        .clock {
+          display: flex;
+          align-items: baseline;
+          gap: 3px;
+          p {
+            font-size: 8px;
+          }
+          img {
+            width: 4.5px;
+          }
+        }
+
+        #color {
+          color: #ff9393;
+        }
+        .time {
+          font-size: 12px;
+          color: #ffd600;
+        }
+      }
+      .predict p:after {
+        background-image: url(${clock1}) no-repeat;
+        content: "";
+      }
+
+      .close {
+        display: flex;
+        gap: 20px;
+      }
+
+      /* span:nth-child(1) {
+      font-weight: 700;
+      font-size: 60px;
+      color: #ffffff;
+    } */
+      span {
+        font-weight: 500;
+        font-size: 7.21px;
+      }
+      #live {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        /* align-items: center; */
+        padding: 5px;
+        gap: 75px;
+
+        p:nth-child(1) {
+          font-size: 10px;
+        }
+
+        p {
+          font-size: 6.01px;
+        }
+      }
+    }
+    .rectangle {
+      display: flex;
+      padding: 5px;
+      max-width: 355px;
+      margin: 0 auto;
+      gap: 94px;
+
+      p {
+        font-size: 6.01px;
+        color: #b6b6b6;
+        text-align: center;
+      }
+      .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      span {
+        font-size: 7.88px;
+      }
+    }
+  }
+  @media screen and (max-width: 375px) {
+    background-size: contain;
+
+    .portfolio {
+      img {
+        max-width: 65px;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 9px;
+        border-radius: 4.5px;
+        padding: 9px;
+      }
+    }
+    #live {
+      gap: 45px;
+    }
+    .vs {
+      max-width: 144px;
+      min-height: 93px;
+
+      span:nth-child(1) {
+        font-size: 40px;
+      }
+
+      .time {
+        span:nth-child(1) {
+          font-size: 12px;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    .rectangle {
+      max-width: 120px;
+      gap: 35px;
+    }
+    .vs {
+      max-width: 399px;
+      min-height: 224px;
+
+      .predict {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        padding: 5px;
+        max-width: 63px;
+        min-height: 42px;
+        background: #0f212e;
+        border-radius: 0px;
+
+        p {
+          font-size: 6.3px;
+        }
+        .clock {
+          display: flex;
+          align-items: baseline;
+          gap: 3px;
+          p {
+            font-size: 6px;
+          }
+          img {
+            width: 4.5px;
+          }
+        }
+
+        #color {
+          color: #ff9393;
+        }
+        .time {
+          font-size: 12px;
+          color: #ffd600;
+        }
+      }
+      .predict p:after {
+        background-image: url(${clock1}) no-repeat;
+        content: "";
+      }
+
+      .close {
+        display: flex;
+        gap: 20px;
+      }
+
+      /* span:nth-child(1) {
+      font-weight: 700;
+      font-size: 60px;
+      color: #ffffff;
+    } */
+      span {
+        font-weight: 500;
+        font-size: 5.25px;
+      }
+      #live {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        /* align-items: center; */
+        padding: 5px;
+        gap: 105px;
+
+        p:nth-child(1) {
+          font-size: 6px;
+        }
+
+        p {
+          font-size: 3.75px;
+        }
+      }
     }
   }
 
@@ -356,9 +941,9 @@ export const StatContainerCurrencies = styled.div`
         gap: 10px;
 
         .predict {
-          .clock p {
+          /* .clock p {
             font-size: 14px;
-          }
+          } */
         }
       }
 
@@ -373,60 +958,6 @@ export const StatContainerCurrencies = styled.div`
     }
   }
 
-  @media screen and (max-width: 620px) {
-    .portfolio {
-      img {
-        max-width: 95px;
-      }
-
-      span {
-        font-size: 13px;
-      }
-    }
-
-    .vs {
-      max-width: 275px;
-      transform: scale(0.8);
-      span:nth-child(1) {
-        font-size: 50px;
-      }
-    }
-
-    .rectangle {
-      max-width: 260px;
-      gap: 40px;
-    }
-  }
-  @media screen and (max-width: 520px) {
-    .portfolio {
-      img {
-        max-width: 75px;
-      }
-
-      span {
-        font-size: 16px;
-      }
-    }
-
-    .vs {
-      max-width: 90px;
-      span:nth-child(1) {
-        font-size: 45px;
-      }
-    }
-
-    .rectangle {
-      max-width: 90px;
-
-      span:nth-child(1) {
-        font-size: 14px;
-      }
-
-      span {
-        font-size: 12px;
-      }
-    }
-  }
   @media screen and (max-width: 420px) {
     .portfolio {
       img {
@@ -455,7 +986,7 @@ export const StatContainerCurrencies = styled.div`
       }
     }
 
-    .rectangle {
+    /* .rectangle {
       max-width: 55px;
 
       span:nth-child(1) {
@@ -464,6 +995,75 @@ export const StatContainerCurrencies = styled.div`
 
       span {
         font-size: 10px;
+      }
+    } */
+  }
+
+  @media screen and (max-width: 620px) {
+    background-size: contain;
+
+    .portfolio {
+      img {
+        max-width: 123px;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 4.5px;
+        padding: 9px;
+      }
+    }
+
+    .vs {
+      max-width: 185px;
+      min-height: 93px;
+      #live {
+        gap: 35px;
+      }
+
+      span:nth-child(1) {
+        font-size: 40px;
+      }
+
+      .time {
+        span:nth-child(1) {
+          font-size: 12px;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    .rectangle {
+      max-width: 160px;
+      gap: 35px;
+    }
+
+    /* .rectangle {
+      max-width: 55px;
+
+      span:nth-child(1) {
+        font-size: 12px;
+      }
+
+      span {
+        font-size: 10px;
+      }
+    } */
+  }
+  @media screen and (max-width: 520px) {
+    .portfolio {
+      img {
+        max-width: 77px;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 8px;
+        border-radius: 4.5px;
+        padding: 9px;
       }
     }
   }

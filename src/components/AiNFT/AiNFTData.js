@@ -1,95 +1,9 @@
-import Donald from "../../assets/images/Ai-NFT/Donald.svg";
-import Cristiano from "../../assets/images/Ai-NFT/Cristiano.svg";
-import Lebron from "../../assets/images/Ai-NFT/Lebron.svg";
-import Elon from "../../assets/images/Ai-NFT/Elon.svg";
-import Jeff from "../../assets/images/Ai-NFT/Jeff.svg";
-import Sylvester from "../../assets/images/Ai-NFT/Sylvester.svg";
-import Kim from "../../assets/images/Ai-NFT/Kim.svg";
-import Volodymyr from "../../assets/images/Ai-NFT/Volodymyr.svg";
-import Dana from "../../assets/images/Ai-NFT/Dana.svg";
-import Jake from "../../assets/images/Ai-NFT/Jake.svg";
-import Bill from "../../assets/images/Ai-NFT/Bill.svg";
-import Gautam from "../../assets/images/Ai-NFT/Gautam.svg";
-import Bernard from "../../assets/images/Ai-NFT/Bernard.svg";
-import Vladimir from "../../assets/images/Ai-NFT/Vladimir.svg";
-import Joe from "../../assets/images/Ai-NFT/Joe.svg";
-import Tyson from "../../assets/images/Ai-NFT/Tyson.svg";
-import Lionel from "../../assets/images/Ai-NFT/Lionel.svg";
-import Connor from "../../assets/images/Ai-NFT/Connor.svg";
-import Tiger from "../../assets/images/Ai-NFT/Tiger.svg";
-import Barak from "../../assets/images/Ai-NFT/Barak.svg";
-import Lewis from "../../assets/images/Ai-NFT/Lewis.svg";
-import Arnold from "../../assets/images/Ai-NFT/Arnold.svg";
-import Tom from "../../assets/images/Ai-NFT/Tom.svg";
-import Floyd from "../../assets/images/Ai-NFT/Floyd.svg";
-import Kanye from "../../assets/images/Ai-NFT/Kanye.svg";
-import Roger from "../../assets/images/Ai-NFT/Roger.svg";
-import Serena from "../../assets/images/Ai-NFT/Serena.svg";
-import Mike from "../../assets/images/Ai-NFT/Mike.svg";
-import Janet from "../../assets/images/Ai-NFT/Janet.svg";
-import Gervonta from "../../assets/images/Ai-NFT/Gervonta.svg";
-import Khabib from "../../assets/images/Ai-NFT/Khabib.svg";
-import Canelo from "../../assets/images/Ai-NFT/Canelo.svg";
-import Novak from "../../assets/images/Ai-NFT/Novak.svg";
-import Usain from "../../assets/images/Ai-NFT/Usain.svg";
-import Virat from "../../assets/images/Ai-NFT/Virat.svg";
-import Rafael from "../../assets/images/Ai-NFT/Rafael.svg";
-import Christine from "../../assets/images/Ai-NFT/Christine.svg";
-import Beyonce from "../../assets/images/Ai-NFT/Beyonce.svg";
-import Michael from "../../assets/images/Ai-NFT/Michael.svg";
-import Changpeng from "../../assets/images/Ai-NFT/Changpeng.svg";
-import Dwayne from "../../assets/images/Ai-NFT/Dwayne.svg";
-import Harry from "../../assets/images/Ai-NFT/Harry.svg";
-import Mukesh from "../../assets/images/Ai-NFT/Mukesh.svg";
-
-//leaderboard images
-
-import dwayne from "../../assets/images/Ai-NFT/Leaderboard/dwayne.svg";
-import beyonce from "../../assets/images/Ai-NFT/Leaderboard/beyonce.svg";
-import elon from "../../assets/images/Ai-NFT/Leaderboard/elon.svg";
-import barak from "../../assets/images/Ai-NFT/Leaderboard/barak.svg";
-import bill from "../../assets/images/Ai-NFT/Leaderboard/bill.svg";
-import bernard from "../../assets/images/Ai-NFT/Leaderboard/bernard.svg";
-import lebron from "../../assets/images/Ai-NFT/Leaderboard/lebron.svg";
-import virat from "../../assets/images/Ai-NFT/Leaderboard/virat.svg";
-import donald from "../../assets/images/Ai-NFT/Leaderboard/donald.svg";
-import jeff from "../../assets/images/Ai-NFT/Leaderboard/jeff.svg";
-import mukesh from "../../assets/images/Ai-NFT/Leaderboard/mukesh.svg";
-import connor from "../../assets/images/Ai-NFT/Leaderboard/connor.svg";
-import joe from "../../assets/images/Ai-NFT/Leaderboard/joe.svg";
-import gautam from "../../assets/images/Ai-NFT/Leaderboard/gautam.svg";
-import arnold from "../../assets/images/Ai-NFT/Leaderboard/arnold.svg";
-import floyd from "../../assets/images/Ai-NFT/Leaderboard/floyd.svg";
-import rafael from "../../assets/images/Ai-NFT/Leaderboard/rafael.svg";
-import mike from "../../assets/images/Ai-NFT/Leaderboard/mike.svg";
-import lewis from "../../assets/images/Ai-NFT/Leaderboard/lewis.svg";
-import michael from "../../assets/images/Ai-NFT/Leaderboard/michael.svg";
-import khabib from "../../assets/images/Ai-NFT/Leaderboard/khabib.svg";
-import usain from "../../assets/images/Ai-NFT/Leaderboard/usain.svg";
-import roger from "../../assets/images/Ai-NFT/Leaderboard/roger.svg";
-import serena from "../../assets/images/Ai-NFT/Leaderboard/serena.svg";
-import jake from "../../assets/images/Ai-NFT/Leaderboard/jake.svg";
-import novak from "../../assets/images/Ai-NFT/Leaderboard/novak.svg";
-import sylvester from "../../assets/images/Ai-NFT/Leaderboard/sylvester.svg";
-import tom from "../../assets/images/Ai-NFT/Leaderboard/tom.svg";
-import canelo from "../../assets/images/Ai-NFT/Leaderboard/canelo.svg";
-import volodymyr from "../../assets/images/Ai-NFT/Leaderboard/volodymyr.svg";
-import changpeng_2 from "../../assets/images/Ai-NFT/Leaderboard/changpeng_2.svg";
-import kanye_2 from "../../assets/images/Ai-NFT/Leaderboard/kanye_2.svg";
-import dana from "../../assets/images/Ai-NFT/Leaderboard/dana.svg";
-import tiger from "../../assets/images/Ai-NFT/Leaderboard/tiger.svg";
-import tyson from "../../assets/images/Ai-NFT/Leaderboard/tyson.svg";
-import gervonta from "../../assets/images/Ai-NFT/Leaderboard/Gervonta.svg";
-import vladimir from "../../assets/images/Ai-NFT/Leaderboard/vladimir.svg";
-import janet from "../../assets/images/Ai-NFT/Leaderboard/janet.svg";
-import christine from "../../assets/images/Ai-NFT/Leaderboard/christine.svg";
-import harry from "../../assets/images/Ai-NFT/Leaderboard/harry.svg";
-
 export const NftData = [
   {
     id: 1,
     heading: "Crypto NFT #1",
-    main_img: Donald,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681474997/AI-NFT%27s/marketPlace/Donald_r81gpj.svg",
     name: "Donald Trump",
     score: 149,
     rank: 12,
@@ -111,7 +25,8 @@ export const NftData = [
   {
     id: 2,
     heading: "Crypto NFT #2",
-    main_img: Cristiano,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475006/AI-NFT%27s/marketPlace/Cristiano_jdcjzv.svg",
     name: "Cristiano Ronaldo",
     score: 833,
     rank: 1,
@@ -131,7 +46,8 @@ export const NftData = [
   {
     id: 3,
     heading: "Crypto NFT #3",
-    main_img: Lebron,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475012/AI-NFT%27s/marketPlace/Lebron_nptqni.svg",
     name: "LeBron James",
     score: 218,
     rank: 10,
@@ -151,7 +67,8 @@ export const NftData = [
   {
     id: 4,
     heading: "Crypto NFT #4",
-    main_img: Elon,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681474997/AI-NFT%27s/marketPlace/Elon_lgfivv.svg",
     name: "Elon Musk",
     score: 329,
     rank: 6,
@@ -171,7 +88,8 @@ export const NftData = [
   {
     id: 5,
     heading: "Crypto NFT #5",
-    main_img: Jeff,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475010/AI-NFT%27s/marketPlace/Jeff_ncyuly.svg",
     name: "Jeff Bezos",
     score: 132,
     rank: 13,
@@ -191,7 +109,8 @@ export const NftData = [
   {
     id: 6,
     heading: "Crypto NFT #6",
-    main_img: Sylvester,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475015/AI-NFT%27s/marketPlace/Sylvester_ypnzgy.svg",
     name: "Sylvester Stallone",
     score: 31,
     rank: 30,
@@ -211,7 +130,8 @@ export const NftData = [
   {
     id: 7,
     heading: "Crypto NFT #7",
-    main_img: Kim,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475000/AI-NFT%27s/marketPlace/Kim_kqmv3j.svg",
     name: "Kim Kardashian",
     score: 461,
     rank: 3,
@@ -231,7 +151,8 @@ export const NftData = [
   {
     id: 8,
     heading: "Crypto NFT #8",
-    main_img: Volodymyr,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681474997/AI-NFT%27s/marketPlace/Volodymyr_qfkfh8.svg",
     name: "Volodymyr Zelenskyy",
     score: 24,
     rank: 33,
@@ -251,7 +172,8 @@ export const NftData = [
   {
     id: 9,
     heading: "Crypto NFT #9",
-    main_img: Dana,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475006/AI-NFT%27s/marketPlace/Dana_dnwj9k.svg",
     name: "Dana White",
     score: 18,
     rank: 36,
@@ -271,7 +193,8 @@ export const NftData = [
   {
     id: 10,
     heading: "Crypto NFT #10",
-    main_img: Jake,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475009/AI-NFT%27s/marketPlace/Jake_c9k86f.svg",
     name: "Jake Paul",
     score: 34,
     rank: 28,
@@ -291,7 +214,8 @@ export const NftData = [
   {
     id: 11,
     heading: "Crypto NFT #11",
-    main_img: Bill,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475002/AI-NFT%27s/marketPlace/Bill_qsjabw.svg",
     name: "Bill Gates",
     score: 221,
     rank: 8,
@@ -311,7 +235,8 @@ export const NftData = [
   {
     id: 12,
     heading: "Crypto NFT #12",
-    main_img: Gautam,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475001/AI-NFT%27s/marketPlace/Gautam_ner46f.svg",
     name: "Gautam Adani",
     score: 59,
     rank: 17,
@@ -331,7 +256,8 @@ export const NftData = [
   {
     id: 13,
     heading: "Crypto NFT #13",
-    main_img: Bernard,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475018/AI-NFT%27s/marketPlace/Bernard_xokkny.svg",
     name: "Bernard Arnault",
     score: 220,
     rank: 9,
@@ -352,7 +278,8 @@ export const NftData = [
   {
     id: 14,
     heading: "Crypto NFT #14",
-    main_img: Vladimir,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681474997/AI-NFT%27s/marketPlace/Vladimir_il7mp1.svg",
     name: "Vladimir Putin",
     score: 1,
     rank: 40,
@@ -372,7 +299,8 @@ export const NftData = [
   {
     id: 15,
     heading: "Crypto NFT #15",
-    main_img: Joe,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475010/AI-NFT%27s/marketPlace/Joe_txr16n.svg",
     name: "Joe Biden",
     score: 66,
     rank: 16,
@@ -392,7 +320,8 @@ export const NftData = [
   {
     id: 16,
     heading: "Crypto NFT #16",
-    main_img: Tyson,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475016/AI-NFT%27s/marketPlace/Tyson_uxrj1h.svg",
     name: "Tyson Fury",
     score: 11,
     rank: 38,
@@ -412,7 +341,8 @@ export const NftData = [
   {
     id: 17,
     heading: "Crypto NFT #17",
-    main_img: Lionel,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475000/AI-NFT%27s/marketPlace/Lionel_okaell.svg",
     name: "Lionel Messi",
     score: 560,
     rank: 2,
@@ -432,7 +362,8 @@ export const NftData = [
   {
     id: 18,
     heading: "Crypto NFT #18",
-    main_img: Connor,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475006/AI-NFT%27s/marketPlace/Connor_tryh9t.svg",
     name: "Connor McGregor",
     score: 72,
     rank: 15,
@@ -452,7 +383,8 @@ export const NftData = [
   {
     id: 19,
     heading: "Crypto NFT #19",
-    main_img: Tiger,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475015/AI-NFT%27s/marketPlace/Tiger_vuevuu.svg",
     name: "Tiger Woods",
     score: 12,
     rank: 37,
@@ -472,7 +404,8 @@ export const NftData = [
   {
     id: 20,
     heading: "Crypto NFT #20",
-    main_img: Barak,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475017/AI-NFT%27s/marketPlace/Barak_i4e58x.svg",
     name: "Barak Obama",
     score: 225,
     rank: 7,
@@ -492,7 +425,8 @@ export const NftData = [
   {
     id: 21,
     heading: "Crypto NFT #21",
-    main_img: Lewis,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475013/AI-NFT%27s/marketPlace/Lewis_ccyczn.svg",
     name: "Lewis Hamilton",
     score: 45,
     rank: 22,
@@ -512,7 +446,8 @@ export const NftData = [
   {
     id: 22,
     heading: "Crypto NFT #22",
-    main_img: Arnold,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475018/AI-NFT%27s/marketPlace/Arnold_hz7ng3.svg",
     name: "Arnold Schwarzenegger",
     score: 53,
     rank: 18,
@@ -532,7 +467,8 @@ export const NftData = [
   {
     id: 23,
     heading: "Crypto NFT #23",
-    main_img: Tom,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475003/AI-NFT%27s/marketPlace/Tom_gw3bql.svg",
     name: "Tom Brady",
     score: 26,
     rank: 31,
@@ -552,7 +488,8 @@ export const NftData = [
   {
     id: 24,
     heading: "Crypto NFT #24",
-    main_img: Floyd,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475006/AI-NFT%27s/marketPlace/FLoyd_wstrwb.svg",
     name: "Floyd Mayweather Jr",
     score: 53,
     rank: 19,
@@ -572,7 +509,8 @@ export const NftData = [
   {
     id: 25,
     heading: "Crypto NFT #25",
-    main_img: Kanye,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475000/AI-NFT%27s/marketPlace/Kanye_hdx7kc.svg",
     name: "Kanye West",
     score: 19,
     rank: 33,
@@ -592,7 +530,8 @@ export const NftData = [
   {
     id: 26,
     heading: "Crypto NFT #26",
-    main_img: Roger,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475013/AI-NFT%27s/marketPlace/Roger_qlsqfz.svg",
     name: "Roger Federer",
     score: 58,
     rank: 26,
@@ -612,7 +551,8 @@ export const NftData = [
   {
     id: 27,
     heading: "Crypto NFT #27",
-    main_img: Serena,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475014/AI-NFT%27s/marketPlace/Serena_ftwvgp.svg",
     name: "Serena Williams",
     score: 36,
     rank: 27,
@@ -632,7 +572,8 @@ export const NftData = [
   {
     id: 28,
     heading: "Crypto NFT #28",
-    main_img: Janet,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475009/AI-NFT%27s/marketPlace/Janet_r4hipb.svg",
     name: "Janet Yellen",
     score: 1,
     rank: 42,
@@ -652,7 +593,8 @@ export const NftData = [
   {
     id: 29,
     heading: "Crypto NFT #29",
-    main_img: Gervonta,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475008/AI-NFT%27s/marketPlace/Gervonta_fdafc6.svg",
     name: "Gervonta Davis",
     score: 5,
     rank: 39,
@@ -672,7 +614,8 @@ export const NftData = [
   {
     id: 30,
     heading: "Crypto NFT #30",
-    main_img: Mike,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475000/AI-NFT%27s/marketPlace/Mike_n1k3vz.svg",
     name: "Mike Tyson",
     score: 49,
     rank: 21,
@@ -693,7 +636,8 @@ export const NftData = [
   {
     id: 31,
     heading: "Crypto NFT #31",
-    main_img: Novak,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475013/AI-NFT%27s/marketPlace/Novak_nrd8z2.svg",
     name: "Novak Djokovic",
     score: 52,
     rank: 29,
@@ -713,7 +657,8 @@ export const NftData = [
   {
     id: 32,
     heading: "Crypto NFT #32",
-    main_img: Canelo,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475003/AI-NFT%27s/marketPlace/Canelo_nii5gk.svg",
     name: "Canelo Álvarez",
     score: 25,
     rank: 32,
@@ -733,7 +678,8 @@ export const NftData = [
   {
     id: 33,
     heading: "Crypto NFT #33",
-    main_img: Khabib,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475011/AI-NFT%27s/marketPlace/Khabib_vkomya.svg",
     name: "Khabib Nurmagomedov",
     score: 43,
     rank: 24,
@@ -753,7 +699,8 @@ export const NftData = [
   {
     id: 34,
     heading: "Crypto NFT #34",
-    main_img: Usain,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475016/AI-NFT%27s/marketPlace/Usain_zq6tw6.svg",
     name: "Usain Bolt",
     score: 39,
     rank: 25,
@@ -773,7 +720,8 @@ export const NftData = [
   {
     id: 35,
     heading: "Crypto NFT #35",
-    main_img: Virat,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475016/AI-NFT%27s/marketPlace/Virat_pmirpf.svg",
     name: "Virat Kohli",
     score: 170,
     rank: 11,
@@ -793,7 +741,8 @@ export const NftData = [
   {
     id: 36,
     heading: "Crypto NFT #36",
-    main_img: Rafael,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475003/AI-NFT%27s/marketPlace/Rafael_cxev53.svg",
     name: "Rafael Nadal",
     score: 50,
     rank: 20,
@@ -814,7 +763,8 @@ export const NftData = [
   {
     id: 37,
     heading: "Crypto NFT #37",
-    main_img: Michael,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475013/AI-NFT%27s/marketPlace/Michael_lnmdkg.svg",
     name: "Michael Jordan",
     score: 43,
     rank: 23,
@@ -834,7 +784,8 @@ export const NftData = [
   {
     id: 38,
     heading: "Crypto NFT #38",
-    main_img: Changpeng,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475003/AI-NFT%27s/marketPlace/Changpeng_bchgsi.svg",
     name: "ChanPeng Zhao",
     score: 20,
     rank: 34,
@@ -854,7 +805,8 @@ export const NftData = [
   {
     id: 39,
     heading: "Crypto NFT #39",
-    main_img: Christine,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475005/AI-NFT%27s/marketPlace/Christine_mpntbc.svg",
     name: "Christine Lagarde",
     score: 1,
     rank: 42,
@@ -874,7 +826,8 @@ export const NftData = [
   {
     id: 40,
     heading: "Crypto NFT #40",
-    main_img: Harry,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475007/AI-NFT%27s/marketPlace/Harry_fwwwbn.svg",
     name: "Prince Harry",
     score: 1,
     rank: 43,
@@ -894,7 +847,8 @@ export const NftData = [
   {
     id: 41,
     heading: "Crypto NFT #41",
-    main_img: Dwayne,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681474997/AI-NFT%27s/marketPlace/Dwayne_nyxekk.svg",
     name: "Dwayne The Rock Johnson",
     score: 452,
     rank: 4,
@@ -915,7 +869,8 @@ export const NftData = [
   {
     id: 42,
     heading: "Crypto NFT #42",
-    main_img: Beyonce,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681474998/AI-NFT%27s/marketPlace/Beyonce_lakkgo.svg",
     name: "Beyonce",
     score: 376,
     rank: 5,
@@ -935,7 +890,8 @@ export const NftData = [
   {
     id: 43,
     heading: "Crypto NFT #43",
-    main_img: Mukesh,
+    main_img:
+      "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681475003/AI-NFT%27s/marketPlace/Mukesh_wz8a1e.svg",
     name: "Mukesh Ambani",
     score: 85,
     rank: 14,
@@ -959,7 +915,7 @@ export const Leaderboard = [
     id: 1,
     number: "№4",
     name: "Dwayne The Rock Johnson ",
-    img: dwayne,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476869/AI-NFT%27s/leaderboard/dwayne_xukqaq.svg",
     score: "453",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -968,7 +924,7 @@ export const Leaderboard = [
     id: 2,
     number: "№5",
     name: "Beyonce",
-    img: beyonce,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476889/AI-NFT%27s/leaderboard/beyonce_azwca8.svg",
     score: "376",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -977,7 +933,7 @@ export const Leaderboard = [
     id: 3,
     number: "№6",
     name: "Elon Musk",
-    img: elon,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476871/AI-NFT%27s/leaderboard/elon_jqkrfm.svg",
     score: "329",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -986,7 +942,7 @@ export const Leaderboard = [
     id: 4,
     number: "№7",
     name: "Barak Obama",
-    img: barak,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476883/AI-NFT%27s/leaderboard/barak_qmuabo.svg",
     score: "225",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -995,7 +951,7 @@ export const Leaderboard = [
     id: 5,
     number: "№8",
     name: "Bill Gates",
-    img: bill,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476864/AI-NFT%27s/leaderboard/bill_bq3lme.svg",
     score: "221",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1004,7 +960,7 @@ export const Leaderboard = [
     id: 6,
     number: "№9",
     name: "Bernard Arnault",
-    img: bernard,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476891/AI-NFT%27s/leaderboard/bernard_ebxv8x.svg",
     score: "221",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1013,7 +969,7 @@ export const Leaderboard = [
     id: 7,
     number: "№10",
     name: "LeBron James",
-    img: lebron,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476880/AI-NFT%27s/leaderboard/lebron_umud9e.svg",
     score: "218",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1022,7 +978,7 @@ export const Leaderboard = [
     id: 8,
     number: "№11",
     name: "Virat Kohli",
-    img: virat,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476883/AI-NFT%27s/leaderboard/virat_ghqssq.svg",
     score: "170",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1031,7 +987,7 @@ export const Leaderboard = [
     id: 9,
     number: "№12",
     name: "Donald Trump",
-    img: donald,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476865/AI-NFT%27s/leaderboard/donald_ety6jv.svg",
     score: "149",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1040,7 +996,7 @@ export const Leaderboard = [
     id: 10,
     number: "№13",
     name: "Jeff Bezos",
-    img: jeff,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476885/AI-NFT%27s/leaderboard/jeff_dcztqj.svg",
     score: "132",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1050,7 +1006,7 @@ export const Leaderboard = [
     id: 11,
     number: "№14",
     name: "Mukesh Ambani",
-    img: mukesh,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476876/AI-NFT%27s/leaderboard/mukesh_nvjcv1.svg",
     score: "85",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1059,7 +1015,7 @@ export const Leaderboard = [
     id: 12,
     number: "№15",
     name: "Connor McGregor",
-    img: connor,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476868/AI-NFT%27s/leaderboard/connor_jzpkbc.svg",
     score: "72",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1068,7 +1024,7 @@ export const Leaderboard = [
     id: 13,
     number: "№16",
     name: "Joe Biden",
-    img: joe,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476882/AI-NFT%27s/leaderboard/joe_kgi0hu.svg",
     score: "66",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1077,7 +1033,7 @@ export const Leaderboard = [
     id: 14,
     number: "№17",
     name: "Gautam Adani",
-    img: gautam,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476868/AI-NFT%27s/leaderboard/gautam_dzurur.svg",
     score: "59",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1086,7 +1042,7 @@ export const Leaderboard = [
     id: 15,
     number: "№18",
     name: "Arnold Schwarzenegger",
-    img: arnold,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476887/AI-NFT%27s/leaderboard/arnold_ujdkxw.svg",
     score: "53",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1095,7 +1051,7 @@ export const Leaderboard = [
     id: 16,
     number: "№19",
     name: "Floyd Mayweather Jr",
-    img: floyd,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476873/AI-NFT%27s/leaderboard/floyd_vpl5jl.svg",
     score: "53",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1104,7 +1060,7 @@ export const Leaderboard = [
     id: 17,
     number: "№20",
     name: "Rafael Nadal",
-    img: rafael,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476878/AI-NFT%27s/leaderboard/rafael_sewwt9.svg",
     score: "50",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1113,7 +1069,7 @@ export const Leaderboard = [
     id: 18,
     number: "№21",
     name: "Mike Tyson",
-    img: mike,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476878/AI-NFT%27s/leaderboard/mike_jheig2.svg",
     score: "49",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1122,7 +1078,7 @@ export const Leaderboard = [
     id: 19,
     number: "№22",
     name: "Lewis Hamilton",
-    img: lewis,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476890/AI-NFT%27s/leaderboard/lewis_esxhkr.svg",
     score: "45",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1131,7 +1087,7 @@ export const Leaderboard = [
     id: 20,
     number: "№23",
     name: "Michael Jordan",
-    img: michael,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476882/AI-NFT%27s/leaderboard/michael_qcdwlb.svg",
     score: "43",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1140,7 +1096,7 @@ export const Leaderboard = [
     id: 21,
     number: "№24",
     name: "Khabib Nurmagomedov",
-    img: khabib,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476888/AI-NFT%27s/leaderboard/khabib_gkkbce.svg",
     score: "43",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1149,7 +1105,7 @@ export const Leaderboard = [
     id: 22,
     number: "№25",
     name: "Usain Bolt",
-    img: usain,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476885/AI-NFT%27s/leaderboard/usain_leetb7.svg",
     score: "39",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1158,7 +1114,7 @@ export const Leaderboard = [
     id: 23,
     number: "№26",
     name: "Roger Federer",
-    img: roger,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476886/AI-NFT%27s/leaderboard/roger_gl2z3j.svg",
     score: "38",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1167,7 +1123,7 @@ export const Leaderboard = [
     id: 24,
     number: "№27",
     name: "Serena Williams",
-    img: serena,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476887/AI-NFT%27s/leaderboard/serena_tvchnq.svg",
     score: "36",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1176,7 +1132,7 @@ export const Leaderboard = [
     id: 25,
     number: "№28",
     name: "Jake Paul",
-    img: jake,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476877/AI-NFT%27s/leaderboard/jake_tjal8p.svg",
     score: "34",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1185,7 +1141,7 @@ export const Leaderboard = [
     id: 26,
     number: "№29",
     name: "Novak Djokovic",
-    img: novak,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476882/AI-NFT%27s/leaderboard/novak_csidjw.svg",
     score: "34",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1194,7 +1150,7 @@ export const Leaderboard = [
     id: 27,
     number: "№30",
     name: "Sylvester Stallone",
-    img: sylvester,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476888/AI-NFT%27s/leaderboard/sylvester_sjfalx.svg",
     score: "31",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1203,7 +1159,7 @@ export const Leaderboard = [
     id: 28,
     number: "№31",
     name: "Tom Brady",
-    img: tom,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476880/AI-NFT%27s/leaderboard/tom_agk99w.svg",
     score: "26",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1212,7 +1168,7 @@ export const Leaderboard = [
     id: 29,
     number: "№32",
     name: "Canelo Álvarez",
-    img: canelo,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476866/AI-NFT%27s/leaderboard/canelo_khozqd.svg",
     score: "25",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1221,7 +1177,7 @@ export const Leaderboard = [
     id: 30,
     number: "№33",
     name: "Volodymyr Zelenskyy",
-    img: volodymyr,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476879/AI-NFT%27s/leaderboard/volodymyr_blzd98.svg",
     score: "24",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1230,7 +1186,7 @@ export const Leaderboard = [
     id: 31,
     number: "№34",
     name: "ChangPeng Zhao",
-    img: changpeng_2,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476865/AI-NFT%27s/leaderboard/changpeng_2_q96o8p.svg",
     score: "20",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1239,7 +1195,7 @@ export const Leaderboard = [
     id: 32,
     number: "№35",
     name: "KanYe West",
-    img: kanye_2,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476872/AI-NFT%27s/leaderboard/kanye_2_jedab1.svg",
     score: "19",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1248,7 +1204,7 @@ export const Leaderboard = [
     id: 33,
     number: "№36",
     name: "Dana White",
-    img: dana,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476871/AI-NFT%27s/leaderboard/dana_f8wxlq.svg",
     score: "18",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1257,7 +1213,7 @@ export const Leaderboard = [
     id: 34,
     number: "№37",
     name: "Tiger Woods",
-    img: tiger,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476884/AI-NFT%27s/leaderboard/tiger_der4oi.svg",
     score: "12",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1266,7 +1222,7 @@ export const Leaderboard = [
     id: 35,
     number: "№38",
     name: "Tyson Fury ",
-    img: tyson,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476885/AI-NFT%27s/leaderboard/tyson_cprifj.svg",
     score: "11",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1275,7 +1231,7 @@ export const Leaderboard = [
     id: 36,
     number: "№39",
     name: "Gervonta Davis ",
-    img: gervonta,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476890/AI-NFT%27s/leaderboard/gervonta_ylqclb.svg",
     score: "5",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1284,7 +1240,7 @@ export const Leaderboard = [
     id: 37,
     number: "№40",
     name: "Vladimir Putin ",
-    img: vladimir,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476875/AI-NFT%27s/leaderboard/vladimir_ggdyn4.svg",
     score: "1",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1293,7 +1249,7 @@ export const Leaderboard = [
     id: 38,
     number: "№41",
     name: "Janet Yellen  ",
-    img: janet,
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476880/AI-NFT%27s/leaderboard/janet_rl0rr5.svg",
     score: "1",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1301,8 +1257,8 @@ export const Leaderboard = [
   {
     id: 39,
     number: "№42",
-    name: "Christine Lagarde ",
-    img: christine,
+    name: "Christine Lagarde",
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476865/AI-NFT%27s/leaderboard/christine_fv7hyn.svg",
     score: "1",
     address: "3BV2...76D723623",
     dollar_price: "12.00",
@@ -1310,8 +1266,8 @@ export const Leaderboard = [
   {
     id: 40,
     number: "№43",
-    name: "Prince Harry ",
-    img: harry,
+    name: "Prince Harry",
+    img: "https://res.cloudinary.com/dfjmnwwan/image/upload/v1681476875/AI-NFT%27s/leaderboard/harry_k0pbxg.svg",
     score: "1",
     address: "3BV2...76D723623",
     dollar_price: "12.00",

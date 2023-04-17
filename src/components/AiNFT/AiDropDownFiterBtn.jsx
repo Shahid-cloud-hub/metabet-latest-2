@@ -162,21 +162,12 @@ const AiDropDownFilterBtn = ({ name, options, style, ...props }) => {
         data-value={getSelectedOptionValue()}
         style={style}
       >
-        <div id="title">
-          {options[selectedIndex].img ?? options.selectedIndex ? (
-            <img
-              src={options[selectedIndex].img ?? options.selectedIndex}
-              alt="img"
-            />
-          ) : (
-            ""
-          )}
-          {/* <img
-            src={options[selectedIndex].img ?? options.selectedIndex}
-            alt="img"
-          /> */}
-          <span className="value">{getSelectedOptionText()}</span>
-        </div>
+        {/* <img
+          src={options[selectedIndex].img ?? options.selectedIndex}
+          alt="img"
+        /> */}
+        <span className="value">{getSelectedOptionText()}</span>
+
         <ul
           ref={optList}
           className={"optList" + (isActive ? "" : " hidden")}

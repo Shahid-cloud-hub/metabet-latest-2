@@ -74,7 +74,7 @@ const CryptoCurrencies = ({ group_type }) => {
   }, []);
 
   const res = response ? response : [];
-  console.log("res", response);
+  console.log("cryto-currencies", response);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -100,7 +100,7 @@ const CryptoCurrencies = ({ group_type }) => {
                     style={{ width: "90%" }}
                     onClick={() =>
                       navigate(
-                        `${item?.event?.title}/stats/${item?.event?.highlights[0]?._id}`,
+                        `${item?.event?.title}/statistics/${item?.event?.highlights[0]?._id}`,
                         {
                           state: item?.event?.highlights[0]?._id,
                         }

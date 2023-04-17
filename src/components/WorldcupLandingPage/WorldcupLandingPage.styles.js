@@ -352,9 +352,10 @@ export const DashContainer = styled("div")`
         font-family: "mostra-nuova", sans-serif;
 
         hr {
-          border-top: 1px solid #fff;
+          border: 1px solid #337577;
           max-width: 100px;
           margin: 0 auto;
+          color: #337577;
         }
       }
       &.active {
@@ -401,6 +402,12 @@ export const DashContainer = styled("div")`
       padding: 10px 0px;
       cursor: pointer;
       margin-right: 5%;
+    }
+    @media screen and (max-width: 375px) {
+      justify-content: center;
+      button {
+        margin-right: 0px;
+      }
     }
   }
 
