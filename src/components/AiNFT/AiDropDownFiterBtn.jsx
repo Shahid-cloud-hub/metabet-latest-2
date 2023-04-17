@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import axios from "axios";
+import twitter from "../../assets/images/ActiveBets/twitter.png";
 
 const DropdownOptions = ({
   options,
@@ -26,8 +27,8 @@ const DropdownOptions = ({
             className={"option" + (i === highlightedIndex ? " highlight" : "")}
             role="option"
           >
+            {el.img && <img src={el.img} alt="img" />}
             {el.name}
-            <hr />
           </li>
         );
       })}
@@ -101,8 +102,10 @@ const AiDropDownFilterBtn = ({ name, options, style, ...props }) => {
   };
 
   const getSelectedOptionValue = () => {
+    console.log("first", options[selectedIndex].img);
     return options[selectedIndex].value ?? options.selectedIndex.name;
   };
+
   const getSelectedOptionText = () => {
     return options[selectedIndex].name;
   };
@@ -138,6 +141,7 @@ const AiDropDownFilterBtn = ({ name, options, style, ...props }) => {
         {options.map((el, i) => {
           return (
             <option key={i} value={el.value ? el.value : el.name}>
+              {el.img && <img src={el.img} alt="img" />}
               {el.name}
             </option>
           );
@@ -161,7 +165,12 @@ const AiDropDownFilterBtn = ({ name, options, style, ...props }) => {
         data-value={getSelectedOptionValue()}
         style={style}
       >
+        {/* <img
+          src={options[selectedIndex].img ?? options.selectedIndex}
+          alt="img"
+        /> */}
         <span className="value">{getSelectedOptionText()}</span>
+
         <ul
           ref={optList}
           className={"optList" + (isActive ? "" : " hidden")}

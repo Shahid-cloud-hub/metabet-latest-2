@@ -429,6 +429,23 @@ export const AINFTContainer = styled("div")`
           max-height: 0;
           visibility: hidden;
         }
+
+        &::-webkit-scrollbar {
+          display: block;
+          width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+          background: rgba(0, 0, 0, 0.35);
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: linear-gradient(180deg, #331f3d 0%, #1c1c1c 112.83%);
+          border-right: none;
+          border-left: none;
+          border-radius: 10px;
+        }
       }
       .value {
         display: inline-block;
@@ -515,7 +532,7 @@ export const AINFTContainer = styled("div")`
     }
   }
 
-  @media screen and (max-width: 1080px) {
+  @media screen and (max-width: 1180px) {
     .ai-filter-btn {
       display: none;
     }
@@ -524,6 +541,12 @@ export const AINFTContainer = styled("div")`
       display: flex;
       justify-content: center;
       padding-top: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1180px) {
+    .parent-wrapper-filter {
+      display: none;
     }
   }
 
@@ -1030,16 +1053,23 @@ export const LeaderboardContainer = styled("div")`
   align-items: center;
   justify-content: center;
   gap: 15px;
+  padding: 40px 0px;
 
   .head {
     display: flex;
     gap: 15px;
     align-items: end;
+
+    .reverse {
+      display: flex;
+      gap: 17px;
+    }
   }
   .box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
   }
   .crown {
     display: flex;
@@ -1186,10 +1216,11 @@ export const LeaderboardContainer = styled("div")`
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    width: 100%;
 
     .rectangle {
       width: 100%;
-      min-width: 615px;
+      max-width: 656px;
       min-height: 101px;
       background: linear-gradient(180.07deg, #180a1b -1.92%, #150118 98.15%);
       border-radius: 12px;
@@ -1198,6 +1229,13 @@ export const LeaderboardContainer = styled("div")`
       justify-content: space-between;
       padding: 0px 20px;
       border: 1px solid #ff33f7;
+
+      .title-id-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+      }
     }
     .icon {
       display: flex;
@@ -1259,6 +1297,106 @@ export const LeaderboardContainer = styled("div")`
         font-weight: 300;
         font-size: 14px;
         color: #b1b1b1;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    .head {
+      max-width: 400px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 100%;
+
+      .box {
+        width: 100%;
+      }
+
+      .reverse {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+
+        .box {
+          width: 100%;
+
+          .card1,
+          .card {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .main-body {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    .main-body {
+      width: 100%;
+      max-width: 450px;
+    }
+  }
+
+  @media screen and (max-width: 880px) {
+    .main-body {
+      width: 100%;
+      max-width: 650px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .main-body {
+      width: 100%;
+      max-width: 650px;
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    .main-body {
+      width: 100%;
+      max-width: 520px;
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    .main-body {
+      width: 100%;
+      max-width: 420px;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .main-body {
+      width: 100%;
+      max-width: 320px;
+
+      .rectangle {
+        .title-id-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .main-body {
+      width: 100%;
+      max-width: 280px;
+
+      .rectangle {
+        padding: 0px 15px;
+        .title-id-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
       }
     }
   }

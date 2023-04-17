@@ -548,7 +548,6 @@ export const BetAINFTStatusContainer = styled("div")`
       display: flex;
       gap: 15px;
       align-items: center;
-      margin-left: 98px;
 
       button {
         width: 100%;
@@ -742,6 +741,8 @@ export const BetAINFTStatusContainer = styled("div")`
       }
 
       .ai-nft-wallet-connect-btn {
+        margin-left: 98px;
+
         .shop-img {
           display: none;
         }

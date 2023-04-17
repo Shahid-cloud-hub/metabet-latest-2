@@ -102,7 +102,8 @@ const AiNFT = () => {
   const [itemData, setItemData] = useState(Filter);
   const [getName, setGetName] = useState("all");
   const { fetchData, response } = useAxios();
-  const { isDesktop, isSmallDesktop, isTablet } = useBreakpoint();
+  const { isDesktop, isSmallDesktop, isTablet, isSmallMobile, isMobile } =
+    useBreakpoint();
   const [change, setChange] = useState({
     myNFT: false,
     MarketPlace: true,
@@ -173,7 +174,7 @@ const AiNFT = () => {
       <div className="ai-logo">
         <img src={AILogoImg} alt="AI NFT" />
       </div>
-      {/* <div className="ai-filter-btn">
+      <div className="ai-filter-btn">
         <AiFilter
           filterItem={filterItem}
           setItemData={setItemData}
@@ -181,11 +182,11 @@ const AiNFT = () => {
           callbackName={callbackName}
           activeBet={true}
         />
-      </div> */}
+      </div>
       <div className="parent-wrapper-filter">
         <AiDropDownFilterBtn
           options={[
-            { name: "All", value: "all", defaultValue: true },
+            { name: "Select Event Category", value: "", defaultValue: true },
             {
               name: "Social Media",
               value: "social-media",
