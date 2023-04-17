@@ -170,18 +170,18 @@ const AiDropDownFilterBtn = ({ name, options, style, ...props }) => {
         // getSelectedOptionValueImg={getSelectedOptionValueImg()}
       >
         <div id="title">
-          {/* {options[selectedIndex].img ?? options.selectedIndex ? (
+          {options[selectedIndex].img ?? options.selectedIndex ? (
             <img
               src={options[selectedIndex].img ?? options.selectedIndex}
               alt="img"
             />
           ) : (
             ""
-          )} */}
-          <img
+          )}
+          {/* <img
             src={options[selectedIndex].img ?? options.selectedIndex}
             alt="img"
-          />
+          /> */}
           <span className="value">{getSelectedOptionText()}</span>
         </div>
 
