@@ -418,7 +418,7 @@ export const AINFTContainer = styled("div")`
         background: linear-gradient(180deg, #331f3d 0%, #1c1c1c 112.83%);
         transition: transform 330ms ease, opacity 330ms ease;
         transform: translateY(1px);
-        z-index: 5;
+        z-index: 11;
         text-align: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -930,7 +930,6 @@ export const MarketPlaceContainer = styled("div")`
         gap: 5px;
         .wallet-not-connected {
           padding: 13px 7px;
-
           span {
             font-size: 12px;
           }

@@ -102,13 +102,8 @@ const AiDropDownFilterBtn = ({ name, options, style, ...props }) => {
   };
 
   const getSelectedOptionValue = () => {
-    console.log("first", options[selectedIndex].img);
     return options[selectedIndex].value ?? options.selectedIndex.name;
   };
-  const getSelectedOptionValueImg = () => {
-    return options[selectedIndex].img ?? options.selectedIndex.img;
-  };
-
   const getSelectedOptionText = () => {
     return options[selectedIndex].name;
   };
@@ -144,7 +139,6 @@ const AiDropDownFilterBtn = ({ name, options, style, ...props }) => {
         {options.map((el, i) => {
           return (
             <option key={i} value={el.value ? el.value : el.name}>
-              {el.img && <img src={el.img} alt="img" />}
               {el.name}
             </option>
           );
@@ -167,7 +161,6 @@ const AiDropDownFilterBtn = ({ name, options, style, ...props }) => {
         tabIndex={0}
         data-value={getSelectedOptionValue()}
         style={style}
-        // getSelectedOptionValueImg={getSelectedOptionValueImg()}
       >
         <div id="title">
           {options[selectedIndex].img ?? options.selectedIndex ? (
@@ -184,10 +177,9 @@ const AiDropDownFilterBtn = ({ name, options, style, ...props }) => {
           /> */}
           <span className="value">{getSelectedOptionText()}</span>
         </div>
-
         <ul
           ref={optList}
-          className={"optList" + (isActive ? "" : "hidden")}
+          className={"optList" + (isActive ? "" : " hidden")}
           role="presentation"
         >
           <DropdownOptions

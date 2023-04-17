@@ -93,8 +93,8 @@ const LeaderboardComponent = () => {
         </div>
       </div>
       <div className="main-body">
-        {Leaderboard.map((item) => (
-          <div className="rectangle">
+        {Leaderboard.map((item, index) => (
+          <div className="rectangle" key={index}>
             <div className="icon">
               <img src={item.img} alt="img" />
               <span>{item.number}</span>

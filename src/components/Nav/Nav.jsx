@@ -69,7 +69,9 @@ const Header = (props) => {
             )}
           </>
         )}
-        {(isSmallMobile || isMobile || isTablet) && <LeftSidebar {...props} />}
+        {(isSmallMobile || isMobile || isTablet) && (
+          <LeftSidebar {...props} onClick={callback} />
+        )}
       </Container>
     </>
   );

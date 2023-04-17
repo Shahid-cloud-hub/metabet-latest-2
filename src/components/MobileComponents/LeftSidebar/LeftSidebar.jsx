@@ -81,6 +81,17 @@ const LeftSidebar = () => {
     window.scrollTo(0, 0);
   }, [pathname, items.getRender]);
 
+  const { setItems } = useContext(Context);
+
+  const callback = () => {
+    setItems((prevState) => ({
+      ...prevState,
+      betMessage: false,
+      airDropBetMessage: false,
+      getRender: true,
+    }));
+  };
+
   return (
     <ContainerSidebar
       purpleBackground={pathname === "/ai-nft" ? "#130e19" : "rgb(15, 33, 46)"}
@@ -112,6 +123,7 @@ const LeftSidebar = () => {
                       <SidebarItems
                         title={item.display_name}
                         active={index === activeItems}
+                        onClick={callback}
                       />
                     </Link>
                   ))}
@@ -128,6 +140,7 @@ const LeftSidebar = () => {
                         white={item?.white}
                         title={item.display_name}
                         active1={index === activeSecItems}
+                        onClick={callback}
                       />
                     </Link>
                   ))}

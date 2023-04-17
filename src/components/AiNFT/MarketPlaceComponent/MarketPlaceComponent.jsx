@@ -34,8 +34,8 @@ const MarketPlaceComponent = () => {
 
   return (
     <MarketPlaceContainer>
-      {NftData.map((item) => (
-        <div className="cryptoAi">
+      {NftData.map((item, index) => (
+        <div className="cryptoAi" key={index}>
           <div className="head">
             <span id="purple">{item.heading}</span>
             <ImageContainer>

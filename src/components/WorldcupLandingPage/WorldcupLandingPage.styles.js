@@ -345,6 +345,7 @@ export const DashContainer = styled("div")`
       }
       .option {
         padding: 10px;
+        color: #337577;
         font-size: 14px;
         opacity: 0;
         animation-delay: calc(40ms * var(--index)) !important;
