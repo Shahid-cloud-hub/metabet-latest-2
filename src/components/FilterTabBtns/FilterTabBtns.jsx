@@ -26,6 +26,8 @@ const FilterTabBtns = ({
     const imgV = filterItem ? filterItem.img : null;
     const imgO = filterItem ? filterItem.imgO : null;
     console.log("first", imgV);
+    console.log("img O", imgO);
+
     return { name: nameObjs, imgV, imgO };
   });
 

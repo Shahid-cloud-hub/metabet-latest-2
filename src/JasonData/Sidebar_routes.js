@@ -74,7 +74,7 @@ export const first_array = [
     route: "/bet-token",
   },
   {
-    display_name: "AiNFT",
+    display_name: "CryptoAi",
     route: "/ai-nft",
   },
 ];

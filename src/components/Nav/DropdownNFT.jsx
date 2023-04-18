@@ -100,7 +100,7 @@ const DropdownNFT = ({ show }) => {
               <input
                 type="text"
                 name="name"
-                value={balance == null ? "0.00" : balance}
+                value={balance == null ? "0" : balance}
                 disabled
               />
             </label>
