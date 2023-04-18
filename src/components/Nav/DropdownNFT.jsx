@@ -11,9 +11,9 @@ import GOAL from "../../assets/images/GOAL.png";
 import USDC from "../../assets/images/usdc.png";
 import foxCircle from "../../assets/images/foxCircle.svg";
 import tru from "../../assets/images/tru.svg";
-import trubet from "../../assets/images/Ai-NFT/trubet.png";
+import trubet from "../../assets/images/Ai-NFT/trubet.svg";
 import dollar from "../../assets/images/Ai-NFT/dollar.png";
-import trolly from "../../assets/images/Ai-NFT/trolly.png";
+import trolly from "../../assets/images/Ai-NFT/trolly.svg";
 import navBet from "../../assets/images/navBet.svg";
 
 import { useDispatch, useSelector } from "react-redux";
