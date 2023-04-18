@@ -404,7 +404,6 @@ export const DashContainer = styled("div")`
       margin-right: 5%;
     }
     @media screen and (max-width: 375px) {
-      justify-content: center;
       button {
         margin-right: 0px;
       }
