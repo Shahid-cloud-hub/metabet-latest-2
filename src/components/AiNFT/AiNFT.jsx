@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AILogoImg from "../../assets/images/Ai-NFT/ai.png";
 import { AINFTContainer } from "./AINFT.Style";
 import AiFilter from "./AiFilter";
@@ -14,89 +14,43 @@ import LeaderboardComponent from "./LeaderboardComponent/LeaderboardComponent";
 import useBreakpoint from "../../hooks/useBreakpoints";
 
 // filter images
-import foxCircle from "../../assets/images/foxCircle.webp";
-import DXY from "../../assets/images/DXY.webp";
-import Bitcoin from "../../assets/images/Bitcoin.svg";
-import Ethere from "../../assets/images/FeaturedEvent/Ethereum.webp";
-import Football from "../../assets/images/PL.png";
-import CricketGrey from "../../assets/images/Cricket.png";
-import UFCGrey from "../../assets/images/UFC.png";
-import trending from "../../assets/images/Politics.png";
-import DXYW from "../../assets/images/DXYW.webp";
-import BitcoinW from "../../assets/images/BitcoinW.webp";
-import EthereW from "../../assets/images/FeaturedEvent/white-Ethereum.webp";
-import CricketW from "../../assets/images/CricketW.webp";
-import PoliticsW from "../../assets/images/PoliticsW.webp";
-import FootballW from "../../assets/images/FootballW.webp";
-import UFCW from "../../assets/images/UFCW.webp";
-import twitter from "../../assets/images/ActiveBets/twitter.png";
-import twitterO from "../../assets/images/ActiveBets/twitterO.png";
-import twitterP from "../../assets/images/ActiveBets/twitterP.png";
-import twittericon from "../../assets/images/ActiveBets/twittericon.png";
-import currency from "../../assets/images/ActiveBets/currency.png";
-import currencyicon from "../../assets/images/ActiveBets/currencyicon.png";
-import crypto from "../../assets/images/ActiveBets/crypto.png";
-import boxing from "../../assets/images/ActiveBets/boxing.png";
-import boxingicon from "../../assets/images/boxingicon.png";
-import footballicon from "../../assets/images/ActiveBets/footballicon.png";
-import CricketNew from "../../assets/images/ActiveBets/cricketnew.png";
-import RugbyW from "../../assets/images/RugbyW.png";
-import Rugbyicon from "../../assets/images/rugbyicon.png";
+import FootballW from "../../assets/images/ai-filter/FootballW.webp";
+import FootballP from "../../assets/images/ai-filter/FootballP.png";
+import twitter from "../../assets/images/ai-filter/twitter.png";
+import twitterP from "../../assets/images/ai-filter/twitterP.png";
+import currency from "../../assets/images/ai-filter/currency.png";
+import currencyP from "../../assets/images/ai-filter/currencyP.png";
+import crypto from "../../assets/images/ai-filter/crypto.png";
+import cryptoP from "../../assets/images/ai-filter/cryptoP.png";
+import CricketNew from "../../assets/images/ai-filter/cricketnew.png";
+import CricketP from "../../assets/images/ai-filter/CricketP.png";
 import FormulaW from "../../assets/images/FormulaW.png";
-import Formulaicon from "../../assets/images/formulaicon.png";
-import HorseW from "../../assets/images/HorseW.png";
-import Horseicon from "../../assets/images/horseicon.png";
-import DartsW from "../../assets/images/DartsW.png";
-import Dartsicon from "../../assets/images/darticon.png";
-import VolleyballW from "../../assets/images/VolleyballW.webp";
-import Volleyballicon from "../../assets/images/volleyballicon.png";
-import GolfW from "../../assets/images/GolfW.png";
-import golficon from "../../assets/images/golficon.png";
+import FormulaP from "../../assets/images/ai-filter/FormulaP.png";
+import BasketballW from "../../assets/images/ai-filter/basketballW.webp";
+import BasketballP from "../../assets/images/ai-filter/BasketballP.png";
+import TennisW from "../../assets/images/ai-filter/TennisW.webp";
+import TennisP from "../../assets/images/ai-filter/TennisP.png";
+import AmericanFootballW from "../../assets/images/ai-filter/AmericanFootballW.webp";
+import AmericanFootballP from "../../assets/images/ai-filter/AmericanFootballP.png";
+import boxing from "../../assets/images/ai-filter/boxing.png";
+import boxingP from "../../assets/images/ai-filter/boxingP.png";
+import BaseballW from "../../assets/images/ai-filter/BaseballW.webp";
+import BaseballP from "../../assets/images/ai-filter/BaseballP.png";
 import SnookerW from "../../assets/images/SnookerW.png";
-import Snookericon from "../../assets/images/snookericon.png";
-import BaseballW from "../../assets/images/BaseballW.webp";
-import baseballicon from "../../assets/images/baseballicon.png";
-import TennisW from "../../assets/images/TennisW.webp";
-import tennisicon from "../../assets/images/tennisicon.png";
-import AmericanFootballW from "../../assets/images/AmericanFootballW.webp";
-import americanfootballicon from "../../assets/images/americanfootballicon.png";
-import BasketballW from "../../assets/images/BasketballW.webp";
-import basketballicon from "../../assets/images/basketballicon.png";
-import foxsmall from "../../assets/images/foxsmall.png";
-import currencyO from "../../assets/images/ActiveBets/currencyO.png";
-import currencyP from "../../assets/images/ActiveBets/currencyP.png";
-import cryptoO from "../../assets/images/ActiveBets/cryptoO.png";
-import cryptoP from "../../assets/images/ActiveBets/cryptoP.png";
-import boxingO from "../../assets/images/ActiveBets/boxingO.png";
-import boxingP from "../../assets/images/ActiveBets/boxingP.png";
-import CricketO from "../../assets/images/ActiveBets/CricketO.png";
-import CricketP from "../../assets/images/ActiveBets/CricketP.png";
-import FootballO from "../../assets/images/ActiveBets/FootballO.png";
-import FootballP from "../../assets/images/ActiveBets/FootballP.png";
-import FormulaO from "../../assets/images/ActiveBets/FormulaO.png";
-import FormulaP from "../../assets/images/ActiveBets/FormulaP.png";
-import BasketballO from "../../assets/images/ActiveBets/BasketballO.png";
-import BasketballP from "../../assets/images/ActiveBets/BasketballP.png";
-import TennisO from "../../assets/images/ActiveBets/TennisO.png";
-import TennisP from "../../assets/images/ActiveBets/TennisP.png";
-import AmericanFootballO from "../../assets/images/ActiveBets/AmericanFootballO.png";
-import AmericanFootballP from "../../assets/images/ActiveBets/AmericanFootballP.png";
-import BaseballO from "../../assets/images/ActiveBets/BaseballO.png";
-import BaseballP from "../../assets/images/ActiveBets/BaseballP.png";
-import SnookerO from "../../assets/images/ActiveBets/SnookerO.png";
-import SnookerP from "../../assets/images/ActiveBets/SnookerP.png";
-import GolfO from "../../assets/images/ActiveBets/GolfO.png";
-import GolfP from "../../assets/images/ActiveBets/GolfP.png";
-import RugbyO from "../../assets/images/ActiveBets/RugbyO.png";
-import RugbyP from "../../assets/images/ActiveBets/RugbyP.png";
-import DartsO from "../../assets/images/ActiveBets/DartsO.png";
-import DartsP from "../../assets/images/ActiveBets/DartsP.png";
-import HorseO from "../../assets/images/ActiveBets/HorseO.png";
-import HorseP from "../../assets/images/ActiveBets/HorseP.png";
-import VolleyballO from "../../assets/images/ActiveBets/VolleyballO.png";
-import VolleyballP from "../../assets/images/ActiveBets/VolleyballP.png";
-import ufcN from "../../assets/images/ActiveBets/UFC.png";
-import ufcP from "../../assets/images/ActiveBets/UFCP.png";
+import SnookerP from "../../assets/images/ai-filter/SnookerP.png";
+import GolfW from "../../assets/images/ai-filter/GolfW.png";
+import GolfP from "../../assets/images/ai-filter/GolfP.png";
+import RugbyW from "../../assets/images/ai-filter/RugbyW.png";
+import RugbyP from "../../assets/images/ai-filter/RugbyP.png";
+import VolleyballW from "../../assets/images/ai-filter/VolleyballW.webp";
+import VolleyballP from "../../assets/images/ai-filter/VolleyballP.png";
+import HorseW from "../../assets/images/ai-filter/HorseW.png";
+import HorseP from "../../assets/images/ai-filter/HorseP.png";
+import DartsW from "../../assets/images/ai-filter/DartsW.png";
+import DartsP from "../../assets/images/ai-filter/DartsP.png";
+
+import ufcN from "../../assets/images/ai-filter/UFC.webp";
+import ufcP from "../../assets/images/ai-filter/UFCP.png";
 
 const AiNFT = () => {
   const [itemData, setItemData] = useState(Filter);
@@ -159,15 +113,6 @@ const AiNFT = () => {
   //     window.scrollTo(0, 0);
   //   }, [title]);
   // }
-
-  const hightlightData = response?.map(
-    (item) => item?.event?.highlights[0]?.stats?.data?.smart_contract_id
-  );
-
-  const arrData =
-    hightlightData == undefined ? [] : Object.values(hightlightData);
-
-  const screenSize = window.screen.availWidth;
 
   return (
     <AINFTContainer>

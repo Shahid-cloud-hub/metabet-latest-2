@@ -11,7 +11,6 @@ import BtcDown from "../../assets/images/Bitcoin/BtcDown.webp";
 import clock1 from "../../assets/images/BitcoinPrice/clock1.png";
 import clock2 from "../../assets/images/BitcoinPrice/clock2.png";
 // import AirdropFooterBanner from "../FooterBanners/AirdropFooterBanner";
-import useFetch from "../../hooks/useFetch";
 import { useAxios } from "../../hooks/useAxios";
 
 function BitcoinPrice() {

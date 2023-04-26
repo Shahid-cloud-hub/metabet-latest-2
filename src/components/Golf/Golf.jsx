@@ -1,7 +1,7 @@
 import React from "react";
 import Maintenance from "../Maintenance/Maintenance";
 
-const GOlf = () => {
+const Golf = () => {
   return (
     <div>
       <Maintenance />
@@ -9,4 +9,4 @@ const GOlf = () => {
   );
 };
 
-export default GOlf;
+export default Golf;

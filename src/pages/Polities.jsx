@@ -1,13 +1,8 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import FeaturedBanners from "../Components/FeaturedBanners/FeaturedBanners";
-import AirdropFooterBanner from "../Components/FooterBanners/AirdropFooterBanner";
-import Loading from "../Components/Loading/Loading";
-import { PoliticsContainer } from "../Components/Politics/Politics.styles";
-import { DashContainer } from "../Components/WorldcupLandingPage/WorldcupLandingPage.styles";
+import Loading from "../components/Loading/Loading";
+import { DashContainer } from "../components/WorldcupLandingPage/WorldcupLandingPage.styles";
 import { useAxios } from "../hooks/useAxios";
-import useBreakpoint from "../hooks/useBreakpoints";
-import { Politics_banner_data } from "../JasonData/FeaturedBannerData";
 
 const Polities = ({ group_type }) => {
   const { fetchData, response, loading } = useAxios();

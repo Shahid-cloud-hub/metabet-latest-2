@@ -224,7 +224,7 @@ input:focus {
 }
 
 .accordion-item.collapsed {
-  max-height: 0;
+  max-height: 350px;
   transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
   margin: 0px;
 }

@@ -5,12 +5,13 @@ import Loading from "../Loading/Loading";
 import { DashContainer } from "./WorldcupLandingPage.styles";
 import { useNavigate } from "react-router-dom";
 import FilteredEventsList from "../FilterTabBtns/FilteredEventsList";
+import useBreakpoint from "../../hooks/useBreakpoints";
+import HorizontalFilter from "../FilterTabBtns/HorizontalFilter";
 
 const WorldcupLandingPage = () => {
   const { fetchData, response, loading } = useAxios();
   const navigate = useNavigate();
-  const [checked, setChecked] = useState(false);
-  const [count, setCount] = useState(1);
+  const { isDesktop, isTablet } = useBreakpoint();
 
   const getEvent = async () => {
     await fetchData({
@@ -27,7 +28,7 @@ const WorldcupLandingPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log("first", response);
+  const screenSize = window?.screen?.availWidth;
 
   return (
     <>
@@ -39,7 +40,8 @@ const WorldcupLandingPage = () => {
         ) : (
           <>
             <div className="parent-wrapper">
-              <>
+              {screenSize > 920 && <HorizontalFilter />}
+              {screenSize <= 920 && (
                 <FilteredEventsList
                   options={[
                     { name: "All", value: "all", defaultValue: true },
@@ -53,10 +55,10 @@ const WorldcupLandingPage = () => {
                     console.log(e.target.value);
                   }}
                 />
-              </>
+              )}
             </div>
             <div className="card-parent">
-              {response?.slice(0, 31)?.map((item, index) => (
+              {response?.map((item, index) => (
                 <>
                   <div className="card" key={index}>
                     {item?.event?.banner && (
@@ -80,7 +82,6 @@ const WorldcupLandingPage = () => {
                         src={item?.event?.bet_banner}
                         alt={item?.event?.title}
                         style={{ width: "85%" }}
-                        
                         onClick={() =>
                           navigate(
                             `${item?.group}/${item?.event?.title}/statistics/${item?.event?.possibleComes[0]?._id}`,

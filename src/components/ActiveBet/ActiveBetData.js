@@ -1,6 +1,3 @@
-import ChainLink from "../../assets/images/Betimg/chainlink.png";
-import senegal from "../../assets/images/WorldcupBanner/senegal-mini.webp";
-import england from "../../assets/images/WorldcupBanner/england-mini.webp";
 import football from "../../assets/images/ActiveBets/football.webp";
 import Cricket from "../../assets/images/ActiveBets/cricketnew.webp";
 import bitcoin from "../../assets/images/ActiveBets/bitcoin.webp";

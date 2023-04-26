@@ -1,9 +1,8 @@
-import React from 'react'
-import Maintenance from '../Maintenance/Maintenance'
+import React from "react";
+import Maintenance from "../Maintenance/Maintenance";
 
 const Formula1 = () => {
-  return (
-<Maintenance/>  )
-}
+  return <Maintenance />;
+};
 
-export default Formula1
+export default Formula1;

@@ -1,9 +1,8 @@
-import React from 'react'
-import Maintenance from '../Maintenance/Maintenance'
+import React from "react";
+import Maintenance from "../Maintenance/Maintenance";
 
 const Rugby = () => {
-  return (
-<Maintenance/>  )
-}
+  return <Maintenance />;
+};
 
-export default Rugby
+export default Rugby;

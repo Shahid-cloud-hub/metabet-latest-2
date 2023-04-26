@@ -49,7 +49,7 @@ import TENNIS from "./components/Tennis/Tennis";
 import AMERICANFOOTBALL from "./components/AmericanFootball/AmericanFootball";
 import BASEBALL from "./components/Baseball/Baseball";
 import SNOOKER from "./components/Snooker/Snooker";
-import GOLF from "./components/Golf/GOlf";
+import GOLF from "./components/Golf/Golf";
 import VOLLEYBALL from "./components/Volleyball/Volleyball";
 import BOXING from "./components/Boxing/Boxing";
 import DARTS from "./components/Darts/Darts";
@@ -278,7 +278,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/social-media",
-        element: <SocialMedia />,
+        element: <SocialMedia group_type="social-media" />,
       },
       {
         path: "/ai-nft",

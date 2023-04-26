@@ -1,5 +1,5 @@
 import React from "react";
-import WorldcupLandingPage from "../Components/WorldcupLandingPage/WorldcupLandingPage";
+import WorldcupLandingPage from "../components/WorldcupLandingPage/WorldcupLandingPage";
 
 const Dashboard = () => {
   return (

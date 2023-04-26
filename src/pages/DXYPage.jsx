@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import DXYComponent from "../Components/DXY/DXYComponent";
+import DXYComponent from "../components/DXY/DXYComponent";
 
 const DXYPage = () => {
   useEffect(() => {

@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from "react";
 import { ContainerBet } from "./BetContainer.styles";
-import { useAxios } from "../../hooks/useAxios";
 import { betData } from "./BetData";
 import { useSelector } from "react-redux";
 import Utils from "../../utilities.js";

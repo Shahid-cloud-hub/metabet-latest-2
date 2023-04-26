@@ -176,6 +176,9 @@ const Dashboard = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, [pathname, items.getRender]);
 
   const availableWidth = window?.screen?.availWidth;

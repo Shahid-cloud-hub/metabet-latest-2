@@ -27,7 +27,6 @@ const DropdownOptions = ({
             role="option"
           >
             {el.name}
-            <hr />
           </li>
         );
       })}
@@ -176,7 +175,6 @@ const FilteredEventsList = ({ name, options, style, ...props }) => {
         </ul>
         {select}
       </div>
-      <button type="submit">Filter</button>
     </>
   );
 };

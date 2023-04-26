@@ -1,25 +1,16 @@
 import React, { useEffect, useState } from "react";
-import ReactPlayer from "react-player/youtube";
 import {
   Container,
   StatContainerCurrencies,
   Info,
 } from "../BitcoinPrice/BitcoinPrice.styles";
-import Times from "../Time/Times";
 import Tabs from "../TabFifa/Tab";
-import AirdropFooter from "../FooterBanners/AirdropFooter";
 import useBreakpoint from "../../hooks/useBreakpoints";
 import BtcUp from "../../assets/images/Bitcoin/BtcUp.webp";
 import BtcDown from "../../assets/images/Bitcoin/BtcDown.webp";
 import clock1 from "../../assets/images/BitcoinPrice/clock1.png";
 import clock2 from "../../assets/images/BitcoinPrice/clock2.png";
 import { useAxios } from "../../hooks/useAxios";
-
-import TradingViewWidget, {
-  Themes,
-  IntervalTypes,
-} from "react-tradingview-widget";
-import AirdropFooterBanner from "../FooterBanners/AirdropFooterBanner";
 
 function Ethereum() {
   useEffect(() => {

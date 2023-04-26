@@ -8,6 +8,7 @@ import VoteBtnDown from "../../assets/images/Vote_btn_Down.webp";
 import eventended from "../../assets/images/Event_ended_btn.png";
 import Truth2earnDropdown from "./Truth2earnDropdown";
 import Progressbar from "../Progressbar/Progressbar";
+import { useAxios } from "../../hooks/useAxios";
 
 const Truth2earn = (props) => {
   const pathname = window.location.pathname;
@@ -15,11 +16,32 @@ const Truth2earn = (props) => {
   const [showAccord, setShowAccord] = useState(false);
   const [addStyle, setAddStyle] = useState();
   const [show, setShow] = useState(false);
+  const { fetchData, response, loading } = useAxios();
+  const [activeIndex, setActiveIndex] = useState(-1);
 
   useEffect(() => {
-    console.log(showAccord);
-    setOpen(showAccord);
-  }, [showAccord]);
+    console.log(activeIndex);
+    setOpen(activeIndex);
+  }, [activeIndex]);
+
+  const getEvent = async () => {
+    await fetchData({
+      method: "GET",
+      url: `https://dull-puce-wildebeest-belt.cyclic.app/getAllHighlights`,
+    });
+  };
+
+  useEffect(() => {
+    getEvent();
+  }, []);
+
+  const finalData = response?.flat(2);
+  const result = finalData?.map((item) => item.resultVerification);
+
+  const handleChange = (index) => {
+    setActiveIndex(index === activeIndex ? -1 : index);
+    setOpen(activeIndex);
+  };
 
   return (
     <Container>
@@ -40,26 +62,19 @@ const Truth2earn = (props) => {
         })}
       </div>
       <Truth2earnContainer displayType="grid" gridTemplateColum="1fr 1fr 1fr">
-        {Politics_banner_data.map((item, index) => {
+        {result?.map((item, index) => {
+          {
+            console.log("first", item);
+          }
           return (
             <div className="truth2earn">
-              <FeaturedBanners
-                id={item.id}
-                key={index}
-                data_name={item.data_name}
-                background_img={item.background_img}
-                vote_btn={item.vote_btn}
-                vote_up={item.vote_up}
-                route_path={item.route_path}
-              />
+              <FeaturedBanners key={index} pc_banner={item?.pc_banner} />
               <div className="vote">
-                {item.event_status === false ? (
+                {item?.resultAnnounced === "false" ? (
                   <>
                     <img
-                      src={item.id === showAccord ? VoteBtnUp : VoteBtnDown}
-                      onClick={() => {
-                        setShowAccord(!isOpen ? item.id : false);
-                      }}
+                      src={index === activeIndex ? VoteBtnUp : VoteBtnDown}
+                      onClick={() => handleChange(index)}
                       alt="eventEnded"
                     />
                   </>
@@ -67,7 +82,7 @@ const Truth2earn = (props) => {
                   <img src={eventended} alt="eventEnded" />
                 )}
               </div>
-              {item.id === showAccord && (
+              {index === activeIndex && (
                 <div
                   className={`accordion-item get_accord ${
                     !isOpen ? "collapsed" : ""
@@ -76,7 +91,7 @@ const Truth2earn = (props) => {
                   <div className="accordion-content">
                     <Truth2earnDropdown
                       Truth_data={item.Truth_data}
-                      verdict_title={item.verdict_title}
+                      pc_banner_title={item?.pc_banner_title}
                     />
                     <Progressbar />
                   </div>

@@ -230,23 +230,37 @@ export const StatContainer = styled.div`
       border: 1px solid #5f9ea0;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 12px;
-      gap: 26px;
+      /* gap: 21px; */
+      gap: ${(props) => props.increaseGapSize};
       /* margin: 0 auto; */
 
       .event-title {
-        color: #1e90ff;
-        font-weight: 700;
         font-size: ${(props) => props.increaseFontSize};
+        font-weight: 700;
+        color: #1e90ff;
+        .blue {
+          font-size: ${(props) => props.increaseFontSize};
+          font-weight: 700;
+          color: #1e90ff;
+        }
+
+        .white {
+          font-weight: 700;
+          font-size: ${(props) => props.increaseFontSize};
+          color: #fff;
+        }
       }
 
       span {
         color: #b6b6b6;
         font-weight: 300;
-        font-size: 10px;
+        font-size: 13px;
       }
 
       .img-wrapper {
         display: flex;
+        justify-content: space-between;
+        width: 100%;
         gap: 15px;
 
         img {
@@ -285,11 +299,11 @@ export const StatContainer = styled.div`
         background: #435b6a;
         border-radius: 12px;
         max-width: 473px;
-        max-height: 225px;
+        max-height: 270px;
 
         iframe {
           border-radius: 12px;
-          height: 225px;
+          height: 270px;
           min-width: 473px;
           width: 100%;
         }

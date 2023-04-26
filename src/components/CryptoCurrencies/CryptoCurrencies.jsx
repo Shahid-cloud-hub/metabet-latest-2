@@ -93,18 +93,14 @@ const CryptoCurrencies = ({ group_type }) => {
             .slice(0, 21)
             ?.map((item, index) => (
               <>
+                {console.log(item, "test")}
                 <div className="card" key={index}>
                   <img
-                    src={item?.event?.banner}
+                    src={item?.event?.bet_banner}
                     alt={item?.event?.title}
                     style={{ width: "90%" }}
                     onClick={() =>
-                      navigate(
-                        `${item?.event?.title}/statistics/${item?.event?.highlights[0]?._id}`,
-                        {
-                          state: item?.event?.highlights[0]?._id,
-                        }
-                      )
+                      navigate(`${item?.event?.title}/statistics/${item?._id}`)
                     }
                   />
                 </div>

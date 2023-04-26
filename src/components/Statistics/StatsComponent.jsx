@@ -8,9 +8,6 @@ import Loading from "../Loading/Loading";
 import Tabs from "../TabFifa/Tab";
 import Times from "../Time/Times";
 import { Info, StatisticsContainer } from "./Stats.syle";
-import useBreakpoint from "../../hooks/useBreakpoints";
-import BtcUp from "../../assets/images/Bitcoin/BtcUp.webp";
-import BtcDown from "../../assets/images/Bitcoin/BtcDown.webp";
 import clock1 from "../../assets/images/BitcoinPrice/clock1.png";
 import clock2 from "../../assets/images/BitcoinPrice/clock2.png";
 

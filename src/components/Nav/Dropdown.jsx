@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import "./Styles.css";
-import Component from "../../assets/images/BNB.svg";
 import ETH from "../../assets/images/ETH.png";
 import WETH from "../../assets/images/WETH.svg";
 import USDT from "../../assets/images/USDT.svg";
@@ -11,15 +10,8 @@ import BUSD from "../../assets/images/BUSD.png";
 import GOAL from "../../assets/images/GOAL.png";
 import USDC from "../../assets/images/usdc.png";
 import foxCircle from "../../assets/images/foxCircle.svg";
-import foxMini from "../../assets/images/fox-mini.webp";
 import tru from "../../assets/images/tru.svg";
 import navBet from "../../assets/images/navBet.svg";
-import Connect from "../../assets/images/Connect.webp";
-import Disconnect from "../../assets/images/Disconnect.webp";
-import Withdraw from "../../assets/images/withdraw_btn.png";
-import navFox from "../../assets/images/nav-fox.webp";
-import openai from "../../assets/images/openai.webp";
-import verified from "../../assets/images/verified.webp";
 import { useDispatch, useSelector } from "react-redux";
 import {
   metaMaskConnection,
@@ -33,12 +25,10 @@ import { Context } from "../../Context";
 import { BetStatusContainer } from "./Nav.styles";
 
 function Dropdown() {
-  const [selected, setSelected] = useState();
-  const [Active, setIsActive] = useState(false);
   const metaMaskAddress = useSelector((state) => state.wallet);
   const dispatch = useDispatch();
   const [balance, setBalance] = useState(null);
-  const { isSmallMobile, isMobile, isTablet, isDesktop } = useBreakpoint();
+  const { isDesktop } = useBreakpoint();
   const { items } = useContext(Context);
 
   // const Address =

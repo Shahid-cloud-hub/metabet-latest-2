@@ -1,16 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import foxCircle from "../../assets/images/foxCircle.svg";
-import foxMini from "../../assets/images/fox-mini.webp";
 import tru from "../../assets/images/tru.svg";
 import navBet from "../../assets/images/navBet.svg";
 import Utils from "../../utilities";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Context } from "../../Context";
 import { BetStatusContainer } from "../Nav/Nav.styles";
 
 const BalanceButtons = () => {
   const metaMaskAddress = useSelector((state) => state.wallet);
-  const dispatch = useDispatch();
   const [balance, setBalance] = useState(null);
   const { items } = useContext(Context);
 

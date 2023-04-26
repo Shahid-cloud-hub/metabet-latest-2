@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import StatdropdownActive from "../../Components/Stats4/StatdropdownActive";
 
 import BNB_Icon from "../../assets/images/small_currency_icons/icon_1.webp";
@@ -7,18 +7,15 @@ import USDT_Icon from "../../assets/images/small_currency_icons/icon_3.webp";
 import USDC_Icon from "../../assets/images/small_currency_icons/icon_4.webp";
 import BUSD_Icon from "../../assets/images/small_currency_icons/icon_5.webp";
 import TRUSC_Icon from "../../assets/images/small_currency_icons/icon_6.webp";
-import TRUEAI_Icon from "../../assets/images/small_currency_icons/icon_7.webp";
 import GOAL_Icon from "../../assets/images/small_currency_icons/icon_8.webp";
 import METABET_Icon from "../../assets/images/small_currency_icons/icon_9.webp";
 
-import Utils from "../../utilities";
 import {
   ZERO_ADDRESS,
   GOAL_ADDRESS,
   BUSD_ADDRESS,
   METABET_ADDRESS,
 } from "../../constants";
-import { createGlobalStyle } from "styled-components";
 
 const Accordian = (props) => {
   const pathname = window.location.pathname;
@@ -27,15 +24,14 @@ const Accordian = (props) => {
   const [addStyle, setAddStyle] = useState();
   const [callBets, setCallBets] = useState();
   const [callPool, setCallPool] = useState();
-console.log("parent",callBets )
-console.log("parent",callPool )
-  const callbackbets = (callbets)=> {
+  console.log("parent", callBets);
+  console.log("parent", callPool);
+  const callbackbets = (callbets) => {
     setCallBets(callbets);
-  
-  }
-  const callbackpool = (callpool)=> {
+  };
+  const callbackpool = (callpool) => {
     setCallPool(callpool);
-  }
+  };
 
   let FifaTableData = [
     {
@@ -75,7 +71,7 @@ console.log("parent",callPool )
       poolCricket: "0.0000",
       img: USDT_Icon,
       amount: "Amount",
-      win: "Possible WIN:",      
+      win: "Possible WIN:",
       odds: "Odds",
       token: ZERO_ADDRESS,
     },
@@ -85,7 +81,7 @@ console.log("parent",callPool )
       poolCricket: "0.0000",
       img: USDC_Icon,
       amount: "Amount",
-      win: "Possible WIN:",      
+      win: "Possible WIN:",
       odds: "Odds",
       token: ZERO_ADDRESS,
     },
@@ -95,7 +91,7 @@ console.log("parent",callPool )
       poolCricket: "0.0000",
       img: BUSD_Icon,
       amount: "Enter Amount",
-      win: "Possible WIN:",       
+      win: "Possible WIN:",
       odds: "Odds",
       token: BUSD_ADDRESS,
     },
@@ -105,7 +101,7 @@ console.log("parent",callPool )
       poolCricket: "0.0000",
       img: TRUSC_Icon,
       amount: "Enter Amount",
-      win: "Possible WIN:",      
+      win: "Possible WIN:",
       odds: "Odds",
       token: BUSD_ADDRESS,
     },
@@ -123,7 +119,7 @@ console.log("parent",callPool )
       name: "METABET",
       poolCricket: "0.0000",
       img: METABET_Icon,
-      amount: "Enter Amount",    
+      amount: "Enter Amount",
       odds: "Odds",
       win: "Possible WIN:",
       token: METABET_ADDRESS,
@@ -163,9 +159,8 @@ console.log("parent",callPool )
               </div>
 
               <div className="item changeItem">
-                
-              <span>{item?.id === 8 && callPool ? callPool : 0.0000}</span>
-                <span>{item?.id === 8 && callBets ? callBets:  0.0000}</span>
+                <span>{item?.id === 8 && callPool ? callPool : 0.0}</span>
+                <span>{item?.id === 8 && callBets ? callBets : 0.0}</span>
                 <button
                   disabled={
                     !props.eventStatus || props.bitAndEth == false
