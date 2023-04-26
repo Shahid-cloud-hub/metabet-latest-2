@@ -61,7 +61,7 @@ import REGFOOTBALL from "./pages/RegFootball";
 // Leagues Section //
 import ALLFOOTBALLEVENTS from "./components/FootballLeagues/Football";
 import GetStatistics from "./components/Statistics/GetStatistics";
-import SocialMedia from "./components/SocialMedia/SocialMedia";
+// import SocialMedia from "./components/SocialMedia/SocialMedia";
 import Formula1 from "./components/Formula1/Formula1";
 import AiNFT from "./components/AiNFT/AiNFT";
 
@@ -221,7 +221,7 @@ const router = createBrowserRouter([
         element: <TERMS />,
       },
       {
-        path: "/currencies",
+        path: "/fiat-currencies",
         element: <CURRENCIES group_type="currencies" />,
       },
       {
@@ -278,7 +278,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/social-media",
-        element: <SocialMedia />,
+        element: <POLITICS group_type="trending-event" />,
       },
       {
         path: "/ai-nft",

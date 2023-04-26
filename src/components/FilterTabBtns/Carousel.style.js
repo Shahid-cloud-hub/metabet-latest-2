@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const CarouselContainer = styled("div")`
   position: relative;
+  margin: 0 auto;
+
   .btn-container {
     display: flex;
     /* transform: translate(0px, -39px); */
@@ -34,6 +36,21 @@ export const CarouselContainer = styled("div")`
       position: absolute;
     }
   }
+
+  @media screen and (max-width: 1280px) {
+    .btn-container {
+      min-width: 840px;
+      div {
+        transform: translate(0px, -62px);
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .btn-container {
+      min-width: 580px;
+    }
+  }
+
   /* .betactive {
     border: 1px solid;
     border-image: linear-gradient(45deg, #997860, #ffa133) 1;

@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import Utils from "../../utilities";
 import { ContainerBet } from "../ActiveBet/ActiveBet.styles";
 import Loading from "../Loading/Loading";
+import useBreakpoint from "../../hooks/useBreakpoints";
 
 const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
   const [bets, setBets] = useState([]);
@@ -95,6 +96,8 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
     return s;
   };
 
+  const { isDesktop, isTablet, isMobile, isSmallMobile } = useBreakpoint();
+
   return (
     <ContainerBet>
       {itemData?.length === 0 ? (
@@ -173,6 +176,81 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
                 </div>
                 <hr />
               </div>
+              {(isSmallMobile || isMobile || isTablet) && (
+                <div className="betHistory-container-banner">
+                  <div className="bet-item-1">
+                    <div className="icon-type">
+                      <img src={item?.icon1} alt="" />
+                      <div className="right-pannel">
+                        <div>
+                          <button>Won</button>
+                          <button>Lost</button>
+                          <button
+                            onClick={handleClick}
+                            style={{ border: border }}
+                          >
+                            All
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="table-wrapper-parent">
+                      <div className="table-wrapper">
+                        <div className="bet-th">
+                          <span>Date</span>
+                          <span>Event</span>
+                        </div>
+                        <div className="bet-td">
+                          <span>
+                            {metaMaskAddress.metaMaskAddress == null
+                              ? ""
+                              : item?.td_1}
+                          </span>
+                          {metaMaskAddress.metaMaskAddress == null
+                            ? ""
+                            : item?.td_2}
+                        </div>
+                      </div>
+                      <div className="table-wrapper">
+                        <div className="bet-th">
+                          <span>Bet Amount</span>
+                          <span>Currency</span>
+                          <span>Current Odds</span>
+                        </div>
+                        <div className="bet-td1">
+                          {metaMaskAddress.metaMaskAddress == null
+                            ? ""
+                            : item?.td_3}
+                          <img
+                            src={
+                              metaMaskAddress.metaMaskAddress == null
+                                ? ""
+                                : item?.td_4
+                            }
+                            alt=""
+                          />
+                          <span>
+                            {metaMaskAddress.metaMaskAddress == null
+                              ? ""
+                              : item?.td_5}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="status-btn">
+                      <div>
+                        {metaMaskAddress.metaMaskAddress == null ? (
+                          ""
+                        ) : (
+                          <button>Claim</button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                </div>
+              )}
             </>
           );
         })

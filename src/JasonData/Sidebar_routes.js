@@ -86,8 +86,8 @@ export const sec_array = [
     white: SocialW,
   },
   {
-    display_name: "Currencies",
-    route: "/currencies",
+    display_name: "Fiat Currencies",
+    route: "/fiat-currencies",
     icon: DXY,
     white: DXYW,
   },

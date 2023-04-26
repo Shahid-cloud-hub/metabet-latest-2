@@ -601,6 +601,47 @@ export const StatContainer = styled.div`
   }
 
   @media screen and (max-width: 1080px) {
+    .event-first-item {
+      .event-detials-main {
+        gap: 30px;
+
+        .event-details-wrapper {
+          .event-title {
+            font-size: 18px;
+          }
+          max-width: 355px;
+        }
+        .event-status-wrapper {
+          display: flex;
+          .event-mini-wrapper {
+            padding: 5px 4px;
+          }
+        }
+      }
+
+      .video-main-wrapper {
+        .video-wrapper {
+          max-width: 395px;
+          max-height: 240px;
+
+          iframe {
+            height: 240px;
+          }
+        }
+
+        .event-status-main {
+          gap: 8px;
+          .event-mini-main {
+            img {
+              /* width: 30px; */
+            }
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
     .portfolio {
       img {
         width: 100%;

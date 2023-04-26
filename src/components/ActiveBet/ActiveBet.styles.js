@@ -465,7 +465,161 @@ export const ContainerBet = styled.div`
       }
     }
   }
+  .betHistory-container-banner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 
+    hr {
+      position: absolute;
+      max-width: 835px;
+      right: 1%;
+      top: 52%;
+      border: none;
+      width: 100%;
+      height: 2px;
+      background: #282c34;
+      border-radius: 5px;
+    }
+
+    .bet-item-1 {
+      display: flex;
+      align-items: center;
+      justify-content: inherit;
+      gap: 30px;
+      width: 100%;
+      max-width: 940px;
+      padding: 15px;
+      background: #081824;
+      border-radius: 10px;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      .icon-type {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .right-pannel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding-bottom: 22px;
+
+        div {
+          display: flex;
+          gap: 5px;
+        }
+
+        button {
+          border: none;
+          background: #122939;
+          border-radius: 7px;
+          font-size: 12px;
+          color: #fff;
+          cursor: pointer;
+          max-width: 47px;
+          min-height: 33px;
+          padding: 10px;
+        }
+      }
+
+      .table-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .bet-th {
+          display: flex;
+          gap: 69px;
+          font-weight: 700;
+          font-size: 12px;
+          color: #f4cd68;
+        }
+
+        .bet-td {
+          display: flex;
+
+          gap: 30px;
+          font-weight: 700;
+          font-size: 14px;
+          color: #fff;
+        }
+
+        .bet-td1 {
+          display: flex;
+          gap: 120px;
+          font-weight: 700;
+          font-size: 14px;
+          color: #fff;
+        }
+      }
+    }
+
+    .bet-item-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      margin-top: 4px;
+      max-width: 100px;
+
+      .table-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+
+        .bet-th {
+          display: flex;
+          gap: 15px;
+          font-weight: 700;
+          font-size: 12px;
+          color: #f4cd68;
+
+          span {
+            width: 100%;
+          }
+        }
+
+        .bet-td {
+          display: flex;
+          gap: 15px;
+          font-weight: 700;
+          font-size: 16px;
+          color: #fff;
+
+          span {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .status-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      div {
+        display: flex;
+        justify-content: center;
+      }
+      button {
+        width: 100%;
+        max-width: 90px;
+        min-height: 27px;
+        padding: 10px;
+        background: #52b143;
+        border-radius: 6px;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+      }
+      .sell {
+        background: #de4b4b;
+      }
+    }
+  }
   @media screen and (max-width: 1280px) {
     .betHistory-container {
       hr {
@@ -476,13 +630,28 @@ export const ContainerBet = styled.div`
 
   @media screen and (max-width: 1080px) {
     .betHistory-container {
+      .bet-item-1 {
+        gap: 5px;
+        .table-wrapper {
+          .bet-th {
+            gap: 35px;
+          }
+          .bet-td1 {
+            gap: 70px;
+          }
+          .bet-td {
+            gap: 8px;
+          }
+        }
+      }
       hr {
-        max-width: 872px;
+        max-width: 524px;
+        right: 2%;
       }
     }
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: 980px) {
     .betHistory-container {
       hr {
         max-width: 795px;
