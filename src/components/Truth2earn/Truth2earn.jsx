@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Truth2earnContainer } from "./Truth2earn.styles";
 import { Truth2Filter } from "../ActiveBet/ActiveBetData";
-import FeaturedBanners from "../../Components/FeaturedBanners/FeaturedBanners";
+import FeaturedBanners from "../../components/FeaturedBanners/FeaturedBanners";
 import { Politics_banner_data } from "../../JasonData/FeaturedBannerData";
 import VoteBtnUp from "../../assets/images/Vote_btn_Up.webp";
 import VoteBtnDown from "../../assets/images/Vote_btn_Down.webp";

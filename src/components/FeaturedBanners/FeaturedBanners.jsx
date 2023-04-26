@@ -10,21 +10,19 @@ const FeaturedBanners = (props) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  // console.log("props", props);
   return (
     <>
       {props.football_data && (
         <NavLink to={{ pathname: props.route_path, state: props.innerData }}>
           <FeaturedBannersContainer
-            background={props.pc_banner}
+            background={props.background_img}
             fHeight="37vh"
           ></FeaturedBannersContainer>
         </NavLink>
       )}
-      {props.pc_banner && (
+      {props.data_name && (
         <FeaturedBannersContainer
-          background={props.pc_banner}
+          background={props.background_img}
           pMWidth="320px"
           pMHeight="168px"
         >

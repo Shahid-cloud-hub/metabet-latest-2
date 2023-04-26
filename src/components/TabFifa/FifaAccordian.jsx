@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import StatdropdownActive from "../../Components/Stats4/StatdropdownActive";
+import StatdropdownActive from "../../components/Stats4/StatdropdownActive";
 
 import BNB_Icon from "../../assets/images/small_currency_icons/icon_1.webp";
 import ETH_Icon from "../../assets/images/small_currency_icons/icon_2.webp";

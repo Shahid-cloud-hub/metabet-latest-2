@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import StatdropdownActive from "../Components/Stats4/StatdropdownActive";
+import StatdropdownActive from "../components/Stats4/StatdropdownActive";
 import { TabTableData } from "./TabTable2/TabTableData";
 
 const Accordian = () => {

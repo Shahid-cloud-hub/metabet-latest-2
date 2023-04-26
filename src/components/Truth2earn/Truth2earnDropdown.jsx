@@ -102,7 +102,7 @@ import verified from "../../assets/images/verified.webp";
 const Truth2earnDropdown = (props) => {
   return (
     <>
-      {props.pc_banner_title && (
+      {props.Truth_data && (
         <div className="payments-inputs">
           <div className="openai">
             <img src={openai} alt="openai" />
@@ -118,7 +118,7 @@ const Truth2earnDropdown = (props) => {
             </button>
           </div>
           <div className="title-text">
-            <span>{props.pc_banner_title}</span>
+            <span>{props.verdict_title}</span>
             <span id="grey">TRUTH ? 💰 $15 BOUNTY</span>
           </div>
           <div className="verdict-btn">

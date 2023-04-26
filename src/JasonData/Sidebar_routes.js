@@ -11,7 +11,7 @@ import DXY from "../assets/images/DXY.webp";
 import DXYW from "../assets/images/DXYW.webp";
 import FootballW from "../assets/images/FootballW.webp";
 import Basketball from "../assets/images/Basketball.png";
-import BasketballW from "../assets/images/BasketballW.webp";
+import BasketballW from "../assets/images/basketballW.webp";
 import AmericanFootball from "../assets/images/AmericanFootball.png";
 import AmericanFootballW from "../assets/images/AmericanFootballW.webp";
 import Tennis from "../assets/images/Tennis.png";
