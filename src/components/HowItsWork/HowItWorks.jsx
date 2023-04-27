@@ -1,17 +1,4 @@
 import React from "react";
-import { Container } from "./HowItWorks.styles";
-import HowIts_1 from "../../assets/images/how-its-work/how-its-works_1.png";
-import HowIts_2 from "../../assets/images/how-its-work/how-its-works_2.png";
-import HowIts_3 from "../../assets/images/how-its-work/how-its-works_3.png";
-import HowIts_4 from "../../assets/images/how-its-work/how-its-works_4.png";
-import HowIts_5 from "../../assets/images/how-its-work/how-its-works_5.png";
-import HowIts_6 from "../../assets/images/how-its-work/how-its-works_6.png";
-import HowIts_7 from "../../assets/images/how-its-work/how-its-works_7.png";
-import HowIts_8 from "../../assets/images/how-its-work/how-its-works_8.png";
-import HowIts_9 from "../../assets/images/how-its-work/how-its-works_9.png";
-import HowIts_10 from "../../assets/images/how-its-work/how-its-works_10.png";
-import HowIts_11 from "../../assets/images/how-its-work/how-its-works_11.png";
-import HowIts_12 from "../../assets/images/how-its-work/how-its-works_12.png";
 import Maintenance from "../Maintenance/Maintenance";
 
 const HowItWorks = () => {

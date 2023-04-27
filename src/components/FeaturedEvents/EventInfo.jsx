@@ -1,20 +1,8 @@
 import React, { useEffect } from "react";
-import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
-import {
-  UFCFeaturedBannersContainer,
-  BetContainer,
-  Info,
-} from "./EventInfo.styles";
-import Tabs from "../TabFifa/Tab";
-import { bData } from "../../JasonData/FeaturedBannerData";
-import Times from "../Time/Times";
-import useBreakpoint from "../../hooks/useBreakpoints";
-import AirdropFooterBanner from "../FooterBanners/AirdropFooterBanner";
-import TradingViewWidget, { Themes } from "react-tradingview-widget";
-import { ZERO_ADDRESS, GOAL_ADDRESS, BUSD_ADDRESS } from "../../constants";
+import { UFCFeaturedBannersContainer } from "./EventInfo.styles";
 
 const EventInfo = () => {
   const { state } = useLocation();

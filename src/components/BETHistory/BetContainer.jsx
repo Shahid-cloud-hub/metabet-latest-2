@@ -1,9 +1,9 @@
 import { React, useState, useEffect } from "react";
 import { ContainerBet } from "./BetContainer.styles";
-import { useAxios } from "../../hooks/useAxios";
 import { betData } from "./BetData";
 import { useSelector } from "react-redux";
 import Utils from "../../utilities.js";
+import useBreakpoint from "../../hooks/useBreakpoints";
 
 const BetContainer = (props) => {
   const [bets, setBets] = useState([]);
@@ -101,56 +101,109 @@ const BetContainer = (props) => {
 
   //   console.log(arr);
   // };
+  const { isDesktop, isTablet, isMobile, isSmallMobile } = useBreakpoint();
 
   return (
     <ContainerBet>
       {betData.map((item, index, arr) => {
         return (
           <>
-            <div className="betHistory-container">
-              <div className="bet-item-1">
-                <div>
-                  <img src={item.icon1} alt="" />
-                </div>
-                <div className="table-wrapper">
-                  <div className="bet-th">
-                    <span>{item.th_1}</span>
-                    <span>{item.th_2}</span>
-                    <span>{item.th_3}</span>
-                    <span>{item.th_4}</span>
-                    <span>{item.th_6}</span>
-                    <span>{item.th_7}</span>
-                    <span>{item.th_5}</span>
+            {isSmallMobile || isMobile || isTablet ? (
+              <div className="betHistory-container">
+                <div className="bet-item-1">
+                  <div>
+                    <img src={item.icon1} alt="" />
                   </div>
-                  <div className="bet-td">
-                    <span>{item.td_1}</span>
-                    <span>
-                      {metaMaskAddress.metaMaskAddress == null
-                        ? item.td_2
-                        : totalBets(1, item.addr).length}
-                    </span>
-                    <span>{item.td_3}</span>
-                    <span>{item.td_4}</span>
-                    <span>
-                      {metaMaskAddress.metaMaskAddress == null
-                        ? item.td_6
-                        : totalValue(totalBets(1, item.addr), 3)}
-                    </span>
-                    <span>
-                      {metaMaskAddress.metaMaskAddress == null ||
-                      item.addr == ""
-                        ? item.td_6
-                        : totalReturned(
-                            metaMaskAddress.metaMaskAddress.toString(),
-                            item.addr
-                          )}
-                    </span>
-                    <img src={item.icon_2} alt="" />
+                  <div className="table-wrapper">
+                    <div className="bet-th">
+                      <span>{item.th_1}</span>
+                      <span>{item.th_2}</span>
+                      <span>{item.th_3}</span>
+                      <span>{item.th_4}</span>
+                    </div>
+                    <div className="bet-td">
+                      <span>{item.td_1}</span>
+                      <span>
+                        {metaMaskAddress.metaMaskAddress == null
+                          ? item.td_2
+                          : totalBets(1, item.addr).length}
+                      </span>
+                      <span>{item.td_3}</span>
+                      <span>{item.td_4}</span>
+                    </div>
+                  </div>
+                  <div className="table-wrapper">
+                    <div className="bet-th">
+                      <span>{item.th_6}</span>
+                      <span>{item.th_7}</span>
+                      <span>{item.th_5}</span>
+                    </div>
+                    <div className="bet-td">
+                      <span>
+                        {metaMaskAddress.metaMaskAddress == null
+                          ? item.td_6
+                          : totalValue(totalBets(1, item.addr), 3)}
+                      </span>
+                      <span>
+                        {metaMaskAddress.metaMaskAddress == null ||
+                        item.addr == ""
+                          ? item.td_6
+                          : totalReturned(
+                              metaMaskAddress.metaMaskAddress.toString(),
+                              item.addr
+                            )}
+                      </span>
+                      <img src={item.icon_2} alt="" />
+                    </div>
                   </div>
                 </div>
               </div>
-              <hr />
-            </div>
+            ) : (
+              <div className="betHistory-container">
+                <div className="bet-item-1">
+                  <div>
+                    <img src={item.icon1} alt="" />
+                  </div>
+                  <div className="table-wrapper">
+                    <div className="bet-th">
+                      <span>{item.th_1}</span>
+                      <span>{item.th_2}</span>
+                      <span>{item.th_3}</span>
+                      <span>{item.th_4}</span>
+                      <span>{item.th_6}</span>
+                      <span>{item.th_7}</span>
+                      <span>{item.th_5}</span>
+                    </div>
+                    <div className="bet-td">
+                      <span>{item.td_1}</span>
+                      <span>
+                        {metaMaskAddress.metaMaskAddress == null
+                          ? item.td_2
+                          : totalBets(1, item.addr).length}
+                      </span>
+                      <span>{item.td_3}</span>
+                      <span>{item.td_4}</span>
+                      <span>
+                        {metaMaskAddress.metaMaskAddress == null
+                          ? item.td_6
+                          : totalValue(totalBets(1, item.addr), 3)}
+                      </span>
+                      <span>
+                        {metaMaskAddress.metaMaskAddress == null ||
+                        item.addr == ""
+                          ? item.td_6
+                          : totalReturned(
+                              metaMaskAddress.metaMaskAddress.toString(),
+                              item.addr
+                            )}
+                      </span>
+                      <img src={item.icon_2} alt="" />
+                    </div>
+                  </div>
+                </div>
+                <hr />
+              </div>
+            )}
           </>
         );
       })}

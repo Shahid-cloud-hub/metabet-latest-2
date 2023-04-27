@@ -30,15 +30,6 @@ import {
   Win,
 } from "../../JasonData/FeaturedBannerData";
 import { Info } from "../Statistics/Stats.syle";
-import { Balance } from "../SocialMedia/SocialMedia.styles";
-import { StatContainer } from "../Politics/Politics.styles";
-import Polygon from "../../assets/images/Polygon.png";
-import clock from "../../assets/images/clock.png";
-import BetUiImg from "../../assets/images/bet-ui/bet.png";
-import StruImg from "../../assets/images/bet-ui/stru.png";
-import FreeBetImg from "../../assets/images/bet-ui/betFree.png";
-import ReactPlayer from "react-player/youtube";
-import banner from "../../assets/images/newBanner.png";
 
 const BetNowBtns = ({ getPath, callback }) => {
   const [addStyle, setAddStyle] = useState();

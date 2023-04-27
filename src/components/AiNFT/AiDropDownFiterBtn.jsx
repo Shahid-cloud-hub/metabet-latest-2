@@ -1,6 +1,4 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import axios from "axios";
-import twitter from "../../assets/images/ActiveBets/twitter.png";
 
 const DropdownOptions = ({
   options,
@@ -162,10 +160,6 @@ const AiDropDownFilterBtn = ({ name, options, style, ...props }) => {
         data-value={getSelectedOptionValue()}
         style={style}
       >
-        {/* <img
-          src={options[selectedIndex].img ?? options.selectedIndex}
-          alt="img"
-        /> */}
         <span className="value">{getSelectedOptionText()}</span>
 
         <ul

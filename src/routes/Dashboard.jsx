@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import styled from "styled-components";
-import Nav from "../Components/Nav/Nav";
+import Nav from "../components/Nav/Nav";
 import useBreakpoint from "../hooks/useBreakpoints";
 import Sidebar from "../components/Sidebar/Sidebar";
 import { useEffect } from "react";
@@ -11,7 +11,6 @@ import { Context } from "../Context";
 import Confetti from "react-confetti";
 import BalanceButtons from "../components/BalanceButtons/BalanceButtons";
 import BalanceButtonsNFT from "../components/BalanceButtons/BalanceButtonsNFT";
-import { isValidMnemonic } from "ethers/lib/utils";
 
 const ContainerWrapper = styled("div")`
   position: relative;
@@ -174,6 +173,9 @@ const Dashboard = () => {
   const [celebRemove] = useState(true);
   const pathname = window.location.pathname;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname, items.getRender]);

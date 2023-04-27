@@ -207,58 +207,58 @@ export const Balance = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
-  .total{
-    display:flex;
+  .total {
+    display: flex;
     gap: 15px;
-    .Banner{
-      disply:flex;
+
+    .Banner {
+      display: flex;
       flex-direction: column;
       max-width: 473px;
-background: linear-gradient(180deg, #1F313D 24.68%, #1C1C1C 63.46%);
-border: 1px solid #4682B4;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 12px;
-.headline{
-  span{
-    font-family: 'Mostra Nuova';
-    font-size: 26px;
-    color: #1E90FF;
-  }
-  hr{
-    width:433px;
-    background: #1E90FF;
-    height:2px;
-    border:none;
-
-  }
-}
-.center{
-  display:flex;
-  justify-content: space-between;
-  .paragraph{
-    display:flex;
-    flex-direction: column;
-    gap:10px;
-  }
-  .event{
-     display:flex;
-    flex-direction: column;
-  }
-}
+      background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+      border: 1px solid #4682b4;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 12px;
+      .headline {
+        span {
+          font-family: "Mostra Nuova";
+          font-size: 26px;
+          color: #1e90ff;
+        }
+        hr {
+          width: 433px;
+          background: #1e90ff;
+          height: 2px;
+          border: none;
+        }
+      }
+      .center {
+        display: flex;
+        justify-content: space-between;
+        .paragraph {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .event {
+          display: flex;
+          flex-direction: column;
+        }
+      }
     }
-    .amountText{
+    .amountText {
       width: 473px;
-      background: linear-gradient(180deg, #1F313D 24.68%, #1C1C1C 63.46%);
-      border: 1px solid #4682B4;
+      background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+      border: 1px solid #4682b4;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 12px;
       text-align: center;
       padding: 11px 0px;
 
-      span{
-        color: #FFFFFF;
+      span {
+        color: #ffffff;
         font-size: 16px;
-        font-family: 'Mostra Nuova';
+        font-family: "Mostra Nuova";
       }
       input {
         background-color: transparent;
@@ -276,8 +276,7 @@ border-radius: 12px;
         font-weight: 700;
         font-size: 20px;
         line-height: 143.7%;
-        color: #87CEFA;
-        
+        color: #87cefa;
       }
     }
   }
@@ -288,24 +287,25 @@ border-radius: 12px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    }
-    @media screen and (max-width: 1280px) {
-      gap: 10px;
-    }
-    @media screen and (max-width: 1024px) {
-      flex-wrap: wrap;
-    }
-    @media screen and (max-width: 820px) {
-      flex-wrap: wrap;
-      margin-left: 40px;
-    }
-    @media screen and (max-width: 768px) {
-      flex-wrap: nowrap;
-    }
-    @media screen and (max-width: 680px) {
-      flex-wrap: wrap;
-    }
   }
+
+  @media screen and (max-width: 1280px) {
+    gap: 10px;
+  }
+  @media screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 820px) {
+    flex-wrap: wrap;
+    margin-left: 40px;
+  }
+  @media screen and (max-width: 768px) {
+    flex-wrap: nowrap;
+  }
+  @media screen and (max-width: 680px) {
+    flex-wrap: wrap;
+  }
+
   .text {
     display: flex;
     flex-direction: column;
@@ -360,89 +360,87 @@ border-radius: 12px;
     }
   }
   .liquidity-pool {
-  margin: auto 0;
-  justify-content: start;
-  align-items: center;  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  width: 100%;
-  max-width: 450px;
-  background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
-  border: 1px solid #5f9ea0;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 12px;
-  gap: 20px;
-
-
-  .amount {
-    display:flex;
-    flex-direction: column;
+    margin: auto 0;
+    justify-content: start;
     align-items: center;
-    justify-content: center;
-    gap:10px;
-    .amountText {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    max-width: 450px;
+    background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+    border: 1px solid #5f9ea0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    gap: 20px;
+
+    .amount {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      width:100%;
-      max-width: 230px;
-      padding: 9px;
-      background: linear-gradient(180deg, #1c1c1c 39.58%, #28516b 100%);
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #1e90ff;
-      border-radius: 8px;
-  span{
-    color: #FFFFFF;
+      justify-content: center;
+      gap: 10px;
 
-  }
-      #title {
-        font-family: "mostra-nuova", sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 17px;
-        color: #5f9ea0;
-      }
-      input {
-        background-color: transparent;
+      .amountText {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         width: 100%;
-        max-width: 80px;
-        padding: 5px 5px;
-        text-align: end;
-        border: none;
-        font-family: "mostra-nuova", sans-serif;
-        font-weight: 800;
-        color: #FFFFFF;
-
+        max-width: 230px;
+        padding: 9px;
+        background: linear-gradient(180deg, #1c1c1c 39.58%, #28516b 100%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #1e90ff;
+        border-radius: 8px;
+        span {
+          color: #ffffff;
+        }
+        #title {
+          font-family: "mostra-nuova", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          color: #5f9ea0;
+        }
+        input {
+          background-color: transparent;
+          width: 100%;
+          max-width: 80px;
+          padding: 5px 5px;
+          text-align: end;
+          border: none;
+          font-family: "mostra-nuova", sans-serif;
+          font-weight: 800;
+          color: #ffffff;
+        }
+        input::placeholder {
+          font-family: "mostra-nuova", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 143.7%;
+          color: #ffffff;
+          text-shadow: 0px 0px 30px #000000;
+        }
       }
-      input::placeholder {
-        font-family: "mostra-nuova", sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 143.7%;
-        color: #FFFFFF;
-        text-shadow: 0px 0px 30px #000000;
+      button {
+        background: linear-gradient(180deg, #fab263 0%, #5f3a12 80.03%);
+        border-radius: 8px;
+        width: 251px;
+        height: 33px;
       }
     }
-    button{
-              background: linear-gradient(180deg, #FAB263 0%, #5F3A12 80.03%);
-      border-radius: 8px;
-      width: 251px;
-      height: 33px;
-            }
-    }         
-  span{
-    color: #1E90FF;
-    font-family: 'Mostra Nuova';
-    font-size: 21px;
-  }
-  hr{
-    width:433px;
-    background: #1E90FF;
-    height:2px;
-    border:none;
-
-  }
+    span {
+      color: #1e90ff;
+      font-family: "Mostra Nuova";
+      font-size: 21px;
+    }
+    hr {
+      width: 433px;
+      background: #1e90ff;
+      height: 2px;
+      border: none;
+    }
     button {
       background: #6495ed;
       border-radius: 12px;
@@ -497,7 +495,7 @@ border-radius: 12px;
     .convert {
       display: flex;
       align-items: center;
-      gap:210px;
+      gap: 210px;
     }
     .balance {
       display: flex;
@@ -508,8 +506,8 @@ border-radius: 12px;
       .icon {
         flex-direction: column;
         display: flex;
-        img{
-          width:60px;
+        img {
+          width: 60px;
         }
         span {
           font-family: "Junegull";
@@ -635,6 +633,7 @@ border-radius: 12px;
       }
     }
   }
+
   .fox-stats {
     display: flex;
     align-items: center;
@@ -663,6 +662,7 @@ border-radius: 12px;
   @media screen and (max-width: 1280px) {
     display: flex;
     align-items: flex-start;
+
     .liquidity-pool {
       padding: 10px;
       max-width: 410px;
@@ -871,7 +871,7 @@ border-radius: 12px;
         align-items: center;
         display: flex;
         align-items: center;
-        gap:210px;
+        gap: 210px;
       }
       .balance {
         display: flex;

@@ -252,7 +252,7 @@ export const DashContainer = styled("div")`
     justify-content: flex-end;
     width: 100%;
     gap: 20px;
-    padding-top: 10px;
+    padding: 20px 0px;
 
     /* padding: 10px 20px; */
 
@@ -267,9 +267,13 @@ export const DashContainer = styled("div")`
       box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
       outline: none;
       box-sizing: border-box;
-      background: #5f9ea0;
+      /* background: #5f9ea0; */
+      background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+      border-radius: 8px;
       z-index: 10;
       color: #fff;
+      border: 1px solid #997860 !important;
+      margin-right: 78px;
 
       &:focus-visible {
         outline: none;
@@ -285,9 +289,11 @@ export const DashContainer = styled("div")`
         height: 100%;
         width: 3em;
         padding-top: 0.6em;
-        border-left: 0.2em solid #5f9ea0;
+        /* border-left: 0.2em solid #5f9ea0; */
         border-radius: 0 0.4em 0.4em 0;
-        background-color: #5f9ea0;
+        /* background-color: #5f9ea0; */
+        background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+        border-radius: 8px;
       }
       &::after {
         content: ""; /* If not empty make sure to set a charset meta tag */
@@ -317,13 +323,14 @@ export const DashContainer = styled("div")`
         max-height: 20em;
         overflow-y: auto;
         overflow-x: hidden;
-        border: 0.2em solid #5f9ea0;
+        border: 1px solid #997860 !important;
         border-top-width: 0.1em;
         border-radius: 0 0 0.4em 0.4em;
         box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
-        background: #5f9ea0;
+        background: linear-gradient(180deg, #1f313d 24.68%, #1c1c1c 63.46%);
+        border-radius: 8px;
         transition: transform 330ms ease, opacity 330ms ease;
-        transform: translateY(1px);
+        transform: translateY(5px);
         z-index: 5;
         text-align: center;
 
@@ -334,7 +341,7 @@ export const DashContainer = styled("div")`
       }
       .value {
         display: inline-block;
-        font-size: 14px;
+        font-size: 15px;
         width: 100%;
         overflow: hidden;
         white-space: nowrap;
@@ -345,18 +352,11 @@ export const DashContainer = styled("div")`
       }
       .option {
         padding: 10px;
-        color: #337577;
-        font-size: 14px;
+        color: #fff;
+        font-size: 15px;
         opacity: 0;
         animation-delay: calc(40ms * var(--index)) !important;
         font-family: "mostra-nuova", sans-serif;
-
-        hr {
-          border: 1px solid #337577;
-          max-width: 100px;
-          margin: 0 auto;
-          color: #337577;
-        }
       }
       &.active {
         &::after {
@@ -367,9 +367,12 @@ export const DashContainer = styled("div")`
         }
       }
       .highlight {
-        background-color: #5f9ea0;
+        /* background-color: #5f9ea0; */
         color: white;
         font-weight: bold;
+        border-bottom: 1px solid #fff;
+        max-width: 80px;
+        margin: 0 auto;
       }
       select {
         visibility: hidden;
@@ -390,23 +393,49 @@ export const DashContainer = styled("div")`
         opacity: 1;
       }
     }
+  }
 
-    button {
-      width: 108px;
-      background: #5f9ea0;
-      border-radius: 8px;
-      border: none;
-      color: #ffffff;
-      font-size: 14px;
-      font-family: "mostra-nuova", sans-serif;
-      padding: 10px 0px;
-      cursor: pointer;
-      margin-right: 5%;
-    }
-    @media screen and (max-width: 375px) {
-      button {
-        margin-right: 0px;
+  @media screen and (max-width: 820px) {
+    .parent-wrapper {
+      .react-dropdown {
+        margin-right: 115px;
       }
+    }
+    button {
+      margin-right: 0px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .parent-wrapper {
+      .react-dropdown {
+        margin-right: 50px;
+      }
+    }
+    button {
+      margin-right: 0px;
+    }
+  }
+
+  @media screen and (max-width: 415px) {
+    .parent-wrapper {
+      .react-dropdown {
+        margin-right: 50px;
+      }
+    }
+    button {
+      margin-right: 0px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .parent-wrapper {
+      .react-dropdown {
+        margin-right: 50px;
+      }
+    }
+    button {
+      margin-right: 0px;
     }
   }
 

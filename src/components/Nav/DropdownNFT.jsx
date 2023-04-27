@@ -9,12 +9,9 @@ import MATIC from "../../assets/images/MATIC.svg";
 import BUSD from "../../assets/images/BUSD.png";
 import GOAL from "../../assets/images/GOAL.png";
 import USDC from "../../assets/images/usdc.png";
-import foxCircle from "../../assets/images/foxCircle.svg";
-import tru from "../../assets/images/tru.svg";
 import trubet from "../../assets/images/Ai-NFT/trubet.svg";
 import dollar from "../../assets/images/Ai-NFT/dollar.png";
 import trolly from "../../assets/images/Ai-NFT/trolly.svg";
-import navBet from "../../assets/images/navBet.svg";
 
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -29,8 +26,6 @@ import { Context } from "../../Context";
 import { BetAINFTStatusContainer } from "./Nav.styles";
 
 const DropdownNFT = ({ show }) => {
-  const [selected, setSelected] = useState();
-  const [Active, setIsActive] = useState(false);
   const metaMaskAddress = useSelector((state) => state.wallet);
   const dispatch = useDispatch();
   const [balance, setBalance] = useState(null);

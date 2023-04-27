@@ -4,6 +4,7 @@ import Utils from "../../utilities";
 import { ContainerBet } from "../ActiveBet/ActiveBet.styles";
 import Loading from "../Loading/Loading";
 import useBreakpoint from "../../hooks/useBreakpoints";
+import upload from "../../assets/images/ActiveBets/upload.svg";
 
 const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
   const [bets, setBets] = useState([]);
@@ -106,77 +107,7 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
         itemData?.map((item) => {
           return (
             <>
-              <div className="betHistory-container">
-                <div className="bet-item-1">
-                  <div>
-                    <img src={item?.icon1} alt="" />
-                  </div>
-                  <div className="table-wrapper">
-                    <div className="bet-th">
-                      <span>Date</span>
-                      <span>Event</span>
-                    </div>
-                    <div className="bet-td">
-                      <span>
-                        {metaMaskAddress.metaMaskAddress == null
-                          ? ""
-                          : item?.td_1}
-                      </span>
-                      {metaMaskAddress.metaMaskAddress == null
-                        ? ""
-                        : item?.td_2}
-                    </div>
-                  </div>
-                  <div className="table-wrapper">
-                    <div className="bet-th">
-                      <span>Bet Amount</span>
-                      <span>Currency</span>
-                      <span>Current Odds</span>
-                    </div>
-                    <div className="bet-td1">
-                      {metaMaskAddress.metaMaskAddress == null
-                        ? ""
-                        : item?.td_3}
-                      <img
-                        src={
-                          metaMaskAddress.metaMaskAddress == null
-                            ? ""
-                            : item?.td_4
-                        }
-                        alt=""
-                      />
-                      <span>
-                        {metaMaskAddress.metaMaskAddress == null
-                          ? ""
-                          : item?.td_5}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="status-btn">
-                    <div className="right-pannel">
-                      <div>
-                        <button>Won</button>
-                        <button>Lost</button>
-                        <button
-                          onClick={handleClick}
-                          style={{ border: border }}
-                        >
-                          All
-                        </button>
-                      </div>
-                    </div>
-                    <div>
-                      {metaMaskAddress.metaMaskAddress == null ? (
-                        ""
-                      ) : (
-                        <button>Claim</button>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                <hr />
-              </div>
-              {(isSmallMobile || isMobile || isTablet) && (
+              {isSmallMobile || isMobile || isTablet ? (
                 <div className="betHistory-container-banner">
                   <div className="bet-item-1">
                     <div className="icon-type">
@@ -195,45 +126,48 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
                       </div>
                     </div>
                     <div className="table-wrapper-parent">
-                      <div className="table-wrapper">
-                        <div className="bet-th">
-                          <span>Date</span>
-                          <span>Event</span>
-                        </div>
-                        <div className="bet-td">
-                          <span>
-                            {metaMaskAddress.metaMaskAddress == null
-                              ? ""
-                              : item?.td_1}
-                          </span>
-                          {metaMaskAddress.metaMaskAddress == null
-                            ? ""
-                            : item?.td_2}
-                        </div>
-                      </div>
-                      <div className="table-wrapper">
-                        <div className="bet-th">
-                          <span>Bet Amount</span>
-                          <span>Currency</span>
-                          <span>Current Odds</span>
-                        </div>
-                        <div className="bet-td1">
-                          {metaMaskAddress.metaMaskAddress == null
-                            ? ""
-                            : item?.td_3}
-                          <img
-                            src={
-                              metaMaskAddress.metaMaskAddress == null
+                      <div className="table">
+                        <div className="table-wrapper">
+                          <div className="bet-th">
+                            <span>Date</span>
+                            <span>Event</span>
+                          </div>
+                          <div className="bet-td">
+                            <span>
+                              {metaMaskAddress.metaMaskAddress == null
                                 ? ""
-                                : item?.td_4
-                            }
-                            alt=""
-                          />
-                          <span>
+                                : item?.td_1}
+                            </span>
                             {metaMaskAddress.metaMaskAddress == null
                               ? ""
-                              : item?.td_5}
-                          </span>
+                              : item?.td_2}
+                          </div>
+                        </div>
+                        <div className="table-wrapper">
+                          <div className="bet-th">
+                            <span>Bet Amount</span>
+                            <span>Currency</span>
+                            <span>Current Odds</span>
+                          </div>
+
+                          <div className="bet-td1">
+                            {metaMaskAddress.metaMaskAddress == null
+                              ? ""
+                              : item?.td_3}
+                            <img
+                              src={
+                                metaMaskAddress.metaMaskAddress == null
+                                  ? ""
+                                  : item?.td_4
+                              }
+                              alt=""
+                            />
+                            <span>
+                              {metaMaskAddress.metaMaskAddress == null
+                                ? ""
+                                : item?.td_5}
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -243,7 +177,83 @@ const DisplayFilterTab = ({ itemData, smartContractId, getName }) => {
                         {metaMaskAddress.metaMaskAddress == null ? (
                           ""
                         ) : (
-                          <button>Claim</button>
+                          <>
+                            <button>Claim</button>
+                            <img src={upload} alt="upload" />
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="betHistory-container">
+                  <div className="bet-item-1">
+                    <div>
+                      <img src={item?.icon1} alt="" />
+                    </div>
+                    <div className="table-wrapper">
+                      <div className="bet-th">
+                        <span>Date</span>
+                        <span>Event</span>
+                      </div>
+                      <div className="bet-td">
+                        <span>
+                          {metaMaskAddress.metaMaskAddress == null
+                            ? ""
+                            : item?.td_1}
+                        </span>
+                        {metaMaskAddress.metaMaskAddress == null
+                          ? ""
+                          : item?.td_2}
+                      </div>
+                    </div>
+                    <div className="table-wrapper">
+                      <div className="bet-th">
+                        <span>Bet Amount</span>
+                        <span>Currency</span>
+                        <span>Current Odds</span>
+                      </div>
+                      <div className="bet-td1">
+                        {metaMaskAddress.metaMaskAddress == null
+                          ? ""
+                          : item?.td_3}
+                        <img
+                          src={
+                            metaMaskAddress.metaMaskAddress == null
+                              ? ""
+                              : item?.td_4
+                          }
+                          alt=""
+                        />
+                        <span>
+                          {metaMaskAddress.metaMaskAddress == null
+                            ? ""
+                            : item?.td_5}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="status-btn">
+                      <div className="right-pannel">
+                        <div>
+                          <button>Won</button>
+                          <button>Lost</button>
+                          <button
+                            onClick={handleClick}
+                            style={{ border: border }}
+                          >
+                            All
+                          </button>
+                        </div>
+                      </div>
+                      <div>
+                        {metaMaskAddress.metaMaskAddress == null ? (
+                          ""
+                        ) : (
+                          <>
+                            <button>Claim</button>
+                            <img src={upload} alt="upload" />
+                          </>
                         )}
                       </div>
                     </div>

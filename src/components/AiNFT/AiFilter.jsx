@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import PreviousNextMethods from "../FilterTabBtns/ClassBaseCarousel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ClassBaseCarouselAi from "./ClassBaseCarouselAi";
 
 const AiFilter = ({
   filterItem,
@@ -51,7 +52,7 @@ const AiFilter = ({
 
   return (
     <>
-      <PreviousNextMethods
+      <ClassBaseCarouselAi
         betHis={betHis}
         activeBet={activeBet}
         data={menuItems}

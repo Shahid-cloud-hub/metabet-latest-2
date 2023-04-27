@@ -8,11 +8,40 @@ export const Container = styled.div`
   margin: 0 auto;
   margin-top: 60px;
 
+  .wrapper-main-active {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 240px);
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 9;
+    top: 6px;
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.35);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #314552;
+      border-right: none;
+      border-left: none;
+      border-radius: 10px;
+    }
+  }
+
   .filter-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+
     button {
       display: flex !important;
       align-items: center;
@@ -28,6 +57,7 @@ export const Container = styled.div`
       gap: 4px;
       color: #ffffff;
       margin: 4px;
+
       span {
         color: #ffffff;
       }
@@ -35,9 +65,13 @@ export const Container = styled.div`
     .betactive {
       border: 1px solid;
       border-image: linear-gradient(45deg, #997860, #ffa133) 1;
+      /* position: relative; */
+      /* border-image: linear-gradient(90deg, #997860 -8.82%, #ffa133 111.76%); */
     }
     .betactive-pseudo {
       position: relative;
+      /* padding: 10px 20px; */
+      /* background: #fff; */
       margin: 4px;
       border-radius: 12px;
     }
@@ -52,9 +86,18 @@ export const Container = styled.div`
       margin: -4px;
       border-radius: inherit;
       background-image: linear-gradient(45deg, #997860, #ffa133);
+
+      /* border: 1px solid transparent; */
+      /* background: linear-gradient(45deg, #997860, #ffa133) 1;
+      -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude; */
     }
     .betactive-pseudo-mask {
       position: relative;
+      /* padding: 15px 20px; */
     }
 
     .slick-prev {
@@ -77,6 +120,8 @@ export const Container = styled.div`
       border-radius: 12px;
       border: 1px solid transparent;
       background: linear-gradient(45deg, #997860, #ffa133) border-box;
+      /* -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0); */
       -webkit-mask-composite: destination-out;
       mask-composite: exclude;
     }
@@ -85,6 +130,7 @@ export const Container = styled.div`
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      /* text-fill-color: transparent; */
     }
     .slick-track {
       display: flex;
@@ -96,6 +142,7 @@ export const Container = styled.div`
       .slick-next {
         background: none;
         border: none;
+        /* display: none !important; */
       }
 
       .slick-next:before {
@@ -123,9 +170,8 @@ export const Container = styled.div`
       color: #ffffff;
     }
   }
-
   .history_span {
-    padding: 20px 5px;
+    padding: 20px 0px;
     span {
       font-weight: 800;
       font-size: 16px;
@@ -240,8 +286,19 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
   }
+  @media screen and (max-width: 1024px) {
+    .filter-btn {
+      .slick-track {
+        gap: 20px;
+      }
+      button {
+        min-width: 120px;
 
-  @media screen and (max-width: 520px) {
+        span {
+          font-size: 12px;
+        }
+      }
+    }
     .history_span {
       span {
         font-size: 13px;
@@ -253,57 +310,102 @@ export const Container = styled.div`
       max-width: 130px;
     }
   }
-  @media screen and (max-width: 1080px) {
-    .filter-btn {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
-  @media screen and (max-width: 1024px) {
-    .filter-btn {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
-  @media screen and (max-width: 620px) {
-    .filter-btn {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
-  //till 820 / 920 sidebar
-  @media screen and (max-width: 820px) {
-    .filter-btn {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
   @media screen and (max-width: 920px) {
     .filter-btn {
-      display: flex;
-      flex-wrap: wrap;
+      .slick-track {
+        gap: 20px;
+      }
+      button {
+        min-width: 115px;
+
+        span {
+          font-size: 12px;
+        }
+      }
     }
-  }
-  @media screen and (max-width: 768px) {
     .history_span {
-      padding: 20px 30px;
+      span {
+        font-size: 13px;
+      }
     }
-    .filter-btn {
-      display: flex;
-      flex-wrap: wrap;
+
+    #history_btn {
+      font-size: 12px;
+      max-width: 130px;
     }
   }
-  //vertical with sidebar
+  @media screen and (max-width: 820px) {
+    .filter-btn {
+      .slick-track {
+        gap: 10px;
+      }
+      button {
+        min-width: 115px;
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+    .history_span {
+      span {
+        font-size: 13px;
+      }
+    }
+
+    #history_btn {
+      font-size: 12px;
+      max-width: 130px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .filter-btn {
+      .slick-track {
+        gap: 35px;
+      }
+    }
+    .history_span {
+      span {
+        font-size: 13px;
+      }
+    }
+
+    #history_btn {
+      font-size: 12px;
+      max-width: 130px;
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    .filter-btn {
+      .slick-track {
+        gap: 60px;
+      }
+      button {
+        min-width: 115px;
+        padding: 10px 0px;
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+    .history_span {
+      span {
+        font-size: 13px;
+      }
+    }
+
+    #history_btn {
+      font-size: 12px;
+      max-width: 130px;
+    }
+  }
 
   @media screen and (max-width: 375px) {
     .history_span {
       span {
         font-size: 12px;
       }
-    }
-    .filter-btn {
-      display: flex;
-      flex-wrap: wrap;
     }
   }
 `;

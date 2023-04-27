@@ -1,16 +1,8 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-// import FeaturedBanners from "../Components/FeaturedBanners/FeaturedBanners";
-// import AirdropFooterBanner from "../Components/FooterBanners/AirdropFooterBanner";
 import Loading from "../Loading/Loading";
-// import { PoliticsContainer } from "../Components/Politics/Politics.styles";
 import { DashContainer } from "../WorldcupLandingPage/WorldcupLandingPage.styles";
 import { useAxios } from "../../hooks/useAxios";
-import Maintenance from "../Maintenance/Maintenance";
-// import useBreakpoint from "../hooks/useBreakpoints";
-// import { Politics_banner_data } from "../JasonData/FeaturedBannerData";
-
-import Img from "../../assets/images/Currencies/Euro.webp";
 
 const Currencies = ({ group_type }) => {
   const { fetchData, response, loading } = useAxios();
@@ -48,17 +40,15 @@ const Currencies = ({ group_type }) => {
               .slice(0, 21)
               ?.map((item, index) => (
                 <>
+                  {console.log(item, "test")}
                   <div className="card" key={index}>
                     <img
-                      src={item?.event?.banner}
+                      src={item?.event?.bet_banner}
                       alt={item?.event?.title}
                       style={{ width: "90%" }}
                       onClick={() =>
                         navigate(
-                          `${item?.event?.title}/statistics/${item?.event?.highlights[0]?._id}`,
-                          {
-                            state: item?.event?.highlights[0]?._id,
-                          }
+                          `${item?.event?.title}/statistics/${item?._id}`
                         )
                       }
                     />
@@ -68,7 +58,6 @@ const Currencies = ({ group_type }) => {
           </div>
         )}
       </DashContainer>
-      {/* <Maintenance /> */}
     </>
   );
 };

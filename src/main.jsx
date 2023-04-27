@@ -49,7 +49,7 @@ import TENNIS from "./components/Tennis/Tennis";
 import AMERICANFOOTBALL from "./components/AmericanFootball/AmericanFootball";
 import BASEBALL from "./components/Baseball/Baseball";
 import SNOOKER from "./components/Snooker/Snooker";
-import GOLF from "./components/Golf/GOlf";
+import GOLF from "./components/Golf/Golf";
 import VOLLEYBALL from "./components/Volleyball/Volleyball";
 import BOXING from "./components/Boxing/Boxing";
 import DARTS from "./components/Darts/Darts";
@@ -61,7 +61,7 @@ import REGFOOTBALL from "./pages/RegFootball";
 // Leagues Section //
 import ALLFOOTBALLEVENTS from "./components/FootballLeagues/Football";
 import GetStatistics from "./components/Statistics/GetStatistics";
-// import SocialMedia from "./components/SocialMedia/SocialMedia";
+import SocialMedia from "./components/SocialMedia/SocialMedia";
 import Formula1 from "./components/Formula1/Formula1";
 import AiNFT from "./components/AiNFT/AiNFT";
 
@@ -278,7 +278,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/social-media",
-        element: <POLITICS group_type="trending-event" />,
+        element: <SocialMedia group_type="social-media" />,
       },
       {
         path: "/ai-nft",

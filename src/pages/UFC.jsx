@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import RegularFootBallBanners from "../Components/RegularFootBall/RegularFootBallBanners";
+import RegularFootBallBanners from "../components/RegularFootBall/RegularFootBallBanners";
 import { UFCMainBanners } from "../JasonData/UFC";
 
 const UFC = () => {

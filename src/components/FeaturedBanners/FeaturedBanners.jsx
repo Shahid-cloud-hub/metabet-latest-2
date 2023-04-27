@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FeaturedBannersContainer } from "./FeaturedBanners.style";
 import { useEffect } from "react";
-import btnIcon from "../../assets/images/Politics/btnIcon.webp";
 import GoldenBtn from "../../assets/images/Politics/GoldenBtn.png";
 
 const FeaturedBanners = (props) => {

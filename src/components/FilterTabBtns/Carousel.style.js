@@ -48,6 +48,41 @@ export const CarouselContainer = styled("div")`
   @media screen and (max-width: 1024px) {
     .btn-container {
       min-width: 580px;
+      div {
+        transform: translate(0px, -48px);
+      }
+    }
+  }
+  @media screen and (max-width: 920px) {
+    .btn-container {
+      min-width: 550px;
+      div {
+        transform: translate(0px, -50px);
+      }
+    }
+  }
+  @media screen and (max-width: 820px) {
+    .btn-container {
+      min-width: 720px;
+      div {
+        transform: translate(0px, -50px);
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .btn-container {
+      min-width: 520px;
+      div {
+        transform: translate(0px, -50px);
+      }
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .btn-container {
+      min-width: 345px;
+      div {
+        transform: translate(0px, -50px);
+      }
     }
   }
 

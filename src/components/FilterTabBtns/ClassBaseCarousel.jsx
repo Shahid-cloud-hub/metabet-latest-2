@@ -90,21 +90,11 @@ export default class PreviousNextMethods extends Component {
                 }
               >
                 {Val?.imgV && (
-                    <img
-                      src={
-                        Val?.name === this.state.check ? Val?.imgO : Val?.imgV
-                      }
-                      alt={Val.name}
-                    />
-                  ) &&
-                  (Val?.imgV || Val?.imgO) && (
-                    <img
-                      src={
-                        Val?.name === this.state.check ? Val?.imgP : Val?.imgV
-                      }
-                      alt={Val.name}
-                    />
-                  )}
+                  <img
+                    src={Val?.name === this.state.check ? Val?.imgO : Val?.imgV}
+                    alt={Val.name}
+                  />
+                )}
 
                 <span
                   style={{ cursor: "pointer" }}

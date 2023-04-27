@@ -286,8 +286,109 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
   }
+  @media screen and (max-width: 1024px) {
+    .filter-btn {
+      .slick-track {
+        gap: 20px;
+      }
+      button {
+        min-width: 120px;
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+    .history_span {
+      span {
+        font-size: 13px;
+      }
+    }
+
+    #history_btn {
+      font-size: 12px;
+      max-width: 130px;
+    }
+  }
+  @media screen and (max-width: 920px) {
+    .filter-btn {
+      .slick-track {
+        gap: 20px;
+      }
+      button {
+        min-width: 115px;
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+    .history_span {
+      span {
+        font-size: 13px;
+      }
+    }
+
+    #history_btn {
+      font-size: 12px;
+      max-width: 130px;
+    }
+  }
+  @media screen and (max-width: 820px) {
+    .filter-btn {
+      .slick-track {
+        gap: 10px;
+      }
+      button {
+        min-width: 115px;
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+    .history_span {
+      span {
+        font-size: 13px;
+      }
+    }
+
+    #history_btn {
+      font-size: 12px;
+      max-width: 130px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .filter-btn {
+      .slick-track {
+        gap: 35px;
+      }
+    }
+    .history_span {
+      span {
+        font-size: 13px;
+      }
+    }
+
+    #history_btn {
+      font-size: 12px;
+      max-width: 130px;
+    }
+  }
 
   @media screen and (max-width: 520px) {
+    .filter-btn {
+      .slick-track {
+        gap: 60px;
+      }
+      button {
+        min-width: 115px;
+        padding: 10px 0px;
+        span {
+          font-size: 12px;
+        }
+      }
+    }
     .history_span {
       span {
         font-size: 13px;
@@ -324,7 +425,7 @@ export const ContainerBet = styled.div`
       position: absolute;
       max-width: 835px;
       right: 1%;
-      top: 52%;
+      top: 48%;
       border: none;
       width: 100%;
       height: 2px;
@@ -448,6 +549,7 @@ export const ContainerBet = styled.div`
       div {
         display: flex;
         justify-content: center;
+        gap: 10px;
       }
       button {
         width: 100%;
@@ -467,12 +569,12 @@ export const ContainerBet = styled.div`
   }
   .betHistory-container-banner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
 
     hr {
       position: absolute;
-      max-width: 835px;
+      max-width: 373px;
       right: 1%;
       top: 52%;
       border: none;
@@ -484,11 +586,13 @@ export const ContainerBet = styled.div`
 
     .bet-item-1 {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: inherit;
       gap: 30px;
       width: 100%;
-      max-width: 940px;
+      max-width: 343px;
+      min-height: 243px;
       padding: 15px;
       background: #081824;
       border-radius: 10px;
@@ -497,6 +601,7 @@ export const ContainerBet = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
       }
       .right-pannel {
         display: flex;
@@ -526,7 +631,7 @@ export const ContainerBet = styled.div`
       .table-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 6px;
 
         .bet-th {
           display: flex;
@@ -534,15 +639,19 @@ export const ContainerBet = styled.div`
           font-weight: 700;
           font-size: 12px;
           color: #f4cd68;
+          border-bottom: 1px solid #282c34;
+          span {
+            margin-bottom: 6px;
+          }
         }
 
         .bet-td {
           display: flex;
-
           gap: 30px;
           font-weight: 700;
           font-size: 14px;
           color: #fff;
+          margin-bottom: 20px;
         }
 
         .bet-td1 {
@@ -600,9 +709,11 @@ export const ContainerBet = styled.div`
       display: flex;
       flex-direction: column;
       gap: 20px;
+      width: 100%;
       div {
         display: flex;
-        justify-content: center;
+        justify-content: end;
+        gap: 15px;
       }
       button {
         width: 100%;
@@ -623,7 +734,8 @@ export const ContainerBet = styled.div`
   @media screen and (max-width: 1280px) {
     .betHistory-container {
       hr {
-        max-width: 825px;
+        max-width: 790px;
+        top: 48%;
       }
     }
   }
@@ -633,6 +745,9 @@ export const ContainerBet = styled.div`
       .bet-item-1 {
         gap: 5px;
         .table-wrapper {
+          span {
+            font-size: 12px;
+          }
           .bet-th {
             gap: 35px;
           }
@@ -643,23 +758,76 @@ export const ContainerBet = styled.div`
             gap: 8px;
           }
         }
+        .right-pannel {
+          padding-bottom: 25px;
+          button {
+            font-size: 8px;
+            max-width: 30px;
+            min-height: 30px;
+          }
+        }
       }
       hr {
         max-width: 524px;
         right: 2%;
+        top: 48%;
       }
     }
   }
 
-  @media screen and (max-width: 980px) {
+  @media screen and (max-width: 912px) {
     .betHistory-container {
+      .bet-item-1 {
+        .table-wrapper {
+          .bet-th {
+            span {
+              font-size: 10px;
+            }
+          }
+          .bet-td {
+            font-size: 10px;
+            span {
+              font-size: 10px;
+            }
+          }
+          .bet-td1 {
+            align-items: center;
+
+            font-size: 10px;
+            span {
+              font-size: 10px;
+            }
+          }
+        }
+        .right-pannel {
+          padding-bottom: 0px;
+          button {
+            font-size: 8px;
+            max-width: 30px;
+            min-height: 30px;
+          }
+        }
+      }
+      .status-btn {
+        max-width: 67px;
+        min-height: 19px;
+        padding: 5px;
+        button {
+          padding: 5px 10px;
+        }
+      }
+
       hr {
-        max-width: 795px;
+        max-width: 430px;
+        top: 49%;
       }
     }
   }
 
   @media screen and (max-width: 820px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     .betHistory-container {
       hr {
         max-width: 692px;
@@ -668,6 +836,7 @@ export const ContainerBet = styled.div`
   }
 
   @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
     .betHistory-container {
       hr {
         max-width: 651px;
@@ -676,6 +845,7 @@ export const ContainerBet = styled.div`
   }
 
   @media screen and (max-width: 620px) {
+    grid-template-columns: 1fr;
     .betHistory-container {
       hr {
         max-width: 432px;
@@ -774,8 +944,13 @@ export const ContainerBet = styled.div`
         }
 
         .table-wrapper {
-          .bet-th,
           .bet-td {
+            gap: 0px;
+            span {
+              font-size: 9px;
+            }
+          }
+          .bet-th {
             gap: 0px;
             span {
               font-size: 9px;

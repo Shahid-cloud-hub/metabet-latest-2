@@ -1,19 +1,14 @@
-import GOAL from "../../assets/images/Betimg/GOAL.png";
-import BNB from "../../assets/images/Betimg/BNB.png";
-import BUSD from "../../assets/images/Betimg/BUSD.png";
 import busd from "../../assets/images/BUSD.png";
 import metabet from "../../assets/images/metabet.webp";
 import betimg from "../../assets/images/betimg.png";
 import foxhistory from "../../assets/images/foxhistory.png";
-
-import ETH from "../../assets/images/ETH.webp";
-import USDT from "../../assets/images/usdt.webp";
 import france from "../../assets/images/WorldcupBanner/france-mini.webp";
 import poland from "../../assets/images/WorldcupBanner/poland-mini.webp";
 import ChainLink from "../../assets/images/Betimg/chainlink.png";
 import senegal from "../../assets/images/WorldcupBanner/senegal-mini.webp";
 import england from "../../assets/images/WorldcupBanner/england-mini.webp";
-import { ZERO_ADDRESS, METABET_ADDRESS } from "../../constants.js";
+
+import { METABET_ADDRESS } from "../../constants.js";
 
 export const betData = [
   {
