@@ -394,6 +394,12 @@ export const DashContainer = styled("div")`
       }
     }
   }
+  @media screen and (max-width: 920px) {
+    .parent-wrapper .react-dropdown .value {
+      font-size: 14px;
+      text-align: inherit;
+    }
+  }
 
   @media screen and (max-width: 820px) {
     .parent-wrapper {
